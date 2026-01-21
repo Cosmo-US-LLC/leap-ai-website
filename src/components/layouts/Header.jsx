@@ -9,12 +9,16 @@ export function Header() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
-      <Link to="/" className="text-lg font-semibold tracking-tight hover:opacity-80">
-        Leap AI
+    <header className="flex w-full max-w-[1280px] mx-auto px-4 md:px-8 py-6 items-center justify-between gap-4">
+      <Link to="/" className="flex items-center gap-3 hover:opacity-90">
+        <img
+          src="https://www.figma.com/api/mcp/asset/4b1cec4c-d0b6-48e6-ac02-ad3c98e9b248"
+          alt="Leap AI"
+          className="h-8 w-[120px]"
+        />
       </Link>
-      <nav className="hidden items-center gap-3 text-sm font-medium text-muted-foreground md:flex">
-        <Link
+      <nav className="hidden items-center gap-4 text-sm font-medium text-muted-foreground md:flex">
+        {/* <Link
           to="/"
           className={`hover:text-foreground ${isActive('/') ? 'text-foreground' : ''}`}
         >
@@ -31,13 +35,18 @@ export function Header() {
           className={`hover:text-foreground ${isActive('/contact') ? 'text-foreground' : ''}`}
         >
           Contact
-        </Link>
+        </Link> */}
       </nav>
-      <div className="hidden items-center gap-2 md:flex">
-        <Button variant="ghost" size="sm">
-          Sign in
-        </Button>
-        <Button size="sm">Get started</Button>
+      <div className="hidden items-center gap-4 md:flex">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#64748b]">
+          Strategic Guide for Executives
+        </p>
+        {/* <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm">
+            Sign in
+          </Button>
+          <Button size="sm">Get started</Button>
+        </div> */}
       </div>
       <Sheet>
         <SheetTrigger asChild>

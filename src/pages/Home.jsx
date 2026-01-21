@@ -15,10 +15,10 @@ export function Home() {
     <>
       <FreeReportHero />
       <TrustedBySection />
-      <StopGuessingSection />
+      {/* <StopGuessingSection />
       <GuideFitSection />
       <ImplementationJourneySection />
-      <InsideTheFramework />
+      <InsideTheFramework /> */}
       <CommonQuestions />
       <MeetTheAuthors />
       <DeliverablesSection />
