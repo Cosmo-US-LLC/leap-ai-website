@@ -13,12 +13,12 @@ import ImplementationJourneySection from '../components/PageComponent/Home/Imple
 export function Home() {
   return (
     <>
-      <FreeReportHero />
+      {/* <FreeReportHero />
       <TrustedBySection />
-      {/* <StopGuessingSection />
-      <GuideFitSection />
-      <ImplementationJourneySection />
-      <InsideTheFramework /> */}
+      <StopGuessingSection />
+      <GuideFitSection /> */}
+      {/* <ImplementationJourneySection /> */}
+      <InsideTheFramework />
       <CommonQuestions />
       <MeetTheAuthors />
       <DeliverablesSection />
