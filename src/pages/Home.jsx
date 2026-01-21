@@ -17,8 +17,9 @@ export function Home() {
       <TrustedBySection />
       <StopGuessingSection />
       <GuideFitSection /> */}
-      {/* <ImplementationJourneySection /> */}
+      
       <InsideTheFramework />
+      <ImplementationJourneySection />
       <CommonQuestions />
       <MeetTheAuthors />
       <DeliverablesSection />

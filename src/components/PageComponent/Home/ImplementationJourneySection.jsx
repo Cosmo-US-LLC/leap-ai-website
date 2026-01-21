@@ -59,7 +59,7 @@ export default function ImplementationJourneySection() {
           <div className="relative grid gap-8 md:grid-cols-5">
             {steps.map((step) => (
               <div key={step.id} className="flex flex-col items-center text-center gap-4">
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#3e6db5] bg-[#2b2b76] shadow-[0_20px_25px_-5px_rgba(15,23,42,0.6)]">
+                <div className="relative overflow-hidden flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#3e6db5] bg-[#2b2b76] shadow-[0_20px_25px_-5px_rgba(15,23,42,0.6)]">
                   <step.Icon className="h-8 w-8 text-white" aria-hidden />
                   <div className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full border border-[#2b2b76] bg-[#059669] text-[14px] font-[700] text-white">
                     {step.id}
