@@ -41,10 +41,10 @@ export default function InsideTheFramework() {
     <section className="bg-white py-16">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-4 md:px-8">
         <div className="text-center">
-          <h2 className="text-[32px] font-[800] leading-[40px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
+          <h2 className="text-[30px] font-[800] leading-[37px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
             Inside the Framework
           </h2>
-          <p className="mt-4 text-[16px] font-[500] leading-[24px] text-[#475569] md:text-[18px] md:leading-[28px]">
+          <p className="mt-3 text-[20px] font-[500] leading-[28px] text-[#475569] md:text-[18px] md:leading-[28px]">
             The 4 essential components of a successful AI strategy.
           </p>
         </div>
@@ -82,11 +82,11 @@ function FrameworkCard({ number, icon: Icon, title, description }) {
           <Icon className="h-8 w-8 text-[#3e6db5]" aria-hidden />
         </div>
 
-        <h3 className="mb-4 text-[20px] font-[800] leading-[32px] text-[#2b2b76] md:text-[24px]">
+        <h3 className="mb-4 text-[24px] font-[800] leading-[32px] text-[#2b2b76] md:text-[24px]">
           {title}
         </h3>
 
-        <p className="text-[14px] font-[700] leading-[24px] text-[#475569] md:text-[16px]">
+        <p className="font-[700] leading-[24px] text-[#475569] text-[16px]">
           {description}
         </p>
       </div>

@@ -1,10 +1,10 @@
-import { Shield, Zap, Users, FileText } from 'lucide-react';
+import { ShieldCheck, Zap, Users, FileText } from 'lucide-react';
 
 export default function TrustedBySection() {
   const industries = [
     {
       id: 'insurance',
-      icon: Shield,
+      icon: ShieldCheck,
       label: 'Insurance',
     },
     {
@@ -26,8 +26,8 @@ export default function TrustedBySection() {
 
   return (
     <section className="border-y border-[#f1f5f9] bg-[rgba(248,250,252,0.5)] py-12">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-8 px-4 md:px-8">
-        <p className="text-[14px] font-[700] uppercase tracking-[0.075em] text-[#7a94b8]">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-7 px-4 md:px-8">
+        <p className="md:text-[14px] text-[16px] font-[700] uppercase tracking-[1.2px] text-[#7a94b8] leading-[16px]">
           Trusted by leaders in
         </p>
 

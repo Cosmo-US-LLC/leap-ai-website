@@ -14,9 +14,9 @@ export function Home() {
   return (
     <>
       <FreeReportHero />
-      {/* <TrustedBySection />
+      <TrustedBySection />
       <StopGuessingSection />
-      <GuideFitSection /> */}
+      <GuideFitSection />
       <InsideTheFramework />
       <ImplementationJourneySection />
       <CommonQuestions />

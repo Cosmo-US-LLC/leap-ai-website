@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '../ui/button.jsx';
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet.jsx';
+import leapLogo from '../../assets/images/home/Leap_hero/leap_logo.svg';
 
 export function Header() {
   const location = useLocation();
@@ -12,9 +13,9 @@ export function Header() {
     <header className="flex w-full max-w-[1280px] mx-auto px-4 md:px-8 py-6 items-center justify-between gap-4">
       <Link to="/" className="flex items-center gap-3 hover:opacity-90">
         <img
-          src="https://www.figma.com/api/mcp/asset/4b1cec4c-d0b6-48e6-ac02-ad3c98e9b248"
+          src={leapLogo}
           alt="Leap AI"
-          className="h-8 w-[120px]"
+          className="h-8 w-[127px]"
         />
       </Link>
       <nav className="hidden items-center gap-4 text-sm font-medium text-muted-foreground md:flex">
@@ -41,12 +42,6 @@ export function Header() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#64748b]">
           Strategic Guide for Executives
         </p>
-        {/* <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm">
-            Sign in
-          </Button>
-          <Button size="sm">Get started</Button>
-        </div> */}
       </div>
       <Sheet>
         <SheetTrigger asChild>

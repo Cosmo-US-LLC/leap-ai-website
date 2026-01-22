@@ -44,17 +44,17 @@ export default function ImplementationJourneySection() {
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
         <div className="text-center">
-          <p className="text-[14px] font-[800] uppercase tracking-[0.1em] text-[#059669]">
+          <p className="text-[14px] font-[800] leading-[20px] uppercase tracking-[0.1em] text-[#059669]">
             The Path Forward
           </p>
-          <h2 className="mt-3 text-[32px] font-[800] leading-[40px] text-white md:text-[44px] md:leading-[48px]">
+          <h2 className="mt-3 text-[30px] font-[800] leading-[37px] text-white md:text-[44px] md:leading-[48px]">
             Your Implementation Journey
           </h2>
         </div>
 
         <div className="relative mt-4">
           {/* horizontal line */}
-          <div className="absolute left-[10%] right-[10%] top-12 h-px bg-gradient-to-r from-[rgba(148,163,184,0.4)] via-[rgba(226,232,240,0.7)] to-[rgba(148,163,184,0.4)]" />
+          <div className="absolute max-md:hidden left-[10%] right-[10%] top-12 h-px bg-gradient-to-r from-[rgba(148,163,184,0.4)] via-[rgba(226,232,240,0.7)] to-[rgba(148,163,184,0.4)]" />
 
           <div className="relative grid gap-8 md:grid-cols-5">
             {steps.map((step) => (
@@ -66,7 +66,7 @@ export default function ImplementationJourneySection() {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-[16px] font-[700] leading-[24px] text-white">
+                  <p className="text-[18px] font-[700] leading-[28px] text-white">
                     {step.title}
                   </p>
                   <p className="text-[14px] font-[500] leading-[20px] text-[#cbd5e1]">

@@ -1,37 +1,43 @@
-import { User, Building2, Mail, Phone, ShieldCheck } from "lucide-react";
+import { User, Building2, Mail, Phone, ShieldCheck, Lock } from "lucide-react";
+import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
+import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
+import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
+import StarBlue from '../../../assets/images/home/Leap_hero/star_blue.svg';
 
 export default function FreeReportHero() {
   return (
-    <section className="relative overflow-hidden bg-white pb-16 pt-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.18),_transparent_55%)]" />
+    <section className="relative overflow-hidden bg-white pb-16 pt-16">
+
+      <img src={overlayBlue} alt="overlayBlue" className="absolute right-[0px] top-[-100px]" />
+      <img src={overlayGreen} alt="overlayGreen" className="absolute left-0 bottom-0" />
+      {/* <div className="pointer-events-none absolute rounded-full left-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_left,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
+      {/* <div className="pointer-events-none absolute right-0 bottom-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_left,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-start md:justify-between md:px-8">
         {/* Left copy */}
         <div className="max-w-xl space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-3 py-1 text-[12px] font-[700] uppercase tracking-[0.12em] text-[#3e6db5] shadow-sm">
-            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#3e6db5] text-[10px] text-white">
-              ★
-            </span>
-            <span>Free 7 Pillars Report</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-4 py-[6px] justify-center text-[#3e6db5] shadow-sm">
+             <img src={StarBlue} alt="StarBlue" className="h-[14px] w-[14px]" />
+            <span className="text-[12px] font-[700] leading-[16px] uppercase tracking-[0.6px] pt-[1px] text-[#2B2B76]">Free 7 Pillars Report</span>
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-[36px] font-[800] leading-[42px] text-[#2b2b76] md:text-[48px] md:leading-[52px]">
+            <h1 className="text-[36px] font-[800] leading-[39px] text-[#2b2b76] md:text-[60px] md:leading-[52px]">
               <span className="block">Make the Right AI</span>
               <span className="block">Decisions</span>
-              <span className="block">Before You Spend.</span>
+              <span className="block bg-gradient-to-r from-[#3E6DB5] to-[#2B2B76] bg-clip-text text-transparent">Before You Spend.</span>
             </h1>
-            <p className="text-[14px] font-[800] uppercase tracking-[0.12em] text-[#3e6db5] md:text-[14px]">
+            <p className="text-[18px] font-[700] uppercase tracking-[0.12em] text-[#3e6db5] md:text-[20px] md:leading-[25px]">
               The free 7 pillars of AI implementation written for executive
             </p>
           </div>
 
-          <p className="text-[16px] font-[500] leading-[26px] text-[#475569] md:text-[18px] md:leading-[28px]">
+          <p className="text-[20px] font-[500] leading-[26px] text-[#475569] md:text-[20px] md:leading-[28px]">
             A practical, business-first framework that shows mid-market leaders where AI actually
             creates ROI before investing in tools, vendors, or pilots.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-[14px] font-[600] leading-[20px] text-[#64748b]">
+          <div className="flex flex-col md:flex-row gap-4">
             <Badge text="No Credit Card Required" />
             <Badge text="Instant PDF Access" />
             <Badge text="Read in 60 Minutes" />
@@ -44,10 +50,10 @@ export default function FreeReportHero() {
             <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669]" />
             <div className="space-y-6 px-6 py-6 md:px-8 md:py-8">
               <div className="space-y-1">
-                <h3 className="text-[20px] font-[800] leading-[28px] text-[#2b2b76]">
+                <h3 className="text-[24px] font-[800] leading-[28px] text-[#2b2b76]">
                   Get the Report
                 </h3>
-                <p className="text-[14px] font-[500] leading-[20px] text-[#64748b]">
+                <p className="text-[14px] font-[600] leading-[16px] text-[#64748b]">
                   Join 2,000+ executives leading the AI era.
                 </p>
               </div>
@@ -60,7 +66,7 @@ export default function FreeReportHero() {
                 <div className="space-y-2">
                   <Label icon={Phone} text="Phone Number" />
                   <div className="flex gap-3">
-                    <select className="w-32 rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#1e293b] outline-none focus-visible:ring-2 focus-visible:ring-offset-2">
+                    <select className="w-32 rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#1e293b] outline-none">
                       <option>US/CA (+1)</option>
                       <option>UK (+44)</option>
                       <option>EU (+49)</option>
@@ -68,17 +74,17 @@ export default function FreeReportHero() {
                     <input
                       type="tel"
                       placeholder="555-0123"
-                      className="flex-1 rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                      className="flex-1 rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none "
                     />
                   </div>
                 </div>
 
-                <button className="btn_primary mt-2 flex w-full items-center justify-center gap-2 rounded-[12px]">
+                <button className="btn_primary mt-2 flex w-full items-center justify-center gap-2 !py-2 !rounded-[8px]">
                   <span>Get Your Free Report</span>
                 </button>
 
-                <div className="flex items-center justify-center gap-2 pt-1 text-[12px] font-[600] leading-[16px] text-[#3e6db5]">
-                  <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
+                <div className="flex items-center justify-center gap-2 pt-1 text-[14px] font-[600]  leading-[16px] text-[#3e6db5]">
+                  <Lock className="h-3.5 w-3.5" aria-hidden />
                   <span>100% secure. No spam.</span>
                 </div>
               </div>
@@ -92,8 +98,8 @@ export default function FreeReportHero() {
 
 function Label({ icon: Icon, text }) {
   return (
-    <div className="flex items-center gap-2 text-[12px] font-[700] uppercase tracking-[0.1em] text-[#2b2b76]">
-      <Icon className="h-3.5 w-3.5 text-[#3e6db5]" aria-hidden />
+    <div className="flex items-center gap-2 text-[14px] font-[700] leading-[16px] uppercase tracking-[0.1em] text-[#2b2b76]">
+      <Icon className="h-4 w-4 text-[#3e6db5]" aria-hidden />
       <span>{text}</span>
     </div>
   );
@@ -106,7 +112,7 @@ function Field({ label, icon, placeholder, type = "text" }) {
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+        className="w-full rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] leading-[20px] placeholder:text-[#94A3B8] outline-none "
       />
     </div>
   );
@@ -114,11 +120,11 @@ function Field({ label, icon, placeholder, type = "text" }) {
 
 function Badge({ text }) {
   return (
-    <div className="inline-flex items-center gap-2 text-[13px]">
-      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#059669]/10">
-        <span className="h-2 w-2 rounded-full bg-[#059669]" />
+    <div className="inline-flex items-center gap-2">
+      <span className="inline-flex relative h-5 w-5 items-center justify-center">
+        <img src={CheckGreen} alt="CheckGreen" className="h-full w-full" />
       </span>
-      <span className="text-[#64748b]">{text}</span>
+      <span className="text-[#64748b] text-[14px] md:text-[16px] font-[500] leading-[20px]">{text}</span>
     </div>
   );
 }
