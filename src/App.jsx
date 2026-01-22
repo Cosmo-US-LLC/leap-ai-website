@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        {/* <Route path="/your-free-report" element={<YourFreeReport />} /> */}
+        <Route path="/your-free-report" element={<YourFreeReport />} />
       </Route>
     </Routes>
   );

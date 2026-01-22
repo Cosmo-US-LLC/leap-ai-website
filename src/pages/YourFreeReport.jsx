@@ -1,11 +1,53 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Download } from 'lucide-react';
+import { ArrowLeft, Download, Loader2 } from 'lucide-react';
+// Import the PDF file from assets
+import pdfFile from '../assets/pdf/7 Pillars Report.pdf';
 
 export function YourFreeReport() {
-  const handleDownload = () => {
-    // TODO: Implement actual download functionality
-    console.log('Download report clicked');
-    // You can add actual download logic here
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = async () => {
+    const fileName = '7 Pillars Report.pdf';
+    
+    setIsDownloading(true);
+
+    try {
+      // Fetch the local PDF file
+      const response = await fetch(pdfFile);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch PDF file');
+      }
+
+      // Convert response to blob
+      const blob = await response.blob();
+      
+      // Create a temporary URL for the blob
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      // Create a temporary anchor element and trigger download
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = fileName;
+      link.style.display = 'none';
+      
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Clean up blob URL after a short delay
+      setTimeout(() => {
+        window.URL.revokeObjectURL(blobUrl);
+        setIsDownloading(false);
+      }, 100);
+      
+    } catch (error) {
+      console.error('Error downloading PDF:', error);
+      alert('Failed to download the report. Please try again later.');
+      setIsDownloading(false);
+    }
   };
 
   return (
@@ -67,10 +109,20 @@ export function YourFreeReport() {
           {/* Download button - responsive sizing */}
           <button
             onClick={handleDownload}
-            className="btn_primary mb-4 flex h-[56px] w-full max-w-[332px] items-center justify-center gap-2 !rounded-[9999px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] md:mb-7 md:h-[68px] md:gap-3"
+            disabled={isDownloading}
+            className="btn_primary mb-4 flex h-[56px] w-full max-w-[332px] items-center justify-center gap-2 !rounded-[9999px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] disabled:opacity-70 disabled:cursor-not-allowed md:mb-7 md:h-[68px] md:gap-3"
           >
-            <Download className="h-5 w-5 md:h-6 md:w-6" aria-hidden />
-            <span className="text-[20px] font-[700] leading-[24px] md:text-[20px] md:leading-[20px]">Download the report</span>
+            {isDownloading ? (
+              <>
+                <Loader2 className="h-5 w-5 animate-spin md:h-6 md:w-6" aria-hidden />
+                <span className="text-[20px] font-[700] leading-[24px] md:text-[20px] md:leading-[20px]">Downloading...</span>
+              </>
+            ) : (
+              <>
+                <Download className="h-5 w-5 md:h-6 md:w-6" aria-hidden />
+                <span className="text-[20px] font-[700] leading-[24px] md:text-[20px] md:leading-[20px]">Download the report</span>
+              </>
+            )}
           </button>
           
           {/* Return to Home link */}
