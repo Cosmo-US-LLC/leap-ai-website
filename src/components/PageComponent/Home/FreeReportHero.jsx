@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { User, Building2, Mail, Phone, ShieldCheck, Lock } from "lucide-react";
 import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
 import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
@@ -6,6 +7,7 @@ import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
 import StarBlue from '../../../assets/images/home/Leap_hero/star_blue.svg';
 
 export default function FreeReportHero() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     companyName: '',
@@ -85,24 +87,20 @@ export default function FreeReportHero() {
       // Simulate API call (you can replace this with actual API call)
       setTimeout(() => {
         setIsSubmitting(false);
-        alert('Form submitted successfully! Check console for data.');
-        // Reset form and errors
-        setFormData({
-          name: '',
-          companyName: '',
-          email: '',
-          countryCode: 'US/CA (+1)',
-          phone: '',
-        });
-        setErrors({});
+        // Navigate to success page
+        navigate('/your-free-report');
       }, 1000);
     }
   };
   return (
     <section className="relative overflow-hidden bg-white pb-16 pt-16">
 
+<div className="absolute inset-0 opacity-50" style={{ 
+        backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.0625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 
+      }} />
+
       <img src={overlayBlue} alt="overlayBlue" className="absolute right-[0px] top-[-100px]" />
-      <img src={overlayGreen} alt="overlayGreen" className="absolute left-0 bottom-0" />
+      <img src={overlayGreen} alt="overlayGreen" className="absolute left-0 bottom-0 " />
       {/* <div className="pointer-events-none absolute rounded-full left-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_left,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
       {/* <div className="pointer-events-none absolute right-0 bottom-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_left,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
 
