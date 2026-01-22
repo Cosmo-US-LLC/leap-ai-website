@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Download, Loader2 } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Download, Loader2, CheckCircle2 } from 'lucide-react';
 // Import the PDF file from assets
 import pdfFile from '../assets/pdf/7 Pillars Report.pdf';
 
 export function YourFreeReport() {
+  const navigate = useNavigate();
   const [isDownloading, setIsDownloading] = useState(false);
+  const [isSuccessful, setIsSuccessful] = useState(false);
 
   const handleDownload = async () => {
     const fileName = '7 Pillars Report.pdf';
@@ -37,11 +39,17 @@ export function YourFreeReport() {
       link.click();
       document.body.removeChild(link);
       
-      // Clean up blob URL after a short delay
+      // Clean up blob URL
+      window.URL.revokeObjectURL(blobUrl);
+      
+      // Show successful state
+      setIsDownloading(false);
+      setIsSuccessful(true);
+      
+      // Navigate to consultation page after 2 seconds
       setTimeout(() => {
-        window.URL.revokeObjectURL(blobUrl);
-        setIsDownloading(false);
-      }, 100);
+        navigate('/book-your-consultation');
+      }, 2000);
       
     } catch (error) {
       console.error('Error downloading PDF:', error);
@@ -87,12 +95,12 @@ export function YourFreeReport() {
               
               {/* Content - responsive padding and gap */}
               <div className="flex h-full flex-col items-center justify-center gap-4 px-4 py-6 md:gap-[27px] md:px-[33px] md:py-10">
-                <h2 className="text-center text-[15px] font-[800] leading-[20px] text-white md:text-[19px] md:leading-[24px]">
+                <h2 className="text-center text-[17px] font-[800] leading-[24px] text-white md:text-[18px] md:leading-[24px]">
                   The 7 Strategic Pillars Your Company Needs to Win in the Age of AI
                 </h2>
                 
                 {/* Green divider */}
-                <div className="h-[4px] w-[35px] bg-[#059669] md:h-[5.41px] md:w-[41.84px]" />
+                <div className="h-[4px] w-[35px] bg-[#059669] md:h-[5.41px] md:w-[41.84px] relative z-10" />
                 
                 <p className="text-center text-[10px] font-[400] leading-[13px] uppercase tracking-[1px] text-[#cbd5e1] md:text-[12px] md:leading-[15px] md:tracking-[1.35px]">
                   The CEO's Guide to AI Transformation
@@ -109,13 +117,18 @@ export function YourFreeReport() {
           {/* Download button - responsive sizing */}
           <button
             onClick={handleDownload}
-            disabled={isDownloading}
-            className="btn_primary mb-4 flex h-[56px] w-full max-w-[332px] items-center justify-center gap-2 !rounded-[9999px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] disabled:opacity-70 disabled:cursor-not-allowed md:mb-7 md:h-[68px] md:gap-3"
+            disabled={isDownloading || isSuccessful}
+            className="btn_primary mb-4 flex  items-center justify-center gap-2 !rounded-[9999px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] disabled:opacity-70 disabled:cursor-not-allowed md:mb-7 md:h-[68px] md:gap-3"
           >
             {isDownloading ? (
               <>
                 <Loader2 className="h-5 w-5 animate-spin md:h-6 md:w-6" aria-hidden />
                 <span className="text-[20px] font-[700] leading-[24px] md:text-[20px] md:leading-[20px]">Downloading...</span>
+              </>
+            ) : isSuccessful ? (
+              <>
+                <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6" aria-hidden />
+                <span className="text-[20px] font-[700] leading-[24px] md:text-[20px] md:leading-[20px]">PDF downloads successfully</span>
               </>
             ) : (
               <>
