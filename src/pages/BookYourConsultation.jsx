@@ -7,7 +7,7 @@ export function BookYourConsultation() {
     // TODO: Implement booking functionality
     // This could open a calendar widget, redirect to a booking page, etc.
     console.log('Book consultation clicked');
-    window.open('https://insights.leap41.ca/consultation', '_blank');
+    // window.open('https://insights.leap41.ca/consultation', '_blank');
   };
 
   return (

@@ -7,32 +7,32 @@ export default function CommonQuestions() {
     {
       id: 'free',
       question: "Is the 7 Pillars Guide really free?",
-      answer: "Yes, the 7 Pillars Guide is completely free. We believe in providing value upfront to help companies make informed decisions about AI implementation.",
+      answer: "Yes. The guide is completely free. No strings attached.",
     },
     {
       id: 'sales',
       question: "Am I being funneled into a sales pitch?",
-      answer: "No, this is not a sales pitch. Our working sessions are designed to provide genuine value and strategic guidance, regardless of whether you choose to work with us further.",
+      answer: "No. The guide provides standalone strategic value. Any consultation is optional and only for companies ready to explore next steps.",
     },
     {
       id: 'consultation',
       question: "Do I have to book a consultation?",
-      answer: "Booking a consultation is optional but recommended. It allows us to provide personalized advice tailored to your specific situation and bottlenecks.",
+      answer: "No. The consultation is optional. It is designed for leaders who want personalized AI insights after reading the guide.",
     },
     {
       id: 'implementation',
       question: "When does AI implementation happen?",
-      answer: "AI implementation timing depends on your organization's readiness and strategic planning. Our guide helps you assess this and create a roadmap that fits your timeline.",
+      answer: "Implementation only begins after you have clarity, a validated strategy, and a prioritized roadmap.",
     },
     {
       id: 'audience',
       question: "Who is this guide for?",
-      answer: "This guide is designed for companies with 25+ employees who have real operational complexity and are willing to invest in foundations first before jumping into quick AI tools.",
+      answer: "Executives managing teams of 25+ employees who want ROI clarity before investing in AI tools or pilots.",
     },
     {
       id: 'quick-tools',
       question: "What if I just want quick AI tools?",
-      answer: "While quick AI tools can provide immediate benefits, our guide focuses on building a solid foundation for long-term success. We help you understand when and how to integrate AI strategically.",
+      answer: "This guide is not for those seeking shortcuts or tool-focused solutions. It is designed for strategic, long-term AI adoption.",
     },
   ];
 

@@ -1,4 +1,5 @@
 import { Check, XCircle, X } from "lucide-react";
+import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
 
 export default function GuideFitSection() {
   const forYouItems = [
@@ -33,11 +34,15 @@ export default function GuideFitSection() {
             tone="positive"
             title="This Guide Is For You If.."
             items={forYouItems}
+            headerIcon={CheckGreen}
+            listIcon={Check}
           />
           <Card
             tone="neutral"
             title="Not For You If..."
             items={notForYouItems}
+            headerIcon={X}
+            listIcon={X}
           />
         </div>
       </div>
@@ -45,7 +50,7 @@ export default function GuideFitSection() {
   );
 }
 
-function Card({ tone, title, items }) {
+function Card({ tone, title, items, headerIcon, listIcon }) {
   const isPositive = tone === "positive";
 
   const topBorder =
@@ -54,7 +59,11 @@ function Card({ tone, title, items }) {
   const iconColor = isPositive ? "text-[#059669]" : "text-[#94a3b8]";
   const titleColor = isPositive ? "text-[#2b2b76]" : "text-[#64748b]";
 
-  const Icon = isPositive ? Check : X;
+  const HeaderIcon = headerIcon || (isPositive ? Check : X);
+  const ListIcon = listIcon || (isPositive ? Check : X);
+
+  // Check if headerIcon is an SVG image (string path) or React component
+  const isHeaderIconImage = typeof headerIcon === 'string' || (headerIcon && headerIcon.src);
 
   return (
     <div
@@ -64,7 +73,11 @@ function Card({ tone, title, items }) {
         <div
           className={`flex h-10 w-10 items-center justify-center rounded-[8px] ${badgeBg}`}
         >
-          <Icon className={`h-5 w-5 ${iconColor}`} aria-hidden />
+          {isHeaderIconImage ? (
+            <img src={headerIcon} alt="" className={`h-5 w-5 ${iconColor}`} aria-hidden />
+          ) : (
+            <HeaderIcon className={`h-5 w-5 ${iconColor}`} aria-hidden />
+          )}
         </div>
         <h3
           className={`text-[24px] font-[800] leading-[28px] ${titleColor}`}
@@ -81,7 +94,7 @@ function Card({ tone, title, items }) {
                 isPositive ? "bg-[rgba(5,150,105,0.1)]" : "bg-[#f1f5f9]"
               }`}
             >
-              <Icon className={`h-3.5 w-3.5 ${iconColor}`} aria-hidden />
+              <ListIcon className={`h-3.5 w-3.5 ${iconColor}`} aria-hidden />
             </span>
             <p className="text-[16px] font-[700] leading-[24px] text-[#334155]">
               {item}

@@ -1,4 +1,5 @@
 import { CheckCircle2, AlertTriangle, ArrowDown, Check } from "lucide-react";
+import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
 
 export default function StopGuessingSection() {
   const bullets = [
@@ -72,7 +73,7 @@ export default function StopGuessingSection() {
                 {/* After card */}
                 <div className="rounded-xl flex flex-row gap-4 border border-[rgba(34,197,94,0.4)] bg-[rgba(16,185,129,0.25)] px-4 py-4">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-[rgba(16,185,129,0.2)]">
-                      <CheckCircle2 className="h-5 w-5 text-white" aria-hidden />
+                      <img src={CheckGreen} alt="CheckGreen" className="h-5 w-5 text-white" aria-hidden />
                     </span>
                   <div className="mb-1 flex flex-col gap-2">
                    

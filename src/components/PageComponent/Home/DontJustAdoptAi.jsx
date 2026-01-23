@@ -15,7 +15,15 @@ function DontJustAdoptAi() {
           The smart companies start with understanding.
         </p>
 
-        <button className="btn_primary mt-2">
+        <button 
+          onClick={() => {
+            const formElement = document.querySelector('form');
+            if (formElement) {
+              formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+          className="btn_primary mt-2"
+        >
           Get Your Free Report
           <span className="inline-flex items-center justify-center">
             <ArrowRight className="h-[16px] w-[16px]" aria-hidden />
