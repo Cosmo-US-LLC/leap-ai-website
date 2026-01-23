@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Building2, Mail, Phone, ShieldCheck, Lock } from "lucide-react";
+import { submitForm } from '../../../lib/api.js';
 import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
 import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
 import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
@@ -68,28 +69,35 @@ export default function FreeReportHero() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Console log the form data
-      console.log('Form submitted with data:', {
-        name: formData.name.trim(),
-        companyName: formData.companyName.trim(),
-        email: formData.email.trim(),
-        phone: `${formData.countryCode} ${formData.phone.trim()}`,
-        fullPhone: formData.phone.trim(),
-        countryCode: formData.countryCode,
-      });
+      try {
+        // Prepare form data
+        const formPayload = {
+          name: formData.name.trim(),
+          companyName: formData.companyName.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          countryCode: formData.countryCode,
+          fullPhone: formData.phone.trim(),
+        };
 
-      // Simulate API call (you can replace this with actual API call)
-      setTimeout(() => {
-        setIsSubmitting(false);
+        // Submit to server
+        const response = await submitForm(formPayload);
+        
+        console.log('Form submitted successfully:', response);
+        
         // Navigate to success page
         navigate('/your-free-report');
-      }, 1000);
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert(error.message || 'Failed to submit form. Please try again later.');
+        setIsSubmitting(false);
+      }
     }
   };
   return (
