@@ -1,4 +1,4 @@
-import { BookOpen, MessagesSquare, ClipboardList, Rocket, LineChart } from "lucide-react";
+import { BookOpen, MessageSquare, ClipboardCheck, Rocket, LineChart } from "lucide-react";
 
 const steps = [
   {
@@ -11,13 +11,13 @@ const steps = [
     id: 2,
     title: "Consultation",
     subtitle: "Strategic Alignment Call",
-    Icon: MessagesSquare,
+    Icon: MessageSquare,
   },
   {
     id: 3,
     title: "Assessment",
     subtitle: "Identify Opportunities",
-    Icon: ClipboardList,
+    Icon: ClipboardCheck,
   },
   {
     id: 4,

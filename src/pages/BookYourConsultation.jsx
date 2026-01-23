@@ -24,7 +24,7 @@ export function BookYourConsultation() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-8 text-center text-[28px] font-[800] leading-[36px] text-[#2b2b76] md:mb-8 md:text-[36px] md:leading-[40px]">
+          <h1 className="mb-8 text-center text-[30px] font-[800] leading-[36px] text-[#2b2b76] md:mb-8 md:text-[36px] md:leading-[40px]">
             Want clarity on <br className="md:hidden"/>  how this {""}
             <br className="max-md:hidden"/>
             applies to <br className="md:hidden"/> your business?
