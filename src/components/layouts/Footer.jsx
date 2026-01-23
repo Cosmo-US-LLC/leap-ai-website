@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -9,12 +10,18 @@ export function Footer() {
           © {year} Leap AI. All rights reserved.
         </div>
         <div className="flex flex-1 items-center justify-end gap-4 text-[14px] font-[700] leading-[20px] text-[#64748b]">
-          <a className="hover:text-foreground" href="#privacy">
+          {/* <a className="hover:text-foreground" href="#privacy">
             Privacy Policy
-          </a>
-          <a className="hover:text-foreground" href="#terms">
+          </a> */}
+          <Link to="/privacy-policy" className="hover:text-foreground">
+            Privacy Policy
+          </Link>
+          <Link to="/terms-of-services" className="hover:text-foreground">
             Terms of Service
-          </a>
+          </Link>
+          {/* <a className="hover:text-foreground" href="#terms">
+            Terms of Service
+          </a> */}
         </div>
       </div>
     </footer>
