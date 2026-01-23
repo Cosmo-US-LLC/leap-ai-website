@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Building2, Mail, Phone, ShieldCheck, Lock } from "lucide-react";
+import { User, Building2, Mail, Phone, ArrowRight, Lock } from "lucide-react";
 import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
 import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
 import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
@@ -98,12 +98,12 @@ export default function FreeReportHero() {
 <div className="absolute inset-0 opacity-50" style={{ 
         backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.0625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 
       }} />
-
+<div className='relative max-w-[1440px] mx-auto h-full w-full'>
       <img src={overlayBlue} alt="overlayBlue" className="absolute right-[0px] top-[-100px]" />
-      <img src={overlayGreen} alt="overlayGreen" className="absolute left-0 bottom-0 " />
+      <img src={overlayGreen} alt="overlayGreen" className="absolute left-0 bottom-[-100px]" />
       {/* <div className="pointer-events-none absolute rounded-full left-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_left,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
       {/* <div className="pointer-events-none absolute right-0 bottom-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_left,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
-
+      
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-start md:justify-between md:px-8">
         {/* Left copy */}
         <div className="max-w-xl space-y-8">
@@ -213,6 +213,7 @@ export default function FreeReportHero() {
                   className="btn_primary mt-2 flex w-full items-center justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>{isSubmitting ? 'Submitting...' : 'Get Your Free Report'}</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden />
                 </button>
 
                 <div className="flex items-center justify-center gap-2 pt-1 text-[14px] font-[600] leading-[16px] text-[#3e6db5]">
@@ -222,6 +223,7 @@ export default function FreeReportHero() {
               </form>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
