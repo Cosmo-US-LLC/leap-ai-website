@@ -5,6 +5,7 @@ import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg'
 import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
 import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
 import StarBlue from '../../../assets/images/home/Leap_hero/star_blue.svg';
+import { submitToGHL } from '../../../lib/ghlService';
 
 export default function FreeReportHero() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export default function FreeReportHero() {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -68,28 +70,20 @@ export default function FreeReportHero() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitError(null);
     
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Console log the form data
-      console.log('Form submitted with data:', {
-        name: formData.name.trim(),
-        companyName: formData.companyName.trim(),
-        email: formData.email.trim(),
-        phone: `${formData.countryCode} ${formData.phone.trim()}`,
-        fullPhone: formData.phone.trim(),
-        countryCode: formData.countryCode,
-      });
-
-      // Simulate API call (you can replace this with actual API call)
-      setTimeout(() => {
-        setIsSubmitting(false);
-        // Navigate to success page
+      try {
+        await submitToGHL(formData);
         navigate('/your-free-report');
-      }, 1000);
+      } catch (error) {
+        setSubmitError(error.message || 'Failed to submit. Please try again.');
+        setIsSubmitting(false);
+      }
     }
   };
   return (
@@ -206,6 +200,12 @@ export default function FreeReportHero() {
                     </div>
                   </div>
                 </div>
+
+                {submitError && (
+                  <div className="rounded-[8px] border border-red-300 bg-red-50 p-3">
+                    <p className="text-[14px] font-[600] text-red-700">{submitError}</p>
+                  </div>
+                )}
 
                 <button
                   type="submit"
