@@ -1,4 +1,4 @@
-import { CheckCircle2, AlertTriangle, ArrowRight, Check } from "lucide-react";
+import { CheckCircle2, AlertTriangle, ArrowDown, Check } from "lucide-react";
 
 export default function StopGuessingSection() {
   const bullets = [
@@ -65,7 +65,7 @@ export default function StopGuessingSection() {
                 {/* Arrow divider */}
                 <div className="mb-6 flex items-center justify-center">
                    
-                    <ArrowRight className="h-6 w-8 text-[#cbd5e1]" aria-hidden />
+                    <ArrowDown className="h-6 w-8 text-[#cbd5e1]" aria-hidden />
                    
                 </div>
 
