@@ -122,7 +122,24 @@ export default function VideoCallStrategySession() {
         </div>
 
         <div className="flex flex-col items-center gap-6">
-          <button className="btn_primary flex  items-center justify-center gap-3">
+          <button 
+            onClick={() => {
+              const heroSection = document.getElementById('hero-section');
+              if (heroSection) {
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const offset = headerHeight + 20; // Add 20px extra spacing
+                const elementPosition = heroSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+            className="btn_primary flex  items-center justify-center gap-3"
+          >
             <span>Apply for Your Free Consultation</span>
             <ArrowRight className="h-5 w-5" aria-hidden />
           </button>

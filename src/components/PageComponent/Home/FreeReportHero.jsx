@@ -87,7 +87,7 @@ export default function FreeReportHero() {
     }
   };
   return (
-    <section className="relative overflow-hidden bg-white pb-16 pt-16">
+    <section id="hero-section" className="relative overflow-hidden bg-white pb-16 pt-16">
 
 <div className="absolute inset-0 opacity-50" style={{ 
         backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.0625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 

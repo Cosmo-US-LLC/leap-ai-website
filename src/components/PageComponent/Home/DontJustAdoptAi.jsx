@@ -17,9 +17,18 @@ function DontJustAdoptAi() {
 
         <button 
           onClick={() => {
-            const formElement = document.querySelector('form');
-            if (formElement) {
-              formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const heroSection = document.getElementById('hero-section');
+            if (heroSection) {
+              const header = document.querySelector('header');
+              const headerHeight = header ? header.offsetHeight : 80;
+              const offset = headerHeight + 20; // Add 20px extra spacing
+              const elementPosition = heroSection.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
             }
           }}
           className="btn_primary mt-2"

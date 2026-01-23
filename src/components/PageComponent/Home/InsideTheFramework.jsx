@@ -56,7 +56,24 @@ export default function InsideTheFramework() {
         </div>
 
         <div className="flex justify-center">
-          <button className="btn_primary mt-4 flex items-center gap-2">
+          <button 
+            onClick={() => {
+              const heroSection = document.getElementById('hero-section');
+              if (heroSection) {
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const offset = headerHeight + 20; // Add 20px extra spacing
+                const elementPosition = heroSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+            className="btn_primary mt-4 flex items-center gap-2"
+          >
             Get Your Free Report
             <span className="inline-flex h-[20px] w-[20px] items-center justify-center">
               <ArrowRight className="h-4 w-4" aria-hidden />
