@@ -21,7 +21,7 @@ export function Home() {
       <ImplementationJourneySection />
       <CommonQuestions />
       <MeetTheAuthors />
-      <DeliverablesSection />
+      {/* <DeliverablesSection /> */}
       <VideoCallStrategySession />
       <DontJustAdoptAi />
     </>
