@@ -61,9 +61,9 @@ export function YourFreeReport() {
   return (
     <div className="relative min-h-screen bg-white">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 opacity-50" style={{ 
+      {/* <div className="absolute inset-0 opacity-50" style={{ 
         backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.1625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 
-      }} />
+      }} /> */}
       
       {/* Blur overlay - responsive size */}
       <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgba(62,109,181,0.2)] blur-[30px] md:h-[600px] md:w-[600px] md:blur-[50px]" />

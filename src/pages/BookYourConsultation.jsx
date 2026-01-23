@@ -12,9 +12,9 @@ export function BookYourConsultation() {
 
   return (
     <div className="relative min-h-screen bg-white">
-          <div className="absolute inset-0 opacity-50" style={{ 
+          {/* <div className="absolute inset-0 opacity-50" style={{ 
         backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.1625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 
-      }} />
+      }} /> */}
       {/* Main content */}
       <div className="relative mx-auto flex min-h-[calc(100vh-128px-67px)] w-full max-w-[1280px] flex-col items-center justify-center px-4 py-12 md:px-8">
         <div className="relative z-10 flex w-full max-w-[576px] flex-col items-center">
