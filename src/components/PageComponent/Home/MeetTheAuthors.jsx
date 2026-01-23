@@ -2,7 +2,7 @@ export default function MeetTheAuthors() {
   return (
     <section className="bg-[#f8fafc] border-t border-[#e2e8f0] py-16">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-4 md:px-8">
-        <h2 className="text-center text-[28px] font-[800] leading-[36px] text-[#2b2b76] md:text-[36px] md:leading-[40px]">
+        <h2 className="text-center text-[30px] font-[800] leading-[36px] text-[#2b2b76] md:text-[44px] md:leading-[40px]">
           Meet the Authors
         </h2>
 

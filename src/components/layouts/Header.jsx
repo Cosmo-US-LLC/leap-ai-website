@@ -40,7 +40,7 @@ export function Header() {
         </Link> */}
       </nav>
       <div className="hidden items-center gap-4 md:flex">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#64748b]">
+        <p className="text-[14px] font-semibold uppercase tracking-[0.18em] text-[#64748b]">
           Strategic Guide for Executives
         </p>
       </div>

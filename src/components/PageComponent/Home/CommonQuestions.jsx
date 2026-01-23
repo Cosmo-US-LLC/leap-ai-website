@@ -39,7 +39,7 @@ export default function CommonQuestions() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
-        <h2 className="text-center text-[32px] font-[800] leading-[40px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
+        <h2 className="text-center text-[30px] font-[800] leading-[40px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
           Common Questions
         </h2>
 

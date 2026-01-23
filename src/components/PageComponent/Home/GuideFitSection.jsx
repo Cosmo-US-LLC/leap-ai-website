@@ -67,7 +67,7 @@ function Card({ tone, title, items }) {
           <Icon className={`h-5 w-5 ${iconColor}`} aria-hidden />
         </div>
         <h3
-          className={`text-[20px] font-[800] leading-[28px] ${titleColor}`}
+          className={`text-[24px] font-[800] leading-[28px] ${titleColor}`}
         >
           {title}
         </h3>

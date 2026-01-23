@@ -216,7 +216,7 @@ export default function FreeReportHero() {
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </button>
 
-                <div className="flex items-center justify-center gap-2 pt-1 text-[14px] font-[600] leading-[16px] text-[#3e6db5]">
+                <div className="flex items-center justify-center gap-2 pt-1 md:text-[14px] text-[12px] font-[600] leading-[16px] text-[#3e6db5]">
                   <Lock className="h-3.5 w-3.5" aria-hidden />
                   <span>100% secure. No spam.</span>
                 </div>
@@ -232,7 +232,7 @@ export default function FreeReportHero() {
 
 function Label({ icon: Icon, text }) {
   return (
-    <div className="flex items-center gap-2 text-[14px] font-[700] leading-[16px] uppercase tracking-[0.1em] text-[#2b2b76]">
+    <div className="flex items-center gap-2 md:text-[14px] text-[12px] font-[700] leading-[16px] uppercase tracking-[0.1em] text-[#2b2b76]">
       <Icon className="h-4 w-4 text-[#3e6db5]" aria-hidden />
       <span>{text}</span>
     </div>
