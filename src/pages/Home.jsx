@@ -22,7 +22,7 @@ export function Home() {
       <CommonQuestions />
       <MeetTheAuthors />
       {/* <DeliverablesSection /> */}
-      <VideoCallStrategySession />
+      {/* <VideoCallStrategySession /> */}
       <DontJustAdoptAi />
     </>
   );

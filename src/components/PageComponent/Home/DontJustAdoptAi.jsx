@@ -31,11 +31,11 @@ function DontJustAdoptAi() {
               });
             }
           }}
-          className="btn_primary mt-2"
+          className="btn_primary mt-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
         >
           Get Your Free Report
           <span className="inline-flex items-center justify-center">
-            <ArrowRight className="h-[16px] w-[16px]" aria-hidden />
+            <ArrowRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </span>
         </button>
       </div>

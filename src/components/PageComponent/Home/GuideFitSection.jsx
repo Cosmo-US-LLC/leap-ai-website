@@ -20,10 +20,10 @@ export default function GuideFitSection() {
     <section className="bg-[#f8fafc] py-16">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-4 md:px-8">
         <div className="text-center">
-          <h2 className="text-[30px] font-[800] leading-[37px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
+          <h2 className="text-[30px] font-[800] leading-[37px] text-[#2b2b76] md:text-[44px] md:leading-[48px] transition-all duration-300">
             Is This Guide Right For You?
           </h2>
-          <p className="mt-3 text-[18px] font-[500] max-w-[600px] mx-auto leading-[24px] text-[#475569] md:text-[18px] md:leading-[28px]">
+          <p className="mt-3 text-[18px] font-[500] max-w-[600px] mx-auto leading-[24px] text-[#475569] md:text-[18px] md:leading-[28px] transition-colors duration-300">
             We are selective about who this guide is for. It is written for leaders who are ready to make
             AI a strategic advantage.
           </p>
@@ -67,20 +67,20 @@ function Card({ tone, title, items, headerIcon, listIcon }) {
 
   return (
     <div
-      className={`rounded-[32px] bg-white md:px-8 px-5 py-8 shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] ${topBorder}`}
+      className={`rounded-[32px] bg-white md:px-8 px-5 py-8 shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] ${topBorder} transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_25px_50px_-12px_rgba(226,232,240,0.6),0_10px_15px_-6px_rgba(226,232,240,0.6)]`}
     >
-      <div className="mb-6 flex items-center gap-3">
+      <div className="mb-6 flex items-center gap-3 group">
         <div
-          className={`flex h-10 w-10 items-center justify-center rounded-[8px] ${badgeBg}`}
+          className={`flex h-10 w-10 items-center justify-center rounded-[8px] ${badgeBg} transition-all duration-300 group-hover:scale-110`}
         >
           {isHeaderIconImage ? (
-            <img src={headerIcon} alt="" className={`h-5 w-5 ${iconColor}`} aria-hidden />
+            <img src={headerIcon} alt="" className={`h-5 w-5 ${iconColor} `} aria-hidden />
           ) : (
-            <HeaderIcon className={`h-5 w-5 ${iconColor}`} aria-hidden />
+            <HeaderIcon className={`h-5 w-5 ${iconColor} `} aria-hidden />
           )}
         </div>
         <h3
-          className={`text-[24px] font-[800] leading-[28px] ${titleColor}`}
+          className={`text-[24px] font-[800] leading-[28px] ${titleColor} transition-colors duration-300`}
         >
           {title}
         </h3>
@@ -88,15 +88,23 @@ function Card({ tone, title, items, headerIcon, listIcon }) {
 
       <ul className="space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex items-start md:gap-3 gap-2">
-            <span
-              className={`mt-[4px] inline-flex h-6 w-6 items-center justify-center rounded-full ${
-                isPositive ? "bg-[rgba(5,150,105,0.1)]" : "bg-[#f1f5f9]"
+          <li key={item} className="flex items-center md:gap-3 gap-2 ">
+           <div className="min-w-[25px] w-[100%] max-w-[25px] cursor-default group">
+             <span
+              className={`mt-[4px] inline-flex h-6 w-6 min-w-6 items-center justify-center rounded-full transition-all duration-300 ${
+                isPositive 
+                  ? "bg-[rgba(5,150,105,0.1)]  group-hover:bg-[#059669]" 
+                  : "bg-[#f1f5f9]  group-hover:bg-[#e2e8f0]"
               }`}
             >
-              <ListIcon className={`h-3.5 w-3.5 ${iconColor}`} aria-hidden />
+              <ListIcon className={`h-3.5 w-3.5 ${iconColor} transition-all duration-300 ${
+                isPositive 
+                  ? "group-hover:text-white" 
+                  : "group-hover:text-[#475569]"
+              }`} aria-hidden />
             </span>
-            <p className="text-[16px] font-[700] leading-[24px] text-[#334155]">
+           </div>
+            <p className="text-[16px] font-[700] leading-[24px] text-[#334155] transition-colors duration-300">
               {item}
             </p>
           </li>
