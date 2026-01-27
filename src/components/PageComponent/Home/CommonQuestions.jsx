@@ -39,7 +39,7 @@ export default function CommonQuestions() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
-        <h2 className="text-center text-[30px] font-[800] leading-[40px] text-[#2b2b76] md:text-[44px] md:leading-[48px]">
+        <h2 className="text-center text-[30px] font-[800] leading-[40px] text-[#2b2b76] md:text-[44px] md:leading-[48px] transition-all duration-300">
           Common Questions
         </h2>
 
@@ -49,21 +49,21 @@ export default function CommonQuestions() {
               <AccordionPrimitive.Item
                 key={item.id}
                 value={item.id}
-                className="rounded-[16px] border-0 bg-[#f8fafc] shadow-[0_1px_2px_rgba(0,0,0,0.10)] overflow-hidden"
+                className="rounded-[16px] border-0 bg-[#f8fafc] shadow-[0_1px_2px_rgba(0,0,0,0.10)] overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-white hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)] active:scale-[0.98] group"
               >
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      'flex flex-1 items-center justify-between hover:cursor-pointer px-6 py-[24px] text-left text-[18px] font-[700] leading-[28px] text-[#2b2b76] transition-all hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 [&[data-state=open]>svg]:rotate-90',
+                      'flex flex-1 items-center justify-between hover:cursor-pointer px-6 py-[24px] text-left text-[18px] font-[700] leading-[28px] text-[#2b2b76] transition-all duration-300 ease-in-out hover:text-[#3e6db5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group-hover:text-[#3e6db5] active:scale-[0.98]',
                     )}
                   >
                     {item.question}
-                    <ChevronRight className="h-5 w-5 shrink-0 text-[#2b2b76] transition-transform duration-200" />
+                    <ChevronRight className="h-5 w-5 shrink-0 text-[#2b2b76] transition-transform duration-300 ease-in-out group-hover:text-[#3e6db5] group-hover:scale-110 [&[data-state=open]]:rotate-90" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionPrimitive.Content
                   className={cn(
-                    'overflow-hidden text-[16px] font-[500] leading-[24px] text-[#475569] transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+                    'overflow-hidden text-[16px] font-[500] leading-[24px] text-[#475569] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
                   )}
                 >
                   <div className="px-6 pb-6 pt-2">{item.answer}</div>

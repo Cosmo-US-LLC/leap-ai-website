@@ -27,8 +27,11 @@ export default function FreeReportHero() {
   };
 
   const validatePhone = (phone) => {
-    const phoneRegex = /^[\d\s\-()]+$/;
-    return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 7;
+    // Only allow digits, no special characters or alphabets
+    // Phone number must be exactly 11, 12, or 13 digits
+    const phoneRegex = /^\d+$/;
+    const validLengths = [11, 12, 13];
+    return phoneRegex.test(phone) && validLengths.includes(phone.length);
   };
 
   const validateForm = () => {
@@ -55,7 +58,7 @@ export default function FreeReportHero() {
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number';
+      newErrors.phone = 'Please enter a valid phone number (11, 12, or 13 digits only, no special characters or letters)';
     }
 
     setErrors(newErrors);
@@ -63,6 +66,11 @@ export default function FreeReportHero() {
   };
 
   const handleChange = (field, value) => {
+    // For phone field, only allow digits
+    if (field === 'phone') {
+      value = value.replace(/\D/g, '');
+    }
+    
     setFormData((prev) => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
     if (errors[field]) {
@@ -101,8 +109,8 @@ export default function FreeReportHero() {
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-start md:justify-between md:px-8">
         {/* Left copy */}
         <div className="max-w-xl space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-4 py-[6px] justify-center text-[#3e6db5] shadow-sm">
-             <img src={StarBlue} alt="StarBlue" className="h-[14px] w-[14px]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-4 py-[6px] justify-center text-[#3e6db5] shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105 hover:bg-white/90">
+             <img src={StarBlue} alt="StarBlue" className="h-[14px] w-[14px] transition-transform duration-300 hover:rotate-12" />
             <span className="text-[12px] font-[700] leading-[16px] uppercase tracking-[0.6px] pt-[1px] text-[#2B2B76]">Free 7 Pillars Report</span>
           </div>
 
@@ -131,14 +139,14 @@ export default function FreeReportHero() {
 
         {/* Right form card */}
         <div className="w-full max-w-md">
-          <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_50px_-12px_rgba(15,23,42,0.35)]">
-            <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669]" />
+          <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_50px_-12px_rgba(15,23,42,0.35)] transition-all duration-300 ease-in-out hover:shadow-[0_35px_60px_-12px_rgba(15,23,42,0.45)] hover:-translate-y-1">
+            <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669] transition-all duration-300" />
             <div className="space-y-6 px-6 py-6 md:px-8 md:py-8">
-              <div className="space-y-1">
-                <h3 className="text-[24px] font-[800] leading-[28px] text-[#2b2b76]">
+              <div className="space-y-1 transition-all duration-300">
+                <h3 className="text-[24px] font-[800] leading-[28px] text-[#2b2b76] transition-colors duration-300">
                   Get the Report
                 </h3>
-                <p className="text-[14px] font-[600] leading-[16px] text-[#64748b]">
+                <p className="text-[14px] font-[600] leading-[16px] text-[#64748b] transition-colors duration-300">
                   Join 2,000+ executives leading the AI era.
                 </p>
               </div>
@@ -176,7 +184,7 @@ export default function FreeReportHero() {
                     <select
                       value={formData.countryCode}
                       onChange={(e) => handleChange('countryCode', e.target.value)}
-                      className="w-32 rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#1e293b] outline-none"
+                      className="w-32 rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#1e293b] outline-none transition-all duration-300 hover:border-[#cbd5e1] hover:bg-white focus:border-[#3e6db5] focus:ring-2 focus:ring-[#3e6db5] cursor-pointer"
                     >
                       <option>US/CA (+1)</option>
                       <option>UK (+44)</option>
@@ -188,10 +196,11 @@ export default function FreeReportHero() {
                         placeholder="555-0123"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none ${
+                        maxLength={13}
+                        className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none transition-all duration-300 ${
                           errors.phone
-                            ? 'border-red-300 bg-red-50'
-                            : 'border-[#e2e8f0] bg-[#f8fafc]'
+                            ? 'border-red-300 bg-red-50 focus:border-red-400 focus:ring-2 focus:ring-red-200'
+                            : 'border-[#e2e8f0] bg-[#f8fafc] hover:border-[#cbd5e1] hover:bg-white focus:border-[#3e6db5] focus:ring-2 focus:ring-[#3e6db5]'
                         }`}
                       />
                       {errors.phone && (
@@ -202,7 +211,7 @@ export default function FreeReportHero() {
                 </div>
 
                 {submitError && (
-                  <div className="rounded-[8px] border border-red-300 bg-red-50 p-3">
+                  <div className="rounded-[8px] border border-red-300 bg-red-50 p-3 transition-all duration-300 transform hover:scale-[1.02]">
                     <p className="text-[14px] font-[600] text-red-700">{submitError}</p>
                   </div>
                 )}
@@ -210,15 +219,15 @@ export default function FreeReportHero() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn_primary mt-2 flex w-full items-center justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn_primary mt-2 flex w-full items-center justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
                 >
                   <span>{isSubmitting ? 'Submitting...' : 'Get Your Free Report'}</span>
-                  <ArrowRight className="h-4 w-4" aria-hidden />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
                 </button>
 
-                <div className="flex items-center justify-center gap-2 pt-1 md:text-[14px] text-[12px] font-[600] leading-[16px] text-[#3e6db5]">
-                  <Lock className="h-3.5 w-3.5" aria-hidden />
-                  <span>100% secure. No spam.</span>
+                <div className="flex items-center justify-center gap-2 pt-1 md:text-[14px] text-[12px] font-[600] leading-[16px] text-[#3e6db5] transition-all duration-300 group">
+                  <Lock className="h-3.5 w-3.5 transition-transform duration-300 group-hover:scale-110" aria-hidden />
+                  <span className="transition-colors duration-300">100% secure. No spam.</span>
                 </div>
               </form>
             </div>
@@ -232,9 +241,9 @@ export default function FreeReportHero() {
 
 function Label({ icon: Icon, text }) {
   return (
-    <div className="flex items-center gap-2 md:text-[14px] text-[12px] font-[700] leading-[16px] uppercase tracking-[0.1em] text-[#2b2b76]">
-      <Icon className="h-4 w-4 text-[#3e6db5]" aria-hidden />
-      <span>{text}</span>
+    <div className="flex items-center gap-2 md:text-[14px] text-[12px] font-[700] leading-[16px] uppercase tracking-[0.1em] text-[#2b2b76] group">
+      <Icon className="h-4 w-4 text-[#3e6db5] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" aria-hidden />
+      <span className="transition-colors duration-300">{text}</span>
     </div>
   );
 }
@@ -248,13 +257,13 @@ function Field({ label, icon, placeholder, type = "text", value, onChange, error
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] leading-[20px] placeholder:text-[#94A3B8] outline-none ${
+        className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] leading-[20px] placeholder:text-[#94A3B8] outline-none transition-all duration-300 ${
           error
-            ? 'border-red-300 bg-red-50 focus-visible:ring-2 focus-visible:ring-red-200'
-            : 'border-[#e2e8f0] bg-[#f8fafc] focus-visible:ring-2 focus-visible:ring-[#3e6db5]'
+            ? 'border-red-300 bg-red-50 focus-visible:ring-2 focus-visible:ring-red-200 focus-visible:border-red-400'
+            : 'border-[#e2e8f0] bg-[#f8fafc] focus-visible:ring-2 focus-visible:ring-[#3e6db5] focus-visible:border-[#3e6db5] hover:border-[#cbd5e1] hover:bg-white'
         }`}
       />
-      {error && <p className="text-[12px] text-red-600">{error}</p>}
+      {error && <p className="text-[12px] text-red-600 animate-pulse">{error}</p>}
     </div>
   );
 }
@@ -262,10 +271,10 @@ function Field({ label, icon, placeholder, type = "text", value, onChange, error
 function Badge({ text }) {
   return (
     <div className="inline-flex items-center gap-2">
-      <span className="inline-flex relative h-5 w-5 items-center justify-center">
-        <img src={CheckGreen} alt="CheckGreen" className="h-full w-full" />
+      <span className="inline-flex relative  transition-all duration-300 hover:scale-105 cursor-default group h-5 w-5 items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+        <img src={CheckGreen} alt="CheckGreen" className="h-full w-full transition-transform duration-300 group-hover:scale-110" />
       </span>
-      <span className="text-[#64748b] text-[14px] md:text-[16px] font-[500] leading-[20px]">{text}</span>
+      <span className="text-[#64748b] text-[14px] md:text-[16px] font-[500] leading-[20px] transition-colors duration-300 group-hover:text-[#475569]">{text}</span>
     </div>
   );
 }

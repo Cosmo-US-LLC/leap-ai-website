@@ -48,7 +48,7 @@ export function YourFreeReport() {
       
       // Navigate to consultation page after 2 seconds
       setTimeout(() => {
-        navigate('/book-your-consultation');
+        navigate('/meet'); 
       }, 2000);
       
     } catch (error) {
