@@ -17,12 +17,12 @@ function DontJustAdoptAi() {
 
         <button 
           onClick={() => {
-            const heroSection = document.getElementById('hero-section');
-            if (heroSection) {
+            const getReportSection = document.getElementById('get-report');
+            if (getReportSection) {
               const header = document.querySelector('header');
               const headerHeight = header ? header.offsetHeight : 80;
               const offset = headerHeight + 20; // Add 20px extra spacing
-              const elementPosition = heroSection.getBoundingClientRect().top;
+              const elementPosition = getReportSection.getBoundingClientRect().top;
               const offsetPosition = elementPosition + window.pageYOffset - offset;
               
               window.scrollTo({

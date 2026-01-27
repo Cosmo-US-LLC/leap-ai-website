@@ -160,7 +160,7 @@ body {
   display: flex;
   padding: 21.6px 39.99px 21.6px 40px;
   justify-content: center;
-  align-items: flex-center;
+  align-items: center !important;
   gap: 11.673px;
   border-radius: 9999px;
   background: #059669;
@@ -181,4 +181,10 @@ body {
   background: #047857;
   box-shadow: 0 24px 30px -8px rgba(5, 150, 105, 0.4), 0 10px 12px -6px rgba(5, 150, 105, 0.35);
   transform: translateY(-1px);
+}
+.animate-accordion-down {
+  animation: accordion-down 500ms ease-in-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 500ms ease-in-out;
 }

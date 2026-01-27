@@ -22,16 +22,63 @@ export default function FreeReportHero() {
   const [submitError, setSubmitError] = useState(null);
 
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    // Basic email format validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      return false;
+    }
+    
+    // Check for multiple consecutive dots
+    if (email.includes('..')) {
+      return false;
+    }
+    
+    // Split email to check domain part
+    const parts = email.split('@');
+    if (parts.length !== 2) {
+      return false;
+    }
+    
+    const domain = parts[1];
+    // Check for invalid patterns like .com.com or multiple TLDs
+    const domainParts = domain.split('.');
+    if (domainParts.length < 2) {
+      return false;
+    }
+    
+    // Check if TLD is valid (should be the last part and only letters)
+    const tld = domainParts[domainParts.length - 1];
+    if (!/^[a-zA-Z]{2,}$/.test(tld)) {
+      return false;
+    }
+    
+    // Check for duplicate TLD patterns (e.g., .com.com)
+    if (domainParts.length > 2) {
+      const lastTwo = domainParts.slice(-2);
+      if (lastTwo[0] === lastTwo[1]) {
+        return false;
+      }
+    }
+    
+    // Check for multiple TLDs (e.g., .com.org, .net.com)
+    // TLDs are typically 2-4 letters, so if last two parts are both short and alphabetic, it's likely invalid
+    if (domainParts.length >= 3) {
+      const lastTwo = domainParts.slice(-2);
+      const tldPattern = /^[a-zA-Z]{2,4}$/;
+      // If both last parts look like TLDs (2-4 letters), it's invalid
+      if (tldPattern.test(lastTwo[0]) && tldPattern.test(lastTwo[1])) {
+        return false;
+      }
+    }
+    
+    return true;
   };
 
   const validatePhone = (phone) => {
     // Only allow digits, no special characters or alphabets
-    // Phone number must be exactly 11, 12, or 13 digits
+    // Phone number must be between 9 and 13 digits
     const phoneRegex = /^\d+$/;
-    const validLengths = [11, 12, 13];
-    return phoneRegex.test(phone) && validLengths.includes(phone.length);
+    return phoneRegex.test(phone) && phone.length >= 9 && phone.length <= 13;
   };
 
   const validateForm = () => {
@@ -58,7 +105,7 @@ export default function FreeReportHero() {
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number (11, 12, or 13 digits only, no special characters or letters)';
+      newErrors.phone = 'Please enter a valid phone number (9-13 digits, no special characters or letters)';
     }
 
     setErrors(newErrors);
@@ -109,8 +156,8 @@ export default function FreeReportHero() {
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-start md:justify-between md:px-8">
         {/* Left copy */}
         <div className="max-w-xl space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-4 py-[6px] justify-center text-[#3e6db5] shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105 hover:bg-white/90">
-             <img src={StarBlue} alt="StarBlue" className="h-[14px] w-[14px] transition-transform duration-300 hover:rotate-12" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white/70 px-4 py-[6px] justify-center text-[#3e6db5] shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105 hover:bg-white/90 group cursor-default">
+             <img src={StarBlue} alt="StarBlue" className="h-[14px] w-[14px] transition-transform duration-300 group-hover:rotate-12" />
             <span className="text-[12px] font-[700] leading-[16px] uppercase tracking-[0.6px] pt-[1px] text-[#2B2B76]">Free 7 Pillars Report</span>
           </div>
 
@@ -138,7 +185,7 @@ export default function FreeReportHero() {
         </div>
 
         {/* Right form card */}
-        <div className="w-full max-w-md">
+        <div id="get-report" className="w-full max-w-md">
           <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_50px_-12px_rgba(15,23,42,0.35)] transition-all duration-300 ease-in-out hover:shadow-[0_35px_60px_-12px_rgba(15,23,42,0.45)] hover:-translate-y-1">
             <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669] transition-all duration-300" />
             <div className="space-y-6 px-6 py-6 md:px-8 md:py-8">
@@ -196,18 +243,17 @@ export default function FreeReportHero() {
                         placeholder="555-0123"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        maxLength={13}
                         className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none transition-all duration-300 ${
                           errors.phone
                             ? 'border-red-300 bg-red-50 focus:border-red-400 focus:ring-2 focus:ring-red-200'
                             : 'border-[#e2e8f0] bg-[#f8fafc] hover:border-[#cbd5e1] hover:bg-white focus:border-[#3e6db5] focus:ring-2 focus:ring-[#3e6db5]'
                         }`}
                       />
+                    </div>
+                  </div>
                       {errors.phone && (
                         <p className="mt-1 text-[12px] text-red-600">{errors.phone}</p>
                       )}
-                    </div>
-                  </div>
                 </div>
 
                 {submitError && (
@@ -250,7 +296,7 @@ function Label({ icon: Icon, text }) {
 
 function Field({ label, icon, placeholder, type = "text", value, onChange, error }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 group">
       <Label icon={icon} text={label} />
       <input
         type={type}
@@ -270,8 +316,8 @@ function Field({ label, icon, placeholder, type = "text", value, onChange, error
 
 function Badge({ text }) {
   return (
-    <div className="inline-flex items-center gap-2">
-      <span className="inline-flex relative  transition-all duration-300 hover:scale-105 cursor-default group h-5 w-5 items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+    <div className="inline-flex items-center gap-2 group cursor-default">
+      <span className="inline-flex relative h-5 w-5 items-center justify-center transition-all duration-300 group-hover:scale-105 ">
         <img src={CheckGreen} alt="CheckGreen" className="h-full w-full transition-transform duration-300 group-hover:scale-110" />
       </span>
       <span className="text-[#64748b] text-[14px] md:text-[16px] font-[500] leading-[20px] transition-colors duration-300 group-hover:text-[#475569]">{text}</span>

@@ -88,16 +88,16 @@ function Card({ tone, title, items, headerIcon, listIcon }) {
 
       <ul className="space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex items-center md:gap-3 gap-2 ">
-           <div className="min-w-[25px] w-[100%] max-w-[25px] cursor-default group">
+          <li key={item} className="flex items-center md:gap-3 gap-2 cursor-default group">
+           <div className="min-w-[25px] w-[100%] max-w-[25px]">
              <span
-              className={`mt-[4px] inline-flex h-6 w-6 min-w-6 items-center justify-center rounded-full transition-all duration-300 ${
+              className={`mt-[4px] inline-flex h-6 w-6 min-w-6 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-105 ${
                 isPositive 
                   ? "bg-[rgba(5,150,105,0.1)]  group-hover:bg-[#059669]" 
                   : "bg-[#f1f5f9]  group-hover:bg-[#e2e8f0]"
               }`}
             >
-              <ListIcon className={`h-3.5 w-3.5 ${iconColor} transition-all duration-300 ${
+              <ListIcon className={`h-3.5 w-3.5 ${iconColor} transition-all duration-300 group-hover:scale-110 ${
                 isPositive 
                   ? "group-hover:text-white" 
                   : "group-hover:text-[#475569]"

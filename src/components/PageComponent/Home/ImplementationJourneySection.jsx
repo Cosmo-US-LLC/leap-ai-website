@@ -1,35 +1,39 @@
-import { BookOpen, MessageSquare, ClipboardCheck, Rocket, LineChart } from "lucide-react";
+import icon1 from "../../../assets/images/home/YourImplementation/icon (3).svg";
+import icon2 from "../../../assets/images/home/YourImplementation/icon (4).svg";
+import icon3 from "../../../assets/images/home/YourImplementation/icon (5).svg";
+import icon4 from "../../../assets/images/home/YourImplementation/icon (1).svg";
+import icon5 from "../../../assets/images/home/YourImplementation/icon (2).svg";
 
 const steps = [
   {
     id: 1,
     title: "Read the Guide",
     subtitle: "Understand the 7 Pillars",
-    Icon: BookOpen,
+    Icon: icon1,
   },
   {
     id: 2,
     title: "Consultation",
     subtitle: "Strategic Alignment Call",
-    Icon: MessageSquare,
+    Icon: icon2,
   },
   {
     id: 3,
     title: "Assessment",
     subtitle: "Identify Opportunities",
-    Icon: ClipboardCheck,
+    Icon: icon3,
   },
   {
     id: 4,
     title: "Implementation",
     subtitle: "Execute the Roadmap",
-    Icon: Rocket,
+    Icon: icon4,
   },
   {
     id: 5,
     title: "Improve",
     subtitle: "Monitor & Optimize",
-    Icon: LineChart,
+    Icon: icon5,
   },
 ];
 
@@ -64,8 +68,7 @@ export default function ImplementationJourneySection() {
                 justify-center rounded-full border-4 border-[#3e6db5] 
                 bg-[#2b2b76] shadow-[0_20px_25px_-5px_rgba(15,23,42,0.6)] transition-all duration-300 group-hover:scale-110 group-hover:border-[#059669] group-hover:bg-[#3e6db5]
                  group-hover:shadow-[0_25px_50px_-12px_rgba(15,23,42,0.8)]">
-                  <step.Icon className="h-8 w-8 text-white transition-transform duration-300
-                    " aria-hidden />
+                  <img src={step.Icon} alt="" />
                   <div className="absolute -right-2 -top-2 flex h-8
                    w-8 items-center justify-center rounded-full border-2 
                    border-[#2b2b76] bg-[#059669] text-[14px] font-[700]
