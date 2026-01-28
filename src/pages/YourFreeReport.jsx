@@ -35,28 +35,28 @@ export function YourFreeReport() {
       const isIOSSafari = isIOS && isSafari;
 
       if (isIOSSafari) {
-        // For iOS Safari, use original file path to trigger download
-        // Fetch the file again and create a download link with proper attributes
-        const link = document.createElement('a');
-        link.href = pdfFile;
-        link.download = fileName;
-        link.setAttribute('download', fileName);
-        link.target = '_self';
-        link.rel = 'noopener';
-        link.style.display = 'none';
-        link.setAttribute('type', 'application/pdf');
-        
-        document.body.appendChild(link);
-        
-        // Trigger click with a small delay
-        setTimeout(() => {
+        // For iOS Safari, convert blob to base64 data URL to force download
+        // Data URLs sometimes work better than blob URLs on iOS Safari
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const dataUrl = reader.result;
+          const link = document.createElement('a');
+          link.href = dataUrl;
+          link.download = fileName;
+          link.setAttribute('download', fileName);
+          link.target = '_self';
+          link.style.display = 'none';
+          
+          document.body.appendChild(link);
+          
+          // Trigger click immediately
           link.click();
           
           // Clean up
           setTimeout(() => {
             document.body.removeChild(link);
             window.URL.revokeObjectURL(blobUrl);
-          }, 300);
+          }, 500);
           
           setIsDownloading(false);
           setIsSuccessful(true);
@@ -65,7 +65,31 @@ export function YourFreeReport() {
           setTimeout(() => {
             navigate('/meet'); 
           }, 2000);
-        }, 50);
+        };
+        reader.onerror = () => {
+          // Fallback to blob URL if data URL conversion fails
+          const link = document.createElement('a');
+          link.href = blobUrl;
+          link.download = fileName;
+          link.target = '_self';
+          link.style.display = 'none';
+          
+          document.body.appendChild(link);
+          link.click();
+          
+          setTimeout(() => {
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+          }, 500);
+          
+          setIsDownloading(false);
+          setIsSuccessful(true);
+          
+          setTimeout(() => {
+            navigate('/meet'); 
+          }, 2000);
+        };
+        reader.readAsDataURL(blob);
       } else {
         // For other browsers, use standard blob download
         const link = document.createElement('a');
