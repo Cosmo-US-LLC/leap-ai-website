@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Building2, Mail, Phone, ArrowRight, Lock } from "lucide-react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
 import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
 import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
@@ -13,7 +15,6 @@ export default function FreeReportHero() {
     name: '',
     companyName: '',
     email: '',
-    countryCode: 'US/CA (+1)',
     phone: '',
   });
 
@@ -75,10 +76,20 @@ export default function FreeReportHero() {
   };
 
   const validatePhone = (phone) => {
-    // Only allow digits, no special characters or alphabets
-    // Phone number must be between 9 and 13 digits
-    const phoneRegex = /^\d+$/;
-    return phoneRegex.test(phone) && phone.length >= 9 && phone.length <= 13;
+    // Phone number should be in international format (e.g., +1234567890)
+    // Remove the + and country code, then check if remaining digits are between 9 and 13
+    if (!phone || !phone.startsWith('+')) {
+      return false;
+    }
+    // Remove + and get only digits
+    const digitsOnly = phone.replace(/\D/g, '');
+    // Check if total length (including country code) is reasonable
+    // Minimum: country code (1-3 digits) + 9 digits = 10-12 total
+    // Maximum: country code (1-3 digits) + 13 digits = 14-16 total
+    // But we want the actual phone number part (without country code) to be 9-13 digits
+    // So we'll check if the phone number has at least 10 digits total (1 country + 9 phone) 
+    // and at most 16 digits total (3 country + 13 phone)
+    return digitsOnly.length >= 10 && digitsOnly.length <= 16;
   };
 
   const validateForm = () => {
@@ -105,7 +116,7 @@ export default function FreeReportHero() {
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number (9-13 digits, no special characters or letters)';
+      newErrors.phone = 'Please enter a valid phone number';
     }
 
     setErrors(newErrors);
@@ -113,11 +124,6 @@ export default function FreeReportHero() {
   };
 
   const handleChange = (field, value) => {
-    // For phone field, only allow digits
-    if (field === 'phone') {
-      value = value.replace(/\D/g, '');
-    }
-    
     setFormData((prev) => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
     if (errors[field]) {
@@ -227,33 +233,16 @@ export default function FreeReportHero() {
 
                 <div className="space-y-2">
                   <Label icon={Phone} text="Phone Number" />
-                  <div className="flex gap-3">
-                    <select
-                      value={formData.countryCode}
-                      onChange={(e) => handleChange('countryCode', e.target.value)}
-                      className="w-32 rounded-[8px] border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2 text-[14px] font-[500] text-[#1e293b] outline-none transition-all duration-300 hover:border-[#cbd5e1] hover:bg-white focus:border-[#3e6db5] focus:ring-2 focus:ring-[#3e6db5] cursor-pointer"
-                    >
-                      <option>US/CA (+1)</option>
-                      <option>UK (+44)</option>
-                      <option>EU (+49)</option>
-                    </select>
-                    <div className="flex-1">
-                      <input
-                        type="tel"
-                        placeholder="555-0123"
-                        value={formData.phone}
-                        onChange={(e) => handleChange('phone', e.target.value)}
-                        className={`w-full rounded-[8px] border px-3 py-2 text-[14px] font-[500] text-[#0f172a] outline-none transition-all duration-300 ${
-                          errors.phone
-                            ? 'border-red-300 bg-red-50 focus:border-red-400 focus:ring-2 focus:ring-red-200'
-                            : 'border-[#e2e8f0] bg-[#f8fafc] hover:border-[#cbd5e1] hover:bg-white focus:border-[#3e6db5] focus:ring-2 focus:ring-[#3e6db5]'
-                        }`}
-                      />
-                    </div>
+                  <div className={`react-international-phone ${errors.phone ? 'phone-input-error' : ''}`}>
+                    <PhoneInput
+                      value={formData.phone}
+                      onChange={(phone) => handleChange('phone', phone)}
+                      defaultCountry="us"
+                    />
                   </div>
-                      {errors.phone && (
-                        <p className="mt-1 text-[12px] text-red-600">{errors.phone}</p>
-                      )}
+                  {errors.phone && (
+                    <p className="mt-1 text-[12px] text-red-600">{errors.phone}</p>
+                  )}
                 </div>
 
                 {submitError && (

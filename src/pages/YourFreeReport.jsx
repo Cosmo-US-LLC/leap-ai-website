@@ -15,12 +15,20 @@ export function YourFreeReport() {
     setIsDownloading(true);
 
     try {
-      // Detect iOS devices (iPhone, iPad, iPod)
-      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      // Detect iOS Safari only (not Chrome/Firefox/Edge on iOS)
+      const userAgent = navigator.userAgent;
+      const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+      const isSafari = /Safari/i.test(userAgent) && !/CriOS|FxiOS|EdgiOS/i.test(userAgent);
+      const isIOSSafari = isIOS && isSafari;
 
-      if (isIOS) {
+      if (isIOSSafari) {
         // For iOS Safari, open PDF in new tab (downloads are blocked)
-        window.open(pdfFile, '_blank');
+        const newTab = window.open(pdfFile, '_blank');
+        
+        // Keep focus on current window (best-effort; some browsers may ignore)
+        if (newTab) {
+          window.focus();
+        }
         
         // Show successful state
         setIsDownloading(false);
