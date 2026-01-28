@@ -35,42 +35,35 @@ export function YourFreeReport() {
       const isIOSSafari = isIOS && isSafari;
 
       if (isIOSSafari) {
-        // For iOS Safari, try blob download first (triggers native download interface)
-        // If that doesn't work, fall back to opening in new tab
-        try {
-          const link = document.createElement('a');
-          link.href = blobUrl;
-          link.download = fileName;
-          link.style.display = 'none';
-          
-          // Append to body, click, and remove
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          
-          // Small delay to check if download was triggered
+        // For iOS Safari, use hidden iframe to trigger download without opening new tab
+        // This should show the download interface while staying on current page
+        const iframe = document.createElement('iframe');
+        iframe.style.position = 'fixed';
+        iframe.style.top = '-9999px';
+        iframe.style.left = '-9999px';
+        iframe.style.width = '1px';
+        iframe.style.height = '1px';
+        iframe.style.border = 'none';
+        iframe.src = blobUrl;
+        
+        document.body.appendChild(iframe);
+        
+        // Clean up after download starts
+        setTimeout(() => {
+          // Don't remove iframe immediately - let download start
           setTimeout(() => {
+            document.body.removeChild(iframe);
             window.URL.revokeObjectURL(blobUrl);
-            setIsDownloading(false);
-            setIsSuccessful(true);
-            
-            // Navigate to consultation page after 2 seconds
-            setTimeout(() => {
-              navigate('/meet'); 
-            }, 2000);
-          }, 100);
-        } catch (error) {
-          // Fallback: if blob download fails, open in new tab
-          console.warn('Blob download failed, opening in new tab:', error);
-          window.open(blobUrl, '_blank');
-          window.URL.revokeObjectURL(blobUrl);
+          }, 2000);
+          
           setIsDownloading(false);
           setIsSuccessful(true);
           
+          // Navigate to consultation page after 2 seconds
           setTimeout(() => {
             navigate('/meet'); 
           }, 2000);
-        }
+        }, 500);
       } else {
         // For other browsers, use standard blob download
         const link = document.createElement('a');
