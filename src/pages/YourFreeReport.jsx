@@ -15,45 +15,64 @@ export function YourFreeReport() {
     setIsDownloading(true);
 
     try {
-      // Detect iOS Safari only (not Chrome/Firefox/Edge on iOS)
+      // Fetch the local PDF file
+      const response = await fetch(pdfFile);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch PDF file');
+      }
+
+      // Convert response to blob
+      const blob = await response.blob();
+      
+      // Create a temporary URL for the blob
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      // Detect iOS Safari
       const userAgent = navigator.userAgent;
       const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
       const isSafari = /Safari/i.test(userAgent) && !/CriOS|FxiOS|EdgiOS/i.test(userAgent);
       const isIOSSafari = isIOS && isSafari;
 
       if (isIOSSafari) {
-        // For iOS Safari, open PDF in new tab (downloads are blocked)
-        const newTab = window.open(pdfFile, '_blank');
-        
-        // Keep focus on current window (best-effort; some browsers may ignore)
-        if (newTab) {
-          window.focus();
+        // For iOS Safari, try blob download first (triggers native download interface)
+        // If that doesn't work, fall back to opening in new tab
+        try {
+          const link = document.createElement('a');
+          link.href = blobUrl;
+          link.download = fileName;
+          link.style.display = 'none';
+          
+          // Append to body, click, and remove
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          
+          // Small delay to check if download was triggered
+          setTimeout(() => {
+            window.URL.revokeObjectURL(blobUrl);
+            setIsDownloading(false);
+            setIsSuccessful(true);
+            
+            // Navigate to consultation page after 2 seconds
+            setTimeout(() => {
+              navigate('/meet'); 
+            }, 2000);
+          }, 100);
+        } catch (error) {
+          // Fallback: if blob download fails, open in new tab
+          console.warn('Blob download failed, opening in new tab:', error);
+          window.open(blobUrl, '_blank');
+          window.URL.revokeObjectURL(blobUrl);
+          setIsDownloading(false);
+          setIsSuccessful(true);
+          
+          setTimeout(() => {
+            navigate('/meet'); 
+          }, 2000);
         }
-        
-        // Show successful state
-        setIsDownloading(false);
-        setIsSuccessful(true);
-        
-        // Navigate to consultation page after 2 seconds
-        setTimeout(() => {
-          navigate('/meet'); 
-        }, 2000);
       } else {
-        // For other devices, use blob download approach
-        // Fetch the local PDF file
-        const response = await fetch(pdfFile);
-        
-        if (!response.ok) {
-          throw new Error('Failed to fetch PDF file');
-        }
-
-        // Convert response to blob
-        const blob = await response.blob();
-        
-        // Create a temporary URL for the blob
-        const blobUrl = window.URL.createObjectURL(blob);
-        
-        // Create a temporary anchor element and trigger download
+        // For other browsers, use standard blob download
         const link = document.createElement('a');
         link.href = blobUrl;
         link.download = fileName;
