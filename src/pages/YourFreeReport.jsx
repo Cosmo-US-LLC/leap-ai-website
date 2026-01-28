@@ -9,118 +9,175 @@ export function YourFreeReport() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [isSuccessful, setIsSuccessful] = useState(false);
 
-  const handleDownload = async () => {
-    const fileName = '7 Pillars Report.pdf';
+  // const handleDownload = async () => {
+  //   const fileName = '7 Pillars Report.pdf';
     
-    setIsDownloading(true);
+  //   setIsDownloading(true);
 
-    try {
-      // Fetch the local PDF file
-      const response = await fetch(pdfFile);
+  //   try {
+  //     // Fetch the local PDF file
+  //     const response = await fetch(pdfFile);
       
-      if (!response.ok) {
-        throw new Error('Failed to fetch PDF file');
-      }
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch PDF file');
+  //     }
 
-      // Convert response to blob
-      const blob = await response.blob();
+  //     // Convert response to blob
+  //     const blob = await response.blob();
       
-      // Create a temporary URL for the blob
-      const blobUrl = window.URL.createObjectURL(blob);
+  //     // Create a temporary URL for the blob
+  //     const blobUrl = window.URL.createObjectURL(blob);
       
-      // Detect iOS Safari
-      const userAgent = navigator.userAgent;
-      const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-      const isSafari = /Safari/i.test(userAgent) && !/CriOS|FxiOS|EdgiOS/i.test(userAgent);
-      const isIOSSafari = isIOS && isSafari;
+  //     // Detect iOS Safari
+  //     const userAgent = navigator.userAgent;
+  //     const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+  //     const isSafari = /Safari/i.test(userAgent) && !/CriOS|FxiOS|EdgiOS/i.test(userAgent);
+  //     const isIOSSafari = isIOS && isSafari;
 
-      if (isIOSSafari) {
-        // For iOS Safari, convert blob to base64 data URL to force download
-        // Data URLs sometimes work better than blob URLs on iOS Safari
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          const dataUrl = reader.result;
-          const link = document.createElement('a');
-          link.href = dataUrl;
-          link.download = fileName;
-          link.setAttribute('download', fileName);
-          link.target = '_self';
-          link.style.display = 'none';
+  //     if (isIOSSafari) {
+  //       // For iOS Safari, convert blob to base64 data URL to force download
+  //       // Data URLs sometimes work better than blob URLs on iOS Safari
+  //       const reader = new FileReader();
+  //       reader.onloadend = () => {
+  //         const dataUrl = reader.result;
+  //         const link = document.createElement('a');
+  //         link.href = dataUrl;
+  //         link.download = fileName;
+  //         link.setAttribute('download', fileName);
+  //         link.target = '_self';
+  //         link.style.display = 'none';
           
-          document.body.appendChild(link);
+  //         document.body.appendChild(link);
           
-          // Trigger click immediately
-          link.click();
+  //         // Trigger click immediately
+  //         link.click();
           
-          // Clean up
-          setTimeout(() => {
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
-          }, 500);
+  //         // Clean up
+  //         setTimeout(() => {
+  //           document.body.removeChild(link);
+  //           window.URL.revokeObjectURL(blobUrl);
+  //         }, 500);
           
-          setIsDownloading(false);
-          setIsSuccessful(true);
+  //         setIsDownloading(false);
+  //         setIsSuccessful(true);
           
-          // Navigate to consultation page after 2 seconds
-          setTimeout(() => {
-            navigate('/meet'); 
-          }, 2000);
-        };
-        reader.onerror = () => {
-          // Fallback to blob URL if data URL conversion fails
-          const link = document.createElement('a');
-          link.href = blobUrl;
-          link.download = fileName;
-          link.target = '_self';
-          link.style.display = 'none';
+  //         // Navigate to consultation page after 2 seconds
+  //         setTimeout(() => {
+  //           navigate('/meet'); 
+  //         }, 2000);
+  //       };
+  //       reader.onerror = () => {
+  //         // Fallback to blob URL if data URL conversion fails
+  //         const link = document.createElement('a');
+  //         link.href = blobUrl;
+  //         link.download = fileName;
+  //         link.target = '_self';
+  //         link.style.display = 'none';
           
-          document.body.appendChild(link);
-          link.click();
+  //         document.body.appendChild(link);
+  //         link.click();
           
-          setTimeout(() => {
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
-          }, 500);
+  //         setTimeout(() => {
+  //           document.body.removeChild(link);
+  //           window.URL.revokeObjectURL(blobUrl);
+  //         }, 500);
           
-          setIsDownloading(false);
-          setIsSuccessful(true);
+  //         setIsDownloading(false);
+  //         setIsSuccessful(true);
           
-          setTimeout(() => {
-            navigate('/meet'); 
-          }, 2000);
-        };
-        reader.readAsDataURL(blob);
-      } else {
-        // For other browsers, use standard blob download
-        const link = document.createElement('a');
-        link.href = blobUrl;
-        link.download = fileName;
-        link.style.display = 'none';
+  //         setTimeout(() => {
+  //           navigate('/meet'); 
+  //         }, 2000);
+  //       };
+  //       reader.readAsDataURL(blob);
+  //     } else {
+  //       // For other browsers, use standard blob download
+  //       const link = document.createElement('a');
+  //       link.href = blobUrl;
+  //       link.download = fileName;
+  //       link.style.display = 'none';
         
-        // Append to body, click, and remove
+  //       // Append to body, click, and remove
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
+        
+  //       // Clean up blob URL
+  //       window.URL.revokeObjectURL(blobUrl);
+        
+  //       // Show successful state
+  //       setIsDownloading(false);
+  //       setIsSuccessful(true);
+        
+  //       // Navigate to consultation page after 2 seconds
+  //       setTimeout(() => {
+  //         navigate('/meet'); 
+  //       }, 2000);
+  //     }
+      
+  //   } catch (error) {
+  //     console.error('Error downloading PDF:', error);
+  //     alert('Failed to download the report. Please try again later.');
+  //     setIsDownloading(false);
+  //   }
+  // };
+
+  const handleDownload = async () => {
+    const fileName = "7 Pillars Report.pdf";
+    const pdfUrl = pdfFile; // normal PDF
+    const zipUrl = "/7-pillars-report.zip"; // iOS-only ZIP
+  
+    setIsDownloading(true);
+  
+    const isIOSSafari =
+      /iP(ad|hone|od)/.test(navigator.platform) &&
+      /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  
+    try {
+      // ✅ iOS SAFARI → ZIP (ONLY WAY TO FORCE DOWNLOAD)
+      if (isIOSSafari) {
+        const link = document.createElement("a");
+        link.href = zipUrl;
+        link.download = "7-pillars-report.zip";
+        link.style.display = "none";
+  
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
-        // Clean up blob URL
-        window.URL.revokeObjectURL(blobUrl);
-        
-        // Show successful state
-        setIsDownloading(false);
+  
         setIsSuccessful(true);
-        
-        // Navigate to consultation page after 2 seconds
-        setTimeout(() => {
-          navigate('/meet'); 
-        }, 2000);
+        setTimeout(() => navigate("/meet"), 2000);
+        return;
       }
-      
-    } catch (error) {
-      console.error('Error downloading PDF:', error);
-      alert('Failed to download the report. Please try again later.');
+  
+      // ✅ ALL OTHER BROWSERS → BLOB FORCE DOWNLOAD
+      const response = await fetch(pdfUrl);
+      if (!response.ok) throw new Error("PDF fetch failed");
+  
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+  
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = fileName;
+      link.style.display = "none";
+  
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  
+      URL.revokeObjectURL(blobUrl);
+  
+      setIsSuccessful(true);
+      setTimeout(() => navigate("/meet"), 2000);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to download the report. Please try again.");
+    } finally {
       setIsDownloading(false);
     }
   };
+  
 
   return (
     <div className="relative min-h-screen bg-white">
