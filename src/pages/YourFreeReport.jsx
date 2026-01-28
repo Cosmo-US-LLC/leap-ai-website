@@ -35,26 +35,28 @@ export function YourFreeReport() {
       const isIOSSafari = isIOS && isSafari;
 
       if (isIOSSafari) {
-        // For iOS Safari, use hidden iframe to trigger download without opening new tab
-        // This should show the download interface while staying on current page
-        const iframe = document.createElement('iframe');
-        iframe.style.position = 'fixed';
-        iframe.style.top = '-9999px';
-        iframe.style.left = '-9999px';
-        iframe.style.width = '1px';
-        iframe.style.height = '1px';
-        iframe.style.border = 'none';
-        iframe.src = blobUrl;
+        // For iOS Safari, use original file path to trigger download
+        // Fetch the file again and create a download link with proper attributes
+        const link = document.createElement('a');
+        link.href = pdfFile;
+        link.download = fileName;
+        link.setAttribute('download', fileName);
+        link.target = '_self';
+        link.rel = 'noopener';
+        link.style.display = 'none';
+        link.setAttribute('type', 'application/pdf');
         
-        document.body.appendChild(iframe);
+        document.body.appendChild(link);
         
-        // Clean up after download starts
+        // Trigger click with a small delay
         setTimeout(() => {
-          // Don't remove iframe immediately - let download start
+          link.click();
+          
+          // Clean up
           setTimeout(() => {
-            document.body.removeChild(iframe);
+            document.body.removeChild(link);
             window.URL.revokeObjectURL(blobUrl);
-          }, 2000);
+          }, 300);
           
           setIsDownloading(false);
           setIsSuccessful(true);
@@ -63,7 +65,7 @@ export function YourFreeReport() {
           setTimeout(() => {
             navigate('/meet'); 
           }, 2000);
-        }, 500);
+        }, 50);
       } else {
         // For other browsers, use standard blob download
         const link = document.createElement('a');
