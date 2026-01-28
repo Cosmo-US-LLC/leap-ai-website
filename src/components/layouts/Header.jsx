@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '../ui/button.jsx';
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet.jsx';
+import leapLogo from '../../assets/images/home/Leap_hero/leap_logo.svg';
 
 export function Header() {
   const location = useLocation();
@@ -9,12 +10,17 @@ export function Header() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
-      <Link to="/" className="text-lg font-semibold tracking-tight hover:opacity-80">
-        Leap AI
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-[#f1f5f9]">
+      <div className="flex w-full max-w-[1280px] mx-auto px-4 md:px-8 py-6 items-center justify-between gap-4">
+      <Link to="/" className="flex items-center gap-3 hover:opacity-90">
+        <img
+          src={leapLogo}
+          alt="Leap AI"
+          className="h-8 w-[127px]"
+        />
       </Link>
-      <nav className="hidden items-center gap-3 text-sm font-medium text-muted-foreground md:flex">
-        <Link
+      <nav className="hidden items-center gap-4 text-sm font-medium text-muted-foreground md:flex">
+        {/* <Link
           to="/"
           className={`hover:text-foreground ${isActive('/') ? 'text-foreground' : ''}`}
         >
@@ -31,19 +37,18 @@ export function Header() {
           className={`hover:text-foreground ${isActive('/contact') ? 'text-foreground' : ''}`}
         >
           Contact
-        </Link>
+        </Link> */}
       </nav>
-      <div className="hidden items-center gap-2 md:flex">
-        <Button variant="ghost" size="sm">
-          Sign in
-        </Button>
-        <Button size="sm">Get started</Button>
+      <div className="hidden items-center gap-4 md:flex">
+        <p className="text-[14px] font-semibold uppercase tracking-[0.18em] text-[#64748b]">
+          Strategic Guide for Executives
+        </p>
       </div>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+          {/* <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
             <Menu className="h-5 w-5" aria-hidden />
-          </Button>
+          </Button> */}
         </SheetTrigger>
         <SheetContent side="right" className="flex flex-col gap-6">
           <SheetHeader className="text-left">
@@ -79,6 +84,7 @@ export function Header() {
           </div>
         </SheetContent>
       </Sheet>
+      </div>
     </header>
   );
 }
