@@ -171,7 +171,7 @@ export default function FreeReportHero() {
             <h1 className="text-[36px] font-[800] leading-[39px] text-[#2b2b76] md:text-[60px] md:leading-[52px]">
               <span className="block">Make the Right AI</span>
               <span className="block">Decisions</span>
-              <span className="block bg-gradient-to-r from-[#3E6DB5] to-[#2B2B76] bg-clip-text text-transparent">Before You Spend.</span>
+              <span className="block bg-gradient-to-r from-[#3E6DB5] to-[#2B2B76] bg-clip-text md:leading-[63px] text-transparent">Before You Spend.</span>
             </h1>
             <p className="text-[18px] font-[700] uppercase tracking-[0.12em] text-[#3e6db5] md:text-[20px] md:leading-[25px]">
               The free 7 pillars of AI implementation written for executive
@@ -262,7 +262,7 @@ export default function FreeReportHero() {
 
                 <div className="flex items-center justify-center gap-2 pt-1 md:text-[14px] text-[12px] font-[600] leading-[16px] text-[#3e6db5] transition-all duration-300 group">
                   <Lock className="h-3.5 w-3.5 transition-transform duration-300 group-hover:scale-110" aria-hidden />
-                  <span className="transition-colors duration-300">100% secure. No spam.</span>
+                  <span className="transition-colors duration-300">100% Secure. No spam.</span>
                 </div>
               </form>
             </div>

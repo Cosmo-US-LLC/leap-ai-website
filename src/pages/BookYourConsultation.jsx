@@ -41,10 +41,10 @@ export function BookYourConsultation() {
           {/* Book consultation button */}
           <button
             onClick={handleBookConsultation}
-            className="mb-6 flex h-[60px] hover:cursor-pointer w-full max-w-[365px] items-center justify-center gap-3 rounded-[9999px] bg-[#3e6db5] px-6 text-[18px] font-[800] leading-[28px] text-white shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] transition-colors hover:bg-[#2d5a9d] md:mb-8"
+            className="mb-6 flex h-[60px] btn_primary hover:cursor-pointer w-full max-w-[365px] items-center justify-center gap-3 rounded-[9999px] bg-[#3e6db5] px-6 !text-[16px] md:text-[18px] font-[800] leading-[28px] text-white shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] transition-colors hover:bg-[#2d5a9d] md:mb-8"
           >
             <Calendar className="h-5 w-5" aria-hidden />
-            <span>Book your free consultation</span>
+            Book your free consultation
           </button>
 
           {/* Back to Leap AI link */}
