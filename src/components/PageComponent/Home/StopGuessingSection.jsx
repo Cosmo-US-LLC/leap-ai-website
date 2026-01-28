@@ -50,8 +50,8 @@ export default function StopGuessingSection() {
               <div className="h-[334px] w-full max-w-[480px] rotate-3 rounded-2xl border border-[rgba(255,255,255,0.1)] bg-[rgba(15,23,42,0.3)] md:p-6 p-4 backdrop-blur-md transition-all duration-300 hover:rotate-0 hover:scale-[1.02] hover:border-[rgba(255,255,255,0.2)] hover:shadow-lg">
                 {/* Before card */}
                 <div className="mb-6 flex flex-row gap-2 md:gap-4 rounded-xl border border-[rgba(255,255,255,0.05)] bg-[rgba(15,23,42,0.3)] px-4 py-6 transition-all duration-300 hover:border-[rgba(255,255,255,0.1)] ">
-                  <span className="inline-flex md:h-10 w-[20px] md:w-10 h-6 md:items-center max-md:mt-[4px] items-start justify-center rounded-md md:bg-[rgba(250,204,21,0.15)] mb-[6px] ">
-                      <AlertTriangle className="md:h-5 md:w-5 h-3 w-3 text-[#facc15] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" aria-hidden />
+                  <span className="inline-flex md:h-10 w-[38px] md:w-10 h-6 md:items-center max-md:mt-[4px] items-start justify-center rounded-md md:bg-[rgba(250,204,21,0.15)] mb-[6px] ">
+                      <AlertTriangle className="md:h-5 md:w-5 h-6 w-6 text-[#facc15] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" aria-hidden />
                   </span>
                   <div className="mb-1 flex flex-col gap-2">
                    
@@ -73,9 +73,9 @@ export default function StopGuessingSection() {
                 </div>
 
                 {/* After card */}
-                <div className="rounded-xl flex flex-row gap-4 border border-[rgba(34,197,94,0.4)] bg-[rgba(16,185,129,0.25)] px-4 py-4 ">
-                <span className="inline-flex h-10 w-[19px] md:w-10 md:items-center items-start justify-center rounded-md md:bg-[rgba(16,185,129,0.2)] ">
-                      <img src={CheckGreen} alt="CheckGreen" className="h-5 w-5 text-white " aria-hidden />
+                <div className="rounded-xl flex flex-row md:gap-4 gap-2 border border-[rgba(34,197,94,0.4)] bg-[rgba(16,185,129,0.25)] px-4 py-4 ">
+                <span className="inline-flex h-10 w-[42px] md:w-10 md:items-center items-start justify-center rounded-md md:bg-[rgba(16,185,129,0.2)] ">
+                      <img src={CheckGreen} alt="CheckGreen" className="md:h-5 md:w-5 h-7 w-7 text-white " aria-hidden />
                     </span>
                   <div className="mb-1 flex flex-col gap-2">
                    

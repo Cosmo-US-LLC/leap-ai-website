@@ -49,21 +49,21 @@ export default function CommonQuestions() {
               <AccordionPrimitive.Item
                 key={item.id}
                 value={item.id}
-                className="rounded-[16px] border-0 bg-[#f8fafc] shadow-[0_1px_2px_rgba(0,0,0,0.10)] overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-white hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)] active:scale-[0.98] group"
+                className="rounded-[16px] border-1 border-transparent hover:border-[0.5px] hover:border-[#3e6db5] data-[state=open]:border-[0.5px] data-[state=open]:border-[#3e6db5] bg-[#f8fafc] shadow-[0_1px_2px_rgba(0,0,0,0.10)] overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.01]  group"
               >
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      'flex flex-1 items-center justify-between hover:cursor-pointer px-6 py-[24px] text-left text-[18px] font-[700] leading-[28px] text-[#2b2b76] transition-all duration-300 ease-in-out hover:text-[#3e6db5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group-hover:text-[#3e6db5] active:scale-[0.98]',
+                      'flex flex-1 items-center justify-between hover:cursor-pointer px-6 py-[24px] text-left text-[18px] font-[700] leading-[28px] text-[#2b2b76] transition-all duration-300 ease-in-out hover:text-[#3e6db5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group-hover:text-[#3e6db5] active:scale-[0.98] data-[state=open]:text-[#3e6db5] [&[data-state=open]_svg]:rotate-90 [&[data-state=open]_svg]:text-[#3e6db5]',
                     )}
                   >
                     {item.question}
-                    <ChevronRight className="h-5 w-5 shrink-0 text-[#2b2b76] transition-transform duration-300 ease-in-out group-hover:text-[#3e6db5] group-hover:scale-110 [&[data-state=open]]:rotate-90" />
+                    <ChevronRight className="h-5 w-5 shrink-0 text-[#2b2b76] transition-all duration-300 ease-in-out group-hover:text-[#3e6db5] group-hover:scale-110" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionPrimitive.Content
                   className={cn(
-                    'overflow-hidden text-[16px] font-[500] leading-[24px] text-[#475569] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+                    'overflow-hidden text-[16px] font-[500] leading-[24px] text-[#475569] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down transition-all duration-300 ease-in-out',
                   )}
                 >
                   <div className="px-6 pb-6 pt-2">{item.answer}</div>

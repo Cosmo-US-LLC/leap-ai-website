@@ -15,41 +15,59 @@ export function YourFreeReport() {
     setIsDownloading(true);
 
     try {
-      // Fetch the local PDF file
-      const response = await fetch(pdfFile);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch PDF file');
-      }
+      // Detect iOS devices (iPhone, iPad, iPod)
+      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-      // Convert response to blob
-      const blob = await response.blob();
-      
-      // Create a temporary URL for the blob
-      const blobUrl = window.URL.createObjectURL(blob);
-      
-      // Create a temporary anchor element and trigger download
-      const link = document.createElement('a');
-      link.href = blobUrl;
-      link.download = fileName;
-      link.style.display = 'none';
-      
-      // Append to body, click, and remove
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // Clean up blob URL
-      window.URL.revokeObjectURL(blobUrl);
-      
-      // Show successful state
-      setIsDownloading(false);
-      setIsSuccessful(true);
-      
-      // Navigate to consultation page after 2 seconds
-      setTimeout(() => {
-        navigate('/meet'); 
-      }, 2000);
+      if (isIOS) {
+        // For iOS Safari, open PDF in new tab (downloads are blocked)
+        window.open(pdfFile, '_blank');
+        
+        // Show successful state
+        setIsDownloading(false);
+        setIsSuccessful(true);
+        
+        // Navigate to consultation page after 2 seconds
+        setTimeout(() => {
+          navigate('/meet'); 
+        }, 2000);
+      } else {
+        // For other devices, use blob download approach
+        // Fetch the local PDF file
+        const response = await fetch(pdfFile);
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch PDF file');
+        }
+
+        // Convert response to blob
+        const blob = await response.blob();
+        
+        // Create a temporary URL for the blob
+        const blobUrl = window.URL.createObjectURL(blob);
+        
+        // Create a temporary anchor element and trigger download
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = fileName;
+        link.style.display = 'none';
+        
+        // Append to body, click, and remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Clean up blob URL
+        window.URL.revokeObjectURL(blobUrl);
+        
+        // Show successful state
+        setIsDownloading(false);
+        setIsSuccessful(true);
+        
+        // Navigate to consultation page after 2 seconds
+        setTimeout(() => {
+          navigate('/meet'); 
+        }, 2000);
+      }
       
     } catch (error) {
       console.error('Error downloading PDF:', error);
