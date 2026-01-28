@@ -32,7 +32,7 @@ export function BookYourConsultation() {
           {/* Description box */}
           <div className="mb-8 w-full rounded-[24px] max-w-[536px] border border-[#f1f5f9] bg-[#f8fafc] px-6 py-8 md:mb-12 md:px-8">
             <p className="text-center text-[20px] font-[500] leading-[28px] text-[#475569] md:text-[20px]">
-              Book a free 30-minute strategy consultation to
+              Book a free 30-minute strategy consultation to {""}
               <br className="max-md:hidden"/>
               review your priorities, risks, and next best steps.
             </p>

@@ -11,11 +11,15 @@ export async function submitToGHL(formData) {
     throw new Error('GHL API Key and Location ID are required. Please check your .env file.');
   }
 
-  // Format phone number
-  const codeMatch = formData.countryCode.match(/\((\+?\d+)\)/);
-  const countryCode = codeMatch ? codeMatch[1].replace('+', '') : '1';
-  const phoneDigits = formData.phone.replace(/\D/g, '');
-  const phone = `+${countryCode}${phoneDigits}`;
+  // Format phone number - react-international-phone already provides it in international format (e.g., +1234567890)
+  // The phone number should already be in the format +[country code][number]
+  // Just ensure it's properly formatted (remove any spaces, keep + and digits)
+  let phone = formData.phone || '';
+  if (phone) {
+    // Remove all non-digit characters except the leading +
+    const digits = phone.replace(/\D/g, '');
+    phone = '+' + digits;
+  }
 
   // Prepare contact data
   const contactData = {
