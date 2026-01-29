@@ -124,8 +124,9 @@ export function YourFreeReport() {
 
   const handleDownload = async () => {
     const fileName = "7 Pillars Report.pdf";
-    const pdfUrl = pdfFile; // normal PDF
-    const zipUrl = "/7-pillars-report.zip"; // iOS-only ZIP
+  
+    const pdfUrl = `${window.location.origin}/7-pillars-report.pdf`;
+    const zipUrl = `${window.location.origin}/7-pillars-report.zip`;
   
     setIsDownloading(true);
   
@@ -134,32 +135,21 @@ export function YourFreeReport() {
       /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   
     try {
-      // ✅ iOS SAFARI → ZIP (ONLY WAY TO FORCE DOWNLOAD)
-      if (isIOSSafari) {
-        const link = document.createElement("a");
-        link.href = zipUrl;
-        link.download = "7-pillars-report.zip";
-        link.style.display = "none";
+      const downloadUrl = isIOSSafari ? zipUrl : pdfUrl;
+      const downloadName = isIOSSafari
+        ? "7-pillars-report.zip"
+        : fileName;
   
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-  
-        setIsSuccessful(true);
-        setTimeout(() => navigate("/meet"), 2000);
-        return;
-      }
-  
-      // ✅ ALL OTHER BROWSERS → BLOB FORCE DOWNLOAD
-      const response = await fetch(pdfUrl);
-      if (!response.ok) throw new Error("PDF fetch failed");
+      // ✅ ALWAYS FETCH → BLOB (prevents new tab + HTML issue)
+      const response = await fetch(downloadUrl);
+      if (!response.ok) throw new Error("File fetch failed");
   
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
   
       const link = document.createElement("a");
       link.href = blobUrl;
-      link.download = fileName;
+      link.download = downloadName;
       link.style.display = "none";
   
       document.body.appendChild(link);
@@ -172,11 +162,12 @@ export function YourFreeReport() {
       setTimeout(() => navigate("/meet"), 2000);
     } catch (err) {
       console.error(err);
-      alert("Failed to download the report. Please try again.");
+      alert("Failed to download the report.");
     } finally {
       setIsDownloading(false);
     }
   };
+  
   
 
   return (
