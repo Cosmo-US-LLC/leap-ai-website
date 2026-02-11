@@ -68,7 +68,7 @@ export default function WhyThisApproach() {
             }}
             className="btn_primary mt-4 flex uppercase items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
           >
-            Get Your Free Report
+            Get Free Access
             <span className="inline-flex h-[20px] w-[20px] items-center justify-center">
               <ArrowRight
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
