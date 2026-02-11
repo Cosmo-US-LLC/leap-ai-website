@@ -15,10 +15,27 @@ function DontJustAdoptAi() {
           The smart companies start with understanding.
         </p>
 
-        <button className="btn_primary mt-2">
+        <button 
+          onClick={() => {
+            const getReportSection = document.getElementById('get-report');
+            if (getReportSection) {
+              const header = document.querySelector('header');
+              const headerHeight = header ? header.offsetHeight : 80;
+              const offset = headerHeight + 20; // Add 20px extra spacing
+              const elementPosition = getReportSection.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }}
+          className="btn_primary mt-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+        >
           Get Your Free Report
           <span className="inline-flex items-center justify-center">
-            <ArrowRight className="h-[16px] w-[16px]" aria-hidden />
+            <ArrowRight className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </span>
         </button>
       </div>

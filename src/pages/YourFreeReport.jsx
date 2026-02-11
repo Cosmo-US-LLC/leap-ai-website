@@ -9,61 +9,173 @@ export function YourFreeReport() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [isSuccessful, setIsSuccessful] = useState(false);
 
-  const handleDownload = async () => {
-    const fileName = '7 Pillars Report.pdf';
+  // const handleDownload = async () => {
+  //   const fileName = '7 Pillars Report.pdf';
     
+  //   setIsDownloading(true);
+
+  //   try {
+  //     // Fetch the local PDF file
+  //     const response = await fetch(pdfFile);
+      
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch PDF file');
+  //     }
+
+  //     // Convert response to blob
+  //     const blob = await response.blob();
+      
+  //     // Create a temporary URL for the blob
+  //     const blobUrl = window.URL.createObjectURL(blob);
+      
+  //     // Detect iOS Safari
+  //     const userAgent = navigator.userAgent;
+  //     const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+  //     const isSafari = /Safari/i.test(userAgent) && !/CriOS|FxiOS|EdgiOS/i.test(userAgent);
+  //     const isIOSSafari = isIOS && isSafari;
+
+  //     if (isIOSSafari) {
+  //       // For iOS Safari, convert blob to base64 data URL to force download
+  //       // Data URLs sometimes work better than blob URLs on iOS Safari
+  //       const reader = new FileReader();
+  //       reader.onloadend = () => {
+  //         const dataUrl = reader.result;
+  //         const link = document.createElement('a');
+  //         link.href = dataUrl;
+  //         link.download = fileName;
+  //         link.setAttribute('download', fileName);
+  //         link.target = '_self';
+  //         link.style.display = 'none';
+          
+  //         document.body.appendChild(link);
+          
+  //         // Trigger click immediately
+  //         link.click();
+          
+  //         // Clean up
+  //         setTimeout(() => {
+  //           document.body.removeChild(link);
+  //           window.URL.revokeObjectURL(blobUrl);
+  //         }, 500);
+          
+  //         setIsDownloading(false);
+  //         setIsSuccessful(true);
+          
+  //         // Navigate to consultation page after 2 seconds
+  //         setTimeout(() => {
+  //           navigate('/meet'); 
+  //         }, 2000);
+  //       };
+  //       reader.onerror = () => {
+  //         // Fallback to blob URL if data URL conversion fails
+  //         const link = document.createElement('a');
+  //         link.href = blobUrl;
+  //         link.download = fileName;
+  //         link.target = '_self';
+  //         link.style.display = 'none';
+          
+  //         document.body.appendChild(link);
+  //         link.click();
+          
+  //         setTimeout(() => {
+  //           document.body.removeChild(link);
+  //           window.URL.revokeObjectURL(blobUrl);
+  //         }, 500);
+          
+  //         setIsDownloading(false);
+  //         setIsSuccessful(true);
+          
+  //         setTimeout(() => {
+  //           navigate('/meet'); 
+  //         }, 2000);
+  //       };
+  //       reader.readAsDataURL(blob);
+  //     } else {
+  //       // For other browsers, use standard blob download
+  //       const link = document.createElement('a');
+  //       link.href = blobUrl;
+  //       link.download = fileName;
+  //       link.style.display = 'none';
+        
+  //       // Append to body, click, and remove
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
+        
+  //       // Clean up blob URL
+  //       window.URL.revokeObjectURL(blobUrl);
+        
+  //       // Show successful state
+  //       setIsDownloading(false);
+  //       setIsSuccessful(true);
+        
+  //       // Navigate to consultation page after 2 seconds
+  //       setTimeout(() => {
+  //         navigate('/meet'); 
+  //       }, 2000);
+  //     }
+      
+  //   } catch (error) {
+  //     console.error('Error downloading PDF:', error);
+  //     alert('Failed to download the report. Please try again later.');
+  //     setIsDownloading(false);
+  //   }
+  // };
+
+  const handleDownload = async () => {
+    const fileName = "7 Pillars Report.pdf";
+  
+    const pdfUrl = `${window.location.origin}/7-pillars-report.pdf`;
+    const zipUrl = `${window.location.origin}/7-pillars-report.zip`;
+  
     setIsDownloading(true);
-
+  
+    const isIOSSafari =
+      /iP(ad|hone|od)/.test(navigator.platform) &&
+      /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  
     try {
-      // Fetch the local PDF file
-      const response = await fetch(pdfFile);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch PDF file');
-      }
-
-      // Convert response to blob
+      const downloadUrl = isIOSSafari ? zipUrl : pdfUrl;
+      const downloadName = isIOSSafari
+        ? "7-pillars-report.zip"
+        : fileName;
+  
+      // ✅ ALWAYS FETCH → BLOB (prevents new tab + HTML issue)
+      const response = await fetch(downloadUrl);
+      if (!response.ok) throw new Error("File fetch failed");
+  
       const blob = await response.blob();
-      
-      // Create a temporary URL for the blob
-      const blobUrl = window.URL.createObjectURL(blob);
-      
-      // Create a temporary anchor element and trigger download
-      const link = document.createElement('a');
+      const blobUrl = URL.createObjectURL(blob);
+  
+      const link = document.createElement("a");
       link.href = blobUrl;
-      link.download = fileName;
-      link.style.display = 'none';
-      
-      // Append to body, click, and remove
+      link.download = downloadName;
+      link.style.display = "none";
+  
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
-      // Clean up blob URL
-      window.URL.revokeObjectURL(blobUrl);
-      
-      // Show successful state
-      setIsDownloading(false);
+  
+      URL.revokeObjectURL(blobUrl);
+  
       setIsSuccessful(true);
-      
-      // Navigate to consultation page after 2 seconds
-      setTimeout(() => {
-        navigate('/book-your-consultation');
-      }, 2000);
-      
-    } catch (error) {
-      console.error('Error downloading PDF:', error);
-      alert('Failed to download the report. Please try again later.');
+      setTimeout(() => navigate("/meet"), 2000);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to download the report.");
+    } finally {
       setIsDownloading(false);
     }
   };
+  
+  
 
   return (
     <div className="relative min-h-screen bg-white">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 opacity-50" style={{ 
+      {/* <div className="absolute inset-0 opacity-50" style={{ 
         backgroundImage: "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.1625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)" 
-      }} />
+      }} /> */}
       
       {/* Blur overlay - responsive size */}
       <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgba(62,109,181,0.2)] blur-[30px] md:h-[600px] md:w-[600px] md:blur-[50px]" />

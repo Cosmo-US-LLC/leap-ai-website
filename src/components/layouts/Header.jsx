@@ -40,15 +40,15 @@ export function Header() {
         </Link> */}
       </nav>
       <div className="hidden items-center gap-4 md:flex">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#64748b]">
+        <p className="text-[14px] font-semibold uppercase tracking-[0.18em] text-[#64748b]">
           Strategic Guide for Executives
         </p>
       </div>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+          {/* <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
             <Menu className="h-5 w-5" aria-hidden />
-          </Button>
+          </Button> */}
         </SheetTrigger>
         <SheetContent side="right" className="flex flex-col gap-6">
           <SheetHeader className="text-left">

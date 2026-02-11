@@ -19,7 +19,7 @@ export default function VideoCallStrategySession() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Left card */}
-          <div className="rounded-[30px] border border-[#f1f5f9] bg-white p-8 shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)]">
+          <div className="rounded-[30px] border border-[#f1f5f9] bg-white p-8 shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] transition-all duration-300 hover:scale-[1.02]">
             <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[rgba(62,109,181,0.1)] text-[#3e6db5]">
               <Zap className="h-8 w-8" aria-hidden />
             </div>
@@ -70,7 +70,7 @@ export default function VideoCallStrategySession() {
           </div>
 
           {/* Right card */}
-          <div className="relative overflow-hidden rounded-[30px] bg-[#2b2b76] p-8 text-white shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)]">
+          <div className="relative overflow-hidden rounded-[30px] bg-[#2b2b76] p-8 text-white shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-[1.02]">
             <div className="pointer-events-none absolute right-[-80px] top-[-80px] h-64 w-64 rounded-full bg-[#3e6db5] opacity-20 blur-[40px]" />
             <div className="relative">
               <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.1)] text-white">
@@ -122,9 +122,26 @@ export default function VideoCallStrategySession() {
         </div>
 
         <div className="flex flex-col items-center gap-6">
-          <button className="btn_primary flex  items-center justify-center gap-3">
+          <button 
+            onClick={() => {
+              const heroSection = document.getElementById('hero-section');
+              if (heroSection) {
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const offset = headerHeight + 20; // Add 20px extra spacing
+                const elementPosition = heroSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+            className="btn_primary flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+          >
             <span>Apply for Your Free Consultation</span>
-            <ArrowRight className="h-5 w-5" aria-hidden />
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </button>
           <p className="flex items-center gap-2 text-[14px] font-[700] leading-[20px] text-[#94a3b8]">
             <Lock className="h-3.5 w-3.5" aria-hidden />

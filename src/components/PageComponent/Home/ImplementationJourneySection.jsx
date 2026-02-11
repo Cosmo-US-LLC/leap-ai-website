@@ -1,35 +1,39 @@
-import { BookOpen, MessagesSquare, ClipboardList, Rocket, LineChart } from "lucide-react";
+import icon1 from "../../../assets/images/home/YourImplementation/icon (3).svg";
+import icon2 from "../../../assets/images/home/YourImplementation/icon (4).svg";
+import icon3 from "../../../assets/images/home/YourImplementation/icon (5).svg";
+import icon4 from "../../../assets/images/home/YourImplementation/icon (1).svg";
+import icon5 from "../../../assets/images/home/YourImplementation/icon (2).svg";
 
 const steps = [
   {
     id: 1,
     title: "Read the Guide",
     subtitle: "Understand the 7 Pillars",
-    Icon: BookOpen,
+    Icon: icon1,
   },
   {
     id: 2,
     title: "Consultation",
     subtitle: "Strategic Alignment Call",
-    Icon: MessagesSquare,
+    Icon: icon2,
   },
   {
     id: 3,
     title: "Assessment",
     subtitle: "Identify Opportunities",
-    Icon: ClipboardList,
+    Icon: icon3,
   },
   {
     id: 4,
     title: "Implementation",
     subtitle: "Execute the Roadmap",
-    Icon: Rocket,
+    Icon: icon4,
   },
   {
     id: 5,
     title: "Improve",
     subtitle: "Monitor & Optimize",
-    Icon: LineChart,
+    Icon: icon5,
   },
 ];
 
@@ -44,10 +48,10 @@ export default function ImplementationJourneySection() {
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
         <div className="text-center">
-          <p className="text-[14px] font-[800] leading-[20px] uppercase tracking-[0.1em] text-[#059669]">
+          <p className="text-[14px] font-[800] leading-[20px] uppercase tracking-[0.1em] text-[#059669] transition-colors duration-300">
             The Path Forward
           </p>
-          <h2 className="mt-3 text-[30px] font-[800] leading-[37px] text-white md:text-[44px] md:leading-[48px]">
+          <h2 className="mt-3 text-[30px] font-[800] leading-[37px] text-white md:text-[44px] md:leading-[48px] transition-all duration-300">
             Your Implementation Journey
           </h2>
         </div>
@@ -58,18 +62,26 @@ export default function ImplementationJourneySection() {
 
           <div className="relative grid gap-8 md:grid-cols-5">
             {steps.map((step) => (
-              <div key={step.id} className="flex flex-col items-center text-center gap-4">
-                <div className="relative overflow-hidden flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#3e6db5] bg-[#2b2b76] shadow-[0_20px_25px_-5px_rgba(15,23,42,0.6)]">
-                  <step.Icon className="h-8 w-8 text-white" aria-hidden />
-                  <div className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full border border-[#2b2b76] bg-[#059669] text-[14px] font-[700] text-white">
+              <div key={step.id} className="flex flex-col items-center text-center 
+              gap-4 cursor-default group transition-all duration-300 hover:scale-105">
+                <div className="relative  flex h-24 w-24 items-center 
+                justify-center rounded-full border-4 border-[#3e6db5] 
+                bg-[#2b2b76] shadow-[0_20px_25px_-5px_rgba(15,23,42,0.6)] transition-all duration-300 group-hover:scale-110 group-hover:border-[#059669] group-hover:bg-[#3e6db5]
+                 group-hover:shadow-[0_25px_50px_-12px_rgba(15,23,42,0.8)]">
+                  <img src={step.Icon} alt="" />
+                  <div className="absolute -right-2 -top-2 flex h-8
+                   w-8 items-center justify-center rounded-full border-2 
+                   border-[#2b2b76] bg-[#059669] text-[14px] font-[700]
+                    text-white transition-all duration-300 group-hover:scale-110
+                     group-hover:bg-[#10b981] group-hover:border-[#2b2b76]">
                     {step.id}
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-[18px] font-[700] leading-[28px] text-white">
+                  <p className="text-[18px] font-[700] leading-[28px] text-white transition-colors duration-300 group-hover:text-[#059669]">
                     {step.title}
                   </p>
-                  <p className="text-[14px] font-[500] leading-[20px] text-[#cbd5e1]">
+                  <p className="text-[14px] font-[500] leading-[20px] text-[#cbd5e1] transition-colors duration-300 group-hover:text-white">
                     {step.subtitle}
                   </p>
                 </div>
