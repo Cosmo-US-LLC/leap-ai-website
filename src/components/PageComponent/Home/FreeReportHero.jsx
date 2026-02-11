@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { User, Building2, Mail, Phone, ShieldCheck, Lock } from "lucide-react";
-import overlayBlue from "../../../assets/images/home/Leap_hero/overlay_blue.svg";
-import overlayGreen from "../../../assets/images/home/Leap_hero/overlay_green.svg";
-import CheckGreen from "../../../assets/images/home/Leap_hero/check_green.svg";
-import StarBlue from "../../../assets/images/home/Leap_hero/star_blue.svg";
-import { submitToGHL } from "../../../lib/ghlService";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { User, Building2, Mail, Phone, ArrowRight, Lock } from "lucide-react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
+import overlayBlue from '../../../assets/images/home/Leap_hero/overlay_blue.svg';
+import overlayGreen from '../../../assets/images/home/Leap_hero/overlay_green.svg';
+import CheckGreen from '../../../assets/images/home/Leap_hero/check_green.svg';
+import StarBlue from '../../../assets/images/home/Leap_hero/star_blue.svg';
+import { submitToGHL } from '../../../lib/ghlService';
 
 export default function FreeReportHero() {
   const navigate = useNavigate();
@@ -135,19 +137,12 @@ export default function FreeReportHero() {
 
     if (validateForm()) {
       setIsSubmitting(true);
-
-      // Console log the form data
-      console.log("Form submitted with data:", {
-        name: formData.name.trim(),
-        companyName: formData.companyName.trim(),
-        email: formData.email.trim(),
-        phone: `${formData.countryCode} ${formData.phone.trim()}`,
-        fullPhone: formData.phone.trim(),
-        countryCode: formData.countryCode,
-      });
-
-      // Simulate API call (you can replace this with actual API call)
-      setTimeout(() => {
+      
+      try {
+        await submitToGHL(formData);
+        navigate('/your-free-report');
+      } catch (error) {
+        setSubmitError(error.message || 'Failed to submit. Please try again.');
         setIsSubmitting(false);
         // Navigate to success page
         navigate("/your-free-report");
