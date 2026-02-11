@@ -86,7 +86,7 @@ function TheReality() {
                 });
               }
             }}
-            className="btn_primary w-full flex items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+            className="btn_primary w-full uppercase flex items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
           >
             Get Your Free Report
             <span className="inline-flex h-[20px] w-[20px] items-center justify-center">
