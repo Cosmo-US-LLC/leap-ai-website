@@ -21,7 +21,7 @@ function InsuranceDontJustAdoptAi() {
             if (getReportSection) {
               const header = document.querySelector("header");
               const headerHeight = header ? header.offsetHeight : 80;
-              const offset = headerHeight + 20; // Add 20px extra spacing
+              const offset = headerHeight + 20;
               const elementPosition =
                 getReportSection.getBoundingClientRect().top;
               const offsetPosition =
