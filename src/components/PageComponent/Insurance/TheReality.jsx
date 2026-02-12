@@ -31,7 +31,7 @@ function TheReality() {
 
   return (
     <section className="bg-white py-16">
-      <div className="mx-auto flex w-full max-w-[896px] flex-col items-center gap-8 px-4 text-center md:px-0">
+      <div className="mx-auto flex w-full max-w-[866px] flex-col items-center gap-8 px-4 text-center md:px-0">
         {/* Heading */}
         <div className="flex flex-col items-center gap-2">
           <p className="text-[36px] font-[800] leading-[57px] tracking-[-0.03em] text-[#3e79bf] md:text-[48px]">
@@ -46,7 +46,7 @@ function TheReality() {
         </div>
 
         {/* Card */}
-        <div className="w-full rounded-[24px] border border-[#eef1f8] bg-[#f8f9fc] px-6 py-10 text-left shadow-sm md:px-12">
+        <div className="w-full rounded-[16px] border border-[#eef1f8] bg-[#f8f9fc] px-6 py-10 text-left shadow-sm md:px-12">
           <p className="mb-6 text-[16px] font-[700] leading-[29.25px] text-[#4f6590] md:text-[18px]">
             Most insurance leaders already know AI matters. What remains unclear
             is:
@@ -67,7 +67,7 @@ function TheReality() {
         </div>
 
         {/* CTA Button */}
-        <div className="flex justify-center w-full max-w-[896px]">
+        <div className="flex justify-center w-full max-w-[896px] mt-2">
           <button
             onClick={() => {
               const getReportSection = document.getElementById("get-report");
@@ -86,7 +86,7 @@ function TheReality() {
                 });
               }
             }}
-            className="btn_primary w-full uppercase flex items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+            className="btn_primary_for_insurance w-full uppercase flex items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
           >
             Get Free Access
             <span className="inline-flex h-[20px] w-[20px] items-center justify-center">

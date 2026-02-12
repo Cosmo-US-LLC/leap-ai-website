@@ -152,13 +152,13 @@ export default function InsuranceHero() {
       id="hero-section"
       className="relative overflow-hidden bg-white pb-16 pt-16"
     >
-      <div
+      {/* <div
         className="absolute inset-0 opacity-50"
         style={{
           backgroundImage:
             "linear-gradient(90deg, rgba(241, 245, 249, 1) 1.0625%, rgba(241, 245, 249, 0) 1.5625%), linear-gradient(180deg, rgba(241, 245, 249, 1) 1.5625%, rgba(241, 245, 249, 0) 1.5625%)",
         }}
-      />
+      /> */}
       {/* <div className='relative max-w-[1640px] mx-auto h-full w-full'> */}
       <img
         src={overlayBlue}
@@ -282,7 +282,7 @@ export default function InsuranceHero() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn_primary mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+                  className="btn_primary_for_insurance mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
                 >
                   <span>
                     {isSubmitting ? "Submitting..." : "Get Your Free Report"}

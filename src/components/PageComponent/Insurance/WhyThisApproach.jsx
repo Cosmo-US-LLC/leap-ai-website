@@ -66,7 +66,7 @@ export default function WhyThisApproach() {
                 });
               }
             }}
-            className="btn_primary mt-4 flex uppercase items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+            className="btn_primary_for_insurance mt-4 flex uppercase items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
           >
             Get Free Access
             <span className="inline-flex h-[20px] w-[20px] items-center justify-center">
@@ -84,7 +84,7 @@ export default function WhyThisApproach() {
 
 function FrameworkCard({ number, icon: Icon, title, description }) {
   return (
-    <div className="relative rounded-[16px] border border-[#DDE4F0] bg-[#FFFFFF] p-10 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] group cursor-default">
+    <div className="relative rounded-[16px] border border-[#DDE4F0] bg-[#FFFFFF] p-8 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] group cursor-default">
       {/* <div className="absolute right-10 top-10">
         <span className="text-[60px] font-[900] leading-[60px] text-[rgba(226,232,240,0.5)] transition-all duration-300 group-hover:text-[rgba(226,232,240,0.7)]">
           {number}
@@ -92,14 +92,14 @@ function FrameworkCard({ number, icon: Icon, title, description }) {
       </div> */}
 
       <div className="relative z-10">
-        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+        <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
           <Icon
             className="h-8 w-8 text-[#3e6db5] transition-all duration-300 group-hover:text-white group-hover:rotate-3"
             aria-hidden
           />
         </div>
 
-        <h3 className="mb-4 text-[24px] font-[800] leading-[28px] text-[#2b2b76] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
+        <h3 className="mb-3 text-[24px] font-[800] leading-[28px] text-[#2b2b76] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
           {title}
         </h3>
 
