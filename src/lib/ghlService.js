@@ -1,9 +1,11 @@
 /**
- * Simple GHL Form Submission
- * Creates a contact in GHL (which will appear in your CRM)
+ * GHL Form Submission
+ * Creates or updates a contact in GHL. Use from Home or Insurance page with optional options.
+ *
+ * @param {Object} formData - { name, companyName, email, phone }
+ * @param {Object} [options] - { source, tags } to segment leads (e.g. Insurance vs Home)
  */
-
-export async function submitToGHL(formData) {
+export async function submitToGHL(formData, options = {}) {
   const apiKey = import.meta.env.VITE_GHL_API_KEY;
   const locationId = import.meta.env.VITE_GHL_LOCATION_ID;
 
@@ -12,24 +14,24 @@ export async function submitToGHL(formData) {
   }
 
   // Format phone number - react-international-phone already provides it in international format (e.g., +1234567890)
-  // The phone number should already be in the format +[country code][number]
-  // Just ensure it's properly formatted (remove any spaces, keep + and digits)
   let phone = formData.phone || '';
   if (phone) {
-    // Remove all non-digit characters except the leading +
     const digits = phone.replace(/\D/g, '');
     phone = '+' + digits;
   }
 
-  // Prepare contact data
+  const defaultTags = ['Website Form', 'Free Report'];
+  const tags = options.tags && options.tags.length ? options.tags : defaultTags;
+  const source = options.source || 'Website Form';
+
   const contactData = {
     locationId: locationId,
     name: formData.name.trim(),
     email: formData.email.trim().toLowerCase(),
     phone: phone,
     companyName: formData.companyName.trim(),
-    tags: ['Website Form', 'Free Report'],
-    source: 'Website Form',
+    tags,
+    source,
   };
 
   console.log('Submitting to GHL:', { locationId, email: contactData.email, name: contactData.name });

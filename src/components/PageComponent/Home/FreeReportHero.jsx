@@ -139,7 +139,10 @@ export default function FreeReportHero() {
       setIsSubmitting(true);
 
       try {
-        await submitToGHL(formData);
+        await submitToGHL(formData, {
+          source: 'Home Page',
+          tags: ['Website Form', 'Free Report'],
+        });
         navigate("/your-free-report");
       } catch (error) {
         setSubmitError(error.message || "Failed to submit. Please try again.");

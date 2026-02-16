@@ -2,11 +2,11 @@ import { ArrowRight } from "lucide-react";
 
 function InsuranceDontJustAdoptAi() {
   return (
-    <section className="relative overflow-hidden bg-[#12174B] px-6 py-16 text-center text-[#fff]">
+    <section className="relative overflow-hidden bg-[#12174B] md:px-6 px-2 py-16 text-center text-[#fff]">
       {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.4),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(16,185,129,0.4),_transparent_55%)]" /> */}
 
-      <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-6">
-        <h2 className="text-[36px] font-[800] tracking-[-2.4px] italic uppercase leading-[36px] md:text-[48px] md:leading-[60px]">
+      <div className="relative mx-auto flex md:max-w-2xl w-full flex-col items-center gap-6">
+        <h2 className="text-[36px] font-[800] tracking-[-1.8px] md:tracking-[-2.4px] italic uppercase leading-[45px] md:text-[48px] md:leading-[60px]">
           Don't Just Adopt AI.
           <span className="block text-[#A1BFDE]">Lead the Era.</span>
         </h2>

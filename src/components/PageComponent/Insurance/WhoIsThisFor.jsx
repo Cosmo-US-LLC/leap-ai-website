@@ -39,7 +39,7 @@ function WhoIsThisFor() {
         {/* Cards */}
         <div className="grid w-full max-w-[940px] gap-6 md:grid-cols-2 md:gap-12">
           {/* Designed for */}
-          <div className="flex flex-col gap-6 rounded-[16px] border border-[#dde4f0] bg-white p-6 shadow-sm md:p-10">
+          <div className="flex flex-col gap-6 rounded-[16px] border border-[#dde4f0] bg-white p-6 shadow-sm md:p-10 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)]">
             <div className="w-full border-b border-[#e5e7eb] pb-4">
               <p className="text-[12px] font-extrabold uppercase tracking-[1.2px] text-[#3e79bf] md:text-[12px]">
                 Designed for:
@@ -50,9 +50,9 @@ function WhoIsThisFor() {
               {designedFor.map(({ icon: Icon, text }) => (
                 <li
                   key={text}
-                  className="flex items-center gap-4 text-[#1a2063]"
+                  className="flex items-center gap-4 text-[#1a2063] group cursor-default"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center text-[#3e79bf]">
+                  <span className="flex h-6 w-6 items-center justify-center text-[#3e79bf] transition-transform duration-300 group-hover:scale-110">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <span className="text-[16px] font-bold leading-[24px]">
@@ -64,7 +64,7 @@ function WhoIsThisFor() {
           </div>
 
           {/* This is a fit if */}
-          <div className="flex flex-col gap-6 rounded-[16px] border border-[#dde4f0] bg-white p-6 shadow-sm md:p-10">
+          <div className="flex flex-col gap-6 rounded-[16px] border border-[#dde4f0] bg-white p-6 shadow-sm md:p-10 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)]">
             <div className="w-full border-b border-[#e5e7eb] pb-4">
               <p className="text-[12px] font-extrabold uppercase tracking-[1.2px] text-[#3e79bf] md:text-[12px]">
                 This is a fit if:
@@ -75,9 +75,9 @@ function WhoIsThisFor() {
               {fitIf.map((text) => (
                 <li
                   key={text}
-                  className="flex items-start gap-4 text-[#1a2063]"
+                  className="flex items-start gap-4 text-[#1a2063] group cursor-default"
                 >
-                  <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full text-[#3e79bf]">
+                  <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full text-[#3e79bf] transition-transform duration-300 group-hover:scale-110">
                     <CheckCircle2 className="h-full w-full" aria-hidden />
                   </span>
                   <span className="text-[16px] font-[700] leading-[24px]">

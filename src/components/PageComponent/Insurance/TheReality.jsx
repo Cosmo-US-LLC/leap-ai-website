@@ -34,19 +34,19 @@ function TheReality() {
       <div className="mx-auto flex w-full max-w-[866px] flex-col items-center gap-8 px-4 text-center md:px-0">
         {/* Heading */}
         <div className="flex flex-col items-center gap-2">
-          <p className="text-[36px] font-[800] leading-[57px] tracking-[-0.03em] text-[#3e79bf] md:text-[48px]">
+          <p className="text-[36px] font-[800] leading-[45px] md:leading-[57px] tracking-[-0.03em] text-[#3e79bf] md:text-[48px]">
             The Reality?
           </p>
-          <h2 className="text-[32px] font-extrabold uppercase leading-[57px] tracking-[-0.03em] text-[#1a2063] md:text-[48px]">
+          <h2 className="text-[36px] font-extrabold uppercase leading-[45px] md:leading-[57px] tracking-[-0.03em] text-[#1a2063] md:text-[48px]">
             AI Is No Longer Optional
           </h2>
-          <p className="text-[20px] font-[900] uppercase tracking-[-1.5px] text-[#3e79bf] md:text-[30px]">
+          <p className="text-[20px] font-[900] uppercase tracking-[-1px] text-[#3e79bf] md:text-[30px]">
             But Guessing Is Dangerous
           </p>
         </div>
 
         {/* Card */}
-        <div className="w-full rounded-[16px] border border-[#eef1f8] bg-[#f8f9fc] px-6 py-10 text-left shadow-sm md:px-12">
+        <div className="w-full rounded-[16px] border border-[#eef1f8] bg-[#f8f9fc] px-4 py-6 text-left shadow-sm md:px-12">
           <p className="mb-6 text-[16px] font-[700] leading-[29.25px] text-[#4f6590] md:text-[18px]">
             Most insurance leaders already know AI matters. What remains unclear
             is:
@@ -54,9 +54,12 @@ function TheReality() {
 
           <div className="grid gap-y-5 gap-x-10 md:grid-cols-2">
             {items.map(({ icon: Icon, title }) => (
-              <div key={title} className="flex items-start gap-3">
-                <div className="flex mt-[3px] h-7 w-7 items-center justify-center text-[#3e79bf]">
-                  <Icon className="h-full w-full" aria-hidden />
+              <div key={title} className="flex items-start md:gap-3 gap-2">
+                <div className="flex mt-[3px] md:h-7 md:w-7 h-6 w-6 items-center  justify-center text-[#3e79bf] group cursor-default">
+                  <Icon
+                    className="h-full w-full transition-transform duration-300 group-hover:scale-110"
+                    aria-hidden
+                  />
                 </div>
                 <p className="text-[16px] font-extrabold leading-[29.25px] text-[#1a2063] md:text-[18px]">
                   {title}

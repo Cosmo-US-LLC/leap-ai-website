@@ -1,4 +1,4 @@
-import { Users, Zap, Heart, Database } from "lucide-react";
+import { Search, Zap, Shield } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
 export default function WhyThisApproach() {
@@ -6,7 +6,7 @@ export default function WhyThisApproach() {
     {
       id: "01",
       number: "01",
-      icon: Users,
+      icon: Search,
       title: 'Focused on "Outcome-First"',
       description:
         "We don't start with what the technology can do. We start with the P&L—identifying exactly where claims leakage or high Opex is hurting your specific line of business.",
@@ -22,7 +22,7 @@ export default function WhyThisApproach() {
     {
       id: "03",
       number: "03",
-      icon: Heart,
+      icon: Shield,
       title: "Risk-Adjusted Strategy",
       description:
         "AI in insurance isn't just a technical challenge; it's a regulatory one. We prioritize governance and data privacy from day one, not as an afterthought.",
