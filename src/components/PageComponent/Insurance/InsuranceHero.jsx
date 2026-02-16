@@ -140,8 +140,8 @@ export default function InsuranceHero() {
 
       try {
         await submitToGHL(formData, {
-          source: 'Insurance Page',
-          tags: ['Website Form', 'Free Report', 'Insurance'],
+          source: "Insurance Page",
+          tags: ["Website Form", "Free Report", "Insurance"],
         });
         navigate("/your-free-report");
       } catch (error) {
@@ -153,7 +153,7 @@ export default function InsuranceHero() {
   return (
     <section
       id="hero-section"
-      className="relative overflow-hidden bg-white pb-16 pt-16"
+      className="relative overflow-hidden bg-white pb-16 md:pt-16 pt-8"
     >
       {/* <div
         className="absolute inset-0 opacity-50"
