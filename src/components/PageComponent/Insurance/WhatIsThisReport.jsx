@@ -40,9 +40,9 @@ function WhatIsThisReport() {
             {items.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start gap-4 rounded-[16px] border border-white/10 bg-white/5 px-6 py-5"
+                className="flex items-start gap-4 rounded-[16px] border border-white/10 bg-white/5 px-6 py-5 group cursor-default"
               >
-                <span className="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full text-[#3e79bf]">
+                <span className="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full text-[#3e79bf] transition-transform duration-300 group-hover:scale-110">
                   <CheckCircle2 className="h-full w-full" aria-hidden />
                 </span>
                 <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ function WhatIsThisReport() {
         </div>
 
         {/* Right card */}
-        <div className="w-full max-w-[550px] rounded-[16px] bg-white px-8 py-8 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
+        <div className="w-full max-w-[550px] rounded-[16px] bg-white px-8 py-8 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] md:rotate-4 rotate-0 hover:rotate-0 hover:scale-[1.02] hover:shadow-[0_25px_36px_-12px_rgba(0,0,0,0.25)] transition-all duration-300">
           <div className="space-y-4">
             <p className="text-[20px] font-extrabold italic uppercase leading-[31px] tracking-[-0.6px] text-[#12174b] md:text-[24px]">
               "Clarity before commitment."

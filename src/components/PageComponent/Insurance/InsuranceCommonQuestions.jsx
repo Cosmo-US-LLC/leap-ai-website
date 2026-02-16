@@ -5,27 +5,39 @@ import { cn } from "../../../lib/utils.js";
 export default function InsuranceCommonQuestions() {
   const questions = [
     {
-      id: "free",
-      question: "Is this report for technical or business leaders?",
+      id: "insurance-free",
+      question: "Is the 7 Pillars Guide really free?",
       answer: "Yes. The guide is completely free. No strings attached.",
     },
     {
-      id: "sales",
-      question: "How long does it take to see ROI from the 7 Pillars?",
+      id: "insurance-sales",
+      question: "Am I being funneled into a sales pitch?",
       answer:
         "No. The guide provides standalone strategic value. Any consultation is optional and only for companies ready to explore next steps.",
     },
     {
-      id: "consultation",
-      question: "We already have an AI pilot running. Is this useful?",
+      id: "insurance-consultation",
+      question: "Do I have to book a consultation?",
       answer:
         "No. The consultation is optional. It is designed for leaders who want personalized AI insights after reading the guide.",
     },
     {
-      id: "implementation",
-      question: "Is my data shared during the strategy session?",
+      id: "insurance-implementation",
+      question: "When does AI implementation happen?",
       answer:
         "Implementation only begins after you have clarity, a validated strategy, and a prioritized roadmap.",
+    },
+    {
+      id: "insurance-audience",
+      question: "Who is this guide for?",
+      answer:
+        "Executives managing teams of 25+ employees who want ROI clarity before investing in AI tools or pilots.",
+    },
+    {
+      id: "insurance-quick-tools",
+      question: "What if I just want quick AI tools?",
+      answer:
+        "This guide is not for those seeking shortcuts or tool-focused solutions. It is designed for strategic, long-term AI adoption.",
     },
   ];
 

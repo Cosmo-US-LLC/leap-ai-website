@@ -28,3 +28,37 @@
   animation: accordion-up 300ms ease-in-out;
 }
 
+/* ItsNotTheTechnology icon circle entrance */
+@keyframes icon-circle-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-icon-circle-in {
+  animation: icon-circle-in 0.6s ease-out forwards;
+}
+
+/* Circle container: subtle pulse */
+@keyframes circle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 rgba(113, 153, 203, 0);
+  }
+  50% {
+    transform: scale(1.1);
+    border-color: rgba(113, 153, 203, 0.45);
+    box-shadow: 0 0 24px 0 rgba(113, 153, 203, 0.55);
+  }
+}
+
+.animate-circle-pulse {
+  animation: circle-pulse 2.5s ease-in-out infinite;
+}

@@ -139,7 +139,10 @@ export default function InsuranceHero() {
       setIsSubmitting(true);
 
       try {
-        await submitToGHL(formData);
+        await submitToGHL(formData, {
+          source: 'Insurance Page',
+          tags: ['Website Form', 'Free Report', 'Insurance'],
+        });
         navigate("/your-free-report");
       } catch (error) {
         setSubmitError(error.message || "Failed to submit. Please try again.");
@@ -160,11 +163,11 @@ export default function InsuranceHero() {
         }}
       /> */}
       {/* <div className='relative max-w-[1640px] mx-auto h-full w-full'> */}
-      <img
+      {/* <img
         src={overlayBlue}
         alt="overlayBlue"
         className="absolute right-[0px] top-[-100px]"
-      />
+      /> */}
       {/* <img
         src={overlayGreen}
         alt="overlayGreen"
@@ -214,7 +217,7 @@ export default function InsuranceHero() {
 
         {/* Right form card */}
         <div id="get-report" className="w-full max-w-md">
-          <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_50px_-12px_rgba(15,23,42,0.35)] transition-all duration-300 ease-in-out hover:shadow-[0_35px_60px_-12px_rgba(15,23,42,0.45)] hover:-translate-y-1">
+          <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_36px_-12px_rgba(15,23,42,0.35)] transition-all duration-300 ease-in-out hover:shadow-[0_35px_40px_-12px_rgba(15,23,42,0.45)] hover:-translate-y-1">
             <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669] transition-all duration-300" />
             <div className="space-y-6 px-6 py-6 md:px-8 md:py-8">
               <div className="space-y-1 transition-all duration-300">
