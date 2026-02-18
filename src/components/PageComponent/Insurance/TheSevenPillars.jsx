@@ -52,12 +52,12 @@ export default function TheSevenPillars() {
 
   return (
     <section className="bg-white py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col md:gap-10 gap-6 px-4 md:px-8">
         <div className="text-center">
-          <h2 className="text-[30px] uppercase tracking-[-1.2px] font-[800] leading-[37px] text-[#12174B] md:text-[48px] md:leading-[58px] transition-all duration-300">
+          <h2 className="text-[36px] uppercase tracking-[-1.2px] font-[800] leading-[37px] text-[#12174B] md:text-[48px] md:leading-[58px] transition-all duration-300">
             The 7 Pillars Framework
           </h2>
-          <p className="mt-3 text-[20px] uppercase font-[700] tracking-[0.28px] leading-[28px] text-[#3E79BF] md:text-[20px] md:leading-[28px] transition-colors duration-300">
+          <p className="mt-3 text-[18px] uppercase font-[700] tracking-[0.28px] leading-[28px] text-[#3E79BF] md:text-[20px] md:leading-[28px] transition-colors duration-300">
             A Strategic Blueprint for Executives
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function TheSevenPillars() {
 
 function FrameworkCard({ number, icon: Icon, title, description }) {
   return (
-    <div className="relative rounded-[16px] border border-[#e2e8f0] bg-[#f8fafc] p-8 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] group cursor-default">
+    <div className="relative rounded-[16px] border border-[#e2e8f0] bg-[#f8fafc] md:p-8 p-6 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:border-[#cbd5e1] hover:shadow-[0_20px_25px_-5px_rgba(226,232,240,0.5),0_8px_10px_-6px_rgba(226,232,240,0.5)] group cursor-default">
       {/* <div className="absolute right-10 top-10">
         <span className="text-[60px] font-[900] leading-[60px] text-[rgba(226,232,240,0.5)] transition-all duration-300 group-hover:text-[rgba(226,232,240,0.7)]">
           {number}
@@ -113,21 +113,21 @@ function FrameworkCard({ number, icon: Icon, title, description }) {
       </div> */}
 
       <div className="relative z-10">
-        <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
           {/* <Icon
             className="h-8 w-8 text-[#3e6db5] transition-all duration-300 group-hover:text-white group-hover:rotate-3"
             aria-hidden
           /> */}
-          <span className="text-[24px] font-[900] leading-[60px] text-[rgba(226,232,240,0.5)] transition-all duration-300 group-hover:text-[#fff]">
+          <span className="text-[12px] font-[900] leading-[16px] text-[#3E79BF] transition-all duration-300 group-hover:text-[#fff]">
             {number}
           </span>
         </div>
 
-        <h3 className="mb-3 text-[24px] font-[800] leading-[28px] text-[#1A2063] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
+        <h3 className="mb-3 text-[18px] font-[800] leading-[28px] text-[#1A2063] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
           {title}
         </h3>
 
-        <p className="font-[700] leading-[24px] text-[#475569] text-[16px] transition-colors duration-300">
+        <p className="font-[500] leading-[24px] text-[#4F6590] text-[14px] transition-colors duration-300">
           {description}
         </p>
       </div>

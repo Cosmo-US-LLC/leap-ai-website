@@ -9,7 +9,7 @@ export default function WhyThisApproach() {
       icon: Search,
       title: 'Focused on "Outcome-First"',
       description:
-        "We don't start with what the technology can do. We start with the P&L—identifying exactly where claims leakage or high Opex is hurting your specific line of business.",
+        "We don't start with what the technology can do. We start with the P&L identifying exactly where claims leakage or high Opex is hurting your specific line of business.",
     },
     {
       id: "02",
@@ -17,7 +17,7 @@ export default function WhyThisApproach() {
       icon: Zap,
       title: "Bias Towards Production",
       description:
-        'Most AI advice stops at the "Proof of Concept." Our framework is built to navigate the "Mudra of Scale"—getting through security, compliance, and user adoption.',
+        'Most AI advice stops at the "Proof of Concept." Our framework is built to navigate the "Mudra of Scale" getting through security, compliance, and user adoption.',
     },
     {
       id: "03",
@@ -33,10 +33,10 @@ export default function WhyThisApproach() {
     <section className="bg-[#EEF1F8] py-16">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
         <div className="text-center">
-          <p className=" text-[20px] font-[800] uppercase tracking-[2.8px] leading-[20px] text-[#3E79BF] md:text-[14px] md:leading-[20px] transition-colors duration-300">
+          <p className=" text-[14px] font-[800] uppercase tracking-[2.8px] leading-[20px] text-[#3E79BF] md:text-[14px] md:leading-[20px] transition-colors duration-300">
             Beyond the Toolset
           </p>
-          <h2 className="mt-3 text-[30px] font-[800] uppercase leading-[37px] text-[#1A2063] md:text-[48px] md:leading-[57px] transition-all duration-300">
+          <h2 className="mt-3 text-[36px] font-[800] uppercase leading-[37px] text-[#1A2063] md:text-[48px] md:leading-[57px] transition-all duration-300">
             Why This Approach Is Different
           </h2>
         </div>
@@ -92,14 +92,14 @@ function FrameworkCard({ number, icon: Icon, title, description }) {
       </div> */}
 
       <div className="relative z-10">
-        <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+        <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-[#F0F4FA] shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#3e6db5] group-hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
           <Icon
             className="h-8 w-8 text-[#3e6db5] transition-all duration-300 group-hover:text-white group-hover:rotate-3"
             aria-hidden
           />
         </div>
 
-        <h3 className="mb-3 text-[24px] font-[800] leading-[28px] text-[#2b2b76] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
+        <h3 className="mb-3 text-[18px] font-[800] leading-[28px] text-[#2b2b76] md:text-[20px] transition-colors duration-300 group-hover:text-[#3e6db5]">
           {title}
         </h3>
 

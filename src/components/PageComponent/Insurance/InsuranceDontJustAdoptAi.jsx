@@ -7,8 +7,8 @@ function InsuranceDontJustAdoptAi() {
 
       <div className="relative mx-auto flex md:max-w-2xl w-full flex-col items-center gap-6">
         <h2 className="text-[36px] font-[800] tracking-[-1.8px] md:tracking-[-2.4px] italic uppercase leading-[45px] md:text-[48px] md:leading-[60px]">
-          Don't Just Adopt AI.
-          <span className="block text-[#A1BFDE]">Lead the Era.</span>
+          Don't Just Adopt <br className="max-md:hidden" /> AI. {""}
+          <span className="text-[#A1BFDE]">Lead the Era.</span>
         </h2>
 
         {/* <p className="text-[20px] md:text-[18px] font-[500] leading-[28px] text-[#cbd5e1]">
@@ -35,7 +35,7 @@ function InsuranceDontJustAdoptAi() {
           }}
           className="btn_primary_for_insurance mt-2 uppercase transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
         >
-          Get Free Access
+          Access the report
           <span className="inline-flex items-center justify-center">
             <ArrowRight
               className="h-[16px] w-[16px] transition-transform duration-300 group-hover:translate-x-1"

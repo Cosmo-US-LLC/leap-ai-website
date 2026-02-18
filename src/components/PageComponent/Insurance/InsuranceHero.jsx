@@ -153,7 +153,7 @@ export default function InsuranceHero() {
   return (
     <section
       id="hero-section"
-      className="relative overflow-hidden bg-white pb-16 md:pt-16 pt-8"
+      className="relative overflow-hidden bg-white pb-16 md:pt-16 pt-6"
     >
       {/* <div
         className="absolute inset-0 opacity-50"
@@ -176,34 +176,34 @@ export default function InsuranceHero() {
       {/* <div className="pointer-events-none absolute rounded-full left-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_left,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
       {/* <div className="pointer-events-none absolute right-0 bottom-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_top_right,_rgba(148,163,184,0.2),_transparent_55%),radial-gradient(circle_at_bottom_left,_rgba(34,197,94,0.18),_transparent_55%)]" /> */}
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-start md:justify-between md:px-8">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col md:gap-12 gap-8 px-4 md:flex-row md:items-start md:justify-between md:px-8">
         {/* Left copy */}
-        <div className="max-w-xl space-y-8">
+        <div className="max-w-xl md:space-y-8 space-y-6">
           <div className="inline-flex items-center gap-2 border-l-[4px] border-[#3E79BF] px-3 py-[3px] justify-center text-[#3E79BF] transition-all duration-300 hover:shadow-md hover:scale-105 group cursor-default">
             {/* <img
               src={StarBlue}
               alt="StarBlue"
               className="h-[14px] w-[14px] transition-transform duration-300 group-hover:rotate-12"
             /> */}
-            <span className="text-[12px] font-[800] leading-[16px] uppercase tracking-[0.6px] pt-[1px] text-[#3E79BF]">
+            <span className="text-[12px] font-[800] leading-[16px] uppercase tracking-[2.4px] pt-[1px] text-[#667DA8]">
               Practical Executive Guide
             </span>
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-[36px] font-[800] leading-[39px] text-[#2b2b76] md:text-[60px] md:leading-[72px]">
+            <h1 className="text-[36px] font-[800] leading-[39px] text-[#1A2063] md:text-[60px] md:leading-[72px]">
               <span className="block">How Insurance</span>
               <span className="block">Leaders Are</span>
-              <span className="block text-[#3E79BF] bg-clip-text md:leading-[63px]">
+              <span className="block text-[#2A5699] bg-clip-text md:leading-[63px]">
                 Using AI
               </span>
             </h1>
-            <p className="text-[18px] font-[600] capitalize text-[#667DA8] md:text-[24px] md:leading-[32px]">
+            <p className="text-[20px] font-[600] capitalize text-[#3B4B74] md:text-[24px] md:leading-[32px]">
               To Reduce Claims Costs, Improve Underwriting, and Protect Margins
             </p>
           </div>
 
-          <p className="text-[20px] italic font-[400] leading-[26px] text-[#667DA8] md:text-[18px] md:leading-[29px]">
+          <p className="text-[18px] italic font-[400] leading-[26px] text-[#4F6590] md:text-[18px] md:leading-[29px]">
             "A practical executive guide for insurance carriers, brokers, MGAs,
             and mutuals who want real ROI from AI and not pilots that never
             scale."
@@ -216,16 +216,16 @@ export default function InsuranceHero() {
         </div>
 
         {/* Right form card */}
-        <div id="get-report" className="w-full max-w-md">
+        <div id="get-report" className="w-full max-w-[460px]">
           <div className="overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-white shadow-[0_25px_36px_-12px_rgba(15,23,42,0.35)] transition-all duration-300 ease-in-out hover:shadow-[0_35px_40px_-12px_rgba(15,23,42,0.45)] hover:-translate-y-1">
             <div className="h-2 bg-gradient-to-r from-[#3e6db5] to-[#059669] transition-all duration-300" />
-            <div className="space-y-6 px-6 py-6 md:px-8 md:py-8">
-              <div className="space-y-1 transition-all duration-300">
+            <div className="space-y-6 px-4 py-6 md:px-6 md:py-8">
+              <div className="space-y-2 transition-all text-center md:text-left duration-300">
                 <h3 className="text-[24px] font-[800] leading-[28px] text-[#2b2b76] transition-colors duration-300">
-                  Get the Report
+                  Download the Free 7 Pillars Report
                 </h3>
-                <p className="text-[14px] font-[600] leading-[16px] text-[#64748b] transition-colors duration-300">
-                  Join 2,000+ executives leading the AI era.
+                <p className="text-[14px] font-[600] leading-[16px] uppercase tracking-[1.4px] text-[#667DA8] transition-colors duration-300">
+                  Built for insurance executives.
                 </p>
               </div>
 
@@ -285,7 +285,7 @@ export default function InsuranceHero() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn_primary_for_insurance mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+                  className="btn_primary_for_insurance md:!text-[18px] !text-[16px] !tracking-[1px] mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
                 >
                   <span>
                     {isSubmitting ? "Submitting..." : "Get Your Free Report"}
@@ -367,7 +367,7 @@ function Badge({ text }) {
           className="h-full w-full transition-transform duration-300 group-hover:scale-110"
         />
       </span>
-      <span className="text-[#64748b] text-[14px] md:text-[16px] font-[500] leading-[20px] transition-colors duration-300 group-hover:text-[#475569]">
+      <span className="text-[#4F6590] text-[14px] md:text-[16px] font-[500] leading-[20px] transition-colors duration-300 group-hover:text-[#475569]">
         {text}
       </span>
     </div>

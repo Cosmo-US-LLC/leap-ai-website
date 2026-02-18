@@ -33,8 +33,8 @@ function TheReality() {
     <section className="bg-white py-16">
       <div className="mx-auto flex w-full max-w-[866px] flex-col items-center gap-8 px-4 text-center md:px-0">
         {/* Heading */}
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-[36px] font-[800] leading-[45px] md:leading-[57px] tracking-[-0.03em] text-[#3e79bf] md:text-[48px]">
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="text-[36px] uppercase md:capitalize font-[800] leading-[43px] md:leading-[57px] md:tracking-[-0.03em] tracking-[-0.9px] text-[#3e79bf] md:text-[48px]">
             The Reality?
           </p>
           <h2 className="text-[36px] font-extrabold uppercase leading-[45px] md:leading-[57px] tracking-[-0.03em] text-[#1a2063] md:text-[48px]">
@@ -61,7 +61,7 @@ function TheReality() {
                     aria-hidden
                   />
                 </div>
-                <p className="text-[16px] font-extrabold leading-[29.25px] text-[#1a2063] md:text-[18px]">
+                <p className="text-[18px] font-extrabold leading-[29.25px] text-[#1a2063] md:text-[18px]">
                   {title}
                 </p>
               </div>
