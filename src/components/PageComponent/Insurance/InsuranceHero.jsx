@@ -185,7 +185,7 @@ export default function InsuranceHero() {
               alt="StarBlue"
               className="h-[14px] w-[14px] transition-transform duration-300 group-hover:rotate-12"
             /> */}
-            <span className="text-[12px] font-[800] leading-[16px] uppercase tracking-[2.4px] pt-[1px] text-[#667DA8]">
+            <span className="text-[12px] font-[800] leading-[16px] uppercase tracking-[2.4px] pt-[1px] text-[#3E79BF]">
               Practical Executive Guide
             </span>
           </div>
