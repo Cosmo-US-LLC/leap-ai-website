@@ -124,45 +124,33 @@ export function YourFreeReport() {
 
   const handleDownload = async () => {
     const fileName = "7 Pillars Report.pdf";
-  
-    const pdfUrl = `${window.location.origin}/7-pillars-report.pdf`;
-    const zipUrl = `${window.location.origin}/7-pillars-report.zip`;
-  
+
     setIsDownloading(true);
-  
-    const isIOSSafari =
-      /iP(ad|hone|od)/.test(navigator.platform) &&
-      /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  
+
     try {
-      const downloadUrl = isIOSSafari ? zipUrl : pdfUrl;
-      const downloadName = isIOSSafari
-        ? "7-pillars-report.zip"
-        : fileName;
-  
-      // ✅ ALWAYS FETCH → BLOB (prevents new tab + HTML issue)
-      const response = await fetch(downloadUrl);
+      // Use the imported asset URL so we always get the real PDF (not SPA index.html)
+      const response = await fetch(pdfFile);
       if (!response.ok) throw new Error("File fetch failed");
-  
+
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
-  
+
       const link = document.createElement("a");
       link.href = blobUrl;
-      link.download = downloadName;
+      link.download = fileName;
       link.style.display = "none";
-  
+
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-  
+
       URL.revokeObjectURL(blobUrl);
-  
+
       setIsSuccessful(true);
       setTimeout(() => navigate("/meet"), 2000);
     } catch (err) {
       console.error(err);
-      alert("Failed to download the report.");
+      alert("Failed to download the report. Please try again.");
     } finally {
       setIsDownloading(false);
     }
