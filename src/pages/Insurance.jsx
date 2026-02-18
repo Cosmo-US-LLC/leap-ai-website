@@ -8,8 +8,17 @@ import WhoIsThisFor from "../components/PageComponent/Insurance/WhoIsThisFor";
 import WhatIsThisReport from "../components/PageComponent/Insurance/WhatIsThisReport";
 import InsuranceCommonQuestions from "../components/PageComponent/Insurance/InsuranceCommonQuestions";
 import InsuranceDontJustAdoptAi from "../components/PageComponent/Insurance/InsuranceDontJustAdoptAi";
+import { usePageMeta } from "../hooks/usePageMeta.js";
+
+const INSURANCE_META = {
+  title: "Transform Your Insurance Strategy with AI | Leap AI Solutions",
+  description:
+    "Unlock the power of AI for your insurance business. Discover how Leap AI’s tailored strategies can streamline operations, reduce costs, and enhance customer satisfaction.",
+};
 
 function Insurance() {
+  usePageMeta(INSURANCE_META);
+
   return (
     <>
       <InsuranceHero />

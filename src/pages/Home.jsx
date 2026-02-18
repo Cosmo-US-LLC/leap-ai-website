@@ -9,8 +9,17 @@ import StopGuessingSection from '../components/PageComponent/Home/StopGuessingSe
 import TrustedBySection from '../components/PageComponent/Home/TrustedBySection.jsx';
 import FreeReportHero from '../components/PageComponent/Home/FreeReportHero.jsx';
 import ImplementationJourneySection from '../components/PageComponent/Home/ImplementationJourneySection.jsx';
+import { usePageMeta } from '../hooks/usePageMeta.js';
+
+const HOME_META = {
+  title: 'Leap AI: Transform Your Business with Strategic AI Solutions',
+  description:
+    'Discover how Leap AI helps businesses drive growth, streamline operations, and lead with AI. Book your free consultation today to explore AI-powered solutions tailored for your company\'s success.',
+};
 
 export function Home() {
+  usePageMeta(HOME_META);
+
   return (
     <>
       <FreeReportHero />
