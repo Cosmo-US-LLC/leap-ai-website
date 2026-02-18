@@ -30,7 +30,7 @@ function WhatIsThisReport() {
         {/* Left column */}
         <div className="max-w-[500px] w-full space-y-8 text-left">
           <div className="space-y-1">
-            <h1 className="text-[32px] font-extrabold leading-tight text-white md:text-[48px] md:leading-[57.6px]">
+            <h1 className="text-[36px] font-extrabold leading-tight text-white md:text-[48px] md:leading-[57.6px]">
               <span className="block">What This Report</span>
               <span className="block text-[#A1BFDE]">Helps You Do</span>
             </h1>
@@ -40,16 +40,16 @@ function WhatIsThisReport() {
             {items.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start gap-4 rounded-[16px] border border-white/10 bg-white/5 px-6 py-5 group cursor-default"
+                className="flex items-start gap-4 rounded-[16px] border border-white/10 bg-white/5 px-6 py-4 group cursor-default"
               >
                 <span className="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full text-[#3e79bf] transition-transform duration-300 group-hover:scale-110">
                   <CheckCircle2 className="h-full w-full" aria-hidden />
                 </span>
                 <div className="flex flex-col gap-2">
-                  <p className="text-[20px] font-extrabold leading-[28px] text-white">
+                  <p className="md:text-[20px] text-[18px] font-extrabold leading-[28px] text-white">
                     {item.title}
                   </p>
-                  <p className="text-[16px] font-medium leading-[20px] text-[#bcc6d9]">
+                  <p className="text-[14px] font-medium leading-[20px] text-[#bcc6d9]">
                     {item.description}
                   </p>
                 </div>
@@ -59,12 +59,12 @@ function WhatIsThisReport() {
         </div>
 
         {/* Right card */}
-        <div className="w-full max-w-[550px] rounded-[16px] bg-white px-8 py-8 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] md:rotate-4 rotate-0 hover:rotate-0 hover:scale-[1.02] hover:shadow-[0_25px_36px_-12px_rgba(0,0,0,0.25)] transition-all duration-300">
+        <div className="w-full max-w-[550px] rounded-[16px] bg-white md:px-8 px-4 md:py-8 py-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:scale-[1.02] hover:shadow-[0_25px_36px_-12px_rgba(0,0,0,0.25)] transition-all duration-300">
           <div className="space-y-4">
-            <p className="text-[20px] font-extrabold italic uppercase leading-[31px] tracking-[-0.6px] text-[#12174b] md:text-[24px]">
+            <p className="text-[24px] font-extrabold italic uppercase leading-[31px] tracking-[-0.6px] text-[#1A2063] md:text-[24px]">
               "Clarity before commitment."
             </p>
-            <p className="text-[18px] font-bold leading-[29.25px] text-[#4f6590]">
+            <p className="text-[18px] font-bold tracking-[-0.4px] leading-[29px] text-[#4f6590]">
               Avoid the costly rework of failed pilots by identifying roadblocks
               before the first line of code is written.
             </p>

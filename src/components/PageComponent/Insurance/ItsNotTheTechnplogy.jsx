@@ -10,19 +10,19 @@ function ItsNotTheTechnplogy() {
 
   return (
     <section className="bg-[#12174b] py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-12 px-4 md:grid-cols-[1fr_auto] md:items-center md:px-8">
         {/* Left copy */}
         <div className="max-w-[600px] space-y-6 text-left">
           <div className="space-y-1">
             <h2 className="text-[36px] font-extrabold leading-tight text-white md:text-[48px] md:leading-[57px]">
-              <span className="block">It’s Not the Technology</span>
-              <span className="block text-[#a1bfde]">
+              <span className="">It’s Not the Technology</span> {""}
+              <span className=" text-[#a1bfde]">
                 It Is Knowing What to Do First
               </span>
             </h2>
           </div>
 
-          <p className="text-[18px] leading-[32px] text-[#bcc6d9] md:text-[20px]">
+          <p className="text-[20px] leading-[32px] text-[#bcc6d9] md:text-[20px]">
             Most AI content focuses on tools, models, or vendors. Successful
             insurers focus on the foundation: preparing people, data, workflows,
             and governance.

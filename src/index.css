@@ -363,3 +363,9 @@ body {
 .react-international-phone-country-selector-dropdown-item:hover {
   background-color: #f8fafc;
 }
+
+@media (max-width: 768px) {
+  .btn_primary_for_insurance {
+    font-weight: 800;
+  }
+}

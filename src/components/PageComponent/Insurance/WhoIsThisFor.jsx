@@ -28,10 +28,10 @@ function WhoIsThisFor() {
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-12 px-4 md:px-8">
         {/* Heading */}
         <div className="text-center space-y-2">
-          <h2 className="text-[32px] font-extrabold uppercase tracking-[-1.2px] text-[#12174b] md:text-[48px]">
+          <h2 className="text-[36px] font-extrabold uppercase tracking-[-1.2px] text-[#12174b] md:text-[48px]">
             Who This Is For
           </h2>
-          <p className="text-[12px] font-extrabold uppercase leading-[20px] tracking-[0.196px] text-[#3e79bf] md:text-[14px]">
+          <p className="text-[14px] font-extrabold uppercase leading-[20px] tracking-[0.196px] text-[#3e79bf] md:text-[14px]">
             Built for operational complexity
           </p>
         </div>

@@ -44,7 +44,7 @@ export default function InsuranceCommonQuestions() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 md:px-8">
-        <h2 className="text-center tracking-[4.8px] uppercase text-[30px] font-[800] leading-[40px] text-[#12174B] md:text-[48px] md:leading-[58px] transition-all duration-300">
+        <h2 className="text-center tracking-[4.8px] uppercase text-[36px] font-[800] leading-[40px] text-[#12174B] md:text-[48px] md:leading-[58px] transition-all duration-300">
           Common Questions
         </h2>
 
