@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, ArrowRight } from "lucide-react";
 import { Button } from "../ui/button.jsx";
 import {
@@ -13,8 +13,29 @@ import leapLogo from "../../assets/images/home/Leap_hero/leap_logo.svg";
 
 export function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isActive = (path) => location.pathname === path;
+
+  const scrollToForm = () => {
+    const getReportSection = document.getElementById("get-report");
+
+    if (getReportSection) {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
+      const offset = headerHeight + 20;
+      const elementPosition = getReportSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    navigate("/your-free-report");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-[#f1f5f9]">
@@ -48,12 +69,13 @@ export function Header() {
           </p>
         </div>
         <div className="flex shrink-0 md:hidden">
-          <Link
-            to="/your-free-report"
-            className="btn_primary_for_insurance !py-2 !px-4 !text-[14px] !tracking-[0.08em] flex items-center justify-center gap-2 rounded-[8px] whitespace-nowrap transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+          <button
+            type="button"
+            onClick={scrollToForm}
+            className="btn_primary_for_insurance !bg-[#12174B] !shadow-[0_10px_15px_-3px_rgba(30,58,138,0.10),0_4px_6px_-4px_rgba(30,58,138,0.10)] py-2! px-4! text-[14px]! tracking-[0.08em]! flex items-center justify-center gap-2 rounded-[8px] whitespace-nowrap transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
           >
             <span className="uppercase">Get Free Report</span>
-          </Link>
+          </button>
         </div>
         {/* <Sheet>
           <SheetTrigger asChild>

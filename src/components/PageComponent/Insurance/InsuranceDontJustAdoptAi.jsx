@@ -7,7 +7,7 @@ function InsuranceDontJustAdoptAi() {
 
       <div className="relative mx-auto flex md:max-w-2xl w-full flex-col items-center gap-6">
         <h2 className="text-[36px] font-[800] tracking-[-1.8px] md:tracking-[-2.4px] italic uppercase leading-[45px] md:text-[48px] md:leading-[60px]">
-          Don't Just Adopt AI. {""}
+          Don't Just Adopt <br className="md:hidden block" /> AI. {""}
           <br className="max-md:hidden block" />
           <span className="text-[#A1BFDE]">Lead the Era.</span>
         </h2>

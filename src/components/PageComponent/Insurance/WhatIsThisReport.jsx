@@ -70,13 +70,38 @@ function WhatIsThisReport() {
             </p>
           </div>
 
-          <button
+          <div className="flex justify-center">
+            <button
+              onClick={() => {
+                const getReportSection = document.getElementById("get-report");
+                if (getReportSection) {
+                  const header = document.querySelector("header");
+                  const headerHeight = header ? header.offsetHeight : 80;
+                  const offset = headerHeight + 20; // Add 20px extra spacing
+                  const elementPosition =
+                    getReportSection.getBoundingClientRect().top;
+                  const offsetPosition =
+                    elementPosition + window.pageYOffset - offset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="mt-8 inline-flex w-full  btn_primary_for_insurance uppercase"
+            >
+              Download the framework
+            </button>
+          </div>
+
+          {/* <button
             type="button"
             onClick={handleDownloadClick}
             className="mt-8 inline-flex w-full  btn_primary_for_insurance uppercase"
           >
             Download the framework
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
