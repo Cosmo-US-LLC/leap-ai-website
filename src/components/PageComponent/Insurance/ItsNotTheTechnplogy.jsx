@@ -10,7 +10,7 @@ function ItsNotTheTechnplogy() {
 
   return (
     <section className="bg-[#12174b] py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-12 px-4 md:grid-cols-[1fr_auto] md:items-center md:px-8">
         {/* Left copy */}
         <div className="max-w-[600px] space-y-6 text-left">
           <div className="space-y-1">
