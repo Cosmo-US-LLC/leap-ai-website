@@ -51,7 +51,7 @@ function ItsNotTheTechnplogy() {
         </div>
 
         {/* Right icon circle */}
-        <div className="flex w-full justify-center items-center max-md:hidden">
+        <div className="flex w-full justify-center items-center mr-[160px] max-md:hidden">
           <div className="flex h-[260px] w-[260px] items-center justify-center rounded-full border border-white/10 bg-white/5 p-px md:h-[300px] md:w-[300px] animate-circle-pulse">
             <svg
               xmlns="http://www.w3.org/2000/svg"
