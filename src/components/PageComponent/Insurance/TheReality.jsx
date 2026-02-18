@@ -47,7 +47,7 @@ function TheReality() {
 
         {/* Card */}
         <div className="w-full rounded-[16px] border border-[#eef1f8] bg-[#f8f9fc] px-4 py-6 text-left shadow-sm md:px-12">
-          <p className="mb-6 text-[16px] font-[700] leading-[29.25px] text-[#4f6590] md:text-[18px]">
+          <p className="mb-6 text-[18px] md:tracking-normal tracking-tight font-[700] leading-[29.25px] text-[#4f6590] md:text-[18px]">
             Most insurance leaders already know AI matters. What remains unclear
             is:
           </p>
