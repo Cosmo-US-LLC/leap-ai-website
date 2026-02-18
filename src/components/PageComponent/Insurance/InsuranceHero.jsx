@@ -285,7 +285,7 @@ export default function InsuranceHero() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn_primary_for_insurance md:!text-[18px] !text-[16px] !tracking-[1px] mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
+                  className="btn_primary_for_insurance !font-[800] md:!text-[18px] !text-[16px] !tracking-[1px] mt-2 flex w-full items-center uppercase justify-center gap-2 !py-2 !rounded-[8px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] group"
                 >
                   <span>
                     {isSubmitting ? "Submitting..." : "Get Your Free Report"}
