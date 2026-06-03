@@ -8,8 +8,11 @@ import { YourFreeReport } from "./pages/YourFreeReport.jsx";
 import { BookYourConsultation } from "./pages/BookYourConsultation.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
+import NewTermsOfService from "./pages/NewTermsOfService.jsx";
+import NewPrivacyPolicy from "./pages/NewPrivacyPolicy.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Insurance from "./pages/Insurance.jsx";
+import CaseStudies from "./pages/CaseStudies.jsx";
 
 function App() {
   return (
@@ -18,14 +21,17 @@ function App() {
       <Routes>
         <Route element={<NewHomeLayout />}>
           <Route index element={<Home />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/terms-of-services" element={<NewTermsOfService />} />
+          <Route path="/privacy-policy" element={<NewPrivacyPolicy />} />
         </Route>
         <Route element={<Layout />}>
           <Route path="/old-home" element={<OldHome />} />
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/your-free-report" element={<YourFreeReport />} />
           <Route path="/meet" element={<BookYourConsultation />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-services" element={<TermsOfService />} />
+          <Route path="/privacy-policy-old" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-services-old" element={<TermsOfService />} />
         </Route>
       </Routes>
     </>

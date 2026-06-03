@@ -35,18 +35,37 @@ const CASE_STUDIES = [
   },
 ];
 
-export default function CaseStudiesSection() {
+export default function CaseStudiesSection({
+  subtitle,
+  headingMuted = "results.",
+  showCtaButton,
+}) {
+  const shouldShowCta = showCtaButton ?? !subtitle;
+  const isCentered = !!subtitle;
+
   return (
-    <section id="case-studies" className="bg-[#fafcfe] px-4 py-16 md:px-8 md:py-20">
+    <section
+      id="case-studies"
+      className={`px-4 py-16 md:px-8 md:py-20 ${isCentered ? "mt-20 bg-white" : "bg-[#fafcfe]"}`}
+    >
       <div className="mx-auto max-w-[1280px]">
-        <div className="mb-12 flex flex-wrap items-center justify-between gap-4">
-          <h2 className="nh-h2 capitalize">
+        <div
+          className={`mb-12 ${isCentered ? "flex flex-col items-center gap-3 text-center" : "flex flex-wrap items-center justify-between gap-4"}`}
+        >
+          <h2
+            className={`capitalize ${isCentered ? "text-[40px] leading-11.5 text-[#201463] md:text-[56px] md:leading-14.5" : "nh-h2"}`}
+          >
             <span className="nh-h2-bold">Recent </span>
-            <span className="nh-h2-muted">results.</span>
+            <span className="nh-h2-muted">{headingMuted}</span>
           </h2>
-          <PrimaryCtaButton to="#case-studies" variant="soft">
-            All case studies
-          </PrimaryCtaButton>
+          {subtitle && (
+            <p className="max-w-xl text-base text-[#4e546c]">{subtitle}</p>
+          )}
+          {shouldShowCta && (
+            <PrimaryCtaButton to="/case-studies" variant="soft">
+              All case studies
+            </PrimaryCtaButton>
+          )}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
