@@ -8,22 +8,23 @@ function scrollToTeam() {
 
 export default function AboutHeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#151515] pt-28 lg:pt-[162px]">
+    <section className="relative overflow-hidden bg-[#151515] pt-[124px] pb-12 lg:pt-[162px] lg:pb-20">
       <div className="about-hero-gradient" aria-hidden />
       <img
         src={heroGrid}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -left-[171px] -top-[103px] z-[1] h-auto w-[min(606px,80vw)] max-w-none opacity-90"
+        className="pointer-events-none absolute left-5 top-0 z-[1] h-auto w-[min(606px,120vw)] max-w-none opacity-90 lg:-left-[171px] lg:-top-[103px]"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col items-center gap-12 px-4 pb-16 md:px-0 lg:flex-row lg:gap-20 lg:pb-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-8 px-5 lg:flex-row lg:items-center lg:gap-20 lg:px-0">
         <div className="flex w-full flex-1 flex-col gap-5">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 lg:gap-4">
             <h1 className="about-hero-title">
               The technology
-              <br />
+              <br className="hidden sm:block" />
               <span>
+                {" "}
                 is ready.{" "}
                 <span className="about-hero-title-accent">Is your business?</span>
               </span>
@@ -36,19 +37,21 @@ export default function AboutHeroSection() {
               transition—you lead it.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <PrimaryCtaButton>Schedule Your Free Consultation</PrimaryCtaButton>
+          <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:flex-wrap sm:items-center lg:gap-4">
+            <PrimaryCtaButton className="w-full justify-center sm:w-auto">
+              Schedule Your Free Consultation
+            </PrimaryCtaButton>
             <button
               type="button"
               onClick={scrollToTeam}
-              className="nh-btn inline-flex cursor-pointer items-center rounded-full border border-[rgba(32,20,99,0.2)] bg-white px-[24.8px] py-[15px] text-[#201463] transition hover:bg-[#f2f6fb]"
+              className="nh-btn inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-[rgba(32,20,99,0.2)] bg-white px-[21px] py-[15px] text-[#201463] transition hover:bg-[#f2f6fb] sm:w-auto lg:px-[24.8px]"
             >
               Meet the Team
             </button>
           </div>
         </div>
 
-        <div className="relative h-[360px] w-full shrink-0 overflow-hidden rounded-[32px] shadow-[0_2px_4px_0px_rgba(20,30,70,0.06),0_24px_48px_-12px_rgba(20,30,70,0.16)] sm:h-[440px] lg:h-[500px] lg:w-[533px]">
+        <div className="relative h-[340px] w-full shrink-0 overflow-hidden rounded-[24px] shadow-[0_2px_4px_0px_rgba(20,30,70,0.06),0_24px_48px_-12px_rgba(20,30,70,0.16)] lg:h-[500px] lg:w-[533px] lg:rounded-[32px]">
           <img
             src={heroImage}
             alt="Professional leader reviewing strategy outdoors"
