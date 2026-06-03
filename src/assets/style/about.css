@@ -1,0 +1,60 @@
+/* About page — Figma 1956:65 */
+
+.about-hero-gradient {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 20%, rgba(61, 81, 160, 0.5) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 88% 40%, rgba(143, 219, 255, 0.6) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(61, 81, 160, 0.18) 0%, transparent 70%);
+}
+
+.about-hero-title {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.03125;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .about-hero-title {
+    font-size: 64px;
+    line-height: 66px;
+  }
+}
+
+.about-hero-title-accent {
+  font-weight: 700;
+  color: var(--nh-primary);
+}
+
+.about-mission-stat {
+  font-family: var(--font-nunito);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1.92px;
+  color: var(--nh-navy);
+}
+
+.about-team-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.04;
+  color: var(--nh-navy);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-team-heading {
+    font-size: 56px;
+    line-height: 58px;
+  }
+}
+
+@media (max-width: 639px) {
+  .about-team-heading {
+    white-space: normal;
+  }
+}

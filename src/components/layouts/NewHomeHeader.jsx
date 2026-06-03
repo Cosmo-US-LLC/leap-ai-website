@@ -6,7 +6,7 @@ import { PrimaryCtaButton } from "../PageComponent/NewHome/PrimaryCtaButton.jsx"
 
 const NAV_LINKS = [
   { label: "Home", to: "/" },
-  { label: "About", to: "#about" },
+  { label: "About", to: "/about" },
   { label: "Methodology", to: "#methodology" },
   { label: "Case studies", to: "#case-studies" },
   { label: "Demos", to: "#demos" },
@@ -24,13 +24,18 @@ export function NewHomeHeader() {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
           {NAV_LINKS.map((link) => {
-            const isHome = link.to === "/" && location.pathname === "/";
+            const isActive =
+              link.to === "/"
+                ? location.pathname === "/"
+                : link.to.startsWith("/")
+                  ? location.pathname === link.to
+                  : false;
             return (
               <Link
                 key={link.label}
                 to={link.to}
                 className={`nh-nav-link rounded-lg px-4 py-1.5 transition ${
-                  isHome
+                  isActive
                     ? "bg-[rgba(43,43,118,0.1)] text-[#201463]"
                     : "text-[rgba(0,0,0,0.7)] hover:text-[#201463]"
                 }`}

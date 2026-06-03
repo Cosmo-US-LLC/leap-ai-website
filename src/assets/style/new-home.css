@@ -346,6 +346,50 @@
 }
 
 /* —— Footer —— */
+.nh-footer-gradient {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  opacity: 0.9;
+  background-image:
+    radial-gradient(
+      ellipse 864px 480px at 15% 80%,
+      rgba(0, 165, 236, 0.5) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 792px 420px at 50% 100%,
+      rgba(61, 81, 160, 0.55) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 864px 480px at 85% 80%,
+      rgba(2, 152, 95, 0.45) 0%,
+      transparent 65%
+    );
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+}
+
+.nh-footer-grid-deco {
+  pointer-events: none;
+  position: absolute;
+  top: 1.31%;
+  right: 7.22%;
+  bottom: 41.04%;
+  left: 54.24%;
+}
+
+.nh-footer-grid-deco img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
 .nh-footer-title {
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.115;

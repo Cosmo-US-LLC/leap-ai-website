@@ -3,6 +3,7 @@ import "./index.css";
 import { Layout } from "./components/layouts/Layout.jsx";
 import { NewHomeLayout } from "./components/layouts/NewHomeLayout.jsx";
 import { Home } from "./pages/Home.jsx";
+import { About } from "./pages/About.jsx";
 import { OldHome } from "./pages/OldHome.jsx";
 import { YourFreeReport } from "./pages/YourFreeReport.jsx";
 import { BookYourConsultation } from "./pages/BookYourConsultation.jsx";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/terms-of-services" element={<NewTermsOfService />} />
           <Route path="/privacy-policy" element={<NewPrivacyPolicy />} />
+          <Route path="/about" element={<About />} />
         </Route>
         <Route element={<Layout />}>
           <Route path="/old-home" element={<OldHome />} />
