@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Methodology", to: "#methodology" },
-  { label: "Case studies", to: "#case-studies" },
+  { label: "Case studies", to: "/case-studies" },
   { label: "Demos", to: "#demos" },
 ];
 

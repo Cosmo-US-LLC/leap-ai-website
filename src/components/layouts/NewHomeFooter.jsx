@@ -14,9 +14,11 @@ import { ArrowRightIcon } from "../PageComponent/NewHome/icons/ArrowRightIcon.js
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Methodology", href: "#methodology" },
-  { label: "Case Studies", href: "#case-studies" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Services", href: "/terms-of-services" },
 ];
 
 const SOCIAL_LINKS = [
