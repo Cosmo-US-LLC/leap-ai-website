@@ -22,7 +22,7 @@ export default function TermsOfService() {
                 Last updated: January 2026
                 </p>
             </div>
-            <div>   
+            <div>
             <h4 className="text-[#2B2B76] font-[Nunito] text-[18px] sm:text-[24px] font-extrabold leading-[28px] mb-3">
                 Introduction
                 </h4>
