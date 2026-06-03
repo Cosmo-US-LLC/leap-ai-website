@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import { Layout } from "./components/layouts/Layout.jsx";
+import { NewHomeLayout } from "./components/layouts/NewHomeLayout.jsx";
 import { Home } from "./pages/Home.jsx";
+import { OldHome } from "./pages/OldHome.jsx";
 import { YourFreeReport } from "./pages/YourFreeReport.jsx";
 import { BookYourConsultation } from "./pages/BookYourConsultation.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
@@ -14,8 +16,11 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<NewHomeLayout />}>
           <Route index element={<Home />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/old-home" element={<OldHome />} />
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/your-free-report" element={<YourFreeReport />} />
           <Route path="/meet" element={<BookYourConsultation />} />

@@ -1,20 +1,17 @@
-import DontJustAdoptAi from '../components/PageComponent/Home/DontJustAdoptAi.jsx';
-import VideoCallStrategySession from '../components/PageComponent/Home/VideoCallStrategySession.jsx';
-import DeliverablesSection from '../components/PageComponent/Home/DeliverablesSection.jsx';
-import MeetTheAuthors from '../components/PageComponent/Home/MeetTheAuthors.jsx';
-import CommonQuestions from '../components/PageComponent/Home/CommonQuestions.jsx';
-import InsideTheFramework from '../components/PageComponent/Home/InsideTheFramework.jsx';
-import GuideFitSection from '../components/PageComponent/Home/GuideFitSection.jsx';
-import StopGuessingSection from '../components/PageComponent/Home/StopGuessingSection.jsx';
-import TrustedBySection from '../components/PageComponent/Home/TrustedBySection.jsx';
-import FreeReportHero from '../components/PageComponent/Home/FreeReportHero.jsx';
-import ImplementationJourneySection from '../components/PageComponent/Home/ImplementationJourneySection.jsx';
-import { usePageMeta } from '../hooks/usePageMeta.js';
+import HeroSection from "../components/PageComponent/NewHome/HeroSection.jsx";
+import StrategicPillarsSection from "../components/PageComponent/NewHome/StrategicPillarsSection.jsx";
+import ArchitectIntelligenceSection from "../components/PageComponent/NewHome/ArchitectIntelligenceSection.jsx";
+import TestimonialsSection from "../components/PageComponent/NewHome/TestimonialsSection.jsx";
+import PartnerCtaSection from "../components/PageComponent/NewHome/PartnerCtaSection.jsx";
+import FaqSection from "../components/PageComponent/NewHome/FaqSection.jsx";
+import CaseStudiesSection from "../components/PageComponent/NewHome/CaseStudiesSection.jsx";
+import InsightsSection from "../components/PageComponent/NewHome/InsightsSection.jsx";
+import { usePageMeta } from "../hooks/usePageMeta.js";
 
 const HOME_META = {
-  title: 'Leap AI: Transform Your Business with Strategic AI Solutions',
+  title: "Leap 41 | Make AI Work for Cost Optimization",
   description:
-    'Discover how Leap AI helps businesses drive growth, streamline operations, and lead with AI. Book your free consultation today to explore AI-powered solutions tailored for your company\'s success.',
+    "Leap 41 helps visionary leaders navigate AI transformation with strategic architecture, proven frameworks, and execution that delivers measurable ROI.",
 };
 
 export function Home() {
@@ -22,17 +19,14 @@ export function Home() {
 
   return (
     <>
-      <FreeReportHero />
-      <TrustedBySection />
-      <StopGuessingSection />
-      <GuideFitSection />
-      <InsideTheFramework />
-      <ImplementationJourneySection />
-      <CommonQuestions />
-      <MeetTheAuthors />
-      {/* <DeliverablesSection /> */}
-      {/* <VideoCallStrategySession /> */}
-      <DontJustAdoptAi />
+      <HeroSection />
+      <StrategicPillarsSection />
+      <ArchitectIntelligenceSection />
+      <TestimonialsSection />
+      <PartnerCtaSection />
+      <FaqSection />
+      <CaseStudiesSection />
+      <InsightsSection />
     </>
   );
 }
