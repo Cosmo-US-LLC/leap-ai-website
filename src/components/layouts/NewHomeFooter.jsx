@@ -17,8 +17,8 @@ const COMPANY_LINKS = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Services", href: "/terms-of-services" },
+  // { label: "Privacy Policy", href: "/privacy-policy" },
+  // { label: "Terms of Services", href: "/terms-of-services" },
 ];
 
 const SOCIAL_LINKS = [

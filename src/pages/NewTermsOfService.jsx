@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta.js";
 
 const META = {
@@ -42,14 +43,12 @@ const SECTIONS = [
         Your privacy is important to us. If you provide any personal information
         to us through this website, we will handle it according to what we say
         in our{" "}
-        <a
-          href="https://www.leapai.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/privacy-policy"
           className="font-medium text-[#2b2b76] underline"
         >
           Privacy Policy
-        </a>
+        </Link>
         .
       </p>
     ),
