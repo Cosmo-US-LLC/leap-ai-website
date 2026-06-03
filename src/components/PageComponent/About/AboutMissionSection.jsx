@@ -18,10 +18,10 @@ const STATS = [
 
 export default function AboutMissionSection() {
   return (
-    <section className="bg-white px-4 py-16 shadow-[0_0_17.35px_rgba(0,0,0,0.15)] md:px-8 lg:px-20 lg:py-20">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-12 lg:flex-row lg:gap-20 items-center">
-        <div className="flex min-w-0 flex-1 flex-col gap-12">
-          <h2 className="nh-h2">
+    <section className="bg-white px-5 py-12 shadow-[0_0_17.35px_rgba(0,0,0,0.15)] lg:px-20 lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-8 lg:flex-row lg:items-center lg:gap-20">
+        <div className="flex min-w-0 flex-1 flex-col gap-6 lg:gap-12">
+          <h2 className="about-section-title">
             <span className="font-bold">Our</span>{" "}
             <span className="text-[rgba(32,20,99,0.7)]">mission</span>
           </h2>
@@ -44,14 +44,14 @@ export default function AboutMissionSection() {
           </div>
         </div>
 
-        <div className="flex w-full shrink-0 flex-col gap-6 lg:w-[500px]">
+        <div className="flex w-full shrink-0 flex-col gap-3.5 lg:w-[500px] lg:gap-6">
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className={`flex flex-col items-center gap-4 rounded-lg px-6 py-5 ${stat.bg}`}
+              className={`flex flex-col items-center gap-4 rounded-lg px-6 py-5 text-center ${stat.bg}`}
             >
-              <p className="about-mission-stat uppercase">{stat.value}</p>
-              <p className="max-w-[356px] text-center text-sm leading-[19.25px] text-black">
+              <p className="about-mission-stat w-full uppercase">{stat.value}</p>
+              <p className="w-full text-sm leading-5 text-black lg:max-w-[356px] lg:leading-[19.25px]">
                 {stat.label}
               </p>
             </div>
