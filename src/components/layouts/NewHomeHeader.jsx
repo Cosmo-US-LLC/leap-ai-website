@@ -13,7 +13,7 @@ import { NewHomeMobileMenu } from "./NewHomeMobileMenu.jsx";
 const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Methodology", to: "#methodology" },
+  { label: "Methodology", to: "/methodology" },
   { label: "Case studies", to: "/case-studies" },
   { label: "Demos", to: "#demos" },
 ];
