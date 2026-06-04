@@ -32,14 +32,14 @@ const FAQ_ITEMS = [
 
 export default function FaqSection() {
   return (
-    <section className="bg-white px-4 py-16 md:px-8 md:py-20">
+    <section className="bg-white px-5 py-12 max-lg:px-5 max-lg:py-12 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1280px]">
         <SectionHeading
           bold="Wondering About"
           muted="Something?"
           subtitle="We've gathered all the important info right here. Explore our FAQs and find the answers you need."
           subtitleRelaxed
-          className="mb-12"
+          className="mb-8 max-lg:mb-8 lg:mb-12"
         />
 
         <Accordion
@@ -51,7 +51,7 @@ export default function FaqSection() {
             <AccordionItem
               key={item.question}
               value={`item-${index}`}
-              className="overflow-hidden rounded-xl border border-[#f0f0f0] bg-[#fafcfe] px-6 data-[state=open]:shadow-sm"
+              className="overflow-hidden rounded-xl border border-[#f0f0f0] bg-[#fafcfe] px-5 max-lg:px-5 lg:px-6 data-[state=open]:shadow-sm"
             >
               <AccordionTrigger className="group cursor-pointer py-5 hover:no-underline [&>svg]:hidden">
                 <span className="nh-faq-question flex-1 text-left">

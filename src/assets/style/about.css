@@ -1,28 +1,10 @@
-/* About page — Figma desktop 1956:65, mobile 1888:6881 */
-
-.about-hero-gradient {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  opacity: 0.8;
-  background:
-    radial-gradient(ellipse 55% 45% at 50% 20%, rgba(61, 81, 160, 0.5) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 40% at 88% 40%, rgba(143, 219, 255, 0.6) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(61, 81, 160, 0.18) 0%, transparent 70%);
-}
+/* About page — headings & CTAs only (layout uses Tailwind) */
 
 .about-hero-title {
   font-size: 48px;
   line-height: 54px;
   font-weight: 400;
   color: #fff;
-}
-
-@media (min-width: 1024px) {
-  .about-hero-title {
-    font-size: 64px;
-    line-height: 66px;
-  }
 }
 
 .about-hero-title-accent {
@@ -36,26 +18,11 @@
   color: var(--nh-navy);
 }
 
-@media (min-width: 1024px) {
-  .about-section-title {
-    font-size: 52px;
-    line-height: 58px;
-  }
-}
-
 .about-team-heading {
   font-size: 40px;
   line-height: 46px;
   color: var(--nh-navy);
   text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .about-team-heading {
-    font-size: 56px;
-    line-height: 58px;
-    white-space: nowrap;
-  }
 }
 
 .about-mission-stat {
@@ -67,31 +34,109 @@
   color: var(--nh-navy);
 }
 
-@media (min-width: 1024px) {
-  .about-mission-stat {
-    font-size: 64px;
-    letter-spacing: 1.92px;
-  }
-}
-
 .about-trust-heading {
   font-size: 40px;
   line-height: 46px;
 }
 
 @media (min-width: 1024px) {
+  .about-hero-title {
+    font-size: 64px;
+    line-height: 66px;
+  }
+
+  .about-section-title {
+    font-size: 52px;
+    line-height: 58px;
+  }
+
+  .about-team-heading {
+    font-size: 56px;
+    line-height: 58px;
+    white-space: nowrap;
+  }
+
+  .about-mission-stat {
+    font-size: 64px;
+    letter-spacing: 1.92px;
+  }
+
   .about-trust-heading {
     font-size: 52px;
     line-height: 58px;
   }
+
+  .about-trust-cta > span:last-child {
+    background-color: #fff !important;
+    color: #201463 !important;
+  }
+
+  .about-trust-cta > span:last-child svg path {
+    stroke: #201463 !important;
+  }
 }
 
-/* Mobile team carousel — hide scrollbar */
-.about-team-carousel-track {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+@media (max-width: 1023px) {
+  .about-hero-primary-cta {
+    width: auto;
+    max-width: 100%;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
 
-.about-team-carousel-track::-webkit-scrollbar {
-  display: none;
+  .about-hero-primary-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+    background-color: #fff !important;
+  }
+
+  .about-hero-primary-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .about-hero-secondary-cta {
+    width: auto;
+    max-width: 100%;
+    align-self: flex-start;
+    padding: 15px 21px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .about-trust-cta {
+    gap: 8px;
+    padding: 14px 24px !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  .about-trust-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+    background-color: #201663 !important;
+    color: #fff !important;
+  }
+
+  .about-trust-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .about-trust-cta > span:last-child svg path {
+    stroke: #fff !important;
+  }
 }

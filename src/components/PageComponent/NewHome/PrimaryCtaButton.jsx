@@ -21,8 +21,10 @@ export function PrimaryCtaButton({
       : variant === "soft"
         ? "bg-[#201663]"
         : variant === "navy"
-          ? "bg-[#201663]"
+          ? "bg-white"
           : "bg-white");
+  const iconOnLightBackground =
+    resolvedIconBg.includes("white") || resolvedIconBg.includes("#fff");
   const base = `nh-btn inline-flex items-center gap-2 rounded-full px-6 py-3.5 transition hover:opacity-95 ${capitalize ? "nh-btn-cap" : ""}`;
   const styles =
     variant === "primary"
@@ -39,10 +41,7 @@ export function PrimaryCtaButton({
       <span
         className={`flex h-6 w-6 items-center justify-center rounded-xl ${resolvedIconBg} ${variant === "navy" || variant === "soft" ? "text-white" : "text-[#201463]"}`}
       >
-        <ArrowRightIcon
-          className="h-3 w-3"
-          dark={variant !== "navy" && variant !== "soft"}
-        />
+        <ArrowRightIcon className="h-3 w-3" dark={iconOnLightBackground} />
       </span>
     </>
   );
