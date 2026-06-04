@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 569.807 590.35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Gradient Layers" opacity="0.3" filter="url(#filter0_f_0_20)">
+<path id="Vector 3" opacity="0.9" d="M447.591 175.666C494.228 108.689 428.159 114.373 389.294 125.588C384.586 139.712 329.097 100.677 295.814 106.841C254.21 114.545 270.389 137.915 163.812 214.188C57.2341 290.462 117.585 287.637 191.291 342.338C264.996 397.039 389.294 451.741 343.068 380.09C296.841 308.439 389.294 259.387 447.591 175.666Z" fill="var(--fill-0, #18A3E6)"/>
+<path id="Vector 2" d="M447.591 210.593C494.228 143.616 428.159 149.3 389.294 160.514C384.586 174.639 329.097 135.604 295.814 141.767C254.21 149.472 270.389 172.841 163.812 249.115C57.2341 325.389 117.585 322.564 191.291 377.265C264.996 431.966 389.294 486.667 343.068 415.017C296.841 343.366 389.294 294.314 447.591 210.593Z" fill="var(--fill-0, #2067FF)"/>
+<path id="Vector 1" d="M447.591 245.519C494.228 178.542 428.159 184.227 389.294 195.441C384.586 209.566 329.097 170.531 295.814 176.694C254.21 184.398 270.389 207.768 163.812 284.042C57.2341 360.315 117.585 357.49 191.291 412.191C264.996 466.893 389.294 521.594 343.068 449.943C296.841 378.292 389.294 329.241 447.591 245.519Z" fill="var(--fill-0, #0600A0)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_20" x="-2.00899e-07" y="-1.84205e-06" width="569.807" height="590.35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="53.0876" result="effect1_foregroundBlur_0_20"/>
+</filter>
+</defs>
+</svg>

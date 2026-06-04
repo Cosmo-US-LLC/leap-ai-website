@@ -34,7 +34,8 @@ export default function AboutTeamSection() {
         <div className="hidden w-full flex-col gap-6 lg:flex">
           <div
             data-team-row
-            className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 sm:items-stretch"
+            data-team-row-large
+            className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start"
           >
             {TEAM_ROW_LARGE.map((member) => (
               <TeamMemberCard key={member.name} member={member} />
@@ -43,7 +44,7 @@ export default function AboutTeamSection() {
 
           <div
             data-team-row
-            className="grid w-full grid-cols-1 gap-6 lg:grid-cols-[410.667px_410.667px_1fr] lg:items-stretch"
+            className="grid w-full grid-cols-1 gap-4 lg:grid-cols-[410.667px_410.667px_1fr] lg:items-stretch"
           >
             {TEAM_ROW_MEDIUM.map((member) => (
               <TeamMemberCard key={member.name} member={member} />
@@ -52,7 +53,7 @@ export default function AboutTeamSection() {
 
           <div
             data-team-row
-            className="flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-center sm:items-stretch"
+            className="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center sm:items-stretch"
           >
             {TEAM_ROW_BOTTOM.map((member) => (
               <TeamMemberCard key={member.name} member={member} />

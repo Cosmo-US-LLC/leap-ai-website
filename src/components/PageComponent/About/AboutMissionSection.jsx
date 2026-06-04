@@ -51,7 +51,7 @@ export default function AboutMissionSection() {
               className={`flex flex-col items-center gap-4 rounded-lg px-6 py-5 text-center ${stat.bg}`}
             >
               <p className="about-mission-stat w-full uppercase">{stat.value}</p>
-              <p className="w-full text-sm leading-5 text-black lg:max-w-[356px] lg:leading-[19.25px]">
+              <p className="w-full text-sm font-normal leading-5 text-black max-lg:text-sm max-lg:leading-5 lg:max-w-[356px] lg:text-sm lg:leading-[19.25px]">
                 {stat.label}
               </p>
             </div>
