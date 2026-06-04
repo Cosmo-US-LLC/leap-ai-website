@@ -14,6 +14,7 @@ import NewPrivacyPolicy from "./pages/NewPrivacyPolicy.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Insurance from "./pages/Insurance.jsx";
 import CaseStudies from "./pages/CaseStudies.jsx";
+import Methodology from "./pages/Methodology.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route element={<NewHomeLayout />}>
           <Route index element={<Home />} />
+          <Route path="/methodology" element={<Methodology />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/terms-of-services" element={<NewTermsOfService />} />
           <Route path="/privacy-policy" element={<NewPrivacyPolicy />} />

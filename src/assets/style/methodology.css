@@ -1,0 +1,388 @@
+/* Methodology page — Figma desktop 1888:7127, mobile 1888:8374 */
+
+.meth-hero-section {
+  position: relative;
+  overflow: hidden;
+  background: #151515;
+  padding-top: 124px;
+  padding-bottom: 48px;
+}
+
+.meth-hero-gradient {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+  /* Mobile: navy at top, teal glow at lower-left — matches Figma 1888:8374 */
+  background:
+    radial-gradient(ellipse 120% 30% at 50% 0%, rgba(61, 81, 160, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 25% at 0% 55%, rgba(143, 219, 255, 0.5) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(61, 81, 160, 0.18) 0%, transparent 60%);
+}
+
+.meth-hero-grid {
+  pointer-events: none;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  z-index: 1;
+  height: auto;
+  width: min(606px, 120vw);
+  max-width: none;
+  opacity: 0.9;
+}
+
+.meth-hero-container {
+  position: relative;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.meth-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.meth-hero-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meth-hero-title {
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.meth-hero-title-accent {
+  font-weight: 700;
+  color: var(--nh-primary);
+}
+
+.meth-hero-body {
+  font-size: 16px;
+  line-height: 24px;
+  color: #dbdbdb;
+}
+
+.meth-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.meth-hero-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 21px;
+  border-radius: 100px;
+  border: 1px solid rgba(32, 20, 99, 0.2);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #201463;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.meth-hero-download-btn:hover {
+  background: #f2f6fb;
+}
+
+.meth-hero-image-wrap {
+  position: relative;
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 2px 4px 0 rgba(20, 30, 70, 0.06), 0 24px 48px -12px rgba(20, 30, 70, 0.16);
+  flex-shrink: 0;
+}
+
+.meth-hero-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ── Desktop ── */
+@media (min-width: 1024px) {
+  .meth-hero-gradient {
+    /* Desktop: navy centre, teal at top-right — matches Figma 1888:7127 */
+    background:
+      radial-gradient(ellipse 55% 45% at 50% 20%, rgba(61, 81, 160, 0.5) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 40% at 88% 40%, rgba(143, 219, 255, 0.6) 0%, transparent 60%),
+      linear-gradient(180deg, rgba(61, 81, 160, 0.18) 0%, transparent 70%);
+  }
+
+  .meth-hero-section {
+    padding-top: 162px;
+    padding-bottom: 80px;
+  }
+
+  .meth-hero-grid {
+    left: -171px;
+    top: -103px;
+  }
+
+  .meth-hero-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .meth-hero-content {
+    flex: 1;
+  }
+
+  .meth-hero-title {
+    font-size: 64px;
+    line-height: 66px;
+  }
+
+  .meth-hero-body {
+    max-width: 600px;
+  }
+
+  .meth-hero-buttons {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .meth-hero-download-btn {
+    justify-content: flex-start;
+  }
+
+  .meth-hero-image-wrap {
+    height: 500px;
+    width: 533px;
+    border-radius: 32px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Challenge Section  (1888:7150 desktop / 1888:8399 mobile)
+───────────────────────────────────────── */
+
+.meth-challenge-section {
+  background: #fff;
+  padding: 48px 20px;
+}
+
+.meth-challenge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* Left text */
+.meth-challenge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meth-challenge-heading {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  color: #201463;
+}
+
+.meth-challenge-heading-bold {
+  font-weight: 700;
+}
+
+.meth-challenge-heading-muted {
+  color: rgba(32, 20, 99, 0.7);
+  font-weight: 400;
+}
+
+.meth-challenge-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4e546c;
+}
+
+.meth-challenge-body p {
+  margin: 0;
+}
+
+/* Right dark card */
+.meth-challenge-card {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background:
+    radial-gradient(ellipse 60% 60% at 15% 20%, rgba(32, 20, 99, 1) 0%, rgba(32, 20, 99, 0) 70%),
+    radial-gradient(ellipse 40% 40% at 80% 15%, rgba(61, 81, 160, 0.3) 0%, rgba(61, 81, 160, 0) 70%),
+    #12174b;
+}
+
+.meth-challenge-card-heading {
+  font-family: var(--font-nunito);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #fff;
+  margin: 0;
+}
+
+.meth-challenge-card-inner {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Stats list */
+.meth-challenge-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.meth-challenge-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meth-challenge-stat-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meth-challenge-stat-value {
+  font-family: var(--font-nunito);
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 800;
+  color: #2b2b76;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.meth-challenge-stat-label {
+  font-family: var(--font-nunito);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.meth-challenge-stat-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #373737;
+  margin: 0;
+}
+
+.meth-challenge-divider {
+  height: 2px;
+  background: #e7edf6;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+/* Blue callout box */
+.meth-challenge-callout {
+  background: #18a3e6;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.meth-challenge-callout p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+/* ── Desktop ── */
+@media (min-width: 1024px) {
+  .meth-challenge-section {
+    padding: 80px;
+  }
+
+  .meth-challenge-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .meth-challenge-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .meth-challenge-heading {
+    font-size: 52px;
+    line-height: 58px;
+  }
+
+  .meth-challenge-card {
+    flex: 1;
+    min-width: 0;
+    padding: 32px 24px;
+  }
+
+  .meth-challenge-card-heading {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.72px;
+  }
+
+  .meth-challenge-card-inner {
+    padding: 32px 24px;
+  }
+
+  .meth-challenge-stat-value {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .meth-challenge-stat-label {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .meth-challenge-callout p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
