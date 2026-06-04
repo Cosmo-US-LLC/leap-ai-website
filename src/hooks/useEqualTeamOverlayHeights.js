@@ -24,6 +24,8 @@ export function useEqualTeamOverlayHeights() {
 
       const rows = section.querySelectorAll("[data-team-row]");
       rows.forEach((row) => {
+        if (row.hasAttribute("data-team-row-large")) return;
+
         const rowOverlays = row.querySelectorAll("[data-team-overlay]");
         if (!rowOverlays.length) return;
 

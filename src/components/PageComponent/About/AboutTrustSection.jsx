@@ -6,7 +6,7 @@ export default function AboutTrustSection() {
   return (
     <section className="bg-white px-5 py-6 lg:px-20 lg:py-12">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-8">
-        <div className="relative flex w-full shrink-0 flex-col items-center justify-center overflow-hidden rounded-2xl bg-[#12174b] px-6 py-16 text-center lg:basis-[800px] lg:px-[72px] lg:py-0">
+        <div className="relative flex w-full shrink-0 flex-col items-center justify-center overflow-hidden rounded-2xl bg-[#12174b] px-6 py-16 text-center max-lg:gap-8 max-lg:px-6 max-lg:py-16 lg:basis-[880px] lg:gap-6 lg:px-[72px] lg:py-0">
           <img
             src={partnerCtaGrid}
             alt=""
@@ -25,7 +25,10 @@ export default function AboutTrustSection() {
                 a business that thinks, learns, and optimizes itself.
               </p>
             </div>
-            <PrimaryCtaButton>Book a Free Consultation Call</PrimaryCtaButton>
+            <PrimaryCtaButton className="about-trust-cta shrink-0 lg:!px-6 lg:!py-3.5 lg:text-sm lg:font-semibold lg:[&>span:last-child]:!size-6 lg:[&>span:last-child]:!rounded-xl">
+              <span className="lg:hidden">Schedule Your Free Consultation</span>
+              <span className="hidden lg:inline">Book a Free Consultation Call</span>
+            </PrimaryCtaButton>
           </div>
         </div>
 
@@ -33,7 +36,7 @@ export default function AboutTrustSection() {
           <img
             src={partnerAbout}
             alt="Leap 41 team collaborating around a table"
-            className="absolute inset-0 h-full w-full object-cover lg:object-cover lg:object-left"
+            className="absolute inset-0 h-full w-full object-cover lg:object-left"
           />
         </div>
       </div>

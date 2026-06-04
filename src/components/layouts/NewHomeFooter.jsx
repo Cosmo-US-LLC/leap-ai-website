@@ -17,8 +17,6 @@ const COMPANY_LINKS = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
-  // { label: "Privacy Policy", href: "/privacy-policy" },
-  // { label: "Terms of Services", href: "/terms-of-services" },
 ];
 
 const SOCIAL_LINKS = [
@@ -26,75 +24,92 @@ const SOCIAL_LINKS = [
     label: "LinkedIn",
     href: "https://linkedin.com/company/leapaisolutions",
     icon: iconLinkedin,
-    iconClass: "h-4 w-4 object-contain",
+    iconClass: "h-4 w-4 object-contain lg:h-4 lg:w-4",
+    iconClassMobile: "h-3 w-3 object-contain",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/leapaisolutions/",
     icon: iconInstagram,
     iconClass: "h-4 w-4 object-contain",
+    iconClassMobile: "h-3 w-3 object-contain",
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/leapaisolutions",
     icon: iconFacebook,
     iconClass: "h-4 w-[9px] object-contain",
+    iconClassMobile: "h-3 w-[7px] object-contain",
   },
   {
     label: "TikTok",
     href: "https://www.tiktok.com/leapaisolutions/",
     icon: iconTiktok,
     iconClass: "h-4 w-[14px] object-contain",
+    iconClassMobile: "h-3 w-[11px] object-contain",
   },
   {
     label: "X",
     href: "https://twitter.com/leapaisolutions",
     icon: iconX,
     iconClass: "size-[12.8px]",
+    iconClassMobile: "size-[10.24px]",
   },
   {
     label: "Email",
     href: "mailto:info@leap41.ca",
     icon: iconEmail,
     iconClass: "h-4 w-4",
+    iconClassMobile: "h-3 w-3",
   },
 ];
+
+const FOOTER_MOBILE_CTA =
+  "max-lg:gap-2 max-lg:self-start max-lg:!px-5 max-lg:!py-3.5 max-lg:text-sm max-lg:font-semibold max-lg:leading-[22px] max-lg:whitespace-nowrap max-lg:[&>span:last-child]:!size-6 max-lg:[&>span:last-child]:!min-w-6 max-lg:[&>span:last-child]:!rounded-xl max-lg:[&>span:last-child_svg]:!h-3 max-lg:[&>span:last-child_svg]:!w-3";
 
 export function NewHomeFooter() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="flex w-full flex-col items-center bg-[#02010c] text-[#f2f6fb]">
-      {/* Single merged band — Figma 1888:897 (gradient + grid span CTA + links) */}
       <div className="relative w-full overflow-hidden">
         <div className="nh-footer-gradient" aria-hidden />
-        <div className="nh-footer-grid-deco" aria-hidden>
+        <div className="nh-footer-grid-deco hidden lg:block" aria-hidden>
           <img src={footerGridDeco} alt="" />
         </div>
 
-        {/* CTA — Figma 1888:902 */}
-        <div className="relative w-full px-4 md:px-8 lg:px-20">
+        {/* CTA — Figma 1888:7001 mobile / 1888:902 desktop */}
+        <div className="relative w-full px-5 lg:px-20">
           <div className="mx-auto max-w-[1280px]">
-            <div className="grid items-center gap-12 py-16 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-12 lg:py-20">
-              <div className="flex flex-col gap-8 pt-4">
+            <div className="flex flex-col gap-8 py-12 max-lg:pt-4 lg:grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:py-20">
+              <div className="flex flex-col gap-6 pt-4 lg:gap-8">
                 <h2 className="nh-footer-title">
-                  <span className="block font-bold">Make AI work for</span>
-                  <span>
-                    <span className="font-bold">your </span>
+                  <span className="lg:hidden">
+                    <span className="font-bold">Make AI work for your </span>
                     <span className="nh-footer-muted">business.</span>
                   </span>
+                  <span className="hidden lg:contents">
+                    <span className="nh-footer-title-line">Make AI work for</span>
+                    <span>
+                      <span className="font-bold">your </span>
+                      <span className="nh-footer-muted">business.</span>
+                    </span>
+                  </span>
                 </h2>
-                <div className="flex flex-wrap items-center gap-4">
-                  <PrimaryCtaButton capitalize>
+                <div className="flex flex-col items-start gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:gap-4">
+                  <PrimaryCtaButton
+                    capitalize
+                    className={`${FOOTER_MOBILE_CTA} footer-desktop-cta`}
+                  >
                     Schedule Your Free Consultation
                   </PrimaryCtaButton>
-                  <p className="nh-footer-cta-note whitespace-nowrap">
+                  <p className="nh-footer-cta-note lg:whitespace-nowrap">
                     No fluff. No obligation.
                   </p>
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[20px] border border-[rgba(242,246,251,0.1)] p-px">
+              <div className="w-full shrink-0 overflow-hidden rounded-[20px] border border-[rgba(242,246,251,0.1)] p-px">
                 <img
                   src={footerTeam}
                   alt="Leap 41 team in conversation"
@@ -105,21 +120,25 @@ export function NewHomeFooter() {
           </div>
         </div>
 
-        {/* Links — Figma 1888:916 */}
-        <div className="relative mx-auto w-full max-w-[1280px] px-4 md:px-0">
-          <div className="flex flex-col gap-16 py-16">
-            <div className="flex flex-col items-start gap-16 lg:flex-row lg:gap-24">
-              <div className="flex w-full max-w-[363px] shrink-0 flex-col gap-6">
-                <div className="flex flex-col gap-8">
+        {/* Links — Figma 1888:7014 mobile / 1888:916 desktop */}
+        <div className="relative mx-auto w-full max-w-[1280px] px-5 py-12 lg:px-0 lg:py-16">
+          <div className="flex flex-col gap-8 lg:gap-16">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-24">
+              <div className="flex w-full flex-col gap-6 lg:max-w-[363px] lg:shrink-0 lg:gap-8">
+                <div className="flex flex-col gap-6 lg:gap-8">
                   <Link to="/" aria-label="Leap 41 home">
-                    <img src={footerLogoWhite} alt="Leap 41" className="h-9 w-[140px]" />
+                    <img
+                      src={footerLogoWhite}
+                      alt="Leap 41"
+                      className="h-[30px] w-[117px] lg:h-9 lg:w-[140px]"
+                    />
                   </Link>
-                  <p className="nh-footer-text text-[rgba(242,246,251,0.65)]">
+                  <p className="nh-footer-address">
                     140 2nd Ave West Cardston, AB T0K0K0 Canada
                   </p>
                 </div>
-                <div className="flex flex-col gap-[13px]">
-                  <p className="nh-label-sm text-[rgba(242,246,251,0.5)]">Follow us on</p>
+                <div className="flex flex-col gap-4 lg:gap-[13px]">
+                  <p className="nh-footer-label">Follow us on</p>
                   <div className="flex flex-wrap gap-2">
                     {SOCIAL_LINKS.map((social) => (
                       <a
@@ -129,12 +148,18 @@ export function NewHomeFooter() {
                         {...(social.href.startsWith("mailto:")
                           ? {}
                           : { target: "_blank", rel: "noopener noreferrer" })}
-                        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-[20px] border-[0.8px] border-solid border-white transition hover:bg-white/10"
+                        className="flex size-8 cursor-pointer items-center justify-center rounded-2xl border border-white transition hover:bg-white/10 lg:h-10 lg:w-10 lg:rounded-[20px] lg:border-[0.8px]"
                       >
                         <img
                           src={social.icon}
                           alt=""
-                          className={social.iconClass}
+                          className={`${social.iconClassMobile} lg:hidden`}
+                          aria-hidden
+                        />
+                        <img
+                          src={social.icon}
+                          alt=""
+                          className={`hidden lg:block ${social.iconClass}`}
                           aria-hidden
                         />
                       </a>
@@ -143,9 +168,9 @@ export function NewHomeFooter() {
                 </div>
               </div>
 
-              <div className="flex min-w-0 flex-1 flex-col gap-4">
-                <p className="nh-label-sm text-[rgba(242,246,251,0.5)]">Company</p>
-                <ul className="flex flex-col gap-3">
+              <div className="flex w-full flex-col gap-4 lg:min-w-0 lg:flex-1">
+                <p className="nh-footer-label">Company</p>
+                <ul className="flex flex-col gap-2 lg:gap-3">
                   {COMPANY_LINKS.map((item) => (
                     <li key={item.label}>
                       <a href={item.href} className="nh-footer-link cursor-pointer">
@@ -156,24 +181,24 @@ export function NewHomeFooter() {
                 </ul>
               </div>
 
-              <div className="flex min-w-0 flex-1 flex-col gap-4">
-                <p className="nh-label-sm text-[rgba(242,246,251,0.5)]">Newsletter</p>
-                <div className="flex flex-col gap-3">
-                  <p className="nh-footer-text text-[rgba(242,246,251,0.7)]">
+              <div className="flex w-full flex-col gap-4 lg:min-w-0 lg:flex-1">
+                <p className="nh-footer-label">Newsletter</p>
+                <div className="flex flex-col gap-4 lg:gap-3">
+                  <p className="nh-footer-newsletter-text">
                     Field notes from real engagements. No fluff.
                   </p>
                   <form
-                    className="flex items-center gap-2 rounded-full border border-[rgba(242,246,251,0.15)] bg-[rgba(242,246,251,0.05)] p-[7px]"
+                    className="flex w-full items-center gap-2 rounded-full border border-[rgba(242,246,251,0.15)] bg-[rgba(242,246,251,0.05)] p-[6.8px] lg:p-[7px]"
                     onSubmit={(e) => e.preventDefault()}
                   >
                     <input
                       type="email"
                       placeholder="you@company.com"
-                      className="nh-footer-text min-w-0 flex-1 bg-transparent px-3 py-2.5 text-[#f2f6fb] placeholder:text-[rgba(242,246,251,0.4)] outline-none"
+                      className="nh-footer-text min-w-0 flex-1 bg-transparent px-3 py-2 text-[#f2f6fb] placeholder:text-[rgba(242,246,251,0.4)] outline-none lg:py-2.5"
                     />
                     <button
                       type="submit"
-                      className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#f2f6fb] text-[#201463] transition hover:opacity-90"
+                      className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#f2f6fb] text-[#201463] transition hover:opacity-90 lg:h-9 lg:w-9"
                       aria-label="Subscribe"
                     >
                       <ArrowRightIcon className="h-4 w-4" dark />
@@ -183,25 +208,31 @@ export function NewHomeFooter() {
               </div>
             </div>
 
-            <div className="nh-footer-legal flex flex-col items-center justify-between gap-4 border-t border-[rgba(242,246,251,0.1)] pt-[16px] text-[rgba(242,246,251,0.55)] md:flex-row">
-              <p>© {year} Leap 41 AI Solutions. All rights reserved.</p>
-              <div className="flex gap-5">
+            <div className="flex flex-col gap-4 border-t border-[rgba(242,246,251,0.1)] pt-6 lg:flex-row lg:items-center lg:justify-between lg:gap-5 lg:pt-6">
+              <p className="nh-footer-legal">© {year} Leap 41 AI Solutions. All rights reserved.</p>
+              <div className="flex flex-wrap gap-5 lg:gap-5">
                 <Link
                   to="/terms-of-services"
-                  className="cursor-pointer transition hover:text-white"
+                  className="nh-footer-legal-link cursor-pointer transition hover:text-white"
                 >
                   Terms
                 </Link>
                 <Link
                   to="/privacy-policy"
-                  className="cursor-pointer transition hover:text-white"
+                  className="nh-footer-legal-link cursor-pointer transition hover:text-white"
                 >
                   Privacy
                 </Link>
-                <button type="button" className="cursor-pointer transition hover:text-white">
+                <button
+                  type="button"
+                  className="nh-footer-legal-link cursor-pointer transition hover:text-white"
+                >
                   EN
                 </button>
-                <button type="button" className="cursor-pointer transition hover:text-white">
+                <button
+                  type="button"
+                  className="nh-footer-legal-link cursor-pointer transition hover:text-white"
+                >
                   FR
                 </button>
               </div>

@@ -49,6 +49,79 @@
   font-weight: 400;
 }
 
+/* Header action groups — avoid Tailwind display conflicts with .nh-btn inline-flex */
+.nh-header-actions-desktop {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.nh-header-actions-mobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 1024px) {
+  .nh-header-actions-desktop {
+    display: flex;
+  }
+
+  .nh-header-actions-mobile {
+    display: none;
+  }
+}
+
+/* Figma 1956:337 — desktop navbar CTA */
+.nh-header-desktop-cta {
+  gap: 8px;
+  padding: 8px 16px !important;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  background-color: #201463 !important;
+  background-image: none !important;
+}
+
+.nh-header-desktop-cta > span:last-child {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 12px;
+  background-color: #fff !important;
+}
+
+.nh-header-desktop-cta > span:last-child svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Figma 1888:6296 — compact mobile header CTA */
+.nh-mobile-header-cta {
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.nh-mobile-header-cta > span:last-child {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.nh-mobile-header-cta > span:last-child svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* Figma 1888:11709 — mobile menu links */
+.nh-mobile-menu-link {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* —— Buttons / CTAs —— */
 .nh-btn {
   font-size: 14px;
@@ -74,7 +147,7 @@
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nh-hero-title {
     font-size: 64px;
     line-height: 66px;
@@ -93,6 +166,14 @@
   color: var(--nh-hero-muted);
 }
 
+.home-hero-secondary-cta {
+  padding: 15px 25px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* —— Section headings (52px) —— */
 .nh-h2 {
   font-size: clamp(2rem, 4vw, 3.25rem);
@@ -100,7 +181,7 @@
   color: var(--nh-navy);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nh-h2 {
     font-size: 52px;
     line-height: 58px;
@@ -122,7 +203,7 @@
   line-height: 1.036;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nh-h2-lg {
     font-size: 56px;
     line-height: 58px;
@@ -250,7 +331,7 @@
   word-break: break-word;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nh-architect-heading {
     font-size: 48px;
     line-height: 56px;
@@ -391,29 +472,12 @@
 }
 
 .nh-footer-title {
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1.115;
-  font-weight: 700;
   color: var(--nh-light);
-}
-
-@media (min-width: 768px) {
-  .nh-footer-title {
-    font-size: 52px;
-    line-height: 58px;
-  }
 }
 
 .nh-footer-muted {
   font-weight: 400;
   color: var(--nh-light-muted);
-}
-
-.nh-footer-note {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--nh-light-soft);
 }
 
 .nh-partner-body {
@@ -431,7 +495,7 @@
   word-break: break-word;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nh-partner-heading {
     font-size: 52px;
     line-height: 58px;
@@ -449,24 +513,15 @@
   font-weight: 600;
 }
 
-.nh-footer-text {
-  font-size: 14px;
-  line-height: 20px;
+.nh-footer-text,
+.nh-footer-cta-note,
+.nh-footer-link,
+.nh-footer-legal,
+.nh-footer-legal-link {
   font-weight: 400;
-}
-
-.nh-footer-cta-note {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: rgba(242, 246, 251, 0.8);
 }
 
 .nh-footer-link {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: rgba(242, 246, 251, 0.8);
   transition: color 0.15s ease;
 }
 
@@ -474,10 +529,135 @@
   color: #fff;
 }
 
-.nh-footer-legal {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
+/* Figma 1888:904 / 1888:916 — desktop footer typography */
+@media (min-width: 1024px) {
+  .nh-footer-title {
+    font-size: 52px;
+    line-height: 58px;
+    font-weight: 700;
+  }
+
+  .nh-footer-title-line {
+    display: block;
+    font-weight: 700;
+  }
+
+  .nh-footer-cta-note {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(242, 246, 251, 0.8);
+  }
+
+  .footer-desktop-cta {
+    padding: 14px 24px !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  .footer-desktop-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+  }
+
+  .footer-desktop-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .nh-footer-address {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 246, 251, 0.65);
+  }
+
+  .nh-footer-label {
+    font-family: var(--font-nunito);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    color: rgba(242, 246, 251, 0.5);
+  }
+
+  .nh-footer-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .nh-footer-newsletter-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 246, 251, 0.7);
+  }
+
+  .nh-footer-link {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 246, 251, 0.8);
+  }
+
+  .nh-footer-legal,
+  .nh-footer-legal-link {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(242, 246, 251, 0.55);
+  }
+}
+
+@media (max-width: 1023px) {
+  .nh-footer-title {
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 700;
+  }
+
+  .nh-footer-cta-note {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 246, 251, 0.8);
+  }
+
+  .nh-footer-address,
+  .nh-footer-text,
+  .nh-footer-newsletter-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .nh-footer-address {
+    color: rgba(242, 246, 251, 0.65);
+  }
+
+  .nh-footer-newsletter-text {
+    color: rgba(242, 246, 251, 0.7);
+  }
+
+  .nh-footer-label {
+    font-family: var(--font-nunito);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    color: rgba(242, 246, 251, 0.5);
+  }
+
+  .nh-footer-link {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(242, 246, 251, 0.8);
+  }
+
+  .nh-footer-legal,
+  .nh-footer-legal-link {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(242, 246, 251, 0.55);
+  }
 }
 
 /* —— Insights —— */
@@ -515,4 +695,256 @@
   line-height: 20px;
   font-weight: 700;
   color: var(--nh-primary);
+}
+
+/* —— Home mobile (Figma 1888:5470) — headings & CTAs only —— */
+@media (max-width: 1023px) {
+  .nh-hero-title {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .nh-h2,
+  .nh-h2-lg {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .nh-h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .nh-architect-heading {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .nh-partner-heading {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .nh-tab {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .nh-quote {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .nh-quote-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nh-quote-role {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .nh-metric-case {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .nh-card-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .nh-stat-value {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .home-hero-primary-cta {
+    gap: 8px;
+    padding: 14px 20px !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  .home-hero-primary-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+  }
+
+  .home-hero-primary-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .home-section-primary-cta {
+    gap: 8px;
+    padding: 14px 24px !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .home-section-primary-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+  }
+
+  .home-section-primary-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .home-section-soft-cta {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .home-section-soft-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+  }
+
+  .home-section-soft-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Case studies carousel — shadow renders inside padded track, not clipped */
+  .case-studies-mobile-track {
+    padding: 20px 16px 28px 0;
+    margin: -20px -16px -28px 0;
+    scroll-padding-right: 16px;
+  }
+
+  .case-study-mobile-wrap {
+    padding-right: 4px;
+  }
+
+  .case-study-mobile-card {
+    box-shadow: 0 8px 40px rgba(43, 43, 118, 0.1);
+  }
+
+  /* Figma 1888:6083 — case studies mobile CTA */
+  .home-case-studies-cta {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .home-case-studies-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+    background-color: #201663 !important;
+    color: #fff !important;
+  }
+
+  .home-case-studies-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .home-case-studies-cta > span:last-child svg path {
+    stroke: #fff !important;
+  }
+
+  /* Figma 1987:92 — insights carousel peek */
+  .insights-mobile-track {
+    scroll-padding-right: 20px;
+  }
+
+  /* Figma 1987:92 — insights section */
+  .nh-insights-title {
+    font-size: 40px;
+    line-height: 46px;
+    color: var(--nh-navy);
+  }
+
+  .nh-article-meta-mobile {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--nh-text);
+  }
+
+  .nh-article-title-mobile {
+    font-family: var(--font-nunito);
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 800;
+    color: var(--nh-navy);
+  }
+
+  .nh-article-author-mobile {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--nh-navy);
+  }
+
+  .home-insights-cta {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .home-insights-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+    background-color: #201663 !important;
+    color: #fff !important;
+  }
+
+  .home-insights-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .home-insights-cta > span:last-child svg path {
+    stroke: #fff !important;
+  }
+
+  .home-pillars-outline-cta {
+    gap: 8px;
+    padding: 12px 20px !important;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  .home-pillars-outline-cta > span:last-child {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 12px;
+  }
+
+  .home-pillars-outline-cta > span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
 }

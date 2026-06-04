@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ALL_TEAM_MEMBERS } from "../../../lib/aboutTeam.js";
-import { TeamMemberCard } from "./TeamMemberCard.jsx";
+import { useEqualMobileTeamOverlayHeights } from "../../../hooks/useEqualMobileTeamOverlayHeights.js";
+import { MobileTeamMemberCard } from "./MobileTeamMemberCard.jsx";
 import { ArrowRightIcon } from "../NewHome/icons/ArrowRightIcon.jsx";
 
+/** Mobile-only team carousel — desktop grid is in AboutTeamSection */
 export default function AboutTeamCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const trackRef = useRef(null);
+  const trackRef = useEqualMobileTeamOverlayHeights();
 
   const scrollToIndex = useCallback((index) => {
     const track = trackRef.current;
@@ -14,7 +16,7 @@ export default function AboutTeamCarousel() {
     const next = Math.max(0, Math.min(index, ALL_TEAM_MEMBERS.length - 1));
     setActiveIndex(next);
     card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-  }, []);
+  }, [trackRef]);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -38,16 +40,16 @@ export default function AboutTeamCarousel() {
 
     track.addEventListener("scroll", onScroll, { passive: true });
     return () => track.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [trackRef]);
 
   return (
-    <div className="flex w-full flex-col items-center gap-6 lg:hidden">
+    <div className="hidden w-full max-lg:flex max-lg:flex-col max-lg:items-center max-lg:gap-6">
       <div
         ref={trackRef}
-        className="about-team-carousel-track -mx-5 flex w-[calc(100%+40px)] gap-3.5 overflow-x-auto scroll-smooth px-5 snap-x snap-mandatory"
+        className="-mx-5 flex w-[calc(100%+40px)] gap-3.5 overflow-x-auto scroll-smooth px-5 [scrollbar-width:none] [-ms-overflow-style:none] [scroll-snap-type:x_mandatory] [&::-webkit-scrollbar]:hidden"
       >
         {ALL_TEAM_MEMBERS.map((member) => (
-          <TeamMemberCard key={member.name} member={member} layout="mobile" />
+          <MobileTeamMemberCard key={member.name} member={member} />
         ))}
       </div>
 
