@@ -13,7 +13,7 @@ import { ArrowRightIcon } from "../PageComponent/NewHome/icons/ArrowRightIcon.js
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Methodology", href: "#methodology" },
+  { label: "Methodology", href: "/methodology" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
