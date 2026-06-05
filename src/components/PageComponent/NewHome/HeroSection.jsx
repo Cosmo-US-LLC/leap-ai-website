@@ -1,7 +1,14 @@
 import heroEarthGrid from "../../../assets/images/new-home/hero-earth-grid.webp";
 import heroVideo from "../../../assets/images/new-home/hero-video.webp";
 import playIcon from "../../../assets/images/new-home/icons/play.svg";
+import { useTypewriter } from "../../../hooks/useTypewriter.js";
 import { PrimaryCtaButton } from "./PrimaryCtaButton.jsx";
+
+const HERO_TYPEWRITER_PHRASES = [
+  "Cost Optimization",
+  "Technical Writing",
+  "Business Growth",
+];
 
 function scrollToCaseStudies() {
   document.getElementById("case-studies")?.scrollIntoView({
@@ -11,6 +18,8 @@ function scrollToCaseStudies() {
 }
 
 export default function HeroSection() {
+  const typewriterText = useTypewriter(HERO_TYPEWRITER_PHRASES);
+
   return (
     <section className="relative flex flex-col overflow-hidden bg-[#151515] max-lg:min-h-0 lg:h-[100dvh] lg:min-h-[100dvh]">
       <div
@@ -26,17 +35,40 @@ export default function HeroSection() {
         src={heroEarthGrid}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute left-1/2 z-[1] w-full -translate-x-1/2 object-cover object-bottom mix-blend-screen max-lg:bottom-0 max-lg:h-[213px] max-lg:opacity-50 lg:-bottom-10 lg:opacity-5"
+        className="pointer-events-none absolute left-1/2 z-[1] w-full -translate-x-1/2 object-cover object-bottom mix-blend-screen opacity-5 max-lg:bottom-0 max-lg:h-[213px] lg:-bottom-10"
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-1 flex-col items-stretch gap-8 px-5 pb-12 pt-[124px] max-lg:justify-start lg:flex-row lg:items-center lg:justify-center lg:gap-20 lg:px-0 lg:pb-12 lg:pt-20">
         <div className="w-full flex-1 max-lg:max-w-none lg:max-w-[600px]">
-          <h1 className="nh-hero-title max-lg:break-words">
-            We make AI work
-            <br className="hidden lg:block" />
-            <span className="max-lg:before:content-['_'] lg:before:content-none">
-              for{" "}
-              <span className="nh-hero-title-accent">cost optimization</span>
+          <h1 className="nh-hero-title max-lg:break-words lg:[text-wrap:balance]">
+            <span className="lg:hidden">
+              <span className="nh-hero-title-static block">
+                We make
+                <br />
+                AI work for
+              </span>
+              <span
+                className="nh-hero-title-accent nh-typewriter-text nh-hero-typewriter-slot block"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {typewriterText}
+              </span>
+            </span>
+
+            <span className="hidden lg:inline">
+              We make AI work
+              <br />
+              <span className="nh-hero-title-for-line">
+                for{" "}
+                <span
+                  className="nh-hero-title-accent nh-typewriter-text"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  {typewriterText}
+                </span>
+              </span>
             </span>
           </h1>
           <p className="nh-hero-body mt-4 max-w-[600px]">

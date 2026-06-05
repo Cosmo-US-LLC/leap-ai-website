@@ -51,8 +51,8 @@ function CaseStudyMetric({ metric, metricParts }) {
 
 function CaseStudyCardInner({ study }) {
   return (
-    <>
-      <div className="relative h-[263px]">
+    <div className="flex h-full flex-col">
+      <div className="relative h-[263px] shrink-0">
         <img
           src={study.image}
           alt=""
@@ -62,33 +62,33 @@ function CaseStudyCardInner({ study }) {
           {study.tag}
         </span>
       </div>
-      <div className="flex flex-col px-5 py-6 max-lg:gap-8 lg:p-6">
-        <div className="flex flex-col max-lg:gap-4">
-          <div className="flex flex-col max-lg:gap-1">
-            <CaseStudyMetric metric={study.metric} metricParts={study.metricParts} />
-            <p className="nh-metric-caption capitalize">{study.metricLabel}</p>
-          </div>
-          <div className="flex flex-col max-lg:gap-3">
-            <h3 className="nh-card-title lg:mt-4">{study.title}</h3>
-            <p className="nh-body-case line-clamp-3 lg:mt-3">{study.description}</p>
-          </div>
+      <div className="case-study-card-body px-5 py-6 lg:p-6">
+        <div className="flex shrink-0 flex-col gap-1">
+          <CaseStudyMetric metric={study.metric} metricParts={study.metricParts} />
+          <p className="nh-metric-caption capitalize">{study.metricLabel}</p>
         </div>
+
+        <div className="case-study-card-copy">
+          <h3 className="case-study-card-title nh-card-title">{study.title}</h3>
+          <p className="case-study-card-desc nh-body-case">{study.description}</p>
+        </div>
+
         <a
           href="#"
-          className="nh-link-case inline-flex w-fit self-start items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px] lg:mt-6"
+          className="case-study-card-link nh-link-case inline-flex w-fit shrink-0 self-start items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px]"
         >
           Read case study
           <ArrowRightIcon className="h-4 w-4 -rotate-45" />
         </a>
       </div>
-    </>
+    </div>
   );
 }
 
 function MobileCaseStudyCard({ study }) {
   return (
-    <div className="case-study-mobile-wrap shrink-0 snap-start">
-      <article className="case-study-mobile-card w-[320px] overflow-hidden rounded-2xl bg-white">
+    <div className="case-study-mobile-wrap shrink-0 snap-start self-stretch">
+      <article className="case-study-mobile-card flex h-full w-[320px] flex-col overflow-hidden rounded-2xl bg-white">
         <CaseStudyCardInner study={study} />
       </article>
     </div>
@@ -97,7 +97,7 @@ function MobileCaseStudyCard({ study }) {
 
 function DesktopCaseStudyCard({ study }) {
   return (
-    <article className="overflow-hidden rounded-2xl bg-white shadow-[0_0_48px_4px_rgba(43,43,118,0.1)]">
+    <article className="case-study-desktop-card flex h-full min-w-0 flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-[0_0_48px_4px_rgba(43,43,118,0.1)]">
       <CaseStudyCardInner study={study} />
     </article>
   );
@@ -165,13 +165,13 @@ export default function CaseStudiesSection({
         </div>
 
         <div className="w-full max-lg:max-w-[350px] lg:max-w-none">
-          <div className="case-studies-mobile-track flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden">
+          <div className="case-studies-mobile-track flex items-stretch gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden">
             {CASE_STUDIES.map((study) => (
               <MobileCaseStudyCard key={study.title} study={study} />
             ))}
           </div>
 
-          <div className="hidden grid-cols-3 gap-6 lg:grid">
+          <div className="case-studies-desktop-row hidden lg:flex">
             {CASE_STUDIES.map((study) => (
               <DesktopCaseStudyCard key={study.title} study={study} />
             ))}

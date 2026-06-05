@@ -74,9 +74,6 @@ export function NewHomeFooter() {
     <footer className="flex w-full flex-col items-center bg-[#02010c] text-[#f2f6fb]">
       <div className="relative w-full overflow-hidden">
         <div className="nh-footer-gradient" aria-hidden />
-        <div className="nh-footer-grid-deco hidden lg:block" aria-hidden>
-          <img src={footerGridDeco} alt="" />
-        </div>
 
         {/* CTA — Figma 1888:7001 mobile / 1888:902 desktop */}
         <div className="relative w-full px-5 lg:px-20">
@@ -109,12 +106,17 @@ export function NewHomeFooter() {
                 </div>
               </div>
 
-              <div className="w-full shrink-0 overflow-hidden rounded-[20px] border border-[rgba(242,246,251,0.1)] p-px">
-                <img
-                  src={footerTeam}
-                  alt="Leap 41 team in conversation"
-                  className="aspect-[522/392] w-full object-cover"
-                />
+              <div className="nh-footer-image-wrap relative w-full shrink-0">
+                <div className="nh-footer-grid-deco" aria-hidden>
+                  <img src={footerGridDeco} alt="" />
+                </div>
+                <div className="relative z-10 overflow-hidden rounded-[20px] border border-[rgba(242,246,251,0.1)] p-px">
+                  <img
+                    src={footerTeam}
+                    alt="Leap 41 team in conversation"
+                    className="aspect-[522/392] w-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
