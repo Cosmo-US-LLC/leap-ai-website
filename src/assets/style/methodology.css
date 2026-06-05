@@ -386,3 +386,58 @@
   }
 }
 
+/* ─────────────────────────────────────────
+   Roadmap Section  (1888:7380 desktop)
+───────────────────────────────────────── */
+
+.meth-roadmap-heading {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+  color: #201463;
+}
+
+.meth-roadmap-heading-bold {
+  font-weight: 700;
+}
+
+.meth-roadmap-heading-muted {
+  font-weight: 400;
+  color: rgba(32, 20, 99, 0.7);
+}
+
+.meth-roadmap-step-title {
+  font-family: var(--font-nunito);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #f2f6fb;
+  margin: 0;
+}
+
+.meth-roadmap-includes-label {
+  font-family: var(--font-nunito);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c9d9ef;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .meth-roadmap-heading {
+    font-size: 56px;
+    line-height: 58px;
+  }
+
+  .meth-roadmap-step-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .meth-roadmap-includes-label {
+    font-size: 18px;
+  }
+}
+

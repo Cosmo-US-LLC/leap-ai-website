@@ -10,12 +10,13 @@ export default function AboutTrustSection({
   photoAlt = "Leap 41 team collaborating around a table",
   button = <PrimaryCtaButton>Book a Free Consultation Call</PrimaryCtaButton>,
   cardClassName = "",
+  imageClassName = "",
 }) {
   return (
     <section className="bg-white px-5 py-6 lg:px-20 lg:py-12">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-8">
+      <div className="about-trust-layout mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-6 lg:grid-cols-[minmax(0,800px)_minmax(0,1fr)] lg:items-stretch lg:gap-8">
         <div
-          className={`flex w-full shrink-0 flex-col items-center justify-center overflow-hidden rounded-2xl bg-[#12174b] px-6 py-16 text-center lg:basis-[800px] lg:px-[72px] lg:py-0 ${cardClassName}`}
+          className={`flex h-full min-h-0 w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-[#12174b] px-6 py-16 text-center lg:min-h-[430px] lg:px-[72px] lg:py-12 ${cardClassName}`}
           style={{ backgroundImage: `url(${partnerCtaGrid})`, backgroundSize: "cover", backgroundPosition: "top" }}
         >
           <div className="flex w-full max-w-[636px] flex-col items-center gap-8 lg:gap-6">
@@ -32,11 +33,13 @@ export default function AboutTrustSection({
           </div>
         </div>
 
-        <div className="relative h-[340px] w-full shrink-0 overflow-hidden rounded-2xl lg:min-h-0 lg:flex-1">
+        <div
+          className={`relative h-full min-h-[340px] w-full overflow-hidden rounded-2xl max-lg:h-[340px] ${imageClassName}`}
+        >
           <img
             src={photo}
             alt={photoAlt}
-            className="absolute inset-0 h-full w-full object-cover lg:object-cover lg:object-left"
+            className="h-full w-full object-cover object-center lg:object-left"
           />
         </div>
       </div>

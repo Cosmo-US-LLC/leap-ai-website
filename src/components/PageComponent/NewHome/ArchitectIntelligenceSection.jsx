@@ -48,8 +48,8 @@ export default function ArchitectIntelligenceSection() {
                 key={stat.value}
                 className="rounded-2xl border border-[rgba(255,255,255,0.12)] bg-[rgba(255,255,255,0.06)] p-4 backdrop-blur-sm max-lg:p-4 lg:p-6"
               >
-                <p className="nh-stat-value">{stat.value}</p>
-                <p className="nh-stat-label mt-2 max-lg:mt-2 lg:mt-3">{stat.label}</p>
+                <p className="nh-stat-value text-center md:text-left">{stat.value}</p>
+                <p className="nh-stat-label mt-2 max-lg:mt-2 lg:mt-3 text-center md:text-left">{stat.label}</p>
               </div>
             ))}
           </div>

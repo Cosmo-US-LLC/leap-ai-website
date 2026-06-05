@@ -1,5 +1,5 @@
 import heroGrid from "../../../assets/images/about/hero-grid.webp";
-import heroImage from "../../../assets/images/about/hero-image.webp";
+import heroImage from "../../../assets/images/methodology/methodology-hero.webp";
 import { PrimaryCtaButton } from "../NewHome/PrimaryCtaButton.jsx";
 import reportPdf from "../../../assets/pdf/7 Pillars Report.pdf";
 

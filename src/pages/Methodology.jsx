@@ -3,6 +3,8 @@ import MethodologyHeroSection from "../components/PageComponent/Methodology/Meth
 import MethodologyChallengeSection from "../components/PageComponent/Methodology/MethodologyChallengeSection.jsx";
 import MethodologyPillarsSection from "../components/PageComponent/Methodology/MethodologyPillarsSection.jsx";
 import MethodologyValueSection from "../components/PageComponent/Methodology/MethodologyValueSection.jsx";
+import MethodologyRoadmapSection from "../components/PageComponent/Methodology/MethodologyRoadmapSection.jsx";
+import MethodologyAuthorsSection from "../components/PageComponent/Methodology/MethodologyAuthorsSection.jsx";
 import AboutTrustSection from "../components/PageComponent/About/AboutTrustSection.jsx";
 import reportPhoto from "../assets/images/methodology/download-report-section/rectangle_27.webp";
 import reportPdf from "../assets/pdf/7 Pillars Report.pdf";
@@ -40,6 +42,8 @@ export default function Methodology() {
         button={<DownloadReportButton />}
         cardClassName="lg:py-[100px]"
       />
+      <MethodologyRoadmapSection />
+      <MethodologyAuthorsSection />
     </>
   );
 }

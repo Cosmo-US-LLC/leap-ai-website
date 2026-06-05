@@ -86,7 +86,7 @@ function MobileTabGrid({ activeTab, onSelect }) {
   ];
 
   return (
-    <div className="w-full rounded-lg border border-[#eaeaea] p-2 lg:hidden">
+    <div className="mb-6 w-full rounded-xl border border-[#eaeaea] p-2 lg:hidden">
       <div className="flex flex-col gap-2">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex gap-2">

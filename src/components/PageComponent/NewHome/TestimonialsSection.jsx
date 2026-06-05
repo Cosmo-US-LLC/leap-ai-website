@@ -1,5 +1,7 @@
-import { useState } from "react";
-import testimonialAvatar from "../../../assets/images/new-home/testimonial-avatar.webp";
+import { useEffect, useState } from "react";
+import testimonial1 from "../../../assets/images/new-home/laurent-groux.webp";
+import testimonial2 from "../../../assets/images/new-home/mikerobillard.webp";
+import testimonial3 from "../../../assets/images/new-home/vmorin.webp";
 import quoteIcon from "../../../assets/images/new-home/icons/quote.svg";
 import arrowIcon from "../../../assets/images/new-home/icons/arrow-right.svg";
 import { SectionHeading } from "./SectionHeading.jsx";
@@ -7,33 +9,71 @@ import { SectionHeading } from "./SectionHeading.jsx";
 const TESTIMONIALS = [
   {
     quote:
-      "We finally have a real AI roadmap, sequenced by priority, with KPIs we can defend in the boardroom.",
-    name: "David Okafor",
-    role: "President - Helio Logistics",
-    avatar: testimonialAvatar,
+      "A sharp, well-structured AI assessment that gave us clarity and confidence in our strategic direction.",
+    name: "Laurent Groux, Ph. D",
+    role: "Partner - Environnement S-air",
+    avatar: testimonial1,
   },
   {
     quote:
-      "Leap 41 helped us move from scattered pilots to a single operating model our board could approve in weeks, not quarters.",
-    name: "Sarah Mitchell",
-    role: "COO - Northline Manufacturing",
-    avatar: testimonialAvatar,
+      "A highly competent team that delivered an AI implementation of exceptional quality, from strategy to execution.",
+    name: "Michael Robillard",
+    role: "CEO - Groupe Robillard",
+    avatar: testimonial2,
   },
   {
     quote:
-      "They speak executive language and still ship production systems. That combination is rare.",
-    name: "James Chen",
-    role: "CEO - Meridian Health Partners",
-    avatar: testimonialAvatar,
+      "Leap AI turned complex AI requirements into a robust, high-quality solution with real business value.",
+    name: "Vincent Morin",
+    role: "COO - Infoprimes",
+    avatar: testimonial3,
   },
 ];
+
+const AUTO_SCROLL_INTERVAL_MS = 5000;
+
+function TestimonialContent({ testimonial, slideKey, variant }) {
+  const isDesktop = variant === "desktop";
+
+  return (
+    <div
+      key={slideKey}
+      className={`nh-testimonial-enter flex w-full flex-col gap-12 ${
+        isDesktop ? "max-w-[824px]" : ""
+      }`}
+    >
+      <div className="flex flex-col items-center gap-8">
+        <img src={quoteIcon} alt="" className="h-8 w-10" aria-hidden />
+        <blockquote className="nh-quote text-center">{testimonial.quote}</blockquote>
+      </div>
+
+      <div
+        className={`flex items-center justify-center ${
+          isDesktop ? "gap-2.5" : "gap-3.5"
+        }`}
+      >
+        <img
+          src={testimonial.avatar}
+          alt=""
+          className={`shrink-0 rounded-full object-cover ${
+            isDesktop ? "h-16 w-16" : "h-14 w-14"
+          }`}
+        />
+        <div className="flex flex-col gap-[3px] text-left">
+          <p className="nh-quote-name">{testimonial.name}</p>
+          <p className="nh-quote-role">{testimonial.role}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function TestimonialNavButton({ onClick, label, rotate, className = "" }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`flex shrink-0 items-center justify-center rounded-2xl border border-black transition hover:bg-[#f2f6fb] max-lg:h-8 max-lg:w-8 lg:h-12 lg:w-12 lg:rounded-3xl ${className}`}
+      className={`flex shrink-0 items-center cursor-pointer justify-center rounded-2xl border border-black transition hover:bg-[#f2f6fb] max-lg:h-8 max-lg:w-8 lg:h-12 lg:w-12 lg:rounded-3xl ${className}`}
       aria-label={label}
     >
       <img
@@ -46,8 +86,30 @@ function TestimonialNavButton({ onClick, label, rotate, className = "" }) {
   );
 }
 
+function TestimonialDots({ count, index, onSelect, className = "" }) {
+  return (
+    <div className={`flex items-center justify-center gap-2 lg:gap-2 ${className}`}>
+      {Array.from({ length: count }, (_, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={() => onSelect(i)}
+          className={`rounded-full transition-all cursor-pointer ${
+            i === index
+              ? "bg-[#201463] max-lg:h-2 max-lg:w-6 lg:h-3 lg:w-3"
+              : "h-2 w-2 bg-[#dde4f0] lg:h-3 lg:w-3"
+          }`}
+          aria-label={`Go to testimonial ${i + 1}`}
+          aria-current={i === index ? "true" : undefined}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function TestimonialsSection() {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const current = TESTIMONIALS[index];
 
   const prev = () =>
@@ -55,8 +117,33 @@ export default function TestimonialsSection() {
   const next = () =>
     setIndex((i) => (i === TESTIMONIALS.length - 1 ? 0 : i + 1));
 
+  useEffect(() => {
+    if (paused) return undefined;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReducedMotion) return undefined;
+
+    const timer = window.setInterval(() => {
+      setIndex((i) => (i === TESTIMONIALS.length - 1 ? 0 : i + 1));
+    }, AUTO_SCROLL_INTERVAL_MS);
+
+    return () => window.clearInterval(timer);
+  }, [paused, index]);
+
   return (
-    <section className="bg-white px-5 py-12 max-lg:px-5 max-lg:py-12 lg:px-8 lg:py-20">
+    <section
+      className="bg-white px-5 py-12 max-lg:px-5 max-lg:py-12 lg:px-8 lg:py-20"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setPaused(false);
+        }
+      }}
+    >
       <div className="mx-auto max-w-[1280px]">
         <SectionHeading
           bold="From Followers to"
@@ -64,78 +151,63 @@ export default function TestimonialsSection() {
           subtitle="Organizations that went from following trends to setting them. Hear what they have to say about Leap AI."
           size="large"
           subtitleRelaxed
-          className="mb-8 max-lg:mb-12 lg:mb-12"
+          className="mb-8 max-lg:mb-0 lg:mb-12"
         />
 
-        <div className="flex flex-col items-center max-lg:gap-12 lg:flex-row lg:items-center lg:gap-8">
-          <TestimonialNavButton
-            onClick={prev}
-            label="Previous testimonial"
-            rotate
-            className="hidden lg:flex"
+        {/* Mobile — Figma 1888:6007 */}
+        <div className="mx-auto flex w-full max-w-[350px] flex-col items-center gap-12 overflow-hidden rounded-[20px] py-12 lg:hidden">
+          <TestimonialContent
+            testimonial={current}
+            slideKey={index}
+            variant="mobile"
           />
 
-          <div className="flex w-full max-w-[824px] flex-1 flex-col items-center rounded-[20px] px-4 max-lg:max-w-[350px] max-lg:gap-12 max-lg:py-12 lg:px-16 lg:py-6">
-            <img src={quoteIcon} alt="" className="h-8 w-10" aria-hidden />
-            <blockquote className="nh-quote text-center">{current.quote}</blockquote>
-            <div className="flex items-center gap-3.5">
-              <img
-                src={current.avatar}
-                alt=""
-                className="h-14 w-14 rounded-full object-cover lg:h-16 lg:w-16"
-              />
-              <div className="text-left">
-                <p className="nh-quote-name">{current.name}</p>
-                <p className="nh-quote-role">{current.role}</p>
-              </div>
-            </div>
-            <div className="hidden gap-2 lg:flex lg:mt-10">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setIndex(i)}
-                  className={`h-3 w-3 rounded-full transition ${
-                    i === index ? "bg-[#201463]" : "bg-[#dde4f0]"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          <TestimonialNavButton
-            onClick={next}
-            label="Next testimonial"
-            rotate={false}
-            className="hidden lg:flex"
-          />
-
-          <div className="flex items-center gap-6 max-lg:flex lg:hidden">
+          <div className="flex items-center gap-6">
             <TestimonialNavButton
               onClick={prev}
               label="Previous testimonial"
               rotate
             />
-            <div className="flex gap-2">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setIndex(i)}
-                  className={`h-2 w-2 rounded-full transition ${
-                    i === index ? "bg-[#201463] w-6" : "bg-[#dde4f0]"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
-            </div>
+            <TestimonialDots
+              count={TESTIMONIALS.length}
+              index={index}
+              onSelect={setIndex}
+            />
             <TestimonialNavButton
               onClick={next}
               label="Next testimonial"
               rotate={false}
             />
           </div>
+        </div>
+
+        {/* Desktop — Figma 1888:701 */}
+        <div className="hidden w-full items-center lg:flex">
+          <TestimonialNavButton
+            onClick={prev}
+            label="Previous testimonial"
+            rotate
+          />
+
+          <div className="flex min-w-0 flex-1 flex-col items-center gap-14 overflow-hidden rounded-[20px] px-[180px] py-6">
+            <TestimonialContent
+              testimonial={current}
+              slideKey={index}
+              variant="desktop"
+            />
+
+            <TestimonialDots
+              count={TESTIMONIALS.length}
+              index={index}
+              onSelect={setIndex}
+            />
+          </div>
+
+          <TestimonialNavButton
+            onClick={next}
+            label="Next testimonial"
+            rotate={false}
+          />
         </div>
       </div>
     </section>

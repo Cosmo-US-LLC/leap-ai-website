@@ -159,6 +159,30 @@
   color: var(--nh-primary);
 }
 
+.nh-hero-title-for-line {
+  display: inline;
+  white-space: normal;
+}
+
+.nh-typewriter-text {
+  display: inline;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1023px) {
+  .nh-hero-title-static {
+    margin-bottom: 0;
+  }
+
+  .nh-hero-typewriter-slot {
+    display: block;
+    min-height: calc(2 * 54px);
+    margin-top: 0;
+    overflow-wrap: break-word;
+  }
+}
+
 .nh-hero-body {
   font-size: 16px;
   line-height: 24px;
@@ -393,6 +417,28 @@
   color: var(--nh-text);
 }
 
+@keyframes nh-testimonial-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nh-testimonial-enter {
+  animation: nh-testimonial-enter 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nh-testimonial-enter {
+    animation: none;
+  }
+}
+
 /* —— Case studies —— */
 .nh-tag-pill {
   font-size: 14px;
@@ -454,13 +500,19 @@
   mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
 }
 
+/* Figma 1888:898 — grid anchored to CTA image (1888:914) */
+.nh-footer-image-wrap {
+  isolation: isolate;
+}
+
 .nh-footer-grid-deco {
   pointer-events: none;
   position: absolute;
-  top: 1.31%;
-  right: 7.22%;
-  bottom: 41.04%;
-  left: 54.24%;
+  z-index: 0;
+  top: -12.8%;
+  left: -3.4%;
+  width: 99%;
+  height: 133%;
 }
 
 .nh-footer-grid-deco img {
@@ -468,7 +520,7 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
-  object-position: right center;
+  object-position: left top;
 }
 
 .nh-footer-title {
@@ -500,6 +552,63 @@
     font-size: 52px;
     line-height: 58px;
   }
+
+  /* Case studies desktop row — Figma 1888:786 */
+  .case-studies-desktop-row {
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .case-study-desktop-card {
+    min-height: 100%;
+  }
+
+  .case-study-card-body {
+    min-height: 316px;
+  }
+
+  .case-study-card-title {
+    min-height: 56px;
+    line-height: 28px;
+  }
+}
+
+/* Case studies — shared equal-height card body (Figma 1888:6086 mobile / 1888:787 desktop) */
+.case-study-card-body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex: 1;
+  row-gap: 16px;
+}
+
+.case-study-card-copy {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-study-card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.case-study-card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  margin-top: 0;
+  line-height: 24px;
+  max-height: 48px;
+}
+
+.case-study-card-link {
+  margin-top: 0;
 }
 
 .nh-partner-heading-muted {
@@ -822,19 +931,32 @@
     height: 12px;
   }
 
-  /* Case studies carousel — shadow renders inside padded track, not clipped */
+  /* Case studies carousel — Figma 1888:6085 equal-height cards, bottom-aligned CTA */
   .case-studies-mobile-track {
+    align-items: stretch;
     padding: 20px 16px 28px 0;
     margin: -20px -16px -28px 0;
     scroll-padding-right: 16px;
   }
 
   .case-study-mobile-wrap {
+    display: flex;
+    align-self: stretch;
     padding-right: 4px;
   }
 
   .case-study-mobile-card {
+    height: 100%;
     box-shadow: 0 8px 40px rgba(43, 43, 118, 0.1);
+  }
+
+  .case-study-card-body {
+    min-height: 302px;
+  }
+
+  .case-study-card-title {
+    min-height: 52px;
+    line-height: 26px;
   }
 
   /* Figma 1888:6083 — case studies mobile CTA */

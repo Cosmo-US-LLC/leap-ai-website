@@ -5,7 +5,7 @@ import globeIcon from "../../assets/images/new-home/icons/globe.svg";
 import chevronDown from "../../assets/images/new-home/icons/chevron-down.svg";
 import menuIcon from "../../assets/images/new-home/icons/menu-icon.svg";
 import menuClose from "../../assets/images/new-home/icons/menu-close.svg";
-import { FREE_CONSULTATION_URL } from "../../lib/newHomeLinks.js";
+import { DEMOS_URL, FREE_CONSULTATION_URL } from "../../lib/newHomeLinks.js";
 import { PrimaryCtaButton } from "../PageComponent/NewHome/PrimaryCtaButton.jsx";
 import { ArrowRightIcon } from "../PageComponent/NewHome/icons/ArrowRightIcon.jsx";
 import { NewHomeMobileMenu } from "./NewHomeMobileMenu.jsx";
@@ -15,7 +15,7 @@ const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Methodology", to: "/methodology" },
   { label: "Case studies", to: "/case-studies" },
-  { label: "Demos", to: "#demos" },
+  { label: "Demos", to: DEMOS_URL },
 ];
 
 function MobileHeaderCta() {
@@ -61,19 +61,33 @@ export function NewHomeHeader() {
           </Link>
 
           <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex" aria-label="Main">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                to={link.to}
-                className={`nh-nav-link rounded-lg px-4 py-1.5 transition ${
-                  isLinkActive(link.to)
-                    ? "bg-[rgba(43,43,118,0.1)] text-[#201463]"
-                    : "text-[rgba(0,0,0,0.7)] hover:text-[#201463]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const className = `nh-nav-link rounded-lg px-4 py-1.5 transition ${
+                isLinkActive(link.to)
+                  ? "bg-[rgba(43,43,118,0.1)] text-[#201463]"
+                  : "text-[rgba(0,0,0,0.7)] hover:text-[#201463]"
+              }`;
+
+              if (link.to.startsWith("http")) {
+                return (
+                  <a
+                    key={link.label}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+
+              return (
+                <Link key={link.label} to={link.to} className={className}>
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="nh-header-actions-desktop">

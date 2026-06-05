@@ -54,20 +54,29 @@ export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
         >
           {navLinks.map((link) => {
             const active = isLinkActive(link.to);
+            const className = `nh-mobile-menu-link rounded px-3 py-1 capitalize transition ${
+              active
+                ? "bg-[rgba(43,43,118,0.1)] font-semibold text-[#201463]"
+                : "font-normal text-black hover:text-[#201463]"
+            }`;
 
             return (
               <div key={link.label} className="flex w-full flex-col items-center">
-                <Link
-                  to={link.to}
-                  onClick={onClose}
-                  className={`nh-mobile-menu-link rounded px-3 py-1 capitalize transition ${
-                    active
-                      ? "bg-[rgba(43,43,118,0.1)] font-semibold text-[#201463]"
-                      : "font-normal text-black hover:text-[#201463]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                {link.to.startsWith("http") ? (
+                  <a
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClose}
+                    className={className}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link to={link.to} onClick={onClose} className={className}>
+                    {link.label}
+                  </Link>
+                )}
               </div>
             );
           })}

@@ -11,22 +11,22 @@ const FAQ_ITEMS = [
   {
     question: "How is this different from typical AI consulting?",
     answer:
-      "We combine C-suite experience with hands-on delivery. You get a strategic roadmap and a team that builds, ships, and measures outcomes—not slide decks and disconnected pilots.",
+      "Most consultants deliver reports. We architect competitive moats. Our 7-pillar approach ensures every AI investment creates compound advantage, not just isolated improvements.",
   },
   {
     question: "What if our workforce resists AI transformation?",
     answer:
-      "Change management is embedded in every engagement. We map role impacts, train leaders and teams, and tie adoption to incentives so people see AI as an amplifier, not a threat.",
+      "We've designed our entire approach around this reality. We transform the 71% who fear AI replacement into innovation champions by showing clear career progression in an AI-augmented world.",
   },
   {
     question: "How do you ensure real business impact, not just impressive demos?",
     answer:
-      "Every initiative starts with a business case, executive sponsors, and KPIs. We prototype quickly, validate with real data, and only scale what proves value in production.",
+      "Every initiative must pass our Strategic Leverage Project filter: measurable financial returns + competitive market advantage + improved customer experience. No exceptions.",
   },
   {
     question: "How do you handle the pace of AI change?",
     answer:
-      "Our 7-pillar framework is designed for adaptability. We build foundational capabilities and governance so you can absorb new models and tools without restarting from zero.",
+      "We build strategic foundations, not technology dependencies. Our pillar-based architecture adapts to new AI capabilities while maintaining competitive advantage as technology evolves.",
   },
 ];
 
