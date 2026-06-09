@@ -13,6 +13,8 @@ export function PrimaryCtaButton({
   iconBg,
   variant = "primary",
   capitalize = false,
+  type = "button",
+  disabled = false,
 }) {
   const resolvedIconBg =
     iconBg ??
@@ -68,7 +70,11 @@ export function PrimaryCtaButton({
   }
 
   return (
-    <button type="button" className={`${base} ${styles} ${className}`}>
+    <button
+      type={type}
+      disabled={disabled}
+      className={`${base} ${styles} ${className}`}
+    >
       {content}
     </button>
   );

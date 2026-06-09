@@ -1,4 +1,5 @@
 import "../assets/style/methodology.css";
+import { usePageMeta } from "../hooks/usePageMeta.js";
 import MethodologyHeroSection from "../components/PageComponent/Methodology/MethodologyHeroSection.jsx";
 import MethodologyChallengeSection from "../components/PageComponent/Methodology/MethodologyChallengeSection.jsx";
 import MethodologyPillarsSection from "../components/PageComponent/Methodology/MethodologyPillarsSection.jsx";
@@ -26,7 +27,15 @@ function DownloadReportButton() {
   );
 }
 
+const METHODOLOGY_META = {
+  title: "AI Implementation Methodology | Leap AI",
+  description:
+    "Explore Leap AI's proven AI implementation methodology. Our 7-pillar framework guides strategy, execution, and adoption to deliver measurable business results.",
+};
+
 export default function Methodology() {
+  usePageMeta(METHODOLOGY_META);
+
   return (
     <>
       <MethodologyHeroSection />

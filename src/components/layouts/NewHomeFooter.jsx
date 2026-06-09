@@ -12,11 +12,11 @@ import { PrimaryCtaButton } from "../PageComponent/NewHome/PrimaryCtaButton.jsx"
 import { ArrowRightIcon } from "../PageComponent/NewHome/icons/ArrowRightIcon.jsx";
 
 const COMPANY_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Methodology", href: "/methodology" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Insights", href: "#insights" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", to: "/about" },
+  { label: "Methodology", to: "/methodology" },
+  { label: "Case Studies", to: "/case-studies" },
+  { label: "Insights", to: "/insights" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -175,9 +175,9 @@ export function NewHomeFooter() {
                 <ul className="flex flex-col gap-2 lg:gap-3">
                   {COMPANY_LINKS.map((item) => (
                     <li key={item.label}>
-                      <a href={item.href} className="nh-footer-link cursor-pointer">
+                      <Link to={item.to} className="nh-footer-link cursor-pointer">
                         {item.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -229,7 +229,7 @@ export function NewHomeFooter() {
                   type="button"
                   className="nh-footer-legal-link cursor-pointer transition hover:text-white"
                 >
-                  EN
+                  ES
                 </button>
                 <button
                   type="button"

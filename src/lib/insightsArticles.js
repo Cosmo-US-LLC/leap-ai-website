@@ -1,0 +1,634 @@
+import teamGregory from "../assets/images/about/team-gregory.webp";
+import insightAiSecurity from "../assets/images/insights/insight-ai-security.webp";
+import DayAIRoadmap from "../assets/images/insights/90-Day-AI-Roadmap.webp";
+import RSIinBusiness from "../assets/images/insights/RSI-in-Business.webp";
+
+const AI_SECURITY_TOC = [
+  { id: "introduction", label: "Introduction" },
+  {
+    id: "traditional-risk-models",
+    label: "Applying Traditional Risk Models to a Non-Traditional Problem",
+  },
+  {
+    id: "three-dimensions",
+    label: "Not Understanding the Three Dimensions That Make AI Risky",
+  },
+  {
+    id: "prompt-injection",
+    label: "Thinking Prompt Injection Is Solved (It Isn't)",
+  },
+  {
+    id: "local-vs-cloud",
+    label: 'Treating "Local vs. Cloud" as a Binary Decision',
+  },
+  { id: "leap-approach", label: "How Leap 41 Approaches AI Security" },
+  { id: "getting-started", label: "Getting Started: Your Next Steps" },
+];
+
+const ROADMAP_TOC = [
+  { id: "introduction", label: "Introduction" },
+  { id: "why-projects-fail", label: "Why Most AI Projects Don't Even Make It to Day 30" },
+  { id: "days-1-30", label: "Days 1 to 30: Understanding Everything" },
+  { id: "days-31-60", label: "Days 31 to 60: Start Building" },
+  { id: "days-61-90", label: "Days 61 to 90: Validation and Handover" },
+  { id: "what-to-demand", label: "What You Should Demand From a Consultant" },
+];
+
+const RSI_TOC = [
+  { id: "introduction", label: "Introduction" },
+  { id: "what-rsi-means", label: "What RSI Actually Means Outside a Lab" },
+  { id: "gold-mine", label: "The Gold Mine Most Companies Let Evaporate" },
+  { id: "compounding-advantage", label: "The Compounding Advantage" },
+  { id: "sequencing-mistake", label: "The Sequencing Mistake That Poisons the Loop" },
+  { id: "what-to-build", label: "What to Build Before Your Next AI Project" },
+];
+
+export const INSIGHTS_ARTICLES = [
+  {
+    slug: "ai-security-what-most-businesses-get-wrong-and-how-to-actually-fix-it",
+    date: "Apr 28, 2026",
+    readTime: "8 min read",
+    title: "AI Security: What Most Businesses Get Wrong (And How to Actually Fix It)",
+    subtitle:
+      "Why traditional security thinking fails with AI and what it takes to manage risk without slowing innovation",
+    excerpt: [
+      "Most businesses approach AI security in one of two ways: move too fast and ignore the risks, or apply outdated frameworks that shut everything down. Neither works. The real opportunity lies in understanding AI risk differently across autonomy, data access, and external exposure and building systems that balance control with progress.",
+    ],
+    author: "Gregory Van Duyse",
+    authorRole: "CEO, Leap AI Solutions",
+    authorImage: teamGregory,
+    heroImage: insightAiSecurity,
+    tableOfContents: AI_SECURITY_TOC,
+    sections: [
+      {
+        type: "paragraphs",
+        paragraphs: [
+          'When businesses start evaluating AI, they almost always end up in one of two camps. The first group gets excited and moves fast, skipping the hard questions. The second does the responsible thing, runs it through their standard risk process, and walks away with a "no" that kills the project entirely.',
+          "Both outcomes are a problem. And both are avoidable. The gap between reckless adoption and paralysis by risk model is exactly where the real opportunity sits, and closing that gap starts with rethinking how you approach AI risk in the first place.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "traditional-risk-models",
+        text: "1. Applying Traditional Risk Models to a Non-Traditional Problem",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "This is where most companies stumble before they even get started.",
+          "The instinct makes sense. You have frameworks that work. You've used them for years. The problem is they were built for traditional software — systems with predictable inputs and predictable outputs. AI doesn't work that way. When you feed a fundamentally different technology through a framework that wasn't designed for it, you almost always get the same result: the answer comes back \"no.\" Project shelved. Competitive advantage handed to whoever was willing to think differently.",
+          "The companies making real progress with AI aren't ignoring risk. They realized the goal isn't to eliminate risk. It's to understand it well enough to manage what's left.",
+        ],
+      },
+      {
+        type: "bottomLine",
+        text: "AI risk isn't a checklist you pass or fail. Control enough of it that you can name what's left, then decide what to do with it.",
+      },
+      {
+        type: "heading",
+        id: "three-dimensions",
+        text: "2. Not Understanding the Three Dimensions That Make AI Risky",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Ask most executives what makes an AI deployment risky and you'll get answers about compliance or hallucinations. Those things matter, but they're symptoms. The actual structure of AI risk comes down to three things, and if you're not evaluating all three before you deploy, you're flying blind.",
+        ],
+      },
+      {
+        type: "labeledBullets",
+        items: [
+          {
+            label: "Autonomy:",
+            text: "Can the AI act on its own without a human making the call? An AI that drafts an email is very different from one that sends it.",
+          },
+          {
+            label: "Data Access:",
+            text: "What can the AI actually see and work with? Sensitivity of access scales risk directly.",
+          },
+          {
+            label: "External Access:",
+            text: "Can the AI reach outside your environment? This is what turns a contained risk into an unbounded one.",
+          },
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Now layer agentic AI on top. You're not dealing with one AI anymore. You're dealing with multiple agents, each with their own risk profile across all three dimensions, interacting without a human in the loop. The risk doesn't add. It compounds faster than most organizations expect.",
+        ],
+      },
+      {
+        type: "bottomLine",
+        text: "Map every deployment against these three dimensions before anything goes live. It takes an hour and tells you more than any compliance framework will.",
+      },
+      {
+        type: "heading",
+        id: "prompt-injection",
+        text: "3. Thinking Prompt Injection Is Solved (It Isn't)",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "This one catches people off guard because it sounds like something that should have been fixed by now. It hasn't been.",
+          "Prompt injection is still one of the genuinely unsolved problems in AI security. When an AI processes a request, it combines your system prompt with the user's input into one block of text. The model has no built-in way to treat your instructions as more authoritative than the user's input. A sophisticated attacker can write a prompt that quietly overrides your rules, and the model won't flag it.",
+          "Putting a guardrail model in front to screen inputs sounds reasonable. It's just not sufficient:",
+        ],
+      },
+      {
+        type: "bullets",
+        items: [
+          "If someone can prompt-inject your primary model, they can prompt-inject the guardrail too",
+          "A layered setup is still penetrable with payloads nested inside payloads",
+          "It raises the bar for attackers but doesn't solve the underlying problem",
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Context management adds another layer of exposure that almost nobody accounts for. Your AI doesn't hold everything in mind at once. If your security instructions get pushed out of the active context window during a long conversation, the model quietly stops following them. No errors. No warning. An attacker who understands this can engineer that situation deliberately.",
+        ],
+      },
+      {
+        type: "bottomLine",
+        text: "Load order matters more than most people realize. Prompt injection testing shouldn't be a one-time exercise. It should be ongoing.",
+      },
+      {
+        type: "heading",
+        id: "local-vs-cloud",
+        text: '4. Treating "Local vs. Cloud" as a Binary Decision',
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "The conversation usually goes one of two ways. Either keep everything local so data never leaves the building, or use a cloud provider because they promise not to train on your data. Both positions are more fragile than they sound.",
+        ],
+      },
+      {
+        type: "bullets",
+        items: [
+          "Cloud providers who promise data privacy can't give you a way to verify it",
+          "Hosting a large model locally solves some problems but creates others: hardware costs, maintenance, and it still doesn't protect you if your internal environment gets compromised",
+          "Open-source models are actually more vulnerable to prompt injection because attackers can study their structure",
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "The architecture that works sits between those two extremes. Use a small local model as an anonymization layer. Before any sensitive data reaches an external model, strip and tokenize it locally. Get the response back. Reinstate the original values. The frontier model does its job without ever seeing anything identifiable.",
+        ],
+      },
+      {
+        type: "bottomLine",
+        text: "You don't have to choose between frontier model intelligence and keeping sensitive data in-house. The right architecture gives you both.",
+      },
+      {
+        type: "heading",
+        id: "leap-approach",
+        text: "How Leap 41 Approaches AI Security",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "A lot of security engagements end the same way: a long process, a detailed report, and a recommendation that kills the project. That's not what we're here to do.",
+          "The goal is always to get a business to a point where they understand their residual risk clearly enough to make a real decision about it. The model we use borrows from something businesses already know well: how you manage people. HR exists, in large part, to manage the risks that come with human employees. AI agents aren't people, but the risk vectors are close enough that the same thinking applies.",
+          "**Our layered approach:**",
+        ],
+      },
+      {
+        type: "orderedList",
+        items: [
+          {
+            label: "Governance First.",
+            text: "Clear answers to basic questions before anything else: who has access, what decisions need a human, and what happens when something goes wrong. Defined roles, escalation paths, and documented policies for bringing AI tools in and out.",
+          },
+          {
+            label: "Zero-Trust Infrastructure.",
+            text: "Secure the environment, not just the model. Identity and access management, data classification, and network segmentation so a compromised agent can't move through your environment.",
+          },
+          {
+            label: "Data Hygiene Before Model Access.",
+            text: "Normalize, classify, and tag your data before it reaches a model. This fixes both performance and security problems at once, which makes the business case for doing it properly much easier.",
+          },
+          {
+            label: "Deterministic and AI Guardrails Together.",
+            text: "Rule-based checks for known PII patterns, combined with AI-based semantic analysis for intent. Neither is sufficient on its own.",
+          },
+          {
+            label: "Context Engineering for Security.",
+            text: "The order you load instructions into context affects whether they survive a long conversation. Critical security rules need deliberate positioning, not just a spot in the system prompt assumed to persist forever.",
+          },
+          {
+            label: "Human-in-the-Loop by Default.",
+            text: "The checkpoints where a human makes the call aren't inefficient. They're what makes everything auditable. Build them in from the start because retrofitting them later is expensive.",
+          },
+          {
+            label: "Quantum-Resistant Architecture.",
+            text: 'Encryption is not a permanent guarantee. "Harvest now, decrypt later" attacks are already happening. The time to reduce dependency on encryption-only security is before quantum capability matures, not after.',
+          },
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "The methodology gets you to 80% of risk controlled through governance, education, and targeted technical controls. The remaining 20% becomes something you can see, name, and decide on deliberately. That 20% is manageable. Ignoring the first 80% is where things go wrong.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "getting-started",
+        text: "Getting Started: Your Next Steps",
+      },
+      {
+        type: "orderedList",
+        items: [
+          {
+            label: "Map every AI deployment",
+            text: "Against autonomy, data access, and external access. You'll surface your biggest exposures in the first sitting.",
+          },
+          {
+            label: "Clean your data before anything else.",
+            text: "Classification and tagging first. Everything else depends on it.",
+          },
+          {
+            label: "Design the anonymization layer.",
+            text: "Decide what stays inside your perimeter and what goes out, and build that separation deliberately.",
+          },
+          {
+            label: "Try to break your own system.",
+            text: "Run a basic prompt injection exercise. If your team hasn't tested it, you don't know how it holds up.",
+          },
+          {
+            label: "Book a diagnostic with our team.",
+            text: "We'll identify where your residual risk actually sits and build a path forward — one that lets you move, not one that gives you reasons to stop.",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        text: "Ready to build AI that's actually secure?",
+        link: "https://insights.leap41.ca/",
+        linkLabel: "Download our free 7 Pillars report at insights.leap41.ca",
+      },
+    ],
+  },
+  {
+    slug: "the-90-day-ai-roadmap",
+    date: "Apr 08, 2026",
+    readTime: "12 min read",
+    title:
+      "The 90-Day AI Roadmap: What Actually Happens After You Hire an AI Consultant",
+    subtitle: "Not the glossy version. The real one.",
+    excerpt: [
+      "Most business owners picture it like this: you hire an AI consultant, shake hands, and by week two, there's some smart tool running in the background.",
+      "That's not how it works. Here's what the first 90 days actually look like.",
+    ],
+    author: "Gregory Van Duyse",
+    authorRole: "CEO, Leap AI Solutions",
+    authorImage: teamGregory,
+    heroImage: DayAIRoadmap,
+    tableOfContents: ROADMAP_TOC,
+    sections: [
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Most business owners picture it like this: you hire an AI consultant, shake hands, and by week two, there's some smart tool running in the background saving you time and money while you get on with everything else.",
+          "Honestly? That's not how it works. And the gap between that expectation and what actually happens is probably the single biggest reason so many AI projects crash before they ever get going.",
+          "So let's talk about what the first 90 days actually look like, based on real client work, real conversations, and real results. Not the glossy version. The real one.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "why-projects-fail",
+        text: "Why Most AI Projects Don't Even Make It to Day 30",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "There's a stat from MIT that should make every business owner sit up straight: somewhere between 90 and 95 percent of AI projects fail. That's not a rounding error. That's almost every single one.",
+          "And here's the thing, it's almost never the technology that's the problem. The technology works fine. What doesn't work is everything around it. No clear data strategy. No KPIs tied to anything that actually matters. Leaders who handed the whole thing to their IT department and said, \"Get it done,\" and then wondered why six months later, nothing had really changed.",
+          'Gregory Van Duyse of Leap AI puts it in a way that sticks with you, "We\'re no longer in the world of information management. We\'re in the world of intelligence." And you can\'t treat an intelligence transformation like you\'re installing a new CRM. It just doesn\'t work that way. That\'s why having a real AI roadmap for your business isn\'t a nice-to-have; it\'s the difference between wasting money and actually making a change.',
+        ],
+      },
+      {
+        type: "heading",
+        id: "days-1-30",
+        text: "Days 1 to 30: Forget Building Anything. This Is About Understanding Everything",
+      },
+      {
+        type: "subheading",
+        text: "What the Data Audit Actually Looks Like",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "The first month is not about tools. Not about tech. It's about going deep into how your business actually works, and most businesses are surprised by what comes up when someone starts asking the right questions.",
+          "For clients who come to Leap AI without a specific project already in mind, the process kicks off with what Gregory calls an AI business assessment. And that means interviewing every single department head, an hour and a half, sometimes two hours each, before anyone even sits down with the CEO. Every department. Every process. Every system.",
+          '"We find out exactly what work they do in the department and find out all the information that could help us understand the work," Gregory says. And what usually comes up? Data is sitting in five different places with no connection between them. KPI tracking that\'s more gut feeling than actual measurement. Work processes that look simple from the outside but have layers of nuance underneath that nobody\'s ever written down anywhere.',
+          "Those are your red flags. And you want to find them in week one, not week eight, when you're already mid-build, and something keeps breaking, and nobody can figure out why.",
+        ],
+      },
+      {
+        type: "subheading",
+        text: "The Stakeholder Interviews",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Here's something that surprises a lot of people about this phase: the most important conversations aren't always with the CEO or the leadership team. They're with the people actually doing the work every day.",
+          '"The people actually doing the work on the ground floor understand the nuance of work, why in this case we change it a little bit this way, and in that case we change it a little bit in the other way." Managers don\'t always see that. Owners often don\'t either. But the person who\'s been doing that job for four years? They know exactly where the little quirks are and why they exist.',
+          "Miss that in the discovery phase, and it will absolutely come back to bite you. Every time. So the interviews are structured to pull that out: what's the actual work, what systems touch it, where does it slow down, and what would genuinely moving the needle actually look like for this team?",
+        ],
+      },
+      {
+        type: "heading",
+        id: "days-31-60",
+        text: "Days 31 to 60: Now You Start Building",
+      },
+      {
+        type: "subheading",
+        text: "Getting the Data In and the Model Set Up",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Once discovery is done and the scope is locked, the build starts, and this is where things get interesting. The team gets access to the client's systems, starts pulling data together, and builds a working prototype that can actually be tested and poked at.",
+          "The best way to understand what this phase really looks like is through a real example. An airport operations client came to Leap AI with a workforce scheduling problem they'd been wrestling with for a long time. They had an experienced team member working on it, an Excel file, and ChatGPT. And they were still stuck.",
+          "The reason? It wasn't a language problem, which is what ChatGPT is built for. It was a mathematical optimization problem. Multiple variables, multiple constraints, millions of possible combinations. And as Gregory points out, \"humans are not really great at optimising things, especially if there's more than two dimensions to the data. If there are two variables, we're okay. But as soon as we hit three or four variables at the same time, our brains have a hard time.\"",
+          'So the first thing the team did wasn\'t build an AI tool. A mathematical model of the problem itself was built. Which, as Gregory describes it, "looked more like a report that a mathematician would write." Only once that existed could AI actually be applied to run it properly.',
+        ],
+      },
+      {
+        type: "subheading",
+        text: 'Running the Scenarios and Testing What "Good" Looks Like',
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "With the model built, the system could take the client's Excel data, apply all the constraints and variables, and run optimisation scenarios over three to four hours to surface the best possible outcomes.",
+          "The results were hard to argue with. The client's experienced team member had spent three weeks on the problem manually and projected staff costs for the quarter at $1.7 million. The model came back with a solution that brought that down to just over $1 million, roughly $700,000 saved, and it did it in four days instead of three weeks.",
+          "But the part that really matters? The model was built to be reused. Every time a new flight schedule comes in now, they just run it again. That's not a one-off win, that's a permanent shift in how the business operates.",
+          '"Good" in this phase doesn\'t just mean the numbers look better on paper. It means the solution is tied to a KPI that actually matters, the client can clearly see the connection to real results, and the people using it understand how it works well enough to trust it.',
+        ],
+      },
+      {
+        type: "heading",
+        id: "days-61-90",
+        text: "Days 61 to 90: Validation and Handing It Over",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "This is the phase where everything gets tested properly, and the client takes ownership of what's been built. The validation meetings aren't a big reveal; they're a walkthrough. Here's what the system does, here's the output, here's how it maps back to the KPIs you actually care about. What's working, what needs tweaking, what comes next.",
+          'Gregory calls the whole model co-creation, and this phase is where that really shows up. "We\'re here working with the CEO, working with his executive team, working with the department heads to co-create a new strategy for the business." It\'s not a handover. It\'s a conversation.',
+          "By the end of day 90, the client walks away with a validated working system, a full strategy report, clear KPI movement they can point to, and a prioritised list of what to build next. For clients who came in for a full business assessment, that list usually runs to 12 to 20 AI projects, each one stress-tested for return on investment and linked to real outcomes, not vanity metrics.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "what-to-demand",
+        text: "What You Should Demand From a Consultant Before You Sign Anything",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "This part matters. A lot of consultants will tell you what you want to hear to close the deal. So before you sign anything, here's what Gregory says you should actually be looking for.",
+        ],
+      },
+      {
+        type: "orderedList",
+        items: [
+          {
+            text: "Don't accept a \"hand it over and wait\" relationship. The engagements that work are built on co-creation from day one. If a consultant isn't planning to involve you and your team throughout the process, that's a problem.",
+          },
+          {
+            text: "Ask to see real work from real clients. Demos, references and actual before-and-after numbers. Any consultant worth their fee should be able to show you this without blinking.",
+          },
+          {
+            text: "Look for a risk-free pilot. Leap AI offers a guarantee on early-stage work. If the client isn't convinced by the time the demo or pilot lands, they get their deposit back. That should be a baseline expectation, not a bonus.",
+          },
+          {
+            text: 'Maybe the most important one, your consultant should be thinking ahead, not just about what AI can do right now, but where it\'s going. Gregory uses a hockey analogy for this: "We talk about skating where the puck is going to be. You want your consultant to have an idea of where it\'s going to go and to position the company to be ready for that."',
+          },
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Right now, AI is doubling its capacity to do real work every three to four months. Gregory puts it plainly, \"From March to September, AI will probably quadruple its capacity to do work. It's the same thing as waiting five years in the old world.\" So a consultant who's only thinking about the next project, not the next three years, isn't the right partner for where this is all going.",
+          "The 90 days aren't just about delivering something that works. They're about laying a foundation your business can keep building on, because the businesses that start now, even imperfectly, are going to be in a completely different position than the ones that kept waiting for the right moment.",
+          "That moment isn't coming. The window is open right now.",
+          "Want to see what your own 90-day AI roadmap could look like? Book a free consultation with Leap AI and find out exactly where to start.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "rsi-in-business-why-the-companies-winning-at-ai-arent-ahead-on-technology-theyre-ahead-on-data",
+    date: "Apr 07, 2026",
+    readTime: "8 min read",
+    title:
+      "RSI in Business: Why the Companies Winning at AI Aren't Ahead on Technology, They're Ahead on Data",
+    subtitle: "Your business got the wrong answer because it Asked the Wrong Questions",
+    excerpt:
+      "The AI race is really a data race. Companies winning aren't ahead on technology, they're ahead on data and feedback loops. Every week you're not capturing and measuring is a week you can't recover.",
+    author: "Gregory Van Duyse",
+    authorRole: "CEO, Leap AI Solutions",
+    authorImage: teamGregory,
+    heroImage: RSIinBusiness,
+    tableOfContents: RSI_TOC,
+    sections: [
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Almost every business owner right now is asking some version of the same question, are we ready for AI? And honestly it feels like the right place to start so nobody questions it, they just go looking for the answer and start spending money based on whatever they find.",
+          "But that question sends you in the wrong direction from day one and the investments that follow it reflect that.",
+          "Gregory Van Duyse of Leap AI is direct about this. The real question isn't are we ready, it's are we building toward where AI is going? Because here's the reality most businesses aren't factoring in:",
+          "AI's capacity to do real work is doubling every four months right now and that means by the end of 2026 we're looking at an 8 to 10x improvement in what AI can actually do compared to where we started the year. If you're only asking whether you're ready for AI today, you're completely missing the trajectory.",
+          'What businesses actually need to be asking is this, "Do we have the foundation in place to take advantage of what AI will be able to do tomorrow?" And that question leads you somewhere very specific and very different from where most companies are currently focused.',
+          "It leads you to data. And it leads you to something called Recursive Self-improvement.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "what-rsi-means",
+        text: "What RSI Actually Means Outside a Lab",
+      },
+      {
+        type: "subheading",
+        text: "The Feedback Loop Explained",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "RSI sounds like something happening inside a frontier AI lab and Gregory is straightforward about that, it is. But the concept it's built on is anything but new and most business owners have actually heard of it under a different name.",
+          "Think about Toyota. In the 1950s they were building cars out of a war-torn Japanese economy with almost nothing going for them competitively and they went on to produce what most people consider the best cars in the world.",
+          "The reason wasn't technology, it was continuous improvement. Running experiments inside the business, measuring what worked and what didn't, going again and again until improvement became the operating system of the entire company.",
+          "RSI is that same loop made automatic and exponential. At the AI lab level what they're working toward is getting AI to improve AI, AI researchers designing experiments, AI coders writing and testing changes, benchmarks measuring whether it worked, and the whole thing feeding back into itself getting smarter with every cycle. The reason labs can move so fast is that everything is digital so there's nothing physical to wait on and the loop runs at machine speed.",
+          "For a business the loop is slower because you're dealing with humans, physical operations, and sales cycles that might take two months to show a result. But the principle is exactly the same,",
+        ],
+      },
+      {
+        type: "blockquote",
+        text: "Measure → Learn → Adapt → Repeat → back to Measure",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "You implement something, you measure what changed, you learn from what the data tells you, you adapt based on that, and you go again.",
+          "Every loop builds on the last one and over time that compounding is what creates an AI competitive advantage. Your competitors genuinely cannot close quickly, not because you have better technology but because you have more loops behind you and better data feeding each new one.",
+        ],
+      },
+      {
+        type: "subheading",
+        text: "What Breaks the Loop Before It Starts",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Here's where most businesses hit a wall before the loop ever gets going and it comes back to the same three problems almost every time:",
+        ],
+      },
+      {
+        type: "orderedList",
+        items: [
+          {
+            text: "Fragmented data across teams with no agreed definition of what anything means. If your sales team and your operations team are measuring the same thing differently, the measurements you get out of the loop are unreliable and you can't trust them to make decisions from.",
+          },
+          {
+            text: "Missing historical data. Without a real benchmark of where you were before, you have no way of knowing if you're actually getting better. You know where you are today but the before-and-after comparison that makes the loop meaningful simply doesn't exist.",
+          },
+          {
+            text: "Decisions made verbally and never recorded. This one is the most underestimated and we'll come back to it in detail because it's where Gregory gets most specific and most urgent.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        id: "gold-mine",
+        text: "The Gold Mine Most Companies Let Evaporate",
+      },
+      {
+        type: "subheading",
+        text: "What Gets Lost Every Week",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Gregory describes businesses as fundamentally doing two things, having meetings and doing work. And in those meetings something enormously valuable is happening that almost nobody is capturing.",
+          "People are reporting on results; they're sharing what they're seeing in their departments. They're debating options where nobody knows for certain what the right move is. They're making judgement calls based on years of experience and context and institutional knowledge that exists nowhere else, and then the call ends and all of it disappears.",
+          "Think about that for a second. A senior manager makes a decision in a meeting, explains exactly why, references something that didn't work three years ago and why this approach is different, and then everyone goes off to act on it and that reasoning is just gone. It's not in any document. It's not in any system. It lived in that room for forty-five minutes and then evaporated.",
+          "Now think about where AI is heading. Gregory puts it plainly, within two years AI will be 100 times more capable than it is today and it will start genuinely helping leadership teams analyse options, model probabilities, run experiments and make better decisions faster.",
+          "When that happens, wouldn't it be enormously valuable for that AI to understand how your business has made decisions in the past? What was the reasoning? What got tried and failed and why? What are the real priorities when things get difficult?",
+          "That context is sitting in your meetings right now and it's evaporating every single week.",
+        ],
+      },
+      {
+        type: "subheading",
+        text: "What Capturing It Actually Looks Like",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Gregory's answer here is simpler than most people expect, record everything and start now.",
+          "Every meeting, at every level of the business, should be recorded. Management meetings, departmental meetings, one-on-ones between managers, daily standups, company-wide sessions, all of it. Recorded, stored, kept confidential with proper access controls, and treated as business data the same way you'd treat financial data.",
+          "There's even hardware available now that people can simply wear at work that captures everything passively throughout the day. The point isn't to build a complicated system, it's to stop letting this data disappear.",
+          "Beyond meetings, the same logic applies to the rest of your AI data strategy. A data lake that pulls together streams from your ERP, your CRM, your spreadsheets, your email, not replacing those systems but connecting them so that AI has one place to access your business instead of having to navigate five different siloed locations.",
+          "And KPIs that are bankable, meaning tied to real outcomes like profit, revenue per employee, client retention, not vanity metrics that look impressive on a slide but don't actually tell you if the business is improving.",
+          "The goal across all of it is the same, give AI the data it needs to eventually help you run the loop properly and keep running it faster.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "compounding-advantage",
+        text: "The Compounding Advantage",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Here's what makes this urgent and not just interesting, the gap between companies building now and companies waiting is already opening and it doesn't stay the same size. It grows every quarter.",
+          "Every cycle of the loop a business runs gives them better data, better measurements, cleaner decisions, and a faster next cycle. The business waiting to feel ready is still at zero cycles.",
+          "And because AI's underlying capability keeps doubling every four months, the companies running loops now are doing it with tools that keep getting more powerful underneath them. The advantage compounds on itself.",
+          "Gregory is clear about what this means at the industry level, whoever reaches recursive self-improvement first in an industry will dominate that industry. They'll do things better, faster, and cheaper in ways that keep improving automatically while everyone else is still figuring out where to start.",
+          "And this brings us back to the most important line in the whole conversation around AI data strategy and why it matters right now:",
+        ],
+      },
+      {
+        type: "blockquote",
+        text: '"You can\'t optimise what you didn\'t record." — Gregory Van Duyse, Leap AI',
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Every week you're not capturing data, not measuring outcomes, not building the feedback infrastructure, that's a week of the loop someone in your industry is running that you're not. And unlike a technology gap which you can close by buying the same tool, a data gap compounds in the other direction the longer you leave it.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "sequencing-mistake",
+        text: "The Sequencing Mistake That Poisons the Loop",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "A lot of AI consultants tell companies to rethink and redesign their workflows at the same time as they're integrating AI, which might improve the process while we're in there. Gregory pushes back on this hard and the reason is measurement.",
+          "If you change your workflow and implement AI simultaneously you now have two variables changing at once and no way of knowing which one drove the result. Did efficiency improve because of the AI or because you redesigned the process? You genuinely can't tell and if you can't tell, you can't learn from it, which means the loop is broken before it starts.",
+          "The right sequence is capture first, then govern, then optimise, then innovate. Take a clean benchmark of how the current process performs with humans doing it, quality, quantity, time, cost. Then integrate AI into that same process without changing anything else.",
+          "Now you have a real before and after and you can see exactly what the AI integration did. Once that's validated you optimise and then eventually you innovate on top of a system you actually understand.",
+          "Gregory uses a customer service example that makes this very concrete. A company built an AI system to handle support tickets, it looked incredible, and they fired 80% of their customer support team because the AI was handling everything so smoothly. A few months later they started rehiring those same people.",
+          "Why? Customers had quietly stopped doing business with them, not complaining, just leaving. The trust had eroded. The AI was technically closing tickets but it wasn't solving real problems and nobody had realised that the human support agents were also the company's most important source of product improvement feedback. Both things were lost at the same time and the damage only showed up later in churn numbers.",
+          "They changed too much too fast and they had no way to measure which change caused which outcome. That's what skipping the sequence costs you and it's a pattern that shows up across industries whenever companies rush the transformation before they've nailed the integration.",
+        ],
+      },
+      {
+        type: "heading",
+        id: "what-to-build",
+        text: "What to Build Before Your Next AI Project",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Before you launch your next AI project, whatever it is, there are three foundations that determine whether it feeds into a compounding loop or just sits there as a standalone tool that doesn't connect to anything.",
+        ],
+      },
+      {
+        type: "orderedList",
+        items: [
+          {
+            label: "Get your data connected.",
+            text: "Not perfect, connected. Your enterprise AI roadmap doesn't require a perfect data lake built all at once. Start with the most important stream, probably your ERP or CRM, and bring that data together into one accessible location. Add streams as new projects create the need for them. Build it incrementally rather than waiting to build something perfect before you start anything.",
+          },
+          {
+            label: "Build KPIs that are actually bankable.",
+            text: "Work with your department heads to find the measurements that tie directly to real outcomes, revenue, profit, efficiency, client lifetime value. If you don't have a dashboard that tells you clearly whether the business is going better or worse, you can't run meaningful experiments and you can't prove that anything you're building is actually moving the needle.",
+          },
+          {
+            label: "Start capturing everything right now.",
+            text: "Every meeting, every decision, every management conversation. Not because you can use all of it today but because the AI that will be helping you run your business in the next two to three years will need it and the businesses that started capturing early will have a depth of institutional knowledge that businesses starting from scratch won't be able to manufacture quickly.",
+          },
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "This is exactly what Gregory's Seven Strategic Pillars framework is built around, creating the conditions where AI can do what it's actually capable of, including eventually running the improvement loops that compound your AI competitive advantage every single quarter. The pillars aren't a technology checklist. They're a sequenced AI implementation strategy that builds toward RSI from the very first project.",
+          "The AI race is a data race. And it's already started.",
+        ],
+      },
+      {
+        type: "cta",
+        text: "Download the 7 Strategic Pillars framework to see exactly how to build the data foundation RSI requires.",
+        link: "https://insights.leap41.ca/",
+        linkLabel: "Download the framework",
+      },
+    ],
+  },
+];
+
+export function getInsightBySlug(slug) {
+  return INSIGHTS_ARTICLES.find((article) => article.slug === slug);
+}
+
+export function getRelatedInsights(slug, limit = 2) {
+  return INSIGHTS_ARTICLES.filter((article) => article.slug !== slug).slice(0, limit);
+}

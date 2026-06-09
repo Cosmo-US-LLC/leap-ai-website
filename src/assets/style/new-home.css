@@ -772,9 +772,9 @@
 /* —— Insights —— */
 .nh-article-meta {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 22px;
   font-weight: 400;
-  color: var(--nh-text);
+  color: #4e546c;
 }
 
 .nh-article-title {
@@ -931,21 +931,24 @@
     height: 12px;
   }
 
-  /* Case studies carousel — Figma 1888:6085 equal-height cards, bottom-aligned CTA */
+  /* Case studies carousel — align with container, peek next card on the right */
   .case-studies-mobile-track {
     align-items: stretch;
-    padding: 20px 16px 28px 0;
-    margin: -20px -16px -28px 0;
-    scroll-padding-right: 16px;
+    margin-top: -20px;
+    margin-right: -1.25rem;
+    margin-bottom: -28px;
+    padding: 20px 1.25rem 28px 0;
+    scroll-padding-right: 1.25rem;
   }
 
   .case-study-mobile-wrap {
     display: flex;
     align-self: stretch;
-    padding-right: 4px;
+    width: min(340px, calc(100% - 2rem));
   }
 
   .case-study-mobile-card {
+    width: 100%;
     height: 100%;
     box-shadow: 0 8px 40px rgba(43, 43, 118, 0.1);
   }
@@ -988,38 +991,23 @@
     stroke: #fff !important;
   }
 
-  /* Figma 1987:92 — insights carousel peek */
+  /* Insights carousel — align with container, peek next card on the right */
   .insights-mobile-track {
-    scroll-padding-right: 20px;
+    align-items: stretch;
+    margin-right: -1.25rem;
+    padding-right: 1.25rem;
+    scroll-padding-right: 1.25rem;
   }
 
-  /* Figma 1987:92 — insights section */
-  .nh-insights-title {
-    font-size: 40px;
-    line-height: 46px;
-    color: var(--nh-navy);
+  .insights-mobile-card-wrap {
+    display: flex;
+    align-self: stretch;
+    width: min(350px, calc(100% - 1.25rem));
   }
 
-  .nh-article-meta-mobile {
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    color: var(--nh-text);
-  }
-
-  .nh-article-title-mobile {
-    font-family: var(--font-nunito);
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 800;
-    color: var(--nh-navy);
-  }
-
-  .nh-article-author-mobile {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-    color: var(--nh-navy);
+  .insights-mobile-card {
+    width: 100%;
+    height: 100%;
   }
 
   .home-insights-cta {

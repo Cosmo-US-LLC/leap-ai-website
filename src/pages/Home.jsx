@@ -9,9 +9,9 @@ import InsightsSection from "../components/PageComponent/NewHome/InsightsSection
 import { usePageMeta } from "../hooks/usePageMeta.js";
 
 const HOME_META = {
-  title: "Leap 41 | Make AI Work for Cost Optimization",
+  title: "AI Consulting & Transformation Experts | Leap AI",
   description:
-    "Leap 41 helps visionary leaders navigate AI transformation with strategic architecture, proven frameworks, and execution that delivers measurable ROI.",
+    "We help visionary leaders implement AI without complexity or risk. Drive efficiency, reduce costs, and unlock measurable results with Leap AI's proven 7-pillar framework.",
 };
 
 export function Home() {
