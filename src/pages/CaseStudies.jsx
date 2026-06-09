@@ -2,9 +2,9 @@ import CaseStudiesSection from "../components/PageComponent/NewHome/CaseStudiesS
 import { usePageMeta } from "../hooks/usePageMeta.js";
 
 const META = {
-  title: "Case Studies | Leap 41",
+  title: "Case Studies & Results | Real Business Impact | Leap AI",
   description:
-    "See how organizations use AI to transform their operations with measurable results.",
+    "Explore real case studies from Leap AI, see how organizations reduce costs, improve efficiency, and achieve measurable results through practical AI implementation.",
 };
 
 export default function CaseStudies() {

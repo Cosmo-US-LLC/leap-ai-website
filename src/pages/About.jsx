@@ -5,9 +5,9 @@ import AboutTeamSection from "../components/PageComponent/About/AboutTeamSection
 import { usePageMeta } from "../hooks/usePageMeta.js";
 
 const ABOUT_META = {
-  title: "About Us | Leap 41 AI Solutions",
+  title: "About Leap AI | AI Transformation Experts & Former C-Suite Leaders",
   description:
-    "Meet the Leap 41 team and learn how we help businesses build Adaptive Organizations—bridging AI innovation with operational reality through strategy, implementation, and trust.",
+    "Learn how Leap AI helps organizations navigate AI transformation with proven frameworks, hands-on execution.",
 };
 
 export function About() {

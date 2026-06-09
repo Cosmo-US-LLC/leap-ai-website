@@ -1,40 +1,7 @@
-import caseStudyAirport from "../../../assets/images/new-home/case-study-airport.webp";
-import caseStudyFinance from "../../../assets/images/new-home/case-study-finance.webp";
-import caseStudyInsurance from "../../../assets/images/new-home/case-study-insurance.webp";
+import { Link } from "react-router-dom";
+import { CASE_STUDIES } from "../../../lib/caseStudyContent.js";
 import { ArrowRightIcon } from "./icons/ArrowRightIcon.jsx";
 import { PrimaryCtaButton } from "./PrimaryCtaButton.jsx";
-
-const CASE_STUDIES = [
-  {
-    tag: "Aviation / Airport Operations",
-    image: caseStudyAirport,
-    metric: "47%",
-    metricLabel: "cost reduction",
-    title: "How a Regional Airport Cut Ground Crew Costs by 47%",
-    description:
-      "They spent weeks trying to solve it with ChatGPT and spreadsheets. The real answer was a constraint optimization model, built in 4 days, saving $800K per quarter.",
-  },
-  {
-    tag: "Financial Services",
-    image: caseStudyFinance,
-    metric: "3.2×",
-    metricParts: ["3.2", "×"],
-    metricLabel: "advisor confidence",
-    title: "AI-Powered Roleplay That Actually Improves Sales Performance",
-    description:
-      "How a financial services firm replaced outdated training with interactive AI roleplay, and saw a measurable lift in advisor confidence and close rates within 60 days.",
-  },
-  {
-    tag: "Insurance",
-    image: caseStudyInsurance,
-    metric: "100%",
-    metricLabel: "call coverage",
-    title:
-      "How a Canadian Insurance Agency Gained Control of Every Sales Conversation in 30 Days",
-    description:
-      "They were reviewing just 5% of calls. Within 30 days, they had full oversight of every meaningful sales conversation, without adding a single headcount.",
-  },
-];
 
 function CaseStudyMetric({ metric, metricParts }) {
   if (metricParts) {
@@ -73,38 +40,47 @@ function CaseStudyCardInner({ study }) {
           <p className="case-study-card-desc nh-body-case">{study.description}</p>
         </div>
 
-        <a
-          href="#"
-          className="case-study-card-link nh-link-case inline-flex w-fit shrink-0 self-start items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px]"
-        >
+        <span className="case-study-card-link nh-link-case inline-flex w-fit shrink-0 self-start items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px]">
           Read case study
           <ArrowRightIcon className="h-4 w-4 -rotate-45" />
-        </a>
+        </span>
       </div>
     </div>
   );
 }
 
+const caseStudyCardLinkClass =
+  "flex h-full flex-col overflow-hidden rounded-2xl bg-white text-inherit no-underline transition hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#18a3e6]";
+
 function MobileCaseStudyCard({ study }) {
   return (
     <div className="case-study-mobile-wrap shrink-0 snap-start self-stretch">
-      <article className="case-study-mobile-card flex h-full w-[320px] flex-col overflow-hidden rounded-2xl bg-white">
+      <Link
+        to={`/case-studies/${study.slug}`}
+        aria-label={`Read case study: ${study.title}`}
+        className={`case-study-mobile-card ${caseStudyCardLinkClass}`}
+      >
         <CaseStudyCardInner study={study} />
-      </article>
+      </Link>
     </div>
   );
 }
 
 function DesktopCaseStudyCard({ study }) {
   return (
-    <article className="case-study-desktop-card flex h-full min-w-0 flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-[0_0_48px_4px_rgba(43,43,118,0.1)]">
+    <Link
+      to={`/case-studies/${study.slug}`}
+      aria-label={`Read case study: ${study.title}`}
+      className={`case-study-desktop-card min-w-0 flex-1 ${caseStudyCardLinkClass} shadow-[0_0_48px_4px_rgba(43,43,118,0.1)]`}
+    >
       <CaseStudyCardInner study={study} />
-    </article>
+    </Link>
   );
 }
 
 export default function CaseStudiesSection({
   subtitle,
+  headingPrefix = "Recent ",
   headingMuted = "results.",
   showCtaButton,
 }) {
@@ -118,12 +94,16 @@ export default function CaseStudiesSection({
         isCentered ? "mt-20 bg-white max-lg:mt-0" : "bg-[#fafcfe]"
       }`}
     >
-      <div className="mx-auto max-w-[1280px] max-lg:flex max-lg:flex-col max-lg:items-center max-lg:gap-8">
+      <div
+        className={`mx-auto max-w-[1280px] max-lg:flex max-lg:flex-col max-lg:gap-8 ${
+          isCentered ? "max-lg:items-center" : "max-lg:items-stretch"
+        }`}
+      >
         <div
           className={`w-full lg:hidden ${isCentered ? "text-center" : "text-left"}`}
         >
           <h2 className="nh-h2 capitalize">
-            <span className="nh-h2-bold">Recent </span>
+            <span className="nh-h2-bold">{headingPrefix}</span>
             <span className="nh-h2-muted">{headingMuted}</span>
           </h2>
           {subtitle ? (
@@ -146,7 +126,7 @@ export default function CaseStudiesSection({
             }
           >
             <h2 className="nh-h2 capitalize">
-              <span className="nh-h2-bold">Recent </span>
+              <span className="nh-h2-bold">{headingPrefix}</span>
               <span className="nh-h2-muted">{headingMuted}</span>
             </h2>
             {subtitle ? (
@@ -164,16 +144,18 @@ export default function CaseStudiesSection({
           ) : null}
         </div>
 
-        <div className="w-full max-lg:max-w-[350px] lg:max-w-none">
+        <div
+          className={`w-full lg:max-w-none ${isCentered ? "max-lg:max-w-[350px]" : ""}`}
+        >
           <div className="case-studies-mobile-track flex items-stretch gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden">
             {CASE_STUDIES.map((study) => (
-              <MobileCaseStudyCard key={study.title} study={study} />
+              <MobileCaseStudyCard key={study.slug} study={study} />
             ))}
           </div>
 
           <div className="case-studies-desktop-row hidden lg:flex">
             {CASE_STUDIES.map((study) => (
-              <DesktopCaseStudyCard key={study.title} study={study} />
+              <DesktopCaseStudyCard key={study.slug} study={study} />
             ))}
           </div>
         </div>

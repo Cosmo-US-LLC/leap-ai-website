@@ -1,99 +1,324 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FREE_CONSULTATION_URL } from "../../../lib/newHomeLinks.js";
 
-// Figma SVG icons (downloaded from design)
-import arrowActiveIcon  from "../../../assets/icons/pillars/arrow-active.svg";
+import arrowActiveIcon from "../../../assets/icons/pillars/arrow-active.svg";
 import arrowInactiveIcon from "../../../assets/icons/pillars/arrow-inactive.svg";
-import ideaIcon         from "../../../assets/icons/pillars/idea.svg";
-import checkIcon        from "../../../assets/icons/pillars/check.svg";
-import arrowBlackIcon   from "../../../assets/icons/pillars/arrow-black.svg";
-import arrowNavyIcon    from "../../../assets/icons/pillars/arrow-navy.svg";
+import ideaIcon from "../../../assets/icons/pillars/idea.svg";
+import usersIcon from "../../../assets/icons/pillars/users.svg";
+import dataIcon from "../../../assets/icons/pillars/data.svg";
+import goalsIcon from "../../../assets/icons/pillars/goals.svg";
+import ratingIcon from "../../../assets/icons/pillars/rating.svg";
+import chartIcon from "../../../assets/icons/pillars/chart.svg";
+import rocketIcon from "../../../assets/icons/pillars/rocket.svg";
+import checkIcon from "../../../assets/icons/pillars/check.svg";
+import arrowBlackIcon from "../../../assets/icons/pillars/arrow-black.svg";
+import arrowNavyIcon from "../../../assets/icons/pillars/arrow-navy.svg";
 
-// Pillar images
-import heroVideoImg      from "../../../assets/images/new-home/hero-video.webp";
-import pillarsTeamImg    from "../../../assets/images/new-home/pillars-team.webp";
-import pillarsDataImg    from "../../../assets/images/new-home/pillars-data.webp";
-import pillarsExecImg    from "../../../assets/images/new-home/pillars-execution.webp";
-import pillarsWorkImg    from "../../../assets/images/new-home/pillars-workforce.webp";
-import partnerCtaImg     from "../../../assets/images/new-home/partner-cta-photo.webp";
-import aboutHeroImg      from "../../../assets/images/about/hero-image.webp";
+import pillar01Img from "../../../assets/images/methodology/pillars/pillar-01.webp";
+import pillar02Img from "../../../assets/images/methodology/pillars/pillar-02.webp";
+import pillar03Img from "../../../assets/images/methodology/pillars/pillar-03.webp";
+import pillar04Img from "../../../assets/images/methodology/pillars/pillar-04.webp";
+import pillar05Img from "../../../assets/images/methodology/pillars/pillar-05.webp";
+import pillar06Img from "../../../assets/images/methodology/pillars/pillar-06.webp";
+import pillar07Img from "../../../assets/images/methodology/pillars/pillar-07.webp";
 
 const PILLARS = [
   {
-    id: "01", category: "Innovation",
+    id: "01",
+    category: "Innovation",
     title: "Build a Guided Innovation Engine",
-    description: "Create a structured environment where every employee can safely experiment with AI and surface real-world use cases. The result: a continuous pipeline of practical innovations from the people who know your operations best.",
-    bullets: ["Sandbox environments with safety guardrails", "Monthly idea pipelines from every department", "Lightweight evaluation rubric for new use cases"],
+    description:
+      "Create a structured environment where every employee can safely experiment with AI and surface real-world use cases. The result: a continuous pipeline of practical innovations from the people who know your operations best.",
+    bullets: [
+      "Sandbox environments with safety guardrails",
+      "Monthly idea pipelines from every department",
+      "Lightweight evaluation rubric for new use cases",
+    ],
     stat: { value: "3×", label: "More qualified use cases per quarter" },
-    image: heroVideoImg,
+    icon: ideaIcon,
+    image: pillar01Img,
   },
   {
-    id: "02", category: "People",
+    id: "02",
+    category: "People",
     title: "Put People at the Center of Transformation",
-    description: "AI transformation fails when people are left behind. Build the capabilities, confidence, and culture your workforce needs to become AI-ready — from frontline employees to the C-suite.",
-    bullets: ["Role-specific AI upskilling programs", "Change management playbooks for every team", "AI champions embedded across departments"],
-    stat: { value: "4×", label: "Higher adoption when teams are enabled first" },
-    image: pillarsTeamImg,
+    description:
+      "The biggest barrier to AI isn't technology — it's fear. This pillar redefines the social contract: AI becomes a tool for career growth, not a threat. When people trust the process, adoption accelerates and resistance disappears.",
+    bullets: [
+      "Transparent communication on AI's role",
+      "Targeted upskilling and retraining programs",
+      "Employee-led AI adoption champions",
+    ],
+    stat: { value: "100%", label: "Focus on AI as a tool for career growth" },
+    icon: usersIcon,
+    image: pillar02Img,
   },
   {
-    id: "03", category: "Data",
+    id: "03",
+    category: "Data",
     title: "Centralize Your Data & Define Actionable KPIs",
-    description: "AI is only as powerful as the data behind it. Consolidate your data sources into a trusted, accessible foundation — then define the metrics that will actually tell you if your AI investments are working.",
-    bullets: ["Unified data architecture across business units", "KPI frameworks tied to strategic outcomes", "Data quality protocols for AI readiness"],
-    stat: { value: "60%", label: "Reduction in decision latency with clean data" },
-    image: pillarsDataImg,
+    description:
+      "AI without clean, connected data is just expensive guessing. Unify scattered data sources, define the KPIs that actually matter, and create feedback loops that let your organization measure, learn, and optimize in real time.",
+    bullets: [
+      "Unified data lakes and seamless integrations",
+      "Real-time tracking for actionable KPIs",
+      "Automated feedback and learning loops",
+    ],
+    stat: { value: "360°", label: "Visibility into real-time optimizations" },
+    icon: dataIcon,
+    image: pillar03Img,
   },
   {
-    id: "04", category: "Strategy",
+    id: "04",
+    category: "Strategy",
     title: "Create Strategic Urgency Without Panic",
-    description: "The risk isn't moving too fast — it's moving without direction. Build an AI roadmap that creates competitive urgency while keeping your operations stable, your team aligned, and your investments focused.",
-    bullets: ["Prioritized AI use case roadmap", "Risk-adjusted implementation sequencing", "Executive alignment workshops"],
-    stat: { value: "2.5×", label: "Faster time-to-value with a structured roadmap" },
-    image: pillarsExecImg,
+    description:
+      "The AI window is narrowing. Companies that wait for perfect conditions will be outrun by competitors who started now. This pillar helps you distinguish what must be built immediately from what can wait — driving action without recklessness.",
+    bullets: [
+      "Prioritized roadmaps for immediate impact",
+      "Agile frameworks for safe, rapid deployment",
+      "Competitive gap analysis and monitoring",
+    ],
+    stat: { value: "#1", label: "Priority on high-impact, immediate builds" },
+    icon: goalsIcon,
+    image: pillar04Img,
   },
   {
-    id: "05", category: "CX",
+    id: "05",
+    category: "CX",
     title: "Make Customer Experience Your North Star",
-    description: "The companies winning with AI aren't just cutting costs — they're creating experiences their customers can't get anywhere else. Every AI initiative should trace back to a measurable improvement in how customers feel about you.",
-    bullets: ["Customer journey AI opportunity mapping", "Personalization engines at scale", "Real-time feedback loops from customer data"],
-    stat: { value: "35%", label: "Average increase in customer satisfaction scores" },
-    image: pillarsWorkImg,
+    description:
+      "Most companies use AI to cut costs. The best use it to win customers. Redirect efficiency gains toward market-defining experiences — faster response times, personalized interactions, predictive service. Deliver so much value your customers can't imagine going anywhere else.",
+    bullets: [
+      "Prioritized roadmaps for immediate impact",
+      "Hyper-personalized user journeys",
+      "Automated, empathetic response systems",
+    ],
+    stat: { value: "5x", label: "Faster, highly personalized customer responses" },
+    icon: ratingIcon,
+    image: pillar05Img,
   },
   {
-    id: "06", category: "Compounding",
+    id: "06",
+    category: "Compounding",
     title: "Engineer Recursive Self-Improvement",
-    description: "The most powerful AI programs don't just run — they learn. Build feedback loops into every initiative so your systems get smarter, your processes get leaner, and your competitive advantage compounds over time.",
-    bullets: ["Automated performance monitoring for AI models", "Continuous improvement sprints every 90 days", "Knowledge management systems that capture learnings"],
-    stat: { value: "10×", label: "Value multiplier from compounding AI improvements" },
-    image: partnerCtaImg,
+    description:
+      "The most powerful AI advantage is a compounding loop: AI optimizes processes, processes generate better data, better data trains sharper AI. Your competitors improve linearly. You improve exponentially.",
+    bullets: [
+      "Closed-loop data refinement systems",
+      "Continuous AI model retraining",
+      "Automated internal process optimization",
+    ],
+    stat: { value: "10x", label: "Exponential improvement loops over competitors" },
+    icon: chartIcon,
+    image: pillar06Img,
   },
   {
-    id: "07", category: "Governance",
+    id: "07",
+    category: "Governance",
     title: "Establish AI Governance & Build Trust",
-    description: "Speed without governance is a liability. Build the policies, oversight structures, and ethical frameworks that let you move fast with AI while maintaining the trust of your employees, your customers, and your regulators.",
-    bullets: ["AI ethics and accountability frameworks", "Bias detection and mitigation protocols", "Regulatory compliance checkpoints built in"],
-    stat: { value: "100%", label: "Audit-ready AI processes from day one" },
-    image: aboutHeroImg,
+    description:
+      "Speed without guardrails is recklessness. Establish ethical policies, security protocols, and accountability frameworks that earn the trust of your employees, customers, and regulators. Governance isn't a brake on innovation — it's the foundation that lets you move fast with confidence.",
+    bullets: [
+      "Comprehensive ethical AI usage policies",
+      "Robust security and privacy protocols",
+      "Clear organizational accountability frameworks",
+    ],
+    stat: { value: "100%", label: "Compliant and secure innovation foundation" },
+    icon: rocketIcon,
+    image: pillar07Img,
   },
 ];
 
+const MOBILE_TAB_TRANSITION =
+  "max-lg:transition-all max-lg:duration-300 max-lg:ease-in-out motion-reduce:max-lg:transition-none";
+
+function PillarTabButton({ pillar, isActive, onClick, layout }) {
+  const isMobile = layout === "mobile";
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-current={isActive ? "true" : undefined}
+      className={[
+        "flex shrink-0 cursor-pointer items-center text-left snap-center",
+        isMobile
+          ? `w-[320px] gap-3.5 rounded-xl p-3 ${MOBILE_TAB_TRANSITION}`
+          : "w-full gap-6 rounded-xl px-4 py-3 transition-colors",
+        isActive ? "bg-[#12174b]" : "bg-white hover:bg-[#f0f4fa]",
+      ].join(" ")}
+    >
+      <span
+        className={[
+          "flex h-9 w-9 shrink-0 items-center justify-center text-xs font-bold tracking-[0.6px]",
+          isMobile ? MOBILE_TAB_TRANSITION : "",
+          isActive
+            ? "rounded-[4px] bg-[#18a3e6] text-[#f2f6fb]"
+            : "rounded-lg bg-[#f5f8fc] text-[#38393f]",
+        ].join(" ")}
+      >
+        {pillar.id}
+      </span>
+
+      <span className={`flex min-w-0 flex-1 flex-col ${isMobile ? "gap-1" : "gap-1"}`}>
+        <span
+          className={[
+            "block font-medium uppercase opacity-70",
+            isMobile ? `text-xs ${MOBILE_TAB_TRANSITION}` : "text-[11px] tracking-wide",
+            isActive ? "text-[#f2f6fb]" : "text-[rgba(32,20,99,0.8)]",
+          ].join(" ")}
+        >
+          {pillar.category}
+        </span>
+        <span
+          className={[
+            "block font-bold leading-[18px]",
+            isMobile ? `text-sm ${MOBILE_TAB_TRANSITION}` : "text-[13px]",
+            isActive ? "text-[#f2f6fb]" : "text-[#404040]",
+          ].join(" ")}
+        >
+          {pillar.title}
+        </span>
+      </span>
+
+      {isMobile ? (
+        <span className="relative h-5 w-5 shrink-0" aria-hidden>
+          <img
+            src={arrowInactiveIcon}
+            alt=""
+            className={[
+              "absolute inset-0 h-5 w-5 rotate-90 transition-all duration-300 ease-in-out motion-reduce:transition-none",
+              isActive ? "opacity-0 scale-75" : "opacity-100 scale-100",
+            ].join(" ")}
+          />
+          <img
+            src={arrowActiveIcon}
+            alt=""
+            className={[
+              "absolute inset-0 h-5 w-5 -rotate-90 transition-all duration-300 ease-in-out motion-reduce:transition-none",
+              isActive ? "opacity-100 scale-100" : "opacity-0 scale-75",
+            ].join(" ")}
+          />
+        </span>
+      ) : (
+        <img
+          src={isActive ? arrowActiveIcon : arrowInactiveIcon}
+          alt=""
+          aria-hidden
+          className="h-5 w-5 shrink-0"
+        />
+      )}
+    </button>
+  );
+}
+
+function getCenteredTabIndex(track) {
+  const tabs = Array.from(track.children);
+  const trackCenter = track.scrollLeft + track.clientWidth / 2;
+  let closest = 0;
+  let minDist = Infinity;
+
+  tabs.forEach((tab, index) => {
+    const tabCenter = tab.offsetLeft + tab.offsetWidth / 2;
+    const dist = Math.abs(tabCenter - trackCenter);
+    if (dist < minDist) {
+      minDist = dist;
+      closest = index;
+    }
+  });
+
+  return closest;
+}
+
+function scrollMobileTabToIndex(track, index) {
+  const tab = track.children[index];
+  if (!tab) return;
+
+  const scrollLeft = tab.offsetLeft - (track.clientWidth - tab.offsetWidth) / 2;
+  track.scrollTo({ left: scrollLeft, behavior: "smooth" });
+}
+
 export default function MethodologyPillarsSection() {
   const [active, setActive] = useState(0);
+  const mobileTabTrackRef = useRef(null);
+  const isProgrammaticScrollRef = useRef(false);
+  const scrollEndTimerRef = useRef(null);
   const pillar = PILLARS[active];
 
-  const handleNext = () => setActive((prev) => (prev + 1) % PILLARS.length);
+  const setActivePillar = (index) => {
+    setActive(index);
+
+    const track = mobileTabTrackRef.current;
+    if (!track || window.matchMedia("(min-width: 1024px)").matches) return;
+
+    isProgrammaticScrollRef.current = true;
+    requestAnimationFrame(() => scrollMobileTabToIndex(track, index));
+  };
+
+  const handleNext = () =>
+    setActivePillar(active === PILLARS.length - 1 ? 0 : active + 1);
+
+  useEffect(() => {
+    const track = mobileTabTrackRef.current;
+    if (!track) return undefined;
+
+    const finishProgrammaticScroll = () => {
+      if (scrollEndTimerRef.current) {
+        window.clearTimeout(scrollEndTimerRef.current);
+        scrollEndTimerRef.current = null;
+      }
+      isProgrammaticScrollRef.current = false;
+    };
+
+    const onScroll = () => {
+      if (isProgrammaticScrollRef.current) {
+        scrollEndTimerRef.current = window.setTimeout(finishProgrammaticScroll, 120);
+        return;
+      }
+
+      setActive(getCenteredTabIndex(track));
+    };
+
+    const onScrollEnd = () => {
+      if (isProgrammaticScrollRef.current) {
+        finishProgrammaticScroll();
+      } else {
+        setActive(getCenteredTabIndex(track));
+      }
+    };
+
+    const onUserScrollIntent = () => {
+      isProgrammaticScrollRef.current = false;
+    };
+
+    track.addEventListener("scroll", onScroll, { passive: true });
+    track.addEventListener("scrollend", onScrollEnd);
+    track.addEventListener("touchstart", onUserScrollIntent, { passive: true });
+    track.addEventListener("pointerdown", onUserScrollIntent);
+
+    return () => {
+      track.removeEventListener("scroll", onScroll);
+      track.removeEventListener("scrollend", onScrollEnd);
+      track.removeEventListener("touchstart", onUserScrollIntent);
+      track.removeEventListener("pointerdown", onUserScrollIntent);
+      if (scrollEndTimerRef.current) {
+        window.clearTimeout(scrollEndTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className="bg-[#e7edf6] px-5 py-12 lg:p-20">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-6 lg:gap-14 ">
 
         {/* ── Header ── */}
-        <div className="flex w-full flex-col items-center gap-4 text-center lg:max-w-[800px] lg:gap-5">
+        <div className="flex w-full flex-col items-center gap-4 text-center max-lg:gap-4 lg:max-w-[800px] lg:gap-5">
           <h2 className="w-full text-[40px] font-normal leading-[46px] text-[#201463] lg:text-[56px] lg:leading-[58px]">
             <span className="font-bold">The 7 </span>
             <span className="font-normal text-[rgba(32,20,99,0.7)]">Strategic Pillars</span>
           </h2>
-          <p className="text-base leading-[26px] text-[#4e546c]">
+          <p className="text-base leading-6 text-[#4e546c] lg:leading-[26px]">
             If the problem is organizational readiness, the solution isn&apos;t
             more tools , it&apos;s a complete framework. These seven pillars
             address every dimension of AI transformation: your people, your
@@ -101,77 +326,58 @@ export default function MethodologyPillarsSection() {
           </p>
         </div>
 
+        {/* Mobile: horizontal tab carousel (Figma 2108:1413) */}
+        <nav
+          ref={mobileTabTrackRef}
+          className="-mx-5 flex w-[calc(100%+40px)] gap-3 overflow-x-auto scroll-smooth px-5 [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden"
+          aria-label="Strategic pillars"
+        >
+          {PILLARS.map((p, i) => (
+            <PillarTabButton
+              key={p.id}
+              pillar={p}
+              isActive={active === i}
+              onClick={() => setActivePillar(i)}
+              layout="mobile"
+            />
+          ))}
+        </nav>
+
         {/* ── Main Card ── */}
         <div className="w-full overflow-hidden rounded-[20px] border border-[#cad1dd] bg-[#fafcfe] p-px">
           <div className="flex w-full flex-col lg:flex-row">
 
-            {/* Left: Tab list */}
+            {/* Desktop: vertical tab list */}
             <nav
-              className="flex flex-col bg-[rgba(242,246,251,0.6)] p-3 lg:w-[360px] lg:self-stretch"
+              className="hidden flex-col bg-[rgba(242,246,251,0.6)] p-3 lg:flex lg:w-[360px] lg:self-stretch"
               aria-label="Strategic pillars"
             >
-              {/* justify-between distributes tabs to fill the full sidebar height */}
-              <div className="flex flex-1 flex-col sm:justify-between gap-y-2 lg:h-full">
-                {PILLARS.map((p, i) => {
-                  const isActive = active === i;
-                  return (
-                    <button
-                      key={p.id}
-                      type="button"
-                      onClick={() => setActive(i)}
-                      aria-current={isActive ? "true" : undefined}
-                      className={[
-                        "flex w-full shrink-0 cursor-pointer items-center gap-6 rounded-xl px-4 py-3 text-left transition-colors",
-                        isActive ? "bg-[#12174b]" : "bg-white hover:bg-[#f0f4fa]",
-                      ].join(" ")}
-                    >
-                      {/* Number badge */}
-                      <span className={[
-                        "flex h-9 w-9 shrink-0 items-center justify-center text-xs font-bold tracking-[0.6px]",
-                        isActive
-                          ? "rounded-[4px] bg-[#18a3e6] text-[#f2f6fb]"
-                          : "rounded-lg bg-[#f5f8fc] text-[#38393f]",
-                      ].join(" ")}>
-                        {p.id}
-                      </span>
-
-                      {/* Category + title */}
-                      <span className="flex min-w-0 flex-1 flex-col gap-1">
-                        <span className={[
-                          "block text-[11px] font-medium uppercase tracking-wide opacity-70",
-                          isActive ? "text-[#f2f6fb]" : "text-[rgba(32,20,99,0.8)]",
-                        ].join(" ")}>
-                          {p.category}
-                        </span>
-                        <span className={[
-                          "block text-[13px] font-bold leading-[18px]",
-                          isActive ? "text-[#f2f6fb]" : "text-[#404040]",
-                        ].join(" ")}>
-                          {p.title}
-                        </span>
-                      </span>
-
-                      {/* Arrow icon from Figma */}
-                      <img
-                        src={isActive ? arrowActiveIcon : arrowInactiveIcon}
-                        alt=""
-                        aria-hidden
-                        className="h-5 w-5 shrink-0"
-                      />
-                    </button>
-                  );
-                })}
+              <div className="flex flex-1 flex-col gap-y-2 sm:justify-between lg:h-full">
+                {PILLARS.map((p, i) => (
+                  <PillarTabButton
+                    key={p.id}
+                    pillar={p}
+                    isActive={active === i}
+                    onClick={() => setActive(i)}
+                    layout="desktop"
+                  />
+                ))}
               </div>
             </nav>
 
-            {/* Right: Content panel */}
-            <div className="flex min-w-0 flex-1 flex-col p-5 lg:p-12">
-              <div className="flex flex-col gap-6 w-full">
+            {/* Content panel */}
+            <div className="flex min-w-0 flex-1 flex-col px-5 py-6 lg:p-12">
+              <div className="flex w-full flex-col gap-5 lg:gap-6">
 
                 {/* Progress row */}
-                <div className="flex items-center gap-3">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#12174b]">
-                    <img src={ideaIcon} alt="" aria-hidden className="h-[22px] w-[22px]" />
+                <div className="flex items-center gap-4 lg:gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#12174b] lg:h-12 lg:w-12 lg:rounded-xl">
+                    <img
+                      src={pillar.icon}
+                      alt=""
+                      aria-hidden
+                      className="h-6 w-6 shrink-0"
+                    />
                   </span>
                   <span className="text-sm font-semibold text-[#4e546c]">{active + 1} of 7</span>
                 </div>
@@ -180,54 +386,69 @@ export default function MethodologyPillarsSection() {
                 <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
 
                   {/* Text column */}
-                  <div className="flex flex-1 min-w-0 flex-col gap-3">
-                    <h3 className="text-xl font-bold leading-7 text-[#201463] lg:text-2xl lg:leading-8 h-[56px]"
-                        style={{ fontFamily: "var(--font-nunito)" }}>
+                  <div className="flex min-w-0 flex-1 flex-col gap-3">
+                    <h3
+                      className="text-xl font-bold leading-7 text-[#201463] lg:text-2xl lg:leading-8"
+                      style={{ fontFamily: "var(--font-nunito)" }}
+                    >
                       {pillar.title}
                     </h3>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-6 lg:gap-4">
                       <p className="text-base leading-6 text-black">{pillar.description}</p>
 
-                      {/* Bullet list */}
-                      <ul className="flex flex-col gap-3">
+                      <ul className="flex flex-col gap-2 lg:gap-3">
                         {pillar.bullets.map((b) => (
-                          <li key={b} className="flex items-start gap-3">
+                          <li key={b} className="flex items-center gap-2 lg:items-start lg:gap-3">
                             <img
                               src={checkIcon}
                               alt=""
                               aria-hidden
-                              className="mt-0.5 h-5 w-5 shrink-0"
+                              className="h-4 w-4 shrink-0 lg:mt-0.5 lg:h-5 lg:w-5"
                             />
-                            <span className="text-sm leading-[22px] text-[#4e546c]">{b}</span>
+                            <span className="text-xs leading-5 text-[#4e546c] lg:text-sm lg:leading-[22px]">
+                              {b}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Stat box */}
-                    <div className="flex flex-col items-center gap-4 rounded-2xl bg-[#12174b] p-6 text-center text-white">
-                      <p className="text-5xl font-extrabold uppercase tracking-[-1.2px] leading-[48px]"
-                         style={{ fontFamily: "var(--font-nunito)" }}>
+                    <div className="flex flex-col items-center gap-3 rounded-2xl bg-[#12174b] px-6 py-4 text-center text-white lg:gap-4 lg:p-6">
+                      <p
+                        className="text-[40px] font-extrabold uppercase leading-[48px] tracking-[-1.2px] lg:text-5xl"
+                        style={{ fontFamily: "var(--font-nunito)" }}
+                      >
                         {pillar.stat.value}
                       </p>
-                      <p className="text-base font-semibold leading-6">{pillar.stat.label}</p>
+                      <p className="text-sm font-semibold leading-[22px] lg:text-base lg:leading-6">
+                        {pillar.stat.label}
+                      </p>
                     </div>
                   </div>
 
-                  {/* Image column */}
-                  <div className="flex flex-1 min-w-0">
+                  {/* Image — desktop only in row */}
+                  <div className="hidden min-w-0 flex-1 lg:flex">
                     <img
                       key={pillar.id}
                       src={pillar.image}
                       alt={pillar.title}
-                      className="h-[340px] w-full rounded-3xl object-cover lg:h-[393px]"
+                      className="h-[393px] w-full rounded-3xl object-cover"
                     />
                   </div>
                 </div>
 
+                {/* Image — mobile below content (Figma 2108:1522) */}
+                <img
+                  key={`${pillar.id}-mobile`}
+                  src={pillar.image}
+                  alt={pillar.title}
+                  className="mt-3 h-[280px] w-full rounded-3xl object-cover lg:hidden"
+                />
+
                 {/* Footer */}
-                <div className="flex flex-col gap-4 border-t border-[#cad1dd] pt-6 lg:flex-row lg:items-center lg:justify-between">
+                <div className="flex flex-col gap-2 max-lg:pt-0 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:border-t lg:border-[#cad1dd] lg:pt-6">
                   <a
                     href={FREE_CONSULTATION_URL}
                     target="_blank"

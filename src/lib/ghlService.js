@@ -29,7 +29,7 @@ export async function submitToGHL(formData, options = {}) {
     name: formData.name.trim(),
     email: formData.email.trim().toLowerCase(),
     phone: phone,
-    companyName: formData.companyName.trim(),
+    companyName: (formData.companyName || "").trim(),
     tags,
     source,
   };
