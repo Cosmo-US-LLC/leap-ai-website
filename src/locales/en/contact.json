@@ -1,0 +1,31 @@
+{
+  "headingBold": "Contact ",
+  "headingMuted": "Us",
+  "intro": "Get in touch with us to explore how we can assist you in transforming your business with innovative AI solutions. Our team is here to answer your questions and provide the support you need.",
+  "fields": {
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message"
+  },
+  "placeholders": {
+    "fullName": "Enter full name",
+    "email": "Enter email address",
+    "phone": "Enter phone number",
+    "message": "Type your message here..."
+  },
+  "validation": {
+    "fullNameRequired": "Full name is required",
+    "emailRequired": "Email address is required",
+    "emailInvalid": "Please enter a valid email address",
+    "phoneRequired": "Phone number is required",
+    "messageRequired": "Message is required"
+  },
+  "submit": {
+    "sending": "Sending...",
+    "sendMessage": "Send Message"
+  },
+  "success": "Thank you. Your message has been sent successfully.",
+  "submitError": "Failed to send message. Please try again.",
+  "imageAlt": "Leap 41 team in conversation"
+}

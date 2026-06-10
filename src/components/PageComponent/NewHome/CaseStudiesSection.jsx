@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
-import { CASE_STUDIES } from "../../../lib/caseStudyContent.js";
+import { useTranslation } from "react-i18next";
+import { LocaleLink } from "../../layouts/LocaleLink.jsx";
+import { useContentLocale } from "../../../hooks/useContentLocale.js";
+import { getCaseStudies } from "../../../lib/caseStudyContent.js";
 import { ArrowRightIcon } from "./icons/ArrowRightIcon.jsx";
 import { PrimaryCtaButton } from "./PrimaryCtaButton.jsx";
 
@@ -16,7 +18,7 @@ function CaseStudyMetric({ metric, metricParts }) {
   return <p className="nh-metric-case uppercase">{metric}</p>;
 }
 
-function CaseStudyCardInner({ study }) {
+function CaseStudyCardInner({ study, readLabel }) {
   return (
     <div className="flex h-full flex-col">
       <div className="relative h-[263px] shrink-0">
@@ -41,7 +43,7 @@ function CaseStudyCardInner({ study }) {
         </div>
 
         <span className="case-study-card-link nh-link-case inline-flex w-fit shrink-0 self-start items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px]">
-          Read case study
+          {readLabel}
           <ArrowRightIcon className="h-4 w-4 -rotate-45" />
         </span>
       </div>
@@ -52,38 +54,46 @@ function CaseStudyCardInner({ study }) {
 const caseStudyCardLinkClass =
   "flex h-full flex-col overflow-hidden rounded-2xl bg-white text-inherit no-underline transition hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#18a3e6]";
 
-function MobileCaseStudyCard({ study }) {
+function MobileCaseStudyCard({ study, readLabel, readAria }) {
   return (
     <div className="case-study-mobile-wrap shrink-0 snap-start self-stretch">
-      <Link
+      <LocaleLink
         to={`/case-studies/${study.slug}`}
-        aria-label={`Read case study: ${study.title}`}
+        aria-label={readAria}
         className={`case-study-mobile-card ${caseStudyCardLinkClass}`}
       >
-        <CaseStudyCardInner study={study} />
-      </Link>
+        <CaseStudyCardInner study={study} readLabel={readLabel} />
+      </LocaleLink>
     </div>
   );
 }
 
-function DesktopCaseStudyCard({ study }) {
+function DesktopCaseStudyCard({ study, readLabel, readAria }) {
   return (
-    <Link
+    <LocaleLink
       to={`/case-studies/${study.slug}`}
-      aria-label={`Read case study: ${study.title}`}
+      aria-label={readAria}
       className={`case-study-desktop-card min-w-0 flex-1 ${caseStudyCardLinkClass} shadow-[0_0_48px_4px_rgba(43,43,118,0.1)]`}
     >
-      <CaseStudyCardInner study={study} />
-    </Link>
+      <CaseStudyCardInner study={study} readLabel={readLabel} />
+    </LocaleLink>
   );
 }
 
 export default function CaseStudiesSection({
   subtitle,
-  headingPrefix = "Recent ",
-  headingMuted = "results.",
+  headingPrefix,
+  headingMuted,
   showCtaButton,
 }) {
+  const { t } = useTranslation("home");
+  const locale = useContentLocale();
+  const studies = getCaseStudies(locale);
+  const resolvedHeadingPrefix = headingPrefix ?? t("caseStudiesSection.headingPrefix", { ns: "home" });
+  const resolvedHeadingMuted = headingMuted ?? t("caseStudiesSection.headingMuted", { ns: "home" });
+  const readLabel = t("caseStudiesSection.readCaseStudy", { ns: "home" });
+  const readAria = (title) => t("caseStudiesSection.readCaseStudyAria", { ns: "home", title });
+  const allCaseStudies = t("caseStudiesSection.allCaseStudies", { ns: "home" });
   const shouldShowCta = showCtaButton ?? !subtitle;
   const isCentered = !!subtitle;
 
@@ -103,8 +113,8 @@ export default function CaseStudiesSection({
           className={`w-full lg:hidden ${isCentered ? "text-center" : "text-left"}`}
         >
           <h2 className="nh-h2 capitalize">
-            <span className="nh-h2-bold">{headingPrefix}</span>
-            <span className="nh-h2-muted">{headingMuted}</span>
+            <span className="nh-h2-bold">{resolvedHeadingPrefix}</span>
+            <span className="nh-h2-muted">{resolvedHeadingMuted}</span>
           </h2>
           {subtitle ? (
             <p className="mx-auto mt-3 max-w-xl text-base text-[#4e546c]">
@@ -126,8 +136,8 @@ export default function CaseStudiesSection({
             }
           >
             <h2 className="nh-h2 capitalize">
-              <span className="nh-h2-bold">{headingPrefix}</span>
-              <span className="nh-h2-muted">{headingMuted}</span>
+              <span className="nh-h2-bold">{resolvedHeadingPrefix}</span>
+              <span className="nh-h2-muted">{resolvedHeadingMuted}</span>
             </h2>
             {subtitle ? (
               <p className="max-w-xl text-base text-[#4e546c]">{subtitle}</p>
@@ -139,7 +149,7 @@ export default function CaseStudiesSection({
               variant="soft"
               className="shrink-0"
             >
-              All case studies
+              {allCaseStudies}
             </PrimaryCtaButton>
           ) : null}
         </div>
@@ -148,14 +158,24 @@ export default function CaseStudiesSection({
           className={`w-full lg:max-w-none ${isCentered ? "max-lg:max-w-[350px]" : ""}`}
         >
           <div className="case-studies-mobile-track flex items-stretch gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden">
-            {CASE_STUDIES.map((study) => (
-              <MobileCaseStudyCard key={study.slug} study={study} />
+            {studies.map((study) => (
+              <MobileCaseStudyCard
+                key={study.slug}
+                study={study}
+                readLabel={readLabel}
+                readAria={readAria(study.title)}
+              />
             ))}
           </div>
 
           <div className="case-studies-desktop-row hidden lg:flex">
-            {CASE_STUDIES.map((study) => (
-              <DesktopCaseStudyCard key={study.slug} study={study} />
+            {studies.map((study) => (
+              <DesktopCaseStudyCard
+                key={study.slug}
+                study={study}
+                readLabel={readLabel}
+                readAria={readAria(study.title)}
+              />
             ))}
           </div>
         </div>
@@ -166,7 +186,7 @@ export default function CaseStudiesSection({
             variant="soft"
             className="home-case-studies-cta w-full shrink-0 lg:hidden"
           >
-            All case studies
+            {allCaseStudies}
           </PrimaryCtaButton>
         )}
       </div>

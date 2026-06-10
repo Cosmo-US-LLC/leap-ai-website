@@ -1,0 +1,31 @@
+{
+  "headingBold": "Contactez",
+  "headingMuted": "-nous",
+  "intro": "Contactez-nous pour explorer comment nous pouvons vous aider à transformer votre entreprise avec des solutions IA innovantes. Notre équipe est là pour répondre à vos questions.",
+  "fields": {
+    "fullName": "Nom complet",
+    "email": "Adresse courriel",
+    "phone": "Numéro de téléphone",
+    "message": "Message"
+  },
+  "placeholders": {
+    "fullName": "Entrez votre nom complet",
+    "email": "Entrez votre adresse courriel",
+    "phone": "Entrez votre numéro de téléphone",
+    "message": "Tapez votre message ici..."
+  },
+  "validation": {
+    "fullNameRequired": "Le nom complet est requis",
+    "emailRequired": "L'adresse courriel est requise",
+    "emailInvalid": "Veuillez entrer une adresse courriel valide",
+    "phoneRequired": "Le numéro de téléphone est requis",
+    "messageRequired": "Le message est requis"
+  },
+  "submit": {
+    "sending": "Envoi en cours...",
+    "sendMessage": "Envoyer le message"
+  },
+  "success": "Merci. Votre message a été envoyé avec succès.",
+  "submitError": "Échec de l'envoi du message. Veuillez réessayer.",
+  "imageAlt": "Équipe Leap 41 en conversation"
+}

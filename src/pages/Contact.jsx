@@ -1,13 +1,8 @@
 import ContactFormSection from "../components/PageComponent/Contact/ContactFormSection.jsx";
-import { usePageMeta } from "../hooks/usePageMeta.js";
-
-const CONTACT_META = {
-  title: "Contact Leap AI | Book an AI Consultation",
-  description: "Get in touch with Leap AI to discuss your AI transformation.",
-};
+import { usePageMetaI18n } from "../hooks/usePageMetaI18n.js";
 
 export default function Contact() {
-  usePageMeta(CONTACT_META);
+  usePageMetaI18n("contact");
 
   return <ContactFormSection />;
 }

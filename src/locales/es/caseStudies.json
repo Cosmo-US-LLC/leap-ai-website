@@ -1,0 +1,19 @@
+{
+  "page": {
+    "subtitle": "Vea cómo las organizaciones usan la IA para transformar sus operaciones.",
+    "headingMuted": "Resultados"
+  },
+  "detail": {
+    "bookStrategyCall": "Reservar llamada estratégica",
+    "impactTitle": "Impacto de un vistazo",
+    "deliveredTitle": "Lo que se entregó",
+    "technologiesTitle": "Tecnologías",
+    "industryLabel": "Industria",
+    "locationLabel": "Ubicación",
+    "relatedHeadingPrefix": "Casos de estudio ",
+    "relatedHeadingMuted": "relacionados",
+    "notFoundTitle": "Caso de estudio no encontrado",
+    "notFoundBody": "El caso de estudio que busca no existe.",
+    "viewAll": "Ver todos los casos de estudio"
+  }
+}

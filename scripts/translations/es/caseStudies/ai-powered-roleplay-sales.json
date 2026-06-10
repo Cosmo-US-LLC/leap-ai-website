@@ -1,0 +1,177 @@
+{
+  "slug": "ai-powered-roleplay-sales",
+  "tag": "Servicios financieros",
+  "metric": "3×",
+  "metricParts": [
+    "3",
+    "×"
+  ],
+  "metricLabel": "frecuencia de práctica",
+  "title": "Roleplay con IA que realmente mejora el desempeño comercial",
+  "description": "Cómo una firma de servicios financieros reemplazó la capacitación obsoleta con roleplay interactivo con IA — y vio un aumento medible en la confianza de los asesores y las tasas de cierre en 60 días.",
+  "hero": {
+    "titlePrefix": "Roleplay con IA que realmente ",
+    "titleHighlight": "mejora el desempeño comercial",
+    "subtitle": "Cómo una firma de servicios financieros reemplazó la capacitación obsoleta con roleplay interactivo con IA — y vio un aumento medible en la confianza de los asesores y las tasas de cierre en 60 días."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "3×",
+        "label": "Frecuencia de práctica"
+      },
+      {
+        "value": "40%",
+        "label": "Incorporación más rápida"
+      },
+      {
+        "value": "89%",
+        "label": "Satisfacción de asesores"
+      },
+      {
+        "value": "60 Days",
+        "label": "Para ver impacto"
+      }
+    ],
+    "delivered": [
+      "Personas de IA adaptativas",
+      "Retroalimentación en tiempo real",
+      "Escenarios personalizados",
+      "Analítica de progreso",
+      "Barreras de cumplimiento normativo",
+      "Panel para gerentes"
+    ],
+    "technologies": [
+      "LLM",
+      "NLP",
+      "Speech Synthesis",
+      "Real-Time AI"
+    ],
+    "industry": "Servicios financieros / Seguros",
+    "location": "América del Norte"
+  },
+  "cta": {
+    "titleMuted": "¿Listo para transformar su ",
+    "titleBold": "capacitación comercial? ",
+    "description": "Descubra cómo el roleplay con IA puede acelerar la preparación de asesores y mejorar las tasas de cierre."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "La brecha de capacitación",
+      "paragraphs": [
+        "La capacitación comercial en servicios financieros tiene un problema fundamental: es costosa, inconsistente y casi imposible de escalar.",
+        "La mayoría de las firmas dependen de una combinación de sesiones presenciales, escenarios con guion y roleplay entre pares. Los gerentes reservan tiempo entre sus propias responsabilidades para dirigir sesiones de práctica — cuando pueden. Los nuevos ingresos reciben una incorporación intensiva, pero el desarrollo continuo suele quedar relegado a reuniones de equipo esporádicas y actualizaciones anuales.",
+        "El resultado es predecible. Los asesores que practican más rinden mejor. Pero las oportunidades de práctica son escasas, se distribuyen de forma desigual y rara vez se miden."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "sliders",
+          "title": "Calidad inconsistente",
+          "description": "La calidad de la capacitación varía drásticamente según el gerente, la oficina y el tiempo disponible."
+        },
+        {
+          "icon": "calendarClock",
+          "title": "Baja frecuencia",
+          "description": "Las sesiones de práctica ocurren como máximo una vez al mes — no suficiente para formar hábitos duraderos."
+        },
+        {
+          "icon": "barChart",
+          "title": "Sin medición",
+          "description": "Sin seguimiento estructurado, no hay forma de conectar el esfuerzo de capacitación con los resultados de desempeño.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Por qué el roleplay tradicional se queda corto",
+      "paragraphs": [
+        "El roleplay entre pares ha sido el estándar de la industria durante décadas. Dos asesores se turnan interpretando cliente y asesor, recorriendo escenarios de manejo de objeciones o análisis de necesidades.",
+        "En teoría, funciona. En la práctica, sufre tres debilidades estructurales.",
+        "Primero, **los pares son predecibles**. Después de unas rondas, los asesores aprenden los patrones del otro. La práctica pierde filo. Los clientes reales no siguen guiones.",
+        "Segundo, **la retroalimentación es subjetiva**. Sin un marco de evaluación consistente, la calidad del coaching depende enteramente de quién observa. Dos gerentes podrían evaluar la misma conversación de forma distinta.",
+        "Tercero, **la programación es un cuello de botella**. Coordinar dos o más personas para una sesión de práctica significa competir con reuniones, llamadas con clientes y trabajo administrativo. La sesión que siempre se cancela es la de capacitación."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Presentando el roleplay con IA",
+      "paragraphs": [
+        "Leap AI construyó una plataforma de roleplay interactivo que da a cada asesor acceso a práctica realista bajo demanda — sin requerir un compañero, un gerente ni una sesión programada.",
+        "Los asesores seleccionan un escenario que coincida con su área de enfoque: un comprador de vivienda por primera vez preguntando sobre protección hipotecaria, un dueño de negocio revisando beneficios grupales, o un jubilado evaluando opciones de anualidad. La IA adapta su persona en tiempo real, respondiendo como lo haría un cliente real — con vacilación, preguntas, objeciones y matices emocionales.",
+        "Cada sesión genera retroalimentación estructurada y accionable. No ánimo vago, sino análisis específico: dónde el asesor generó rapport, dónde perdió una oportunidad de descubrimiento, dónde su lenguaje de cumplimiento necesitaba ajuste.",
+        "La plataforma se integra directamente al sistema de gestión del aprendizaje existente de la firma. Sin apps nuevas. Sin contraseñas nuevas. Solo mejor práctica, disponible cuando un asesor tiene 15 minutos."
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": "La plataforma ofrece un bucle completo de capacitación — práctica, retroalimentación y medición — en una sola sesión:",
+      "items": [
+        "Personas de IA adaptativas que responden como clientes reales",
+        "Retroalimentación en tiempo real sobre técnica de comunicación",
+        "Escenarios personalizados alineados con sus líneas de producto",
+        "Analítica de progreso y seguimiento de mejora",
+        "Barreras de cumplimiento normativo y puntuación de mejores prácticas",
+        "Panel para gerentes con supervisión del equipo"
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Cómo funciona una sesión",
+      "steps": [
+        {
+          "icon": "clipboardList",
+          "title": "Seleccionar escenario",
+          "description": "Elija de una biblioteca de escenarios personalizados diseñados en torno a sus líneas de producto y perfiles de clientes."
+        },
+        {
+          "icon": "messages",
+          "title": "Practicar",
+          "description": "Participe en una conversación realista con una persona de IA que se adapta a sus respuestas en tiempo real."
+        },
+        {
+          "icon": "feedback",
+          "title": "Recibir retroalimentación",
+          "description": "Reciba coaching estructurado sobre rapport, descubrimiento, manejo de objeciones y cumplimiento normativo."
+        },
+        {
+          "icon": "trendingUp",
+          "title": "Seguir el progreso",
+          "description": "Monitoree la mejora a lo largo del tiempo con analítica visible para asesores y gerentes."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Impacto en el mundo real",
+      "paragraphs": [
+        "En los primeros 60 días, los asesores que usaban la plataforma completaron un promedio de **12 sesiones de práctica cada uno** — comparado con el promedio anterior de 2 por trimestre mediante roleplay tradicional.",
+        "Los gerentes reportaron que las conversaciones de coaching pasaron de \"esto es lo que debería hacer\" a \"noté que ya mejoró en X — trabajemos en Y.\" La plataforma dio a los asesores propiedad de su desarrollo, y los gerentes pudieron ver el progreso sin estar presentes en cada práctica."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Resultados medibles",
+      "paragraphs": [
+        "La firma siguió el desempeño en tres dimensiones durante los primeros 90 días.",
+        "La **frecuencia de práctica** aumentó 3×. Los asesores practicaron con más frecuencia porque podían hacerlo en su propio horario, sin la sobrecarga de coordinación. Los asesores más comprometidos realizaron de 2 a 3 sesiones por semana.",
+        "El **tiempo de incorporación** disminuyó aproximadamente un 40 por ciento. Los nuevos ingresos alcanzaron los benchmarks de competencia más rápido porque tenían práctica estructurada ilimitada desde el primer día — no solo observación y acompañamiento.",
+        "La **satisfacción de los asesores** con la capacitación alcanzó el 89 por ciento en encuestas internas, frente al 54 por ciento bajo el programa anterior. La razón más citada: \"Puedo practicar sin sentir que me juzgan.\"",
+        "Las tasas de cierre y las métricas de conversión mostraron movimiento positivo temprano, aunque la firma lo atribuye a una combinación de factores que incluyen la nueva capacitación, guiones actualizados y tendencias estacionales."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "La conclusión",
+      "paragraphs": [
+        "La capacitación que ocurre una vez al mes no forma hábitos. La capacitación disponible bajo demanda sí.",
+        "El roleplay con IA no reemplaza a gerentes ni mentores. Da a cada asesor acceso al tipo de práctica deliberada y repetida que los mejores desempeños siempre han encontrado formas de obtener por su cuenta.",
+        "Las firmas que ganarán la próxima década de servicios financieros no son solo las que contratan mejores personas. Son las que **construyen mejores sistemas para desarrollar a las personas que ya tienen**."
+      ]
+    }
+  ]
+}

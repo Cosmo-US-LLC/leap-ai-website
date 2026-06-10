@@ -1,0 +1,263 @@
+{
+  "hero": {
+    "title": "Stop guessing.",
+    "titleAccent": "Start leading.",
+    "body": "Most companies are buying AI tools and hoping for the best. That's not a strategy, it's a gamble. We built a proven framework that turns AI from an expensive experiment into your greatest competitive advantage.",
+    "downloadReport": "Download report",
+    "imageAlt": "Team collaborating on AI strategy"
+  },
+  "challenge": {
+    "headingBold": "AI isn't a technology challenge. ",
+    "headingMuted": "It's a leadership challenge.",
+    "body": [
+      "Most AI initiatives fail , not because the technology doesn't work, but because companies skip the foundations. They buy tools before they've aligned their teams. They automate processes before they've cleaned their data. They chase trends before they've defined their strategy.",
+      "The result? Wasted budgets, frustrated teams, and a growing gap between you and the competitors who got it right."
+    ],
+    "cardHeading": "Companies that wait won't just miss out , they'll pay a premium to catch up.",
+    "stats": [
+      {
+        "value": "87%",
+        "label": "of AI projects fail",
+        "description": "Not because the tech failed , because the organization wasn't ready."
+      },
+      {
+        "value": "$4.4T",
+        "label": "market by 2028",
+        "description": "Companies that wait won't just miss out , they'll pay a premium to catch up."
+      },
+      {
+        "value": "#1",
+        "label": "reason for AI failure",
+        "description": "Lack of organizational readiness , not the technology itself."
+      }
+    ],
+    "callout": "Lack of organizational readiness, not the technology itself."
+  },
+  "pillars": {
+    "headingBold": "The 7 ",
+    "headingMuted": "Strategic Pillars",
+    "intro": "If the problem is organizational readiness, the solution isn't more tools , it's a complete framework. These seven pillars address every dimension of AI transformation: your people, your data, your strategy, and the governance to tie it all together.",
+    "navAria": "Strategic pillars",
+    "progress": "{{current}} of 7",
+    "talkToExpert": "Talk to an expert about this pillar",
+    "nextPillar": "Next pillar",
+    "backToFirst": "Back to first",
+    "items": {
+      "01": {
+        "category": "Innovation",
+        "title": "Build a Guided Innovation Engine",
+        "description": "Create a structured environment where every employee can safely experiment with AI and surface real-world use cases. The result: a continuous pipeline of practical innovations from the people who know your operations best.",
+        "bullets": [
+          "Sandbox environments with safety guardrails",
+          "Monthly idea pipelines from every department",
+          "Lightweight evaluation rubric for new use cases"
+        ],
+        "stat": {
+          "value": "3×",
+          "label": "More qualified use cases per quarter"
+        }
+      },
+      "02": {
+        "category": "People",
+        "title": "Put People at the Center of Transformation",
+        "description": "The biggest barrier to AI isn't technology — it's fear. This pillar redefines the social contract: AI becomes a tool for career growth, not a threat. When people trust the process, adoption accelerates and resistance disappears.",
+        "bullets": [
+          "Transparent communication on AI's role",
+          "Targeted upskilling and retraining programs",
+          "Employee-led AI adoption champions"
+        ],
+        "stat": {
+          "value": "100%",
+          "label": "Focus on AI as a tool for career growth"
+        }
+      },
+      "03": {
+        "category": "Data",
+        "title": "Centralize Your Data & Define Actionable KPIs",
+        "description": "AI without clean, connected data is just expensive guessing. Unify scattered data sources, define the KPIs that actually matter, and create feedback loops that let your organization measure, learn, and optimize in real time.",
+        "bullets": [
+          "Unified data lakes and seamless integrations",
+          "Real-time tracking for actionable KPIs",
+          "Automated feedback and learning loops"
+        ],
+        "stat": {
+          "value": "360°",
+          "label": "Visibility into real-time optimizations"
+        }
+      },
+      "04": {
+        "category": "Strategy",
+        "title": "Create Strategic Urgency Without Panic",
+        "description": "The AI window is narrowing. Companies that wait for perfect conditions will be outrun by competitors who started now. This pillar helps you distinguish what must be built immediately from what can wait — driving action without recklessness.",
+        "bullets": [
+          "Prioritized roadmaps for immediate impact",
+          "Agile frameworks for safe, rapid deployment",
+          "Competitive gap analysis and monitoring"
+        ],
+        "stat": {
+          "value": "#1",
+          "label": "Priority on high-impact, immediate builds"
+        }
+      },
+      "05": {
+        "category": "CX",
+        "title": "Make Customer Experience Your North Star",
+        "description": "Most companies use AI to cut costs. The best use it to win customers. Redirect efficiency gains toward market-defining experiences — faster response times, personalized interactions, predictive service. Deliver so much value your customers can't imagine going anywhere else.",
+        "bullets": [
+          "Prioritized roadmaps for immediate impact",
+          "Hyper-personalized user journeys",
+          "Automated, empathetic response systems"
+        ],
+        "stat": {
+          "value": "5x",
+          "label": "Faster, highly personalized customer responses"
+        }
+      },
+      "06": {
+        "category": "Compounding",
+        "title": "Engineer Recursive Self-Improvement",
+        "description": "The most powerful AI advantage is a compounding loop: AI optimizes processes, processes generate better data, better data trains sharper AI. Your competitors improve linearly. You improve exponentially.",
+        "bullets": [
+          "Closed-loop data refinement systems",
+          "Continuous AI model retraining",
+          "Automated internal process optimization"
+        ],
+        "stat": {
+          "value": "10x",
+          "label": "Exponential improvement loops over competitors"
+        }
+      },
+      "07": {
+        "category": "Governance",
+        "title": "Establish AI Governance & Build Trust",
+        "description": "Speed without guardrails is recklessness. Establish ethical policies, security protocols, and accountability frameworks that earn the trust of your employees, customers, and regulators. Governance isn't a brake on innovation — it's the foundation that lets you move fast with confidence.",
+        "bullets": [
+          "Comprehensive ethical AI usage policies",
+          "Robust security and privacy protocols",
+          "Clear organizational accountability frameworks"
+        ],
+        "stat": {
+          "value": "100%",
+          "label": "Compliant and secure innovation foundation"
+        }
+      }
+    }
+  },
+  "value": {
+    "headingBold": "We don't sell software. ",
+    "headingMuted": "We build market leaders.",
+    "intro": "Knowing the pillars is one thing. Executing them inside your organization , with your people, your constraints, your market , is another. That's where we come in.",
+    "cards": [
+      {
+        "title": "A Real Roadmap, Not a Sales Pitch",
+        "description": "You get a 100+ page strategic plan with 15–20 specific AI projects, sequenced by priority, each tied to measurable KPIs and validated ROI. Not theory , an execution blueprint."
+      },
+      {
+        "title": "People First, Technology Second",
+        "description": "95% of AI projects fail because they ignore the human side. Our framework starts with your workforce, your culture, and your workflows , the foundation that makes everything else work."
+      },
+      {
+        "title": "Revenue Decoupled from Headcount",
+        "description": "Stop scaling costs at the same rate as revenue. Our methodology redesigns how your company functions so you can grow without proportionally growing your team or eroding your margins."
+      }
+    ]
+  },
+  "trustReport": {
+    "titleBold": "This Page Covers the Principles. ",
+    "titleMuted": "The Report Goes Deeper.",
+    "description": "Each pillar includes 3–4 detailed strategic actions, real-world implementation guidance, and a step-by-step methodology you can start executing tomorrow. Plus ROI stress-testing frameworks to keep your plan bankable.",
+    "photoAlt": "Team collaborating on AI strategy",
+    "downloadFullReport": "Download the Full Report"
+  },
+  "roadmap": {
+    "headingBold": "How we build your ",
+    "headingMuted": "AI roadmap",
+    "intro": "Principles are clean, but your business is messy. You can't copy-paste a generic strategy. Here's the methodology we use to translate these pillars into a plan that fits your reality, your constraints, and your ambition.",
+    "includesLabel": "What is included",
+    "steps": [
+      {
+        "title": "The Operational Diagnosis",
+        "description": "You can't prescribe a cure without a diagnosis. We interview every department leader, map their value engine, and find the key opportunities hiding behind your biggest problems. No strategy survives without an honest understanding of the current reality.",
+        "includes": [
+          "Value-stream map",
+          "Friction inventory",
+          "Quick-win shortlist"
+        ],
+        "imageAlt": "Team conducting operational diagnosis workshop"
+      },
+      {
+        "title": "Define the Target",
+        "description": "What do you want to achieve? We work with the CEO to get crystal clear on business goals, current strategy, and what's standing in the way. The goal isn't to start from scratch , it's to create an AI-driven strategy that accelerates and exceeds your existing ambitions.",
+        "includes": [
+          "Strategic intent doc",
+          "Constraint register",
+          "Success criteria"
+        ],
+        "imageAlt": "Executive defining strategic targets"
+      },
+      {
+        "title": "Strategic Alignment",
+        "description": "With a clear grasp of problems, targets, and constraints, we create a new AI-driven strategy anchored to a single \"North Star\" KPI that determines the progress of your AI transition. Validated with your leadership to ensure total alignment.",
+        "includes": [
+          "North Star KPI",
+          "Leadership alignment memo",
+          "Tradeoff log"
+        ],
+        "imageAlt": "Leadership team aligning on strategy"
+      },
+      {
+        "title": "Portfolio of AI Projects",
+        "description": "The heart of the strategy. We define 12–20 specific AI projects: what needs to be done, why, how we'll implement it, the cost, and the impact on your North Star KPI. Each project is sequenced for maximum compounding effect.",
+        "includes": [
+          "Scored project portfolio",
+          "Sequencing roadmap",
+          "Capability gaps"
+        ],
+        "imageAlt": "Team reviewing AI project portfolio"
+      },
+      {
+        "title": "Stress-Test Your ROI",
+        "description": "Financial validation using the Prudence Principle: divide expected positive impact by two, double the projected costs. Your investment model includes scaling, continuous improvement, and a new-project factor. The plan must be realistic and bankable.",
+        "includes": [
+          "Bankable business case",
+          "Risk-adjusted ROI",
+          "Go / no-go recommendation"
+        ],
+        "imageAlt": "Financial ROI stress-testing session"
+      }
+    ]
+  },
+  "authors": {
+    "headingBold": "About ",
+    "headingMuted": "Authors",
+    "intro": "This framework was built by practitioners, not theorists. As former executives, we don't just advise , we've sat in your seat.",
+    "prev": "Previous author",
+    "next": "Next author",
+    "viewAuthor": "View {{name}}",
+    "items": [
+      {
+        "name": "Gregory van Duyse",
+        "role": "CEO & Co-founder",
+        "bio": "Serial entrepreneur and visionary CEO. Greg leverages deep leadership experience to help businesses gain a decisive strategic advantage, transforming cutting-edge AI capabilities into tangible growth and operational excellence."
+      },
+      {
+        "name": "Benjamin Gonzalez",
+        "role": "CTO & Co-founder · M.Sc.",
+        "bio": "With a Master's in Data Science and seasoned CTO leadership, Ben bridges the gap between deep technical engineering and strategic business goals. He translates complex technology into clear, high-impact value."
+      }
+    ],
+    "cta": {
+      "headingBold": "Want ",
+      "headingMuted": "the complete framework?",
+      "body": "The full report includes detailed strategic actions for every pillar, the complete 5-step implementation methodology, ROI stress-testing frameworks, and a roadmap for building your AI-enhanced organization.",
+      "downloadReport": "Download the 7 Pillars Report"
+    }
+  },
+  "trust": {
+    "defaultTitleBold": "A partner you ",
+    "defaultTitleMuted": "can trust.",
+    "defaultDescription": "We help visionary leaders navigate the AI transformation without the complexity, the risk, or the guesswork. Stop running random pilot projects and start building a business that thinks, learns, and optimizes itself.",
+    "defaultPhotoAlt": "Leap 41 team collaborating around a table",
+    "bookConsultation": "Book a Free Consultation Call"
+  }
+}

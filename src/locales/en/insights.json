@@ -1,0 +1,20 @@
+{
+  "page": {
+    "headingBold": "Latest ",
+    "headingMuted": "Insights",
+    "intro": "Discover how businesses are leveraging AI to revolutionize their workflows in our Latest Insights section."
+  },
+  "card": {
+    "readArticle": "Read Article",
+    "readArticleAria": "Read article: {{title}}"
+  },
+  "detail": {
+    "bottomLine": "Bottom Line:",
+    "tableOfContents": "Table of Contents",
+    "moreHeadingBold": "More ",
+    "moreHeadingMuted": "Insights",
+    "notFoundTitle": "Article not found",
+    "notFoundBody": "The insight you are looking for does not exist.",
+    "viewAll": "View all insights"
+  }
+}

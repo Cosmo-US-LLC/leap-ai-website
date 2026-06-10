@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import pillarsTeam from "../../../assets/images/new-home/pillars-team.webp";
 import pillarsWorkforce from "../../../assets/images/new-home/pillars-workforce.webp";
 import pillarsData from "../../../assets/images/new-home/pillars-data.webp";
@@ -7,82 +8,19 @@ import { CheckIcon } from "./icons/CheckIcon.jsx";
 import { SectionHeading } from "./SectionHeading.jsx";
 import { PrimaryCtaButton } from "./PrimaryCtaButton.jsx";
 
-const TABS = [
-  {
-    id: "architecture",
-    label: "Strategic AI Architecture",
-    title: "Stop random pilots. Start systematic advantage.",
-    description:
-      "Our strategic experts guide you through our proven 7-pillar framework to define a clear vision and AI adoption strategy aligned with your business goals. We help you navigate AI's rapid pace with strategic urgency, acting now on foundational work while designing for future adaptability.",
-    benefitsLabel: "What you get:",
-    benefits: [
-      "Real opportunity identification through strategic workshops",
-      "Team alignment and buy-in across all departments",
-      "Practical governance frameworks that build confidence",
-      "Clear direction with well-defined, ready-to-execute projects",
-    ],
-    ctaLabel: "Talk to an expert",
-    image: pillarsTeam,
-    imageAlt: "Team collaborating on AI strategy",
-  },
-  {
-    id: "workforce",
-    label: "Workforce Intelligence Transformation",
-    title: "Turn AI anxiety and fear or replacement into an innovation engine.",
-    description:
-      "We don't just train people on AI tools. We redesign roles around human-AI collaboration, showing your team how AI makes them more valuable, not replaceable.",
-    benefitsLabel: "Our Approach:",
-    benefits: [
-      "3-5 year evolution map for every role.",
-      "Clear AI-augmented future vision for each employee.",
-      "Transform fear into competitive enthusiasm.",
-      "Build internal innovation champions.",
-    ],
-    ctaLabel: "Read More",
-    image: pillarsWorkforce,
-    imageAlt: "Colleagues reviewing work on a laptop together",
-  },
-  {
-    id: "data",
-    label: "Data Infrastructure & Intelligence",
-    title: "Build the nervous system for autonomous advantage.",
-    description:
-      "What if your business could think? Not just process data, but actually understand patterns, predict problems, and optimize itself in real-time across every function?",
-    benefitsLabel: "Your business can:",
-    benefits: [
-      "Spot opportunities before they become obvious.",
-      "Prevent problems before they become expensive.",
-      "Make connections human minds would never see.",
-      "Develop institutional intuition that compounds over time.",
-    ],
-    ctaLabel: "Find Out More",
-    image: pillarsData,
-    imageAlt: "Professional working on a laptop in a modern office",
-    imageClassName: "object-[15%_center]",
-  },
-  {
-    id: "execution",
-    label: "AI Implementation & Execution",
-    title: "Deploy AI that makes competitors scramble to understand what you did.",
-    description:
-      "Our Strategic Leverage Projects don't just improve what you do,they fundamentally change what's possible in your industry. We identify the exact moment where AI can create customer value that didn't exist yesterday.",
-    benefitsLabel: "The impact:",
-    benefits: [
-      "Massive market ripples created by small, targeted changes.",
-      "Customer experiences that spoil them for competitors.",
-      "New market categories emerge around your offerings.",
-      "Fundamental shifts in industry possibilities.",
-    ],
-    ctaLabel: "Read more",
-    image: pillarsExecution,
-    imageAlt: "Team members reviewing a tablet in the office",
-  },
-];
+const TAB_IDS = ["architecture", "workforce", "data", "execution"];
 
-function MobileTabGrid({ activeTab, onSelect }) {
+const TAB_ASSETS = {
+  architecture: { image: pillarsTeam },
+  workforce: { image: pillarsWorkforce },
+  data: { image: pillarsData, imageClassName: "object-[15%_center]" },
+  execution: { image: pillarsExecution },
+};
+
+function MobileTabGrid({ tabs, activeTab, onSelect }) {
   const rows = [
-    [TABS[0], TABS[1]],
-    [TABS[2], TABS[3]],
+    [tabs[0], tabs[1]],
+    [tabs[2], tabs[3]],
   ];
 
   return (
@@ -112,8 +50,24 @@ function MobileTabGrid({ activeTab, onSelect }) {
 }
 
 export default function StrategicPillarsSection() {
-  const [activeTab, setActiveTab] = useState(TABS[0].id);
-  const active = TABS.find((t) => t.id === activeTab) ?? TABS[0];
+  const { t } = useTranslation("home");
+  const tabs = useMemo(
+    () =>
+      TAB_IDS.map((id) => ({
+        id,
+        label: t(`pillars.tabs.${id}.label`),
+        title: t(`pillars.tabs.${id}.title`),
+        description: t(`pillars.tabs.${id}.description`),
+        benefitsLabel: t(`pillars.tabs.${id}.benefitsLabel`),
+        benefits: t(`pillars.tabs.${id}.benefits`, { returnObjects: true }),
+        ctaLabel: t(`pillars.tabs.${id}.ctaLabel`),
+        imageAlt: t(`pillars.tabs.${id}.imageAlt`),
+        ...TAB_ASSETS[id],
+      })),
+    [t],
+  );
+  const [activeTab, setActiveTab] = useState(TAB_IDS[0]);
+  const active = tabs.find((tab) => tab.id === activeTab) ?? tabs[0];
 
   return (
     <section
@@ -122,17 +76,17 @@ export default function StrategicPillarsSection() {
     >
       <div className="mx-auto max-w-[1280px]">
         <SectionHeading
-          bold="Unrivaled advantage, built by "
-          muted="collective intelligence."
-          subtitle="As proven former CEOs and CTOs, we have been in your shoes. We are the reliable partners who help you successfully navigate the AI revolution and overcome uncertainty."
+          bold={t("pillars.headingBold")}
+          muted={t("pillars.headingMuted")}
+          subtitle={t("pillars.headingSubtitle")}
           className="mb-8 max-lg:mb-8 lg:mb-12"
         />
 
-        <MobileTabGrid activeTab={activeTab} onSelect={setActiveTab} />
+        <MobileTabGrid tabs={tabs} activeTab={activeTab} onSelect={setActiveTab} />
 
         <div className="mb-6 hidden justify-center overflow-x-auto lg:flex">
           <div className="inline-flex max-w-full gap-1 rounded-full border border-[#cad1dd] p-[5px]">
-            {TABS.map((tab) => (
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
                 type="button"

@@ -2,6 +2,9 @@ import teamGregory from "../assets/images/about/team-gregory.webp";
 import insightAiSecurity from "../assets/images/insights/insight-ai-security.webp";
 import DayAIRoadmap from "../assets/images/insights/90-Day-AI-Roadmap.webp";
 import RSIinBusiness from "../assets/images/insights/RSI-in-Business.webp";
+import frInsightsContent from "../locales/fr/insightsContent.json";
+import esInsightsContent from "../locales/es/insightsContent.json";
+import { localizeBySlug } from "./mergeLocalizedContent.js";
 
 const AI_SECURITY_TOC = [
   { id: "introduction", label: "Introduction" },
@@ -625,10 +628,32 @@ export const INSIGHTS_ARTICLES = [
   },
 ];
 
-export function getInsightBySlug(slug) {
-  return INSIGHTS_ARTICLES.find((article) => article.slug === slug);
+const INSIGHTS_CONTENT_BY_LOCALE = {
+  fr: frInsightsContent,
+  es: esInsightsContent,
+};
+
+function resolveLocale(locale) {
+  const lang = (locale ?? "en").split("-")[0];
+  return lang === "fr" || lang === "es" ? lang : "en";
 }
 
-export function getRelatedInsights(slug, limit = 2) {
-  return INSIGHTS_ARTICLES.filter((article) => article.slug !== slug).slice(0, limit);
+function getLocalizedInsights(locale) {
+  const lang = resolveLocale(locale);
+  const pack = INSIGHTS_CONTENT_BY_LOCALE[lang];
+  if (!pack?.articles) return INSIGHTS_ARTICLES;
+  return localizeBySlug(INSIGHTS_ARTICLES, pack.articles);
+}
+
+export function getInsights(locale = "en") {
+  return getLocalizedInsights(locale);
+}
+
+export function getInsightBySlug(slug, locale = "en") {
+  return getInsights(locale).find((article) => article.slug === slug)
+    ?? INSIGHTS_ARTICLES.find((article) => article.slug === slug);
+}
+
+export function getRelatedInsights(slug, limit = 2, locale = "en") {
+  return getInsights(locale).filter((article) => article.slug !== slug).slice(0, limit);
 }

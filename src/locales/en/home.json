@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "titleStaticMobile": "We make\nAI work for",
+    "titleStaticDesktop": "We make AI work",
+    "titleFor": "for",
+    "typewriter": ["Cost Optimization", "Technical Writing", "Business Growth"],
+    "body": "We help visionary leaders navigate the AI transformation without the complexity, the risk, or the guesswork, even if you feel overwhelmed, short on time, or unsure where to start.",
+    "viewCaseStudies": "View case studies",
+    "imageAlt": "Professional reviewing AI strategy on laptop",
+    "playVideo": "Play video"
+  },
+  "pillars": {
+    "headingBold": "Unrivaled advantage, built by ",
+    "headingMuted": "collective intelligence.",
+    "headingSubtitle": "As proven former CEOs and CTOs, we have been in your shoes. We are the reliable partners who help you successfully navigate the AI revolution and overcome uncertainty.",
+    "tabs": {
+      "architecture": {
+        "label": "Strategic AI Architecture",
+        "title": "Stop random pilots. Start systematic advantage.",
+        "description": "Our strategic experts guide you through our proven 7-pillar framework to define a clear vision and AI adoption strategy aligned with your business goals. We help you navigate AI's rapid pace with strategic urgency, acting now on foundational work while designing for future adaptability.",
+        "benefitsLabel": "What you get:",
+        "benefits": [
+          "Real opportunity identification through strategic workshops",
+          "Team alignment and buy-in across all departments",
+          "Practical governance frameworks that build confidence",
+          "Clear direction with well-defined, ready-to-execute projects"
+        ],
+        "ctaLabel": "Talk to an expert",
+        "imageAlt": "Team collaborating on AI strategy"
+      },
+      "workforce": {
+        "label": "Workforce Intelligence Transformation",
+        "title": "Turn AI anxiety and fear or replacement into an innovation engine.",
+        "description": "We don't just train people on AI tools. We redesign roles around human-AI collaboration, showing your team how AI makes them more valuable, not replaceable.",
+        "benefitsLabel": "Our Approach:",
+        "benefits": [
+          "3-5 year evolution map for every role.",
+          "Clear AI-augmented future vision for each employee.",
+          "Transform fear into competitive enthusiasm.",
+          "Build internal innovation champions."
+        ],
+        "ctaLabel": "Read More",
+        "imageAlt": "Colleagues reviewing work on a laptop together"
+      },
+      "data": {
+        "label": "Data Infrastructure & Intelligence",
+        "title": "Build the nervous system for autonomous advantage.",
+        "description": "What if your business could think? Not just process data, but actually understand patterns, predict problems, and optimize itself in real-time across every function?",
+        "benefitsLabel": "Your business can:",
+        "benefits": [
+          "Spot opportunities before they become obvious.",
+          "Prevent problems before they become expensive.",
+          "Make connections human minds would never see.",
+          "Develop institutional intuition that compounds over time."
+        ],
+        "ctaLabel": "Find Out More",
+        "imageAlt": "Professional working on a laptop in a modern office"
+      },
+      "execution": {
+        "label": "AI Implementation & Execution",
+        "title": "Deploy AI that makes competitors scramble to understand what you did.",
+        "description": "Our Strategic Leverage Projects don't just improve what you do,they fundamentally change what's possible in your industry. We identify the exact moment where AI can create customer value that didn't exist yesterday.",
+        "benefitsLabel": "The impact:",
+        "benefits": [
+          "Massive market ripples created by small, targeted changes.",
+          "Customer experiences that spoil them for competitors.",
+          "New market categories emerge around your offerings.",
+          "Fundamental shifts in industry possibilities."
+        ],
+        "ctaLabel": "Read more",
+        "imageAlt": "Team members reviewing a tablet in the office"
+      }
+    }
+  },
+  "architect": {
+    "headingBold": "We don't just implement AI. ",
+    "headingMuted": "We architect intelligence.",
+    "body": "90% of AI transformations fail not because of bad technology, but because they treat AI like another software deployment instead of an organizational evolution.",
+    "stats": [
+      { "value": "25+", "label": "Years of combined C-suite experience" },
+      { "value": "100%", "label": "Strategy to execution, we build and ship, not just advise" },
+      { "value": "90%", "label": "Of clients move to full implementation" },
+      { "value": "4×", "label": "Average ROI vs. industry benchmark" }
+    ]
+  },
+  "testimonials": {
+    "headingBold": "From Followers to",
+    "headingMuted": "Industry Leaders",
+    "subtitle": "Organizations that went from following trends to setting them. Hear what they have to say about Leap AI.",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {{n}}",
+    "items": [
+      {
+        "quote": "A sharp, well-structured AI assessment that gave us clarity and confidence in our strategic direction.",
+        "name": "Laurent Groux, Ph. D",
+        "role": "Partner - Environnement S-air"
+      },
+      {
+        "quote": "A highly competent team that delivered an AI implementation of exceptional quality, from strategy to execution.",
+        "name": "Michael Robillard",
+        "role": "CEO - Groupe Robillard"
+      },
+      {
+        "quote": "Leap AI turned complex AI requirements into a robust, high-quality solution with real business value.",
+        "name": "Vincent Morin",
+        "role": "COO - Infoprimes"
+      }
+    ]
+  },
+  "faq": {
+    "headingBold": "Wondering About",
+    "headingMuted": "Something?",
+    "subtitle": "We've gathered all the important info right here. Explore our FAQs and find the answers you need.",
+    "items": [
+      {
+        "question": "How is this different from typical AI consulting?",
+        "answer": "Most consultants deliver reports. We architect competitive moats. Our 7-pillar approach ensures every AI investment creates compound advantage, not just isolated improvements."
+      },
+      {
+        "question": "What if our workforce resists AI transformation?",
+        "answer": "We've designed our entire approach around this reality. We transform the 71% who fear AI replacement into innovation champions by showing clear career progression in an AI-augmented world."
+      },
+      {
+        "question": "How do you ensure real business impact, not just impressive demos?",
+        "answer": "Every initiative must pass our Strategic Leverage Project filter: measurable financial returns + competitive market advantage + improved customer experience. No exceptions."
+      },
+      {
+        "question": "How do you handle the pace of AI change?",
+        "answer": "We build strategic foundations, not technology dependencies. Our pillar-based architecture adapts to new AI capabilities while maintaining competitive advantage as technology evolves."
+      }
+    ]
+  },
+  "partner": {
+    "headingBold": "A partner you ",
+    "headingMuted": "can trust.",
+    "body": "Every engagement starts with a deep-dive into your data, workflows, and compliance needs. From there we design a right-sized roadmap, prototyping fast, iterating together, and scaling only what proves real value to your team.",
+    "cta": "Talk to a Founder",
+    "imageAlt": "Leap 41 founders consulting with a client"
+  },
+  "caseStudiesSection": {
+    "headingPrefix": "Recent ",
+    "headingMuted": "results.",
+    "readCaseStudy": "Read case study",
+    "readCaseStudyAria": "Read case study: {{title}}",
+    "allCaseStudies": "All case studies"
+  },
+  "insightsSection": {
+    "headingBold": "Latest",
+    "headingMuted": "insights.",
+    "allInsights": "All insights"
+  }
+}

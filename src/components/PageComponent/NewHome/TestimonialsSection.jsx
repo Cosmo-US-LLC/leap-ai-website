@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import testimonial1 from "../../../assets/images/new-home/laurent-groux.webp";
 import testimonial2 from "../../../assets/images/new-home/mikerobillard.webp";
 import testimonial3 from "../../../assets/images/new-home/vmorin.webp";
@@ -6,29 +7,7 @@ import quoteIcon from "../../../assets/images/new-home/icons/quote.svg";
 import arrowIcon from "../../../assets/images/new-home/icons/arrow-right.svg";
 import { SectionHeading } from "./SectionHeading.jsx";
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "A sharp, well-structured AI assessment that gave us clarity and confidence in our strategic direction.",
-    name: "Laurent Groux, Ph. D",
-    role: "Partner - Environnement S-air",
-    avatar: testimonial1,
-  },
-  {
-    quote:
-      "A highly competent team that delivered an AI implementation of exceptional quality, from strategy to execution.",
-    name: "Michael Robillard",
-    role: "CEO - Groupe Robillard",
-    avatar: testimonial2,
-  },
-  {
-    quote:
-      "Leap AI turned complex AI requirements into a robust, high-quality solution with real business value.",
-    name: "Vincent Morin",
-    role: "COO - Infoprimes",
-    avatar: testimonial3,
-  },
-];
+const TESTIMONIAL_AVATARS = [testimonial1, testimonial2, testimonial3];
 
 const AUTO_SCROLL_INTERVAL_MS = 5000;
 
@@ -86,7 +65,7 @@ function TestimonialNavButton({ onClick, label, rotate, className = "" }) {
   );
 }
 
-function TestimonialDots({ count, index, onSelect, className = "" }) {
+function TestimonialDots({ count, index, onSelect, goToLabel, className = "" }) {
   return (
     <div className={`flex items-center justify-center gap-2 lg:gap-2 ${className}`}>
       {Array.from({ length: count }, (_, i) => (
@@ -99,7 +78,7 @@ function TestimonialDots({ count, index, onSelect, className = "" }) {
               ? "bg-[#201463] max-lg:h-2 max-lg:w-6 lg:h-3 lg:w-3"
               : "h-2 w-2 bg-[#dde4f0] lg:h-3 lg:w-3"
           }`}
-          aria-label={`Go to testimonial ${i + 1}`}
+          aria-label={goToLabel(i + 1)}
           aria-current={i === index ? "true" : undefined}
         />
       ))}
@@ -108,14 +87,23 @@ function TestimonialDots({ count, index, onSelect, className = "" }) {
 }
 
 export default function TestimonialsSection() {
+  const { t } = useTranslation("home");
+  const testimonials = useMemo(
+    () =>
+      t("testimonials.items", { returnObjects: true }).map((item, index) => ({
+        ...item,
+        avatar: TESTIMONIAL_AVATARS[index],
+      })),
+    [t],
+  );
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const current = TESTIMONIALS[index];
+  const current = testimonials[index];
 
   const prev = () =>
-    setIndex((i) => (i === 0 ? TESTIMONIALS.length - 1 : i - 1));
+    setIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
   const next = () =>
-    setIndex((i) => (i === TESTIMONIALS.length - 1 ? 0 : i + 1));
+    setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
 
   useEffect(() => {
     if (paused) return undefined;
@@ -126,11 +114,11 @@ export default function TestimonialsSection() {
     if (prefersReducedMotion) return undefined;
 
     const timer = window.setInterval(() => {
-      setIndex((i) => (i === TESTIMONIALS.length - 1 ? 0 : i + 1));
+      setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
     }, AUTO_SCROLL_INTERVAL_MS);
 
     return () => window.clearInterval(timer);
-  }, [paused, index]);
+  }, [paused, index, testimonials.length]);
 
   return (
     <section
@@ -146,15 +134,14 @@ export default function TestimonialsSection() {
     >
       <div className="mx-auto max-w-[1280px]">
         <SectionHeading
-          bold="From Followers to"
-          muted="Industry Leaders"
-          subtitle="Organizations that went from following trends to setting them. Hear what they have to say about Leap AI."
+          bold={t("testimonials.headingBold")}
+          muted={t("testimonials.headingMuted")}
+          subtitle={t("testimonials.subtitle")}
           size="large"
           subtitleRelaxed
           className="mb-8 max-lg:mb-0 lg:mb-12"
         />
 
-        {/* Mobile — Figma 1888:6007 */}
         <div className="mx-auto flex w-full max-w-[350px] flex-col items-center gap-12 overflow-hidden rounded-[20px] py-12 lg:hidden">
           <TestimonialContent
             testimonial={current}
@@ -165,27 +152,27 @@ export default function TestimonialsSection() {
           <div className="flex items-center gap-6">
             <TestimonialNavButton
               onClick={prev}
-              label="Previous testimonial"
+              label={t("testimonials.prev")}
               rotate
             />
             <TestimonialDots
-              count={TESTIMONIALS.length}
+              count={testimonials.length}
               index={index}
               onSelect={setIndex}
+              goToLabel={(n) => t("testimonials.goTo", { n })}
             />
             <TestimonialNavButton
               onClick={next}
-              label="Next testimonial"
+              label={t("testimonials.next")}
               rotate={false}
             />
           </div>
         </div>
 
-        {/* Desktop — Figma 1888:701 */}
         <div className="hidden w-full items-center lg:flex">
           <TestimonialNavButton
             onClick={prev}
-            label="Previous testimonial"
+            label={t("testimonials.prev")}
             rotate
           />
 
@@ -197,15 +184,16 @@ export default function TestimonialsSection() {
             />
 
             <TestimonialDots
-              count={TESTIMONIALS.length}
+              count={testimonials.length}
               index={index}
               onSelect={setIndex}
+              goToLabel={(n) => t("testimonials.goTo", { n })}
             />
           </div>
 
           <TestimonialNavButton
             onClick={next}
-            label="Next testimonial"
+            label={t("testimonials.next")}
             rotate={false}
           />
         </div>

@@ -1,0 +1,20 @@
+{
+  "page": {
+    "headingBold": "Dernières ",
+    "headingMuted": "perspectives",
+    "intro": "Découvrez comment les entreprises exploitent l'IA pour révolutionner leurs flux de travail dans notre section Perspectives."
+  },
+  "card": {
+    "readArticle": "Lire l'article",
+    "readArticleAria": "Lire l'article : {{title}}"
+  },
+  "detail": {
+    "bottomLine": "En bref :",
+    "tableOfContents": "Table des matières",
+    "moreHeadingBold": "Plus de ",
+    "moreHeadingMuted": "perspectives",
+    "notFoundTitle": "Article introuvable",
+    "notFoundBody": "La perspective que vous recherchez n'existe pas.",
+    "viewAll": "Voir toutes les perspectives"
+  }
+}

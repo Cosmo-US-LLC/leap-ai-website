@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useContentLocale } from "../../../hooks/useContentLocale.js";
 import { useInsightTocScrollspy } from "../../../hooks/useInsightTocScrollspy.js";
 import teamGregory from "../../../assets/images/about/team-gregory.webp";
 import { getRelatedInsights } from "../../../lib/insightsArticles.js";
@@ -17,11 +19,13 @@ function slugifyHeading(text) {
 }
 
 function BottomLineCallout({ text }) {
+  const { t } = useTranslation("insights");
+
   return (
     <div className="flex items-center gap-4 rounded-2xl bg-[#f8f9fc] p-6">
       <QuoteIcon className="h-10 w-10 shrink-0" />
       <p className="text-base leading-6 text-[#4e546c]">
-        <span className="font-bold text-[#201463]">Bottom Line:</span>{" "}
+        <span className="font-bold text-[#201463]">{t("detail.bottomLine")}</span>{" "}
         <ArticleRichText text={text} />
       </p>
     </div>
@@ -207,6 +211,7 @@ function useTocProgress(activeIndex, isVisible = true) {
 }
 
 function TableOfContents({ items, variant = "desktop" }) {
+  const { t } = useTranslation("insights");
   const activeIndex = useInsightTocScrollspy(items);
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = variant === "mobile";
@@ -250,7 +255,7 @@ function TableOfContents({ items, variant = "desktop" }) {
             onClick={() => setIsOpen((open) => !open)}
           >
             <span className="font-bold text-[18px] leading-[27px] tracking-[0.6px] text-[#1a2063]">
-              Table of Contents
+              {t("detail.tableOfContents")}
             </span>
             <TocChevronIcon
               className={`h-5 w-5 shrink-0 transition-transform duration-300 ${
@@ -267,7 +272,7 @@ function TableOfContents({ items, variant = "desktop" }) {
   return (
     <aside className="w-full rounded-[20px] bg-[#f8f9fc] px-6 py-8">
       <h2 className="mb-4 font-bold text-xl leading-7 tracking-[0.6px] text-[#1a2063]">
-        Table of Contents
+        {t("detail.tableOfContents")}
       </h2>
       {navList}
     </aside>
@@ -275,14 +280,16 @@ function TableOfContents({ items, variant = "desktop" }) {
 }
 
 function MoreInsightsSection({ currentSlug }) {
-  const related = getRelatedInsights(currentSlug);
+  const { t } = useTranslation("insights");
+  const locale = useContentLocale();
+  const related = getRelatedInsights(currentSlug, 2, locale);
 
   return (
     <section className="bg-[#fafcfe] px-5 py-12 lg:px-20 lg:py-20">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-12">
         <h2 className="text-center text-[40px] capitalize leading-[46px] text-[#201463] lg:text-[52px] lg:leading-[58px]">
-          <span className="font-bold">More </span>
-          <span className="text-[rgba(32,20,99,0.7)]">Insights</span>
+          <span className="font-bold">{t("detail.moreHeadingBold")}</span>
+          <span className="text-[rgba(32,20,99,0.7)]">{t("detail.moreHeadingMuted")}</span>
         </h2>
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2 lg:gap-6">
           {related.map((article) => (

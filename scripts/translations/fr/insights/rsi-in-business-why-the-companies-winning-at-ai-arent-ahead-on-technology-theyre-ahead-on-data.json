@@ -1,0 +1,221 @@
+{
+  "slug": "rsi-in-business-why-the-companies-winning-at-ai-arent-ahead-on-technology-theyre-ahead-on-data",
+  "date": "7 avr. 2026",
+  "readTime": "8 min de lecture",
+  "title": "RSI en entreprise : pourquoi les entreprises qui gagnent avec l'IA n'ont pas d'avance sur la technologie, mais sur les données",
+  "subtitle": "Votre entreprise a obtenu la mauvaise réponse parce qu'elle a posé les mauvaises questions",
+  "excerpt": "La course à l'IA est en réalité une course aux données. Les entreprises qui gagnent n'ont pas d'avance sur la technologie — elles ont une avance sur les données et les boucles de rétroaction. Chaque semaine où vous ne capturez pas et ne mesurez pas est une semaine que vous ne pourrez jamais rattraper.",
+  "author": "Gregory Van Duyse",
+  "authorRole": "PDG, Leap AI Solutions",
+  "tableOfContents": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "what-rsi-means",
+      "label": "Ce que signifie réellement la RSI en dehors d'un laboratoire"
+    },
+    {
+      "id": "gold-mine",
+      "label": "La mine d'or que la plupart des entreprises laissent s'évaporer"
+    },
+    {
+      "id": "compounding-advantage",
+      "label": "L'avantage cumulatif"
+    },
+    {
+      "id": "sequencing-mistake",
+      "label": "L'erreur de séquençage qui empoisonne la boucle"
+    },
+    {
+      "id": "what-to-build",
+      "label": "Ce qu'il faut construire avant votre prochain projet IA"
+    }
+  ],
+  "sections": [
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Presque tous les dirigeants d'entreprise se posent en ce moment une version de la même question : sommes-nous prêts pour l'IA ? Et honnêtement, cela semble être le bon point de départ — personne ne le remet en question, ils partent simplement chercher la réponse et commencent à dépenser de l'argent en fonction de ce qu'ils trouvent.",
+        "Mais cette question vous envoie dans la mauvaise direction dès le premier jour — et les investissements qui suivent en reflètent la logique.",
+        "Gregory Van Duyse de Leap AI est direct à ce sujet. La vraie question n'est pas « sommes-nous prêts », mais « construisons-nous dans la direction où va l'IA ? » Car voici la réalité que la plupart des entreprises ne prennent pas en compte :",
+        "La capacité de l'IA à effectuer un vrai travail double tous les quatre mois en ce moment — ce qui signifie qu'à la fin de 2026, nous envisageons une amélioration de 8 à 10 fois de ce que l'IA peut réellement faire par rapport au début de l'année. Si vous ne demandez que si vous êtes prêts pour l'IA aujourd'hui, vous manquez complètement la trajectoire.",
+        "Ce que les entreprises devraient réellement se demander, c'est : « Avons-nous les fondations en place pour profiter de ce que l'IA pourra faire demain ? » Et cette question mène quelque part de très spécifique et de très différent de là où la plupart des entreprises concentrent leurs efforts.",
+        "Elle mène aux données. Et elle mène à quelque chose appelé l'amélioration récursive de soi."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "what-rsi-means",
+      "text": "Ce que signifie réellement la RSI en dehors d'un laboratoire"
+    },
+    {
+      "type": "subheading",
+      "text": "La boucle de rétroaction expliquée"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La RSI ressemble à quelque chose qui se passe dans un laboratoire d'IA de pointe — et Gregory est franc à ce sujet : c'est le cas. Mais le concept sur lequel elle repose est loin d'être nouveau, et la plupart des dirigeants l'ont en fait entendu sous un autre nom.",
+        "Pensez à Toyota. Dans les années 1950, ils construisaient des voitures dans une économie japonaise ravagée par la guerre, sans presque aucun avantage concurrentiel — et ils sont allés produire ce que la plupart considèrent comme les meilleures voitures au monde.",
+        "La raison n'était pas la technologie — c'était l'amélioration continue. Mener des expériences dans l'entreprise, mesurer ce qui fonctionnait et ce qui ne fonctionnait pas, recommencer encore et encore jusqu'à ce que l'amélioration devienne le système d'exploitation de toute la société.",
+        "La RSI, c'est la même boucle rendue automatique et exponentielle. Au niveau du laboratoire IA, l'objectif est de faire en sorte que l'IA améliore l'IA — des chercheurs IA concevant des expériences, des codeurs IA écrivant et testant des modifications, des benchmarks mesurant si cela a fonctionné, et le tout se nourrissant de lui-même en devenant plus intelligent à chaque cycle. La raison pour laquelle les laboratoires peuvent avancer si vite, c'est que tout est numérique — il n'y a rien de physique à attendre — et la boucle tourne à la vitesse de la machine.",
+        "Pour une entreprise, la boucle est plus lente parce que vous traitez avec des humains, des opérations physiques et des cycles de vente qui peuvent prendre deux mois pour montrer un résultat. Mais le principe est exactement le même :"
+      ]
+    },
+    {
+      "type": "blockquote",
+      "text": "Mesurer → Apprendre → Adapter → Répéter → retour à Mesurer"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Vous implémentez quelque chose, vous mesurez ce qui a changé, vous apprenez de ce que les données vous disent, vous adaptez en conséquence, et vous recommencez.",
+        "Chaque boucle s'appuie sur la précédente — et avec le temps, cette accumulation crée un avantage concurrentiel en IA. Vos concurrents ne peuvent vraiment pas combler l'écart rapidement — non pas parce que vous avez une meilleure technologie, mais parce que vous avez plus de boucles derrière vous et de meilleures données alimentant chaque nouvelle itération."
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Ce qui casse la boucle avant qu'elle ne démarre"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "C'est ici que la plupart des entreprises heurtent un mur avant même que la boucle ne démarre — et cela revient aux mêmes trois problèmes presque à chaque fois :"
+      ]
+    },
+    {
+      "type": "orderedList",
+      "items": [
+        {
+          "text": "Des données fragmentées entre les équipes, sans définition commune de ce que signifie quoi que ce soit. Si votre équipe commerciale et votre équipe opérationnelle mesurent la même chose différemment, les mesures que vous obtenez de la boucle sont peu fiables — et vous ne pouvez pas leur faire confiance pour prendre des décisions."
+        },
+        {
+          "text": "Des données historiques manquantes. Sans un véritable point de référence de là où vous étiez avant, vous n'avez aucun moyen de savoir si vous vous améliorez réellement. Vous savez où vous en êtes aujourd'hui, mais la comparaison avant-après qui donne du sens à la boucle n'existe tout simplement pas."
+        },
+        {
+          "text": "Des décisions prises verbalement et jamais enregistrées. Celui-ci est le plus sous-estimé — et nous y reviendrons en détail, car c'est là que Gregory est le plus précis et le plus urgent."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "gold-mine",
+      "text": "La mine d'or que la plupart des entreprises laissent s'évaporer"
+    },
+    {
+      "type": "subheading",
+      "text": "Ce qui se perd chaque semaine"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Gregory décrit les entreprises comme faisant fondamentalement deux choses : tenir des réunions et travailler. Et dans ces réunions, quelque chose d'extrêmement précieux se produit que presque personne ne capture.",
+        "Les gens font des rapports sur les résultats ; ils partagent ce qu'ils observent dans leurs départements. Ils débattent d'options où personne ne sait avec certitude quelle est la bonne décision. Ils prennent des jugements basés sur des années d'expérience, de contexte et de connaissances institutionnelles qui n'existent nulle part ailleurs — puis la réunion se termine et tout disparaît.",
+        "Réfléchissez-y une seconde. Un cadre supérieur prend une décision en réunion, explique exactement pourquoi, fait référence à quelque chose qui n'a pas fonctionné il y a trois ans et pourquoi cette approche est différente — puis tout le monde part agir en conséquence, et ce raisonnement est simplement perdu. Il n'est dans aucun document. Il n'est dans aucun système. Il a existé dans cette salle pendant quarante-cinq minutes, puis s'est évaporé.",
+        "Maintenant, pensez à la direction que prend l'IA. Gregory le dit clairement : dans deux ans, l'IA sera 100 fois plus capable qu'aujourd'hui — et commencera réellement à aider les équipes de direction à analyser les options, modéliser les probabilités, mener des expériences et prendre de meilleures décisions plus rapidement.",
+        "Quand cela arrivera, ne serait-il pas extrêmement précieux que cette IA comprenne comment votre entreprise a pris des décisions par le passé ? Quel était le raisonnement ? Qu'a-t-on essayé et échoué, et pourquoi ? Quelles sont les vraies priorités quand les choses deviennent difficiles ?",
+        "Ce contexte se trouve dans vos réunions en ce moment — et il s'évapore chaque semaine."
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "À quoi ressemble réellement la capture"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La réponse de Gregory ici est plus simple que la plupart des gens ne l'imaginent : tout enregistrer — et commencer maintenant.",
+        "Chaque réunion, à chaque niveau de l'entreprise, devrait être enregistrée. Réunions de direction, réunions de département, entretiens individuels entre gestionnaires, stand-ups quotidiens, sessions à l'échelle de l'entreprise — tout. Enregistré, stocké, gardé confidentiel avec des contrôles d'accès appropriés, et traité comme des données d'entreprise de la même façon que vous traiteriez des données financières.",
+        "Il existe même du matériel disponible maintenant que les gens peuvent simplement porter au travail et qui capture tout passivement tout au long de la journée. Le point n'est pas de construire un système compliqué — c'est d'arrêter de laisser ces données disparaître.",
+        "Au-delà des réunions, la même logique s'applique au reste de votre stratégie de données IA. Un lac de données qui rassemble les flux de votre ERP, votre CRM, vos feuilles de calcul, vos courriels — sans remplacer ces systèmes, mais en les connectant pour que l'IA ait un seul endroit pour accéder à votre entreprise au lieu de devoir naviguer entre cinq emplacements isolés.",
+        "Et des KPI « bankables », c'est-à-dire liés à des résultats concrets comme le profit, le revenu par employé, la rétention client — pas des métriques de vanité qui impressionnent sur une diapositive mais ne disent pas réellement si l'entreprise s'améliore.",
+        "L'objectif dans tout cela est le même : donner à l'IA les données dont elle a besoin pour éventuellement vous aider à faire tourner la boucle correctement — et à la faire tourner plus vite."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "compounding-advantage",
+      "text": "L'avantage cumulatif"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Voici ce qui rend cela urgent — et pas seulement intéressant : l'écart entre les entreprises qui construisent maintenant et celles qui attendent s'ouvre déjà — et il ne reste pas de la même taille. Il grandit chaque trimestre.",
+        "Chaque cycle de la boucle qu'une entreprise exécute lui donne de meilleures données, de meilleures mesures, des décisions plus claires et un cycle suivant plus rapide. L'entreprise qui attend de se sentir prête est toujours à zéro cycle.",
+        "Et comme la capacité sous-jacente de l'IA continue de doubler tous les quatre mois, les entreprises qui font tourner des boucles maintenant le font avec des outils qui deviennent de plus en plus puissants sous leurs pieds. L'avantage se cumule sur lui-même.",
+        "Gregory est clair sur ce que cela signifie au niveau de l'industrie : celui qui atteindra en premier l'amélioration récursive de soi dans une industrie dominera cette industrie. Il fera les choses mieux, plus vite et moins cher, de façons qui continuent de s'améliorer automatiquement pendant que tous les autres essaient encore de savoir par où commencer.",
+        "Et cela nous ramène à la ligne la plus importante de toute la conversation autour de la stratégie de données IA — et pourquoi cela compte maintenant :"
+      ]
+    },
+    {
+      "type": "blockquote",
+      "text": "« Vous ne pouvez pas optimiser ce que vous n'avez pas enregistré. » — Gregory Van Duyse, Leap AI"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Chaque semaine où vous ne capturez pas de données, ne mesurez pas les résultats, ne construisez pas l'infrastructure de rétroaction — c'est une semaine de boucle que quelqu'un dans votre industrie exécute et que vous n'exécutez pas. Et contrairement à un écart technologique que vous pouvez combler en achetant le même outil, un écart de données se cumule dans l'autre sens plus longtemps vous le laissez ouvert."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "sequencing-mistake",
+      "text": "L'erreur de séquençage qui empoisonne la boucle"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Beaucoup de consultants IA disent aux entreprises de repenser et de redessiner leurs flux de travail en même temps qu'elles intègrent l'IA — « on pourrait améliorer le processus pendant qu'on y est ». Gregory s'oppose fermement à cela — et la raison, c'est la mesure.",
+        "Si vous changez votre flux de travail et implémentez l'IA simultanément, vous avez maintenant deux variables qui changent en même temps — et aucun moyen de savoir laquelle a produit le résultat. L'efficacité s'est-elle améliorée grâce à l'IA ou parce que vous avez redessiné le processus ? Vous ne pouvez vraiment pas le dire — et si vous ne pouvez pas le dire, vous ne pouvez pas en apprendre, ce qui signifie que la boucle est cassée avant même de démarrer.",
+        "La bonne séquence est : capturer d'abord, puis gouverner, puis optimiser, puis innover. Prenez un point de référence propre de la performance actuelle du processus avec des humains qui l'exécutent — qualité, quantité, temps, coût. Puis intégrez l'IA dans ce même processus sans rien changer d'autre.",
+        "Maintenant vous avez un vrai avant-après — et vous pouvez voir exactement ce que l'intégration de l'IA a produit. Une fois cela validé, vous optimisez — puis éventuellement vous innovez sur un système que vous comprenez réellement.",
+        "Gregory utilise un exemple de service client qui rend cela très concret. Une entreprise a construit un système IA pour gérer les tickets de support — cela avait l'air incroyable — et elle a licencié 80 % de son équipe de support client parce que l'IA gérait tout si bien. Quelques mois plus tard, elle a recommencé à réembaucher les mêmes personnes.",
+        "Pourquoi ? Les clients avaient silencieusement cessé de faire affaire avec eux — pas en se plaignant, en partant simplement. La confiance s'était érodée. L'IA fermait techniquement les tickets, mais ne résolvait pas les vrais problèmes — et personne n'avait réalisé que les agents de support humains étaient aussi la source la plus importante de retours d'amélioration produit de l'entreprise. Les deux choses ont été perdues en même temps — et les dégâts n'ont apparu que plus tard dans les chiffres de désabonnement.",
+        "Ils ont changé trop de choses trop vite — et ils n'avaient aucun moyen de mesurer quel changement a causé quel résultat. C'est ce que coûte le fait de sauter la séquence — et c'est un schéma qui apparaît dans toutes les industries dès que les entreprises précipitent la transformation avant d'avoir maîtrisé l'intégration."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "what-to-build",
+      "text": "Ce qu'il faut construire avant votre prochain projet IA"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Avant de lancer votre prochain projet IA — quel qu'il soit — il y a trois fondations qui déterminent s'il alimente une boucle cumulative ou s'il reste simplement un outil autonome qui ne se connecte à rien."
+      ]
+    },
+    {
+      "type": "orderedList",
+      "items": [
+        {
+          "label": "Connectez vos données.",
+          "text": "Pas parfaites — connectées. Votre feuille de route IA d'entreprise n'exige pas un lac de données parfait construit d'un coup. Commencez par le flux le plus important — probablement votre ERP ou CRM — et rassemblez ces données en un seul endroit accessible. Ajoutez des flux au fur et à mesure que de nouveaux projets créent le besoin. Construisez de façon incrémentale plutôt que d'attendre de construire quelque chose de parfait avant de commencer quoi que ce soit."
+        },
+        {
+          "label": "Construisez des KPI réellement bankables.",
+          "text": "Travaillez avec vos chefs de département pour trouver les mesures directement liées à des résultats concrets — revenus, profit, efficacité, valeur vie client. Si vous n'avez pas de tableau de bord qui vous dit clairement si l'entreprise va mieux ou moins bien, vous ne pouvez pas mener d'expériences significatives — et vous ne pouvez pas prouver que ce que vous construisez déplace réellement l'aiguille."
+        },
+        {
+          "label": "Commencez à tout capturer dès maintenant.",
+          "text": "Chaque réunion, chaque décision, chaque conversation de direction. Pas parce que vous pouvez tout utiliser aujourd'hui — mais parce que l'IA qui vous aidera à diriger votre entreprise dans les deux à trois prochaines années en aura besoin — et les entreprises qui ont commencé à capturer tôt auront une profondeur de connaissances institutionnelles que les entreprises partant de zéro ne pourront pas fabriquer rapidement."
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "C'est exactement autour de quoi le cadre des Sept piliers stratégiques de Gregory est construit — créer les conditions où l'IA peut faire ce dont elle est réellement capable, y compris éventuellement faire tourner les boucles d'amélioration qui cumulent votre avantage concurrentiel en IA chaque trimestre. Les piliers ne sont pas une liste de contrôle technologique. C'est une stratégie d'implémentation IA séquencée qui construit vers la RSI dès le premier projet.",
+        "La course à l'IA est une course aux données. Et elle a déjà commencé."
+      ]
+    },
+    {
+      "type": "cta",
+      "text": "Téléchargez le cadre des 7 piliers stratégiques pour voir exactement comment construire la fondation de données que la RSI exige.",
+      "link": "https://insights.leap41.ca/",
+      "linkLabel": "Télécharger le cadre"
+    }
+  ]
+}

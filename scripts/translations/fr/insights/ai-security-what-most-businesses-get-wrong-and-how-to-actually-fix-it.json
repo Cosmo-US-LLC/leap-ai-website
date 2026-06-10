@@ -1,0 +1,254 @@
+{
+  "slug": "ai-security-what-most-businesses-get-wrong-and-how-to-actually-fix-it",
+  "date": "28 avr. 2026",
+  "readTime": "8 min de lecture",
+  "title": "Sécurité de l'IA : ce que la plupart des entreprises font mal (et comment y remédier concrètement)",
+  "subtitle": "Pourquoi la sécurité traditionnelle échoue face à l'IA et ce qu'il faut pour gérer les risques sans freiner l'innovation",
+  "excerpt": [
+    "La plupart des entreprises abordent la sécurité de l'IA de l'une de deux façons : avancer trop vite en ignorant les risques, ou appliquer des cadres obsolètes qui bloquent tout. Aucune des deux ne fonctionne. La véritable opportunité réside dans une compréhension différente du risque lié à l'IA — autonomie, accès aux données et exposition externe — et dans la construction de systèmes qui équilibrent contrôle et progrès."
+  ],
+  "author": "Gregory Van Duyse",
+  "authorRole": "PDG, Leap AI Solutions",
+  "tableOfContents": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "traditional-risk-models",
+      "label": "Appliquer des modèles de risque traditionnels à un problème non traditionnel"
+    },
+    {
+      "id": "three-dimensions",
+      "label": "Ne pas comprendre les trois dimensions qui rendent l'IA risquée"
+    },
+    {
+      "id": "prompt-injection",
+      "label": "Penser que l'injection de prompt est résolue (ce n'est pas le cas)"
+    },
+    {
+      "id": "local-vs-cloud",
+      "label": "Traiter « local vs cloud » comme une décision binaire"
+    },
+    {
+      "id": "leap-approach",
+      "label": "Comment Leap 41 aborde la sécurité de l'IA"
+    },
+    {
+      "id": "getting-started",
+      "label": "Par où commencer : vos prochaines étapes"
+    }
+  ],
+  "sections": [
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Lorsque les entreprises commencent à évaluer l'IA, elles se retrouvent presque toujours dans l'un de deux camps. Le premier groupe s'enthousiasme et avance vite, en évitant les questions difficiles. Le second fait ce qu'il faut, soumet le projet à son processus de gestion des risques standard, et repart avec un « non » qui tue le projet sur place.",
+        "Les deux résultats posent problème. Et les deux sont évitables. L'écart entre l'adoption imprudente et la paralysie par le modèle de risque est exactement là où se trouve la véritable opportunité — et combler cet écart commence par repenser votre approche du risque lié à l'IA."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "traditional-risk-models",
+      "text": "1. Appliquer des modèles de risque traditionnels à un problème non traditionnel"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "C'est là que la plupart des entreprises trébuchent avant même de commencer.",
+        "L'instinct est logique. Vous avez des cadres qui fonctionnent. Vous les utilisez depuis des années. Le problème, c'est qu'ils ont été conçus pour les logiciels traditionnels — des systèmes aux entrées et sorties prévisibles. L'IA ne fonctionne pas ainsi. Lorsque vous faites passer une technologie fondamentalement différente par un cadre qui n'a pas été conçu pour elle, vous obtenez presque toujours le même résultat : la réponse est « non ». Projet mis de côté. Avantage concurrentiel remis à celui qui était prêt à penser autrement.",
+        "Les entreprises qui progressent réellement avec l'IA n'ignorent pas le risque. Elles ont compris que l'objectif n'est pas d'éliminer le risque, mais de le comprendre suffamment bien pour gérer ce qui reste."
+      ]
+    },
+    {
+      "type": "bottomLine",
+      "text": "Le risque lié à l'IA n'est pas une liste de contrôle que l'on réussit ou échoue. Contrôlez-en assez pour nommer ce qui reste, puis décidez quoi en faire."
+    },
+    {
+      "type": "heading",
+      "id": "three-dimensions",
+      "text": "2. Ne pas comprendre les trois dimensions qui rendent l'IA risquée"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Demandez à la plupart des dirigeants ce qui rend un déploiement d'IA risqué et vous obtiendrez des réponses sur la conformité ou les hallucinations. Ces éléments comptent, mais ce sont des symptômes. La structure réelle du risque lié à l'IA repose sur trois facteurs — et si vous n'évaluez pas les trois avant de déployer, vous avancez à l'aveugle."
+      ]
+    },
+    {
+      "type": "labeledBullets",
+      "items": [
+        {
+          "label": "Autonomie :",
+          "text": "L'IA peut-elle agir seule sans qu'un humain prenne la décision ? Une IA qui rédige un courriel est très différente d'une qui l'envoie."
+        },
+        {
+          "label": "Accès aux données :",
+          "text": "Que peut réellement voir et utiliser l'IA ? La sensibilité de l'accès augmente directement le risque."
+        },
+        {
+          "label": "Accès externe :",
+          "text": "L'IA peut-elle atteindre l'extérieur de votre environnement ? C'est ce qui transforme un risque contenu en un risque illimité."
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Maintenant, ajoutez l'IA agentique par-dessus. Vous ne traitez plus avec une seule IA. Vous traitez avec plusieurs agents, chacun avec son propre profil de risque sur les trois dimensions, interagissant sans humain dans la boucle. Le risque ne s'additionne pas. Il se multiplie plus vite que la plupart des organisations ne l'anticipent."
+      ]
+    },
+    {
+      "type": "bottomLine",
+      "text": "Cartographiez chaque déploiement selon ces trois dimensions avant toute mise en production. Cela prend une heure et vous en apprend plus que n'importe quel cadre de conformité."
+    },
+    {
+      "type": "heading",
+      "id": "prompt-injection",
+      "text": "3. Penser que l'injection de prompt est résolue (ce n'est pas le cas)"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Celui-ci surprend les gens, car cela semble être un problème qui aurait dû être réglé depuis longtemps. Ce n'est pas le cas.",
+        "L'injection de prompt reste l'un des problèmes véritablement non résolus de la sécurité de l'IA. Lorsqu'une IA traite une requête, elle combine votre prompt système avec l'entrée de l'utilisateur en un seul bloc de texte. Le modèle n'a aucun moyen intégré de traiter vos instructions comme plus autoritaires que l'entrée de l'utilisateur. Un attaquant sophistiqué peut rédiger un prompt qui remplace discrètement vos règles, et le modèle ne le signalera pas.",
+        "Placer un modèle de garde-fous devant pour filtrer les entrées semble raisonnable. Ce n'est simplement pas suffisant :"
+      ]
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "Si quelqu'un peut injecter un prompt dans votre modèle principal, il peut aussi le faire avec le garde-fou",
+        "Une configuration en couches reste pénétrable avec des charges utiles imbriquées dans d'autres charges utiles",
+        "Cela élève la barre pour les attaquants, mais ne résout pas le problème sous-jacent"
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La gestion du contexte ajoute une autre couche d'exposition que presque personne ne prend en compte. Votre IA ne garde pas tout en mémoire simultanément. Si vos instructions de sécurité sont expulsées de la fenêtre de contexte active lors d'une longue conversation, le modèle cesse silencieusement de les suivre. Pas d'erreurs. Pas d'avertissement. Un attaquant qui comprend cela peut concevoir cette situation délibérément."
+      ]
+    },
+    {
+      "type": "bottomLine",
+      "text": "L'ordre de chargement compte plus que la plupart des gens ne le pensent. Les tests d'injection de prompt ne devraient pas être un exercice ponctuel. Ils devraient être continus."
+    },
+    {
+      "type": "heading",
+      "id": "local-vs-cloud",
+      "text": "4. Traiter « local vs cloud » comme une décision binaire"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La conversation prend généralement l'une de deux directions. Soit tout garder en local pour que les données ne quittent jamais l'entreprise, soit utiliser un fournisseur cloud parce qu'il promet de ne pas entraîner ses modèles sur vos données. Les deux positions sont plus fragiles qu'elles ne le paraissent."
+      ]
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "Les fournisseurs cloud qui promettent la confidentialité des données ne peuvent pas vous donner de moyen de la vérifier",
+        "Héberger un grand modèle en local résout certains problèmes, mais en crée d'autres : coûts matériels, maintenance, et cela ne vous protège toujours pas si votre environnement interne est compromis",
+        "Les modèles open source sont en réalité plus vulnérables à l'injection de prompt, car les attaquants peuvent étudier leur structure"
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "L'architecture qui fonctionne se situe entre ces deux extrêmes. Utilisez un petit modèle local comme couche d'anonymisation. Avant que des données sensibles n'atteignent un modèle externe, supprimez-les et tokenisez-les localement. Récupérez la réponse. Réintégrez les valeurs originales. Le modèle de pointe fait son travail sans jamais voir quoi que ce soit d'identifiable."
+      ]
+    },
+    {
+      "type": "bottomLine",
+      "text": "Vous n'avez pas à choisir entre l'intelligence d'un modèle de pointe et le maintien des données sensibles en interne. La bonne architecture vous offre les deux."
+    },
+    {
+      "type": "heading",
+      "id": "leap-approach",
+      "text": "Comment Leap 41 aborde la sécurité de l'IA"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Beaucoup d'engagements en sécurité se terminent de la même façon : un long processus, un rapport détaillé et une recommandation qui tue le projet. Ce n'est pas ce que nous sommes là pour faire.",
+        "L'objectif est toujours d'amener une entreprise à comprendre clairement son risque résiduel pour prendre une véritable décision à ce sujet. Le modèle que nous utilisons s'inspire de quelque chose que les entreprises connaissent déjà bien : la gestion des personnes. Les RH existent, en grande partie, pour gérer les risques liés aux employés humains. Les agents IA ne sont pas des personnes, mais les vecteurs de risque sont suffisamment proches pour que la même logique s'applique.",
+        "**Notre approche en couches :**"
+      ]
+    },
+    {
+      "type": "orderedList",
+      "items": [
+        {
+          "label": "Gouvernance d'abord.",
+          "text": "Des réponses claires aux questions de base avant toute autre chose : qui a accès, quelles décisions nécessitent un humain, et que se passe-t-il lorsque quelque chose tourne mal. Rôles définis, chemins d'escalade et politiques documentées pour intégrer et retirer les outils d'IA."
+        },
+        {
+          "label": "Infrastructure zero-trust.",
+          "text": "Sécurisez l'environnement, pas seulement le modèle. Gestion des identités et des accès, classification des données et segmentation réseau pour qu'un agent compromis ne puisse pas se déplacer dans votre environnement."
+        },
+        {
+          "label": "Hygiène des données avant l'accès au modèle.",
+          "text": "Normalisez, classifiez et étiquetez vos données avant qu'elles n'atteignent un modèle. Cela corrige à la fois les problèmes de performance et de sécurité, ce qui facilite grandement la justification commerciale d'une exécution rigoureuse."
+        },
+        {
+          "label": "Garde-fous déterministes et IA combinés.",
+          "text": "Vérifications basées sur des règles pour les schémas PII connus, combinées à une analyse sémantique par IA pour l'intention. Aucun des deux n'est suffisant seul."
+        },
+        {
+          "label": "Ingénierie du contexte pour la sécurité.",
+          "text": "L'ordre dans lequel vous chargez les instructions dans le contexte détermine si elles survivent à une longue conversation. Les règles de sécurité critiques nécessitent un positionnement délibéré, pas seulement une place dans le prompt système supposée persister indéfiniment."
+        },
+        {
+          "label": "Humain dans la boucle par défaut.",
+          "text": "Les points de contrôle où un humain prend la décision ne sont pas inefficaces. Ce sont eux qui rendent tout auditable. Intégrez-les dès le départ, car les ajouter après coup est coûteux."
+        },
+        {
+          "label": "Architecture résistante au quantique.",
+          "text": "Le chiffrement n'est pas une garantie permanente. Les attaques « récolter maintenant, déchiffrer plus tard » sont déjà en cours. Le moment de réduire la dépendance à une sécurité basée uniquement sur le chiffrement est avant que la capacité quantique ne mûrisse, pas après."
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La méthodologie vous amène à 80 % du risque contrôlé grâce à la gouvernance, la formation et des contrôles techniques ciblés. Les 20 % restants deviennent quelque chose que vous pouvez voir, nommer et décider délibérément. Ces 20 % sont gérables. Ignorer les 80 % premiers, c'est là que les choses dérapent."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "getting-started",
+      "text": "Par où commencer : vos prochaines étapes"
+    },
+    {
+      "type": "orderedList",
+      "items": [
+        {
+          "label": "Cartographiez chaque déploiement d'IA",
+          "text": "Selon l'autonomie, l'accès aux données et l'accès externe. Vous identifierez vos plus grandes expositions dès la première session."
+        },
+        {
+          "label": "Nettoyez vos données avant toute autre chose.",
+          "text": "Classification et étiquetage d'abord. Tout le reste en dépend."
+        },
+        {
+          "label": "Concevez la couche d'anonymisation.",
+          "text": "Décidez ce qui reste dans votre périmètre et ce qui sort, et construisez cette séparation délibérément."
+        },
+        {
+          "label": "Essayez de casser votre propre système.",
+          "text": "Lancez un exercice basique d'injection de prompt. Si votre équipe ne l'a pas testé, vous ne savez pas comment il tient."
+        },
+        {
+          "label": "Réservez un diagnostic avec notre équipe.",
+          "text": "Nous identifierons où se situe réellement votre risque résiduel et construirons une voie à suivre — une qui vous permet d'avancer, pas une qui vous donne des raisons de vous arrêter."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "text": "Prêt à construire une IA réellement sécurisée ?",
+      "link": "https://insights.leap41.ca/",
+      "linkLabel": "Téléchargez notre rapport gratuit sur les 7 piliers sur insights.leap41.ca"
+    }
+  ]
+}

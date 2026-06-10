@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import roadmapCheckIcon from "../../../assets/icons/methodology/roadmap-check.svg";
 import step1Image from "../../../assets/images/methodology/roadmap/step-1.webp";
 import step2Image from "../../../assets/images/methodology/roadmap/step-2.webp";
@@ -148,7 +149,7 @@ function MobileTimelineNode({ isActive, top }) {
   );
 }
 
-function RoadmapStepCard({ step }) {
+function RoadmapStepCard({ step, includesLabel }) {
   return (
     <div className="flex w-full flex-col gap-8 rounded-2xl bg-[#12174b] px-4 py-6 lg:flex-1 lg:gap-8 lg:rounded-3xl lg:px-6 lg:py-8">
       <div className="flex flex-col gap-4 lg:gap-6">
@@ -164,7 +165,7 @@ function RoadmapStepCard({ step }) {
       </div>
 
       <div className="flex flex-col gap-3 lg:gap-4">
-        <p className="meth-roadmap-includes-label">What is included</p>
+        <p className="meth-roadmap-includes-label">{includesLabel}</p>
         <ul className="flex flex-col gap-2">
           {step.includes.map((item) => (
             <li key={item} className="flex items-center gap-3">
@@ -188,63 +189,24 @@ function RoadmapStepImage({ src, alt }) {
   );
 }
 
-const STEPS = [
-  {
-    title: "The Operational Diagnosis",
-    description:
-      "You can't prescribe a cure without a diagnosis. We interview every department leader, map their value engine, and find the key opportunities hiding behind your biggest problems. No strategy survives without an honest understanding of the current reality.",
-    includes: ["Value-stream map", "Friction inventory", "Quick-win shortlist"],
-    image: step1Image,
-    imageAlt: "Team conducting operational diagnosis workshop",
-    imagePosition: "left",
-    icon: <SearchIcon />,
-  },
-  {
-    title: "Define the Target",
-    description:
-      "What do you want to achieve? We work with the CEO to get crystal clear on business goals, current strategy, and what's standing in the way. The goal isn't to start from scratch , it's to create an AI-driven strategy that accelerates and exceeds your existing ambitions.",
-    includes: ["Strategic intent doc", "Constraint register", "Success criteria"],
-    image: step2Image,
-    imageAlt: "Executive defining strategic targets",
-    imagePosition: "right",
-    icon: <TargetIcon />,
-  },
-  {
-    title: "Strategic Alignment",
-    description:
-      'With a clear grasp of problems, targets, and constraints, we create a new AI-driven strategy anchored to a single "North Star" KPI that determines the progress of your AI transition. Validated with your leadership to ensure total alignment.',
-    includes: ["North Star KPI", "Leadership alignment memo", "Tradeoff log"],
-    image: step3Image,
-    imageAlt: "Leadership team aligning on strategy",
-    imagePosition: "left",
-    icon: <SettingsIcon />,
-  },
-  {
-    title: "Portfolio of AI Projects",
-    description:
-      "The heart of the strategy. We define 12–20 specific AI projects: what needs to be done, why, how we'll implement it, the cost, and the impact on your North Star KPI. Each project is sequenced for maximum compounding effect.",
-    includes: ["Scored project portfolio", "Sequencing roadmap", "Capability gaps"],
-    image: step4Image,
-    imageAlt: "Team reviewing AI project portfolio",
-    imagePosition: "right",
-    icon: <LayersIcon />,
-  },
-  {
-    title: "Stress-Test Your ROI",
-    description:
-      "Financial validation using the Prudence Principle: divide expected positive impact by two, double the projected costs. Your investment model includes scaling, continuous improvement, and a new-project factor. The plan must be realistic and bankable.",
-    includes: ["Bankable business case", "Risk-adjusted ROI", "Go / no-go recommendation"],
-    image: step5Image,
-    imageAlt: "Financial ROI stress-testing session",
-    imagePosition: "left",
-    icon: <RocketIcon />,
-  },
+const STEP_ASSETS = [
+  { image: step1Image, imagePosition: "left", icon: <SearchIcon /> },
+  { image: step2Image, imagePosition: "right", icon: <TargetIcon /> },
+  { image: step3Image, imagePosition: "left", icon: <SettingsIcon /> },
+  { image: step4Image, imagePosition: "right", icon: <LayersIcon /> },
+  { image: step5Image, imagePosition: "left", icon: <RocketIcon /> },
 ];
 
-function useRoadmapTimelineProgress(timelineRef, desktopStepRefs, mobileStepRefs, mobileStepsColRef) {
+function useRoadmapTimelineProgress(
+  timelineRef,
+  desktopStepRefs,
+  mobileStepRefs,
+  mobileStepsColRef,
+  stepCount,
+) {
   const [fillPercent, setFillPercent] = useState(0);
-  const [activeSteps, setActiveSteps] = useState(() => STEPS.map(() => false));
-  const [mobileNodeTops, setMobileNodeTops] = useState(() => STEPS.map(() => 0));
+  const [activeSteps, setActiveSteps] = useState(() => Array.from({ length: stepCount }, () => false));
+  const [mobileNodeTops, setMobileNodeTops] = useState(() => Array.from({ length: stepCount }, () => 0));
 
   const updateProgress = useCallback(() => {
     const timeline = timelineRef.current;
@@ -293,7 +255,7 @@ function useRoadmapTimelineProgress(timelineRef, desktopStepRefs, mobileStepRefs
         mobileStepRefs.current.map((stepEl) => (stepEl ? stepEl.offsetTop : 0)),
       );
     }
-  }, [timelineRef, desktopStepRefs, mobileStepRefs, mobileStepsColRef]);
+  }, [timelineRef, desktopStepRefs, mobileStepRefs, mobileStepsColRef, stepCount]);
 
   useEffect(() => {
     let frame = 0;
@@ -330,6 +292,16 @@ function useRoadmapTimelineProgress(timelineRef, desktopStepRefs, mobileStepRefs
 }
 
 export default function MethodologyRoadmapSection() {
+  const { t } = useTranslation("methodology");
+  const stepTexts = t("roadmap.steps", { returnObjects: true });
+  const steps = useMemo(
+    () =>
+      Array.isArray(stepTexts)
+        ? stepTexts.map((step, index) => ({ ...step, ...STEP_ASSETS[index] }))
+        : [],
+    [stepTexts],
+  );
+
   const timelineRef = useRef(null);
   const desktopStepRefs = useRef([]);
   const mobileStepRefs = useRef([]);
@@ -339,6 +311,7 @@ export default function MethodologyRoadmapSection() {
     desktopStepRefs,
     mobileStepRefs,
     mobileStepsColRef,
+    steps.length,
   );
 
   return (
@@ -355,14 +328,10 @@ export default function MethodologyRoadmapSection() {
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center gap-8 lg:gap-14">
         <div className="flex w-full max-w-[800px] flex-col items-center gap-4 text-center lg:gap-5">
           <h2 className="meth-roadmap-heading">
-            <span className="meth-roadmap-heading-bold">How we build your </span>
-            <span className="meth-roadmap-heading-muted">AI roadmap</span>
+            <span className="meth-roadmap-heading-bold">{t("roadmap.headingBold")}</span>
+            <span className="meth-roadmap-heading-muted">{t("roadmap.headingMuted")}</span>
           </h2>
-          <p className="text-base leading-6 text-[#4e546c]">
-            Principles are clean, but your business is messy. You can&apos;t copy-paste a generic
-            strategy. Here&apos;s the methodology we use to translate these pillars into a plan
-            that fits your reality, your constraints, and your ambition.
-          </p>
+          <p className="text-base leading-6 text-[#4e546c]">{t("roadmap.intro")}</p>
         </div>
 
         <div ref={timelineRef} className="relative w-full">
@@ -381,7 +350,7 @@ export default function MethodologyRoadmapSection() {
                   />
                 </div>
               </div>
-              {STEPS.map((step, index) => (
+              {steps.map((step, index) => (
                 <MobileTimelineNode
                   key={step.title}
                   isActive={activeSteps[index]}
@@ -391,7 +360,7 @@ export default function MethodologyRoadmapSection() {
             </div>
 
             <div ref={mobileStepsColRef} className="flex min-w-0 flex-1 flex-col gap-8">
-              {STEPS.map((step, index) => (
+              {steps.map((step, index) => (
                 <div
                   key={step.title}
                   ref={(el) => {
@@ -399,7 +368,7 @@ export default function MethodologyRoadmapSection() {
                   }}
                   className="flex flex-col gap-3.5"
                 >
-                  <RoadmapStepCard step={step} />
+                  <RoadmapStepCard step={step} includesLabel={t("roadmap.includesLabel")} />
                   <RoadmapStepImage src={step.image} alt={step.imageAlt} />
                 </div>
               ))}
@@ -422,9 +391,9 @@ export default function MethodologyRoadmapSection() {
             </div>
 
             <div className="relative flex flex-col gap-16">
-              {STEPS.map((step, index) => {
+              {steps.map((step, index) => {
                 const image = <RoadmapStepImage src={step.image} alt={step.imageAlt} />;
-                const card = <RoadmapStepCard step={step} />;
+                const card = <RoadmapStepCard step={step} includesLabel={t("roadmap.includesLabel")} />;
                 const node = <TimelineNode isActive={activeSteps[index]} />;
 
                 return (

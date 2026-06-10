@@ -1,0 +1,173 @@
+{
+  "slug": "the-90-day-ai-roadmap",
+  "date": "8 avr. 2026",
+  "readTime": "12 min de lecture",
+  "title": "La feuille de route IA sur 90 jours : ce qui se passe réellement après avoir engagé un consultant IA",
+  "subtitle": "Pas la version lisse. La vraie.",
+  "excerpt": [
+    "La plupart des dirigeants s'imaginent ceci : vous engagez un consultant IA, serrez la main, et dès la deuxième semaine, un outil intelligent tourne en arrière-plan.",
+    "Ce n'est pas ainsi que ça se passe. Voici à quoi ressemblent réellement les 90 premiers jours."
+  ],
+  "author": "Gregory Van Duyse",
+  "authorRole": "PDG, Leap AI Solutions",
+  "tableOfContents": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "why-projects-fail",
+      "label": "Pourquoi la plupart des projets IA n'atteignent même pas le jour 30"
+    },
+    {
+      "id": "days-1-30",
+      "label": "Jours 1 à 30 : tout comprendre"
+    },
+    {
+      "id": "days-31-60",
+      "label": "Jours 31 à 60 : commencer à construire"
+    },
+    {
+      "id": "days-61-90",
+      "label": "Jours 61 à 90 : validation et transfert"
+    },
+    {
+      "id": "what-to-demand",
+      "label": "Ce que vous devriez exiger d'un consultant"
+    }
+  ],
+  "sections": [
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "La plupart des dirigeants s'imaginent ceci : vous engagez un consultant IA, serrez la main, et dès la deuxième semaine, un outil intelligent tourne en arrière-plan pour vous faire gagner du temps et de l'argent pendant que vous vous occupez du reste.",
+        "Honnêtement ? Ce n'est pas ainsi que ça se passe. Et l'écart entre cette attente et ce qui se produit réellement est probablement la raison principale pour laquelle tant de projets IA s'écrasent avant même de décoller.",
+        "Parlons donc de ce à quoi ressemblent réellement les 90 premiers jours, basé sur du travail client réel, de vraies conversations et de vrais résultats. Pas la version lisse. La vraie."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "why-projects-fail",
+      "text": "Pourquoi la plupart des projets IA n'atteignent même pas le jour 30"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Il y a une statistique du MIT qui devrait faire redresser tout dirigeant : entre 90 et 95 pour cent des projets IA échouent. Ce n'est pas une erreur d'arrondi. C'est presque tous.",
+        "Et voici le point : ce n'est presque jamais la technologie qui pose problème. La technologie fonctionne très bien. Ce qui ne fonctionne pas, c'est tout ce qui l'entoure. Pas de stratégie de données claire. Pas de KPI liés à ce qui compte vraiment. Des dirigeants qui ont confié l'ensemble à leur service informatique en disant « Débrouillez-vous », puis se sont demandés six mois plus tard pourquoi rien n'avait vraiment changé.",
+        "Gregory Van Duyse de Leap AI le formule d'une manière qui marque : « Nous ne sommes plus dans le monde de la gestion de l'information. Nous sommes dans le monde de l'intelligence. » Et vous ne pouvez pas traiter une transformation de l'intelligence comme l'installation d'un nouveau CRM. Ça ne fonctionne tout simplement pas ainsi. C'est pourquoi avoir une véritable feuille de route IA pour votre entreprise n'est pas un luxe — c'est la différence entre gaspiller de l'argent et effectuer un changement réel."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "days-1-30",
+      "text": "Jours 1 à 30 : oubliez de construire quoi que ce soit. Il s'agit de tout comprendre"
+    },
+    {
+      "type": "subheading",
+      "text": "À quoi ressemble réellement l'audit de données"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Le premier mois ne concerne pas les outils. Ni la technologie. Il s'agit d'aller au fond de la façon dont votre entreprise fonctionne réellement — et la plupart des entreprises sont surprises par ce qui émerge lorsque quelqu'un commence à poser les bonnes questions.",
+        "Pour les clients qui viennent chez Leap AI sans projet spécifique déjà en tête, le processus démarre par ce que Gregory appelle une évaluation IA de l'entreprise. Cela signifie interviewer chaque chef de département — une heure et demie, parfois deux heures chacun — avant même de s'asseoir avec le PDG. Chaque département. Chaque processus. Chaque système.",
+        "« Nous découvrons exactement le travail qu'ils effectuent dans le département et toutes les informations qui pourraient nous aider à comprendre ce travail », dit Gregory. Et ce qui ressort généralement ? Les données sont éparpillées dans cinq endroits différents sans aucun lien entre eux. Le suivi des KPI repose davantage sur l'intuition que sur une mesure réelle. Des processus de travail qui semblent simples de l'extérieur, mais qui recèlent des nuances que personne n'a jamais documentées.",
+        "Ce sont vos signaux d'alarme. Et vous voulez les identifier dès la semaine un, pas la semaine huit, lorsque vous êtes déjà en pleine construction et que quelque chose continue de casser sans que personne ne comprenne pourquoi."
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Les entretiens avec les parties prenantes"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Voici quelque chose qui surprend beaucoup de gens dans cette phase : les conversations les plus importantes ne sont pas toujours avec le PDG ou l'équipe de direction. Elles sont avec les personnes qui font réellement le travail au quotidien.",
+        "« Les personnes qui font réellement le travail sur le terrain comprennent la nuance du travail — pourquoi dans ce cas on le modifie un peu de cette façon, et dans cet autre cas un peu autrement. » Les gestionnaires ne voient pas toujours cela. Les propriétaires non plus. Mais la personne qui fait ce travail depuis quatre ans ? Elle sait exactement où se trouvent les petites particularités et pourquoi elles existent.",
+        "Manquer cela en phase de découverte, et cela reviendra vous mordre. À chaque fois. Les entretiens sont donc structurés pour en faire ressortir l'essentiel : quel est le travail réel, quels systèmes le touchent, où ralentit-il, et à quoi ressemblerait un véritable changement significatif pour cette équipe ?"
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "days-31-60",
+      "text": "Jours 31 à 60 : maintenant vous commencez à construire"
+    },
+    {
+      "type": "subheading",
+      "text": "Intégrer les données et configurer le modèle"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Une fois la découverte terminée et le périmètre verrouillé, la construction commence — et c'est là que les choses deviennent intéressantes. L'équipe accède aux systèmes du client, commence à rassembler les données et construit un prototype fonctionnel qui peut réellement être testé et examiné.",
+        "La meilleure façon de comprendre ce à quoi ressemble réellement cette phase est à travers un exemple concret. Un client en opérations aéroportuaires est venu chez Leap AI avec un problème de planification des effectifs qu'il peinait à résoudre depuis longtemps. Ils avaient un membre d'équipe expérimenté qui y travaillait, un fichier Excel et ChatGPT. Et ils étaient toujours bloqués.",
+        "La raison ? Ce n'était pas un problème de langage — ce pour quoi ChatGPT est conçu. C'était un problème d'optimisation mathématique. Plusieurs variables, plusieurs contraintes, des millions de combinaisons possibles. Et comme Gregory le souligne : « Les humains ne sont pas vraiment doués pour optimiser les choses, surtout s'il y a plus de deux dimensions dans les données. Avec deux variables, on s'en sort. Mais dès qu'on atteint trois ou quatre variables simultanément, notre cerveau a du mal. »",
+        "La première chose que l'équipe a faite n'a donc pas été de construire un outil IA. Un modèle mathématique du problème lui-même a été construit. Ce qui, comme Gregory le décrit, « ressemblait davantage à un rapport qu'un mathématicien rédigerait ». Ce n'est qu'une fois cela en place que l'IA a pu être appliquée pour l'exécuter correctement."
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Exécuter les scénarios et tester ce qu'est le « bon » résultat"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Avec le modèle construit, le système pouvait prendre les données Excel du client, appliquer toutes les contraintes et variables, et exécuter des scénarios d'optimisation sur trois à quatre heures pour faire émerger les meilleurs résultats possibles.",
+        "Les résultats étaient difficiles à contester. Le membre d'équipe expérimenté du client avait passé trois semaines sur le problème manuellement et projeté les coûts de personnel du trimestre à 1,7 million de dollars. Le modèle est revenu avec une solution qui ramena ce montant à un peu plus de 1 million de dollars — environ 700 000 $ économisés — et l'a fait en quatre jours au lieu de trois semaines.",
+        "Mais la partie qui compte vraiment ? Le modèle a été conçu pour être réutilisé. Chaque fois qu'un nouveau planning de vols arrive maintenant, ils le relancent simplement. Ce n'est pas une victoire ponctuelle — c'est un changement permanent dans la façon dont l'entreprise fonctionne.",
+        "« Bon » dans cette phase ne signifie pas seulement que les chiffres sont meilleurs sur le papier. Cela signifie que la solution est liée à un KPI qui compte vraiment, que le client voit clairement le lien avec des résultats concrets, et que les personnes qui l'utilisent comprennent suffamment bien son fonctionnement pour lui faire confiance."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "days-61-90",
+      "text": "Jours 61 à 90 : validation et transfert"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "C'est la phase où tout est testé correctement, et où le client prend possession de ce qui a été construit. Les réunions de validation ne sont pas une grande révélation — ce sont une présentation pas à pas. Voici ce que fait le système, voici le résultat, voici comment cela se rattache aux KPI qui vous importent vraiment. Ce qui fonctionne, ce qui nécessite des ajustements, ce qui vient ensuite.",
+        "Gregory appelle l'ensemble du modèle la co-création, et c'est dans cette phase que cela se manifeste vraiment. « Nous travaillons ici avec le PDG, avec son équipe de direction, avec les chefs de département pour co-créer une nouvelle stratégie pour l'entreprise. » Ce n'est pas un transfert. C'est une conversation.",
+        "À la fin du jour 90, le client repart avec un système fonctionnel validé, un rapport stratégique complet, une évolution claire des KPI qu'il peut montrer, et une liste priorisée de ce qu'il faut construire ensuite. Pour les clients venus pour une évaluation complète de l'entreprise, cette liste compte généralement de 12 à 20 projets IA, chacun testé sous contrainte de retour sur investissement et lié à des résultats concrets, pas à des métriques de vanité."
+      ]
+    },
+    {
+      "type": "heading",
+      "id": "what-to-demand",
+      "text": "Ce que vous devriez exiger d'un consultant avant de signer quoi que ce soit"
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Cette partie compte. Beaucoup de consultants vous diront ce que vous voulez entendre pour conclure la vente. Alors avant de signer quoi que ce soit, voici ce que Gregory dit que vous devriez réellement rechercher."
+      ]
+    },
+    {
+      "type": "orderedList",
+      "items": [
+        {
+          "text": "N'acceptez pas une relation « on vous remet le dossier et vous attendez ». Les engagements qui fonctionnent reposent sur la co-création dès le premier jour. Si un consultant ne prévoit pas de vous impliquer, vous et votre équipe, tout au long du processus, c'est un problème."
+        },
+        {
+          "text": "Demandez à voir du vrai travail de vrais clients. Démos, références et chiffres avant-après concrets. Tout consultant qui vaut son tarif devrait pouvoir vous montrer cela sans hésiter."
+        },
+        {
+          "text": "Recherchez un pilote sans risque. Leap AI offre une garantie sur le travail en phase initiale. Si le client n'est pas convaincu au moment où la démo ou le pilote aboutit, il récupère son acompte. Cela devrait être une attente de base, pas un bonus."
+        },
+        {
+          "text": "Peut-être le plus important : votre consultant devrait penser à l'avance — pas seulement à ce que l'IA peut faire maintenant, mais à où elle va. Gregory utilise une analogie du hockey pour cela : « On parle d'aller là où le palet va être. Vous voulez que votre consultant ait une idée de la direction et positionne l'entreprise pour être prête. »"
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "En ce moment, l'IA double sa capacité à effectuer un vrai travail tous les trois à quatre mois. Gregory le dit clairement : « De mars à septembre, l'IA va probablement quadrupler sa capacité à travailler. C'est la même chose qu'attendre cinq ans dans l'ancien monde. » Un consultant qui ne pense qu'au prochain projet, et non aux trois prochaines années, n'est pas le bon partenaire pour là où tout cela mène.",
+        "Les 90 jours ne consistent pas seulement à livrer quelque chose qui fonctionne. Ils consistent à poser les fondations sur lesquelles votre entreprise pourra continuer à construire — car les entreprises qui commencent maintenant, même imparfaitement, seront dans une position complètement différente de celles qui ont continué à attendre le bon moment.",
+        "Ce moment n'arrivera pas. La fenêtre est ouverte maintenant.",
+        "Vous voulez voir à quoi pourrait ressembler votre propre feuille de route IA sur 90 jours ? Réservez une consultation gratuite avec Leap AI et découvrez exactement par où commencer."
+      ]
+    }
+  ]
+}

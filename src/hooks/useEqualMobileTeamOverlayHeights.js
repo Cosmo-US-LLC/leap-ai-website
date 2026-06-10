@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { ALL_TEAM_MEMBERS } from "../lib/aboutTeam.js";
 import { measureMaxMobileTeamOverlayHeight } from "../lib/measureMobileTeamOverlay.js";
 
 const MOBILE_MQ = "(max-width: 1023px)";
@@ -7,12 +6,12 @@ const MOBILE_MQ = "(max-width: 1023px)";
 /**
  * Mobile carousel: one overlay height for all slides — tallest bio at card width.
  */
-export function useEqualMobileTeamOverlayHeights() {
+export function useEqualMobileTeamOverlayHeights(members = []) {
   const trackRef = useRef(null);
 
   useLayoutEffect(() => {
     const track = trackRef.current;
-    if (!track) return;
+    if (!track || members.length === 0) return;
 
     const equalize = () => {
       const overlays = track.querySelectorAll("[data-team-mobile-overlay]");
@@ -24,7 +23,7 @@ export function useEqualMobileTeamOverlayHeights() {
 
       if (!window.matchMedia(MOBILE_MQ).matches) return;
 
-      const maxHeight = measureMaxMobileTeamOverlayHeight(ALL_TEAM_MEMBERS);
+      const maxHeight = measureMaxMobileTeamOverlayHeight(members);
 
       if (maxHeight > 0) {
         const heightPx = `${maxHeight}px`;
@@ -56,7 +55,7 @@ export function useEqualMobileTeamOverlayHeights() {
       mq.removeEventListener("change", scheduleEqualize);
       window.removeEventListener("resize", scheduleEqualize);
     };
-  }, []);
+  }, [members]);
 
   return trackRef;
 }

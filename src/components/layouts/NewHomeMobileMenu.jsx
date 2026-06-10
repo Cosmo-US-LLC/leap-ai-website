@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import mobileMenuGradient from "../../assets/images/new-home/icons/mobile-menu-gradient.svg";
-import globeIcon from "../../assets/images/new-home/icons/globe.svg";
-import chevronDown from "../../assets/images/new-home/icons/chevron-down.svg";
+import { LocaleLink } from "./LocaleLink.jsx";
+import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
 
 export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     if (!open) return undefined;
 
@@ -28,12 +30,12 @@ export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
       className="fixed inset-0 z-40 overflow-y-auto lg:hidden"
       role="dialog"
       aria-modal="true"
-      aria-label="Mobile menu"
+      aria-label={t("aria.mobileMenu")}
     >
       <button
         type="button"
         className="fixed inset-0 bg-[#151515]"
-        aria-label="Close menu"
+        aria-label={t("aria.closeMenu")}
         onClick={onClose}
       />
 
@@ -50,7 +52,7 @@ export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
       >
         <nav
           className="relative z-10 flex w-full max-w-[358px] flex-col items-center gap-3 rounded-xl border border-[#ddd] bg-white px-4 py-7 shadow-sm"
-          aria-label="Mobile"
+          aria-label={t("aria.mobileNav")}
         >
           {navLinks.map((link) => {
             const active = isLinkActive(link.to);
@@ -61,7 +63,7 @@ export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
             }`;
 
             return (
-              <div key={link.label} className="flex w-full flex-col items-center">
+              <div key={link.labelKey} className="flex w-full flex-col items-center">
                 {link.to.startsWith("http") ? (
                   <a
                     href={link.to}
@@ -70,26 +72,19 @@ export function NewHomeMobileMenu({ open, onClose, navLinks, isLinkActive }) {
                     onClick={onClose}
                     className={className}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 ) : (
-                  <Link to={link.to} onClick={onClose} className={className}>
-                    {link.label}
-                  </Link>
+                  <LocaleLink to={link.to} onClick={onClose} className={className}>
+                    {t(link.labelKey)}
+                  </LocaleLink>
                 )}
               </div>
             );
           })}
 
           <div className="mt-1 flex w-full justify-center px-[18px] py-0.5">
-            <button
-              type="button"
-              className="nh-nav-lang inline-flex items-center gap-2 rounded-full border border-black px-2 py-2.5 text-black"
-              aria-label="Language selector"
-            >
-              <img src={globeIcon} alt="" className="h-[18px] w-[18px]" aria-hidden />
-              <span>English</span>
-            </button>
+            <LanguageSwitcher variant="mobile" />
           </div>
         </nav>
       </div>

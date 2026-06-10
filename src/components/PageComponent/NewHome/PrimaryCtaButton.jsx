@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocaleLink } from "../../layouts/LocaleLink.jsx";
 import { FREE_CONSULTATION_URL } from "../../../lib/newHomeLinks.js";
 import { ArrowRightIcon } from "./icons/ArrowRightIcon.jsx";
 
@@ -63,9 +63,9 @@ export function PrimaryCtaButton({
     }
 
     return (
-      <Link to={to} className={`${base} ${styles} ${className}`}>
+      <LocaleLink to={to} className={`${base} ${styles} ${className}`}>
         {content}
-      </Link>
+      </LocaleLink>
     );
   }
 

@@ -1,0 +1,182 @@
+{
+  "slug": "insurance-call-coverage",
+  "tag": "Assurance",
+  "metric": "100%",
+  "metricLabel": "couverture des appels",
+  "title": "Comment une agence d'assurance canadienne a pris le contrôle de chaque conversation commerciale en 30 jours",
+  "description": "Ils n'examinaient que 5 % des appels. En 30 jours, ils avaient une supervision complète de chaque conversation commerciale significative — sans ajouter un seul poste.",
+  "hero": {
+    "titlePrefix": "Comment une agence d'assurance canadienne ",
+    "titleHighlight": "a pris le contrôle de chaque conversation commerciale en 30 jours",
+    "subtitle": "Ils n'examinaient que 5 % des appels. En 30 jours, ils avaient une supervision complète de chaque conversation commerciale significative — sans ajouter un seul poste."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Couverture des appels"
+      },
+      {
+        "value": "30 min",
+        "label": "Délai de traitement"
+      },
+      {
+        "value": "~80%",
+        "label": "Temps QA économisé"
+      },
+      {
+        "value": "30 Days",
+        "label": "Pour déployer"
+      }
+    ],
+    "delivered": [
+      "Transcription et analyse automatiques",
+      "Notation de performance",
+      "Recommandations de coaching",
+      "Liste de contrôle de conformité",
+      "Alertes d'escalade",
+      "Intégration CRM"
+    ],
+    "technologies": [
+      "IA/ML",
+      "NLP",
+      "Speech-to-Text",
+      "Cloud Computing"
+    ],
+    "industry": "Assurance / Services financiers",
+    "location": "Québec, Canada"
+  },
+  "cta": {
+    "titleMuted": "Prêt à voir ",
+    "titleBold": "chaque conversation ?",
+    "description": "Réservez un appel stratégique de 30 minutes pour découvrir comment l'évaluation d'appels propulsée par l'IA peut transformer votre supervision commerciale."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "Le défi",
+      "paragraphs": [
+        "Cette agence d'assurance en ligne canadienne savait que le coaching fonctionnait. Lorsque leurs conseillers agréés recevaient un retour structuré, la performance s'améliorait. Le problème n'était pas la qualité — c'était la **couverture**.",
+        "Avec environ **200 à 250 appels commerciaux par semaine**, chacun d'une durée de **60 à 90 minutes**, leur responsable QA pouvait réalistiquement n'examiner que **10 à 15 appels par semaine**. Cela signifiait que seulement **cinq à huit pour cent** des conversations clients étaient évaluées.",
+        "Plus de 90 % restaient non examinés. Dans une industrie compétitive et réglementée, ce niveau de visibilité n'est pas suffisant.",
+        "Examiner manuellement chaque appel nécessiterait d'augmenter les effectifs QA pour correspondre à l'équipe commerciale — une impasse économique. La direction ne voulait pas plus d'auditeurs. Elle voulait du levier."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "eyeOff",
+          "title": "Couverture limitée",
+          "description": "Seulement 5 à 8 % des 200+ appels commerciaux hebdomadaires étaient examinés par l'équipe QA."
+        },
+        {
+          "icon": "clock",
+          "title": "Chronophage",
+          "description": "Chaque appel de 75 minutes nécessitait une écoute complète, la prise de notes et la préparation du coaching."
+        },
+        {
+          "icon": "scale",
+          "title": "Plafond structurel",
+          "description": "Augmenter les effectifs QA pour correspondre à l'équipe commerciale était économiquement impossible.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Le goulot d'étranglement que personne ne pouvait compenser par le travail",
+      "paragraphs": [
+        "L'agence avait déjà un processus de coaching structuré. Les appels étaient enregistrés via leur système PBX interne. Le responsable QA sélectionnait les conversations selon son expérience — priorisant les nouveaux conseillers, les sous-performants perçus ou des vérifications aléatoires occasionnelles.",
+        "Le retour était délivré en tête-à-tête, souvent mensuellement ou selon les besoins.",
+        "Mais examiner un seul appel de 75 minutes nécessite une écoute complète, la prise de notes, une évaluation structurée et la préparation du coaching. Multipliez cela par plus de 200 appels par semaine et les mathématiques deviennent impossibles.",
+        "La pression du temps introduisait un autre risque. Pour gérer la charge de travail, des parties d'appels étaient parfois ignorées pour atteindre les moments « importants ». Le contexte pouvait être perdu. Des signaux de conformité subtils pouvaient être manqués.",
+        "La direction faisait face à un plafond structurel : une supervision partielle dans une entreprise où la cohérence et l'alignement réglementaire comptent."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Construire une visibilité complète sans changer le flux de travail",
+      "paragraphs": [
+        "Leap AI s'est associé à la direction et à la fonction QA pour concevoir un système qui augmenterait le coaching humain plutôt que de le remplacer.",
+        "Le mandat était clair : analyser **100 % des appels commerciaux significatifs**, s'intégrer directement à leur CRM existant et respecter des normes de sécurité de niveau réglementaire.",
+        "En quatre semaines, un moteur d'évaluation d'appels propulsé par l'IA a été déployé.",
+        "Dans les 30 minutes suivant la fin de chaque rendez-vous commercial, le système transcrit et évalue automatiquement la conversation. Dans le dossier CRM, la direction et les agents peuvent voir :"
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": null,
+      "items": [
+        "Résumé structuré de la conversation",
+        "Score de performance aligné sur les normes internes",
+        "Raisonnement clair derrière le score",
+        "Recommandations de coaching spécifiques",
+        "Liste de contrôle de conformité complétée"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Détection de problèmes en temps réel",
+      "paragraphs": [
+        "Le système a introduit des signaux d'escalade automatisés. Si une conversation inclut un langage suggérant un risque de conformité, un ton inapproprié ou une insatisfaction client, la direction est alertée immédiatement.",
+        "Dans un cas précoce, un conseiller a perdu patience pendant un appel. Le système a signalé l'interaction en quelques minutes. Le directeur a contacté le client avant qu'une plainte ne soit déposée — transformant ce qui aurait pu dégénérer en friction réputationnelle ou réglementaire en opportunité de récupération."
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Comment ça fonctionne",
+      "steps": [
+        {
+          "icon": "mic",
+          "title": "Enregistrer",
+          "description": "Les appels sont capturés via le système PBX existant sans modification du flux de travail des conseillers."
+        },
+        {
+          "icon": "fileAudio",
+          "title": "Transcrire",
+          "description": "L'IA traite l'audio en transcription structurée et consultable en quelques minutes."
+        },
+        {
+          "icon": "clipboardCheck",
+          "title": "Évaluer",
+          "description": "La performance est notée automatiquement selon les normes de qualité internes."
+        },
+        {
+          "icon": "layoutDashboard",
+          "title": "Livrer",
+          "description": "Les résultats apparaissent directement dans le dossier CRM — sans nouvelles plateformes ni identifiants."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Élever la fonction QA",
+      "paragraphs": [
+        "Avant l'implémentation, le responsable QA passait environ **20 à 25 heures par semaine** à écouter des enregistrements et préparer des notes. Le coaching nécessitait une révision complète des appels.",
+        "Aujourd'hui, le temps d'écoute est tombé à quasi zéro.",
+        "Au lieu de réécouter des conversations entières, le responsable QA examine les évaluations générées par l'IA et se concentre uniquement sur les segments qui comptent. Le temps de préparation est tombé à environ **5 à 8 heures par semaine**, alors que la capacité de coaching s'étend maintenant à toute l'équipe.",
+        "Le système n'a pas éliminé le rôle humain. Il a retiré la charge mécanique qui l'entourait. Le coaching est maintenant cohérent, ciblé et scalable."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Conçu pour un environnement réglementé",
+      "paragraphs": [
+        "La sécurité et la conformité étaient des exigences fondamentales, pas des réflexions après coup.",
+        "La solution fonctionne avec une **résidence des données au Canada** et un transfert de données chiffré. Le traitement s'effectue dans un environnement serverless sécurisé avec **aucune rétention de données et aucun stockage tiers**. Les informations clients ne sont pas utilisées pour entraîner des modèles externes.",
+        "Chaque évaluation laisse des journaux traçables, et les examinateurs humains conservent une supervision et une capacité de correction complètes.",
+        "Le résultat n'est pas une boîte noire superposée à une entreprise réglementée. C'est une infrastructure qualité contrôlée et auditable, alignée sur les normes des services financiers."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'enseignement pour les dirigeants financiers",
+      "paragraphs": [
+        "Dans les environnements commerciaux à volume élevé et réglementés, la variance de performance est inévitable. La question est de savoir si vous pouvez la voir assez tôt pour la corriger.",
+        "Cette agence d'assurance est passée d'une visibilité partielle à une supervision complète en 30 jours — sans ajouter de postes, perturber le flux de travail ou compromettre la sécurité des données.",
+        "Ils n'ont pas automatisé les personnes. Ils ont donné du levier à leurs personnes. Et dans les marchés compétitifs des services financiers, **le levier se cumule**."
+      ]
+    }
+  ]
+}

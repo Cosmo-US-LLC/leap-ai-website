@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "titleStaticMobile": "Nous faisons\nfonctionner l'IA pour",
+    "titleStaticDesktop": "Nous faisons fonctionner l'IA",
+    "titleFor": "pour",
+    "typewriter": ["l'optimisation des coûts", "la rédaction technique", "la croissance"],
+    "body": "Nous aidons les dirigeants visionnaires à naviguer la transformation IA sans complexité, risque ni approximations — même si vous vous sentez dépassé, à court de temps ou incertain par où commencer.",
+    "viewCaseStudies": "Voir les études de cas",
+    "imageAlt": "Professionnel examinant une stratégie IA sur ordinateur portable",
+    "playVideo": "Lire la vidéo"
+  },
+  "pillars": {
+    "headingBold": "Un avantage inégalé, bâti par ",
+    "headingMuted": "l'intelligence collective.",
+    "headingSubtitle": "En tant qu'anciens PDG et CTO, nous avons été à votre place. Nous sommes les partenaires fiables qui vous aident à naviguer la révolution IA et à surmonter l'incertitude.",
+    "tabs": {
+      "architecture": {
+        "label": "Architecture IA stratégique",
+        "title": "Arrêtez les pilotes aléatoires. Commencez un avantage systématique.",
+        "description": "Nos experts stratégiques vous guident à travers notre cadre éprouvé en 7 piliers pour définir une vision claire et une stratégie d'adoption alignée sur vos objectifs d'affaires.",
+        "benefitsLabel": "Ce que vous obtenez :",
+        "benefits": [
+          "Identification réelle des opportunités via des ateliers stratégiques",
+          "Alignement et adhésion de l'équipe dans tous les départements",
+          "Cadres de gouvernance pratiques qui inspirent confiance",
+          "Direction claire avec des projets bien définis et prêts à exécuter"
+        ],
+        "ctaLabel": "Parler à un expert",
+        "imageAlt": "Équipe collaborant sur une stratégie IA"
+      },
+      "workforce": {
+        "label": "Transformation de la main-d'œuvre",
+        "title": "Transformez l'anxiété face à l'IA en moteur d'innovation.",
+        "description": "Nous ne formons pas seulement aux outils IA. Nous redessinons les rôles autour de la collaboration humain-IA, montrant à votre équipe comment l'IA les rend plus précieux, pas remplaçables.",
+        "benefitsLabel": "Notre approche :",
+        "benefits": [
+          "Carte d'évolution sur 3 à 5 ans pour chaque rôle.",
+          "Vision claire du futur augmenté par l'IA pour chaque employé.",
+          "Transformer la peur en enthousiasme compétitif.",
+          "Bâtir des champions de l'innovation internes."
+        ],
+        "ctaLabel": "En savoir plus",
+        "imageAlt": "Collègues examinant du travail sur un ordinateur portable"
+      },
+      "data": {
+        "label": "Infrastructure et intelligence des données",
+        "title": "Construisez le système nerveux de l'avantage autonome.",
+        "description": "Et si votre entreprise pouvait penser ? Pas seulement traiter des données, mais comprendre les tendances, prédire les problèmes et s'optimiser en temps réel.",
+        "benefitsLabel": "Votre entreprise peut :",
+        "benefits": [
+          "Repérer les opportunités avant qu'elles ne deviennent évidentes.",
+          "Prévenir les problèmes avant qu'ils ne deviennent coûteux.",
+          "Faire des connexions qu'un esprit humain ne verrait jamais.",
+          "Développer une intuition institutionnelle qui se compose dans le temps."
+        ],
+        "ctaLabel": "Découvrir",
+        "imageAlt": "Professionnel travaillant sur un ordinateur portable"
+      },
+      "execution": {
+        "label": "Mise en œuvre et exécution IA",
+        "title": "Déployez une IA qui fait chercher à vos concurrents de comprendre ce que vous avez fait.",
+        "description": "Nos projets de levier stratégique ne se contentent pas d'améliorer ce que vous faites — ils changent fondamentalement ce qui est possible dans votre industrie.",
+        "benefitsLabel": "L'impact :",
+        "benefits": [
+          "Des ondes de marché massives créées par de petits changements ciblés.",
+          "Des expériences client qui gâtent vos clients pour vos concurrents.",
+          "De nouvelles catégories de marché autour de vos offres.",
+          "Des changements fondamentaux des possibilités de l'industrie."
+        ],
+        "ctaLabel": "En savoir plus",
+        "imageAlt": "Membres de l'équipe examinant une tablette au bureau"
+      }
+    }
+  },
+  "architect": {
+    "headingBold": "Nous ne faisons pas que mettre en œuvre l'IA. ",
+    "headingMuted": "Nous architecturons l'intelligence.",
+    "body": "90 % des transformations IA échouent non pas à cause d'une mauvaise technologie, mais parce qu'on traite l'IA comme un autre déploiement logiciel plutôt qu'une évolution organisationnelle.",
+    "stats": [
+      { "value": "25+", "label": "Années d'expérience combinée au niveau C-suite" },
+      { "value": "100%", "label": "De la stratégie à l'exécution — nous construisons et livrons" },
+      { "value": "90%", "label": "Des clients passent à la mise en œuvre complète" },
+      { "value": "4×", "label": "ROI moyen vs. référence de l'industrie" }
+    ]
+  },
+  "testimonials": {
+    "headingBold": "De suiveurs à",
+    "headingMuted": "leaders de l'industrie",
+    "subtitle": "Des organisations passées de la tendance à la définition du marché. Voici ce qu'elles disent de Leap AI.",
+    "prev": "Témoignage précédent",
+    "next": "Témoignage suivant",
+    "goTo": "Aller au témoignage {{n}}",
+    "items": [
+      {
+        "quote": "Une évaluation IA précise et bien structurée qui nous a donné clarté et confiance dans notre direction stratégique.",
+        "name": "Laurent Groux, Ph. D",
+        "role": "Associé - Environnement S-air"
+      },
+      {
+        "quote": "Une équipe très compétente qui a livré une mise en œuvre IA d'une qualité exceptionnelle, de la stratégie à l'exécution.",
+        "name": "Michael Robillard",
+        "role": "PDG - Groupe Robillard"
+      },
+      {
+        "quote": "Leap AI a transformé des exigences IA complexes en une solution robuste et de haute qualité avec une valeur d'affaires réelle.",
+        "name": "Vincent Morin",
+        "role": "COO - Infoprimes"
+      }
+    ]
+  },
+  "faq": {
+    "headingBold": "Vous vous demandez",
+    "headingMuted": "quelque chose ?",
+    "subtitle": "Nous avons rassemblé toutes les informations importantes ici. Explorez nos FAQ et trouvez les réponses dont vous avez besoin.",
+    "items": [
+      {
+        "question": "En quoi est-ce différent du conseil IA typique ?",
+        "answer": "La plupart des consultants livrent des rapports. Nous architecturons des avantages compétitifs. Notre approche en 7 piliers assure que chaque investissement IA crée un avantage composé."
+      },
+      {
+        "question": "Et si notre main-d'œuvre résiste à la transformation IA ?",
+        "answer": "Nous avons conçu toute notre approche autour de cette réalité. Nous transformons la peur du remplacement en champions de l'innovation en montrant une progression de carrière claire dans un monde augmenté par l'IA."
+      },
+      {
+        "question": "Comment assurez-vous un impact réel, pas seulement des démos impressionnantes ?",
+        "answer": "Chaque initiative doit passer notre filtre de projet de levier stratégique : retours financiers mesurables + avantage compétitif + meilleure expérience client. Sans exception."
+      },
+      {
+        "question": "Comment gérez-vous le rythme du changement en IA ?",
+        "answer": "Nous bâtissons des fondations stratégiques, pas des dépendances technologiques. Notre architecture en piliers s'adapte aux nouvelles capacités IA tout en maintenant l'avantage compétitif."
+      }
+    ]
+  },
+  "partner": {
+    "headingBold": "Un partenaire en qui ",
+    "headingMuted": "vous pouvez avoir confiance.",
+    "body": "Chaque mandat commence par une analyse approfondie de vos données, flux de travail et besoins de conformité. Ensuite, nous concevons une feuille de route adaptée, prototypons rapidement et ne déployons que ce qui apporte une valeur réelle.",
+    "cta": "Parler à un fondateur",
+    "imageAlt": "Fondateurs Leap 41 en consultation avec un client"
+  },
+  "caseStudiesSection": {
+    "headingPrefix": "Résultats ",
+    "headingMuted": "récents.",
+    "readCaseStudy": "Lire l'étude de cas",
+    "readCaseStudyAria": "Lire l'étude de cas : {{title}}",
+    "allCaseStudies": "Toutes les études de cas"
+  },
+  "insightsSection": {
+    "headingBold": "Dernières",
+    "headingMuted": "perspectives.",
+    "allInsights": "Toutes les perspectives"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "ai-powered-roleplay-sales",
+  "tag": "Services financiers",
+  "metric": "3×",
+  "metricParts": [
+    "3",
+    "×"
+  ],
+  "metricLabel": "fréquence de pratique",
+  "title": "Jeu de rôle propulsé par l'IA qui améliore réellement la performance commerciale",
+  "description": "Comment une société de services financiers a remplacé une formation obsolète par un jeu de rôle interactif propulsé par l'IA — et a observé une amélioration mesurable de la confiance des conseillers et des taux de clôture en 60 jours.",
+  "hero": {
+    "titlePrefix": "Jeu de rôle propulsé par l'IA qui ",
+    "titleHighlight": "améliore réellement la performance commerciale",
+    "subtitle": "Comment une société de services financiers a remplacé une formation obsolète par un jeu de rôle interactif propulsé par l'IA — et a observé une amélioration mesurable de la confiance des conseillers et des taux de clôture en 60 jours."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "3×",
+        "label": "Fréquence de pratique"
+      },
+      {
+        "value": "40%",
+        "label": "Intégration plus rapide"
+      },
+      {
+        "value": "89%",
+        "label": "Satisfaction des conseillers"
+      },
+      {
+        "value": "60 Days",
+        "label": "Avant impact"
+      }
+    ],
+    "delivered": [
+      "Personas IA adaptatifs",
+      "Retour en temps réel",
+      "Scénarios personnalisés",
+      "Analytique de progression",
+      "Garde-fous de conformité",
+      "Tableau de bord gestionnaire"
+    ],
+    "technologies": [
+      "LLM",
+      "NLP",
+      "Synthèse vocale",
+      "IA en temps réel"
+    ],
+    "industry": "Services financiers / Assurance",
+    "location": "Amérique du Nord"
+  },
+  "cta": {
+    "titleMuted": "Prêt à transformer votre ",
+    "titleBold": "formation commerciale ?",
+    "description": "Découvrez comment le jeu de rôle propulsé par l'IA peut accélérer la préparation des conseillers et améliorer les taux de clôture."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "L'écart de formation",
+      "paragraphs": [
+        "La formation commerciale dans les services financiers a un problème fondamental : elle est coûteuse, incohérente et presque impossible à mettre à l'échelle.",
+        "La plupart des sociétés s'appuient sur une combinaison de sessions en salle, de scénarios scriptés et de jeux de rôle entre pairs. Les gestionnaires trouvent du temps entre leurs propres responsabilités pour animer des sessions de pratique — quand ils le peuvent. Les nouvelles recrues bénéficient d'une intégration intensive, mais le développement continu se limite souvent à des réunions d'équipe sporadiques et à des recyclages annuels.",
+        "Le résultat est prévisible. Les conseillers qui pratiquent davantage performent mieux. Mais les occasions de pratique sont rares, inégalement distribuées et rarement mesurées."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "sliders",
+          "title": "Qualité incohérente",
+          "description": "La qualité de la formation varie considérablement selon le gestionnaire, le bureau et le temps disponible."
+        },
+        {
+          "icon": "calendarClock",
+          "title": "Faible fréquence",
+          "description": "Les sessions de pratique ont lieu au mieux une fois par mois — insuffisant pour créer des habitudes durables."
+        },
+        {
+          "icon": "barChart",
+          "title": "Aucune mesure",
+          "description": "Sans suivi structuré, il est impossible de relier l'effort de formation aux résultats de performance.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi le jeu de rôle traditionnel échoue",
+      "paragraphs": [
+        "Le jeu de rôle entre pairs est la norme du secteur depuis des décennies. Deux conseillers jouent tour à tour le client et le conseiller, en parcourant des scénarios de gestion d'objections ou d'analyse des besoins.",
+        "En théorie, cela fonctionne. En pratique, il souffre de trois faiblesses structurelles.",
+        "Premièrement, **les pairs sont prévisibles**. Après quelques tours, les conseillers apprennent les schémas de l'autre. La pratique perd son acuité. Les vrais clients ne suivent pas de script.",
+        "Deuxièmement, **le retour est subjectif**. Sans cadre d'évaluation cohérent, la qualité du coaching dépend entièrement de qui observe. Deux gestionnaires pourraient évaluer la même conversation différemment.",
+        "Troisièmement, **la planification est un goulot d'étranglement**. Coordonner deux personnes ou plus pour une session de pratique signifie rivaliser avec les réunions, les appels clients et le travail administratif. La session annulée, c'est toujours la formation."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Présentation du jeu de rôle propulsé par l'IA",
+      "paragraphs": [
+        "Leap AI a construit une plateforme de jeu de rôle interactive qui donne à chaque conseiller un accès à une pratique réaliste à la demande — sans partenaire, gestionnaire ou session planifiée.",
+        "Les conseillers sélectionnent un scénario correspondant à leur domaine de focus : un primo-accédant posant des questions sur la protection hypothécaire, un propriétaire d'entreprise examinant les avantages collectifs, ou un retraité évaluant des options de rente. L'IA adapte son persona en temps réel, répondant comme le ferait un vrai client — avec hésitation, questions, objections et nuances émotionnelles.",
+        "Chaque session génère un retour structuré et actionnable. Pas d'encouragements vagues, mais une analyse précise : où le conseiller a créé du rapport, où il a manqué une opportunité de découverte, où son langage de conformité devait être resserré.",
+        "La plateforme s'intègre directement au système de gestion de l'apprentissage existant de la société. Pas de nouvelles applications. Pas de nouveaux mots de passe. Juste une meilleure pratique, disponible dès qu'un conseiller a 15 minutes."
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": "La plateforme offre une boucle de formation complète — pratique, retour et mesure — en une seule session :",
+      "items": [
+        "Personas IA adaptatifs qui répondent comme de vrais clients",
+        "Retour en temps réel sur la technique de communication",
+        "Scénarios personnalisés correspondant à vos gammes de produits",
+        "Analytique de progression et suivi de l'amélioration",
+        "Garde-fous de conformité et notation des meilleures pratiques",
+        "Tableau de bord gestionnaire pour la supervision d'équipe"
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Comment se déroule une session",
+      "steps": [
+        {
+          "icon": "clipboardList",
+          "title": "Sélectionner un scénario",
+          "description": "Choisissez parmi une bibliothèque de scénarios personnalisés conçus autour de vos gammes de produits et profils clients."
+        },
+        {
+          "icon": "messages",
+          "title": "Pratiquer",
+          "description": "Engagez une conversation réaliste avec un persona IA qui s'adapte à vos réponses en temps réel."
+        },
+        {
+          "icon": "feedback",
+          "title": "Obtenir un retour",
+          "description": "Recevez un coaching structuré sur le rapport, la découverte, la gestion d'objections et la conformité."
+        },
+        {
+          "icon": "trendingUp",
+          "title": "Suivre la progression",
+          "description": "Surveillez l'amélioration dans le temps avec des analytiques visibles pour les conseillers et les gestionnaires."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Impact concret",
+      "paragraphs": [
+        "Dans les 60 premiers jours, les conseillers utilisant la plateforme ont complété en moyenne **12 sessions de pratique chacun** — comparé à la moyenne précédente de 2 par trimestre via le jeu de rôle traditionnel.",
+        "Les gestionnaires ont signalé que les conversations de coaching sont passées de « voici ce que vous devriez faire » à « j'ai remarqué que vous vous êtes déjà amélioré sur X — travaillons sur Y ». La plateforme a donné aux conseillers la responsabilité de leur développement, et les gestionnaires pouvaient voir la progression sans assister à chaque pratique."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Résultats mesurables",
+      "paragraphs": [
+        "La société a suivi la performance sur trois dimensions au cours des 90 premiers jours.",
+        "La **fréquence de pratique** a augmenté de 3×. Les conseillers pratiquaient plus souvent parce qu'ils pouvaient le faire selon leur propre horaire, sans surcharge de coordination. Les conseillers les plus engagés effectuaient 2 à 3 sessions par semaine.",
+        "Le **temps d'intégration** a diminué d'environ 40 %. Les nouvelles recrues atteignaient plus rapidement les repères de compétence parce qu'elles avaient une pratique structurée illimitée dès le premier jour — pas seulement de l'observation et de l'accompagnement sur le terrain.",
+        "La **satisfaction des conseillers** vis-à-vis de la formation a atteint 89 % dans les enquêtes internes, contre 54 % sous le programme précédent. La raison la plus citée : « Je peux pratiquer sans me sentir jugé. »",
+        "Les taux de clôture et les métriques de conversion ont montré une évolution positive précoce, bien que la société l'attribue à une combinaison de facteurs incluant la nouvelle formation, les scripts mis à jour et les tendances saisonnières."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'essentiel",
+      "paragraphs": [
+        "Une formation qui a lieu une fois par mois ne crée pas d'habitudes. Une formation disponible à la demande, si.",
+        "Le jeu de rôle propulsé par l'IA ne remplace pas les gestionnaires ou les mentors. Il donne à chaque conseiller accès au type de pratique délibérée et répétée que les meilleurs performers ont toujours trouvé le moyen d'obtenir par leurs propres moyens.",
+        "Les sociétés qui gagneront la prochaine décennie des services financiers ne se contentent pas d'embaucher de meilleures personnes. Elles **construisent de meilleurs systèmes pour développer les personnes qu'elles ont déjà**."
+      ]
+    }
+  ]
+}

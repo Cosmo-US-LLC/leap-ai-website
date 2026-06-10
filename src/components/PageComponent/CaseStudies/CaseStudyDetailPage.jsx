@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   AlertTriangle,
   BarChart3,
@@ -60,6 +61,7 @@ const STEP_ICONS = {
 };
 
 function CaseStudyHero({ study }) {
+  const { t } = useTranslation("caseStudies");
   const { hero } = study;
 
   return (
@@ -88,7 +90,7 @@ function CaseStudyHero({ study }) {
         </h1>
         <p className="max-w-[800px] text-base leading-6 text-[#dbdbdb]">{hero.subtitle}</p>
         <PrimaryCtaButton className="shrink-0 self-start lg:self-center">
-          Book a Strategy Call
+          {t("detail.bookStrategyCall")}
         </PrimaryCtaButton>
       </div>
     </section>
@@ -201,12 +203,13 @@ function CalloutBox({ title, paragraphs }) {
 }
 
 function ImpactAtGlance({ metrics }) {
+  const { t } = useTranslation("caseStudies");
   const rows = [metrics.slice(0, 2), metrics.slice(2, 4)];
 
   return (
     <div className="flex flex-col">
       <h2 className="font-bold text-2xl leading-[26px] tracking-[0.6px] text-[#1a2063] lg:text-xl lg:leading-7">
-        Impact at a Glance
+        {t("detail.impactTitle")}
       </h2>
       <div className="flex flex-col gap-2 pt-4">
         {rows.map((row, rowIndex) => (
@@ -232,6 +235,8 @@ function ImpactAtGlance({ metrics }) {
 }
 
 function CaseStudySidebar({ sidebar }) {
+  const { t } = useTranslation("caseStudies");
+
   return (
     <aside className="h-fit w-full shrink-0 rounded-[20px] bg-[#f8f9fc] px-4 py-6 lg:sticky lg:top-28 lg:w-[450px] lg:px-6 lg:py-8">
       <div className="flex flex-col gap-6">
@@ -241,7 +246,7 @@ function CaseStudySidebar({ sidebar }) {
 
         <div className="flex flex-col gap-4">
           <h2 className="font-bold text-xl leading-7 tracking-[0.6px] text-[#1a2063]">
-            What Was Delivered
+            {t("detail.deliveredTitle")}
           </h2>
           <ul className="flex flex-col gap-3">
             {sidebar.delivered.map((item) => (
@@ -259,7 +264,7 @@ function CaseStudySidebar({ sidebar }) {
 
         <div className="flex flex-col gap-4">
           <h2 className="font-bold text-xl leading-7 tracking-[0.6px] text-[#1a2063]">
-            Technologies
+            {t("detail.technologiesTitle")}
           </h2>
           <div className="flex flex-wrap gap-3">
             {sidebar.technologies.map((tech) => (
@@ -279,14 +284,14 @@ function CaseStudySidebar({ sidebar }) {
           <div className="flex gap-2">
             <Building2 className="mt-0.5 h-6 w-6 shrink-0 text-[#201463]" strokeWidth={1.5} />
             <div>
-              <p className="font-semibold text-base leading-6 text-black">Industry</p>
+              <p className="font-semibold text-base leading-6 text-black">{t("detail.industryLabel")}</p>
               <p className="text-sm leading-6 text-[#6a707e]">{sidebar.industry}</p>
             </div>
           </div>
           <div className="flex gap-2">
             <MapPin className="mt-0.5 h-6 w-6 shrink-0 text-[#201463]" strokeWidth={1.5} />
             <div>
-              <p className="font-semibold text-base leading-6 text-black">Location</p>
+              <p className="font-semibold text-base leading-6 text-black">{t("detail.locationLabel")}</p>
               <p className="text-sm leading-6 text-[#6a707e]">{sidebar.location}</p>
             </div>
           </div>
@@ -335,6 +340,7 @@ function renderSection(section) {
 }
 
 export default function CaseStudyDetailPage({ study }) {
+  const { t } = useTranslation("caseStudies");
   const { cta, sections } = study;
 
   return (
@@ -354,12 +360,12 @@ export default function CaseStudyDetailPage({ study }) {
         description={cta.description}
         photo={cta.image}
         photoAlt={cta.imageAlt}
-        button={<PrimaryCtaButton>Book a Strategy Call</PrimaryCtaButton>}
+        button={<PrimaryCtaButton>{t("detail.bookStrategyCall")}</PrimaryCtaButton>}
       />
 
       <CaseStudiesSection
-        headingPrefix="Related "
-        headingMuted="Case Studies"
+        headingPrefix={t("detail.relatedHeadingPrefix")}
+        headingMuted={t("detail.relatedHeadingMuted")}
         showCtaButton={false}
       />
     </>

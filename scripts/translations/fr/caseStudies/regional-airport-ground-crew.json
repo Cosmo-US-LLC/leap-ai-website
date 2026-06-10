@@ -1,0 +1,181 @@
+{
+  "slug": "regional-airport-ground-crew",
+  "tag": "Aviation / Opérations aéroportuaires",
+  "metric": "47%",
+  "metricLabel": "réduction des coûts",
+  "title": "Comment un aéroport régional a réduit les coûts de ses équipes au sol de 47 %",
+  "description": "Ils ont passé des semaines à essayer de résoudre le problème avec ChatGPT et des feuilles de calcul. La vraie réponse était un modèle d'optimisation sous contraintes — construit en 4 jours, économisant 800 000 $ par trimestre.",
+  "hero": {
+    "titlePrefix": "Comment un aéroport régional ",
+    "titleHighlight": "a réduit les coûts de ses équipes au sol de 47 %",
+    "subtitle": "Ils ont passé des semaines à essayer de résoudre le problème avec ChatGPT et des feuilles de calcul. La vraie réponse était un modèle d'optimisation sous contraintes — construit en 4 jours, économisant 800 000 $ par trimestre."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "47%",
+        "label": "Réduction des coûts"
+      },
+      {
+        "value": "$0.9M",
+        "label": "Nouveau coût trimestriel"
+      },
+      {
+        "value": "4 Days",
+        "label": "Pour construire"
+      },
+      {
+        "value": "20,000%",
+        "label": "ROI la première année"
+      }
+    ],
+    "delivered": [
+      "Modèle d'optimisation MILP",
+      "Encodage complet des contraintes",
+      "Génération de plannings trimestriels",
+      "Conformité au droit du travail",
+      "Moteur de minimisation des coûts",
+      "Sortie prête pour les opérations"
+    ],
+    "technologies": [
+      "MILP",
+      "Google OR-Tools",
+      "CP-SAT",
+      "Optimisation mathématique"
+    ],
+    "industry": "Aviation / Opérations aéroportuaires",
+    "location": "Québec, Canada"
+  },
+  "cta": {
+    "titleMuted": "Vous faites face à un ",
+    "titleBold": "problème d'optimisation complexe ?",
+    "description": "Tous les problèmes ne nécessitent pas un modèle de langage. Réservez un appel pour découvrir quelle approche IA convient au vôtre."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "Le problème : un casse-tête de planification qu'aucune feuille de calcul ne pouvait résoudre",
+      "paragraphs": [
+        "Un aéroport régional en croissance au Québec gère des vols commerciaux sur **9 portes**, chacune nécessitant une **équipe au sol de 6 personnes** dédiée pour les arrivées, les départs et les rotations.",
+        "Planifier ces équipes sur un trimestre complet — plus de 90 jours, plusieurs quarts de travail, volumes de vols variables — était devenu un véritable casse-tête opérationnel. L'équipe des opérations construisait les plannings manuellement dans Excel, passant **2 à 3 semaines par cycle** à jongler avec la réglementation du travail, la disponibilité des équipes, les assignations de portes et les contraintes budgétaires.",
+        "Le résultat était toujours le même : des plannings techniquement valides mais financièrement surdimensionnés. **Les effectifs au sol coûtaient 1,7 million de dollars par trimestre** — et la direction soupçonnait qu'il y avait un gaspillage significatif dans le processus."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "calendar",
+          "title": "Planification manuelle",
+          "description": "Chaque planning trimestriel prenait 2 à 3 semaines à construire manuellement dans Excel — un processus fragile et sujet aux erreurs."
+        },
+        {
+          "icon": "dollar",
+          "title": "1,7 M$ / trimestre",
+          "description": "Les coûts de personnel au sol dépassaient largement ce que le volume de vols exigeait réellement."
+        },
+        {
+          "icon": "plane",
+          "title": "9 portes, équipes de 6 personnes",
+          "description": "Coordonner la couverture entre portes, quarts et règles du travail créait une complexité de planification exponentielle.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ChatGPT n'a pas pu résoudre cela",
+      "paragraphs": [
+        "Avant de faire appel à Leap AI, l'équipe des opérations de l'aéroport a passé plusieurs semaines à essayer de résoudre le problème avec **ChatGPT et des macros Excel**. La logique semblait solide : décrire les contraintes, demander au modèle de générer un planning optimisé.",
+        "Cela n'a pas fonctionné. Non pas parce que l'équipe manquait d'efforts — mais parce que **ce n'était pas un problème de langage.**",
+        "Les grands modèles de langage sont extraordinaires pour comprendre le contexte, générer du texte et raisonner face à l'ambiguïté. Mais la planification des équipes est un **problème de satisfaction de contraintes** — un défi mathématique avec des limites strictes : droit du travail, périodes de repos minimales, exigences de couverture des portes, plafonds budgétaires et limites de durée des quarts.",
+        "Un LLM peut décrire le problème avec éloquence. Il ne peut pas le résoudre de façon optimale. Cela nécessite une catégorie d'outils fondamentalement différente."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'insight clé",
+      "paragraphs": [
+        "L'IA est une boîte à outils, pas un outil unique. Les organisations qui tirent le plus de valeur de l'IA sont celles qui associent la bonne technique au bon problème.",
+        "Modèles de langage pour les problèmes de langage. Solveurs d'optimisation pour les problèmes d'optimisation. Connaître la différence — et avoir accès aux deux — c'est l'avantage concurrentiel."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "La solution : un moteur d'optimisation sur mesure",
+      "paragraphs": [
+        "Leap AI a construit un modèle de **programmation linéaire en nombres entiers mixtes (MILP)** utilisant le solveur **Google OR-Tools CP-SAT** — l'un des moteurs d'optimisation sous contraintes open source les plus puissants disponibles.",
+        "Le modèle a été conçu pour minimiser le coût total de personnel tout en respectant chaque contrainte opérationnelle et réglementaire auxquelles l'aéroport est confronté. Il ne devine pas. Il n'approxime pas. Il trouve la solution mathématiquement optimale sur l'ensemble de l'horizon de planification.",
+        "De la première conversation au modèle fonctionnel : **4 jours.**"
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": "Le modèle d'optimisation applique simultanément chaque contrainte du monde réel :",
+      "items": [
+        "Couverture complète des portes — chaque arrivée, départ et rotation est couverte",
+        "Conformité au droit du travail — heures maximales, périodes de repos obligatoires, règles des heures supplémentaires",
+        "Exigences de taille d'équipe — minimum de 6 personnes par porte active",
+        "Continuité des quarts — pas de quarts interrompus ou de transitions impossibles",
+        "Optimisation budgétaire — planning au coût minimum satisfaisant toutes les contraintes",
+        "Horizon trimestriel — plannings complets sur 90 jours générés en quelques minutes"
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Comment ça fonctionne",
+      "steps": [
+        {
+          "icon": "file",
+          "title": "Définir les contraintes",
+          "description": "Les plannings de vols, les assignations de portes, les règles d'équipe et la réglementation du travail sont encodés comme contraintes mathématiques."
+        },
+        {
+          "icon": "code",
+          "title": "Construire le modèle",
+          "description": "Un modèle MILP structure le problème en variables de décision binaires avec un objectif de minimisation des coûts."
+        },
+        {
+          "icon": "search",
+          "title": "Résoudre",
+          "description": "Le solveur Google OR-Tools CP-SAT explore l'espace des solutions et trouve le planning mathématiquement optimal."
+        },
+        {
+          "icon": "deploy",
+          "title": "Déployer",
+          "description": "Le planning optimisé est livré dans un format prêt pour les opérations — sans nouveaux systèmes ni formation requise."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Les résultats",
+      "paragraphs": [
+        "L'impact a été immédiat et spectaculaire.",
+        "Les coûts trimestriels de personnel au sol sont passés de **1,7 million de dollars à 0,9 million de dollars** — une **réduction de 47 %**. Les économies ne proviennent pas de coupes arbitraires, mais de l'élimination des inefficacités que la planification manuelle crée inévitablement : surdotation pendant les périodes de faible volume, distributions de quarts sous-optimales et chevauchements redondants.",
+        "Le processus de planification lui-même est passé de **2 à 3 semaines de travail manuel à quelques minutes de calcul**. L'équipe des opérations exécute maintenant le modèle, examine le résultat et apporte les ajustements manuels qu'elle souhaite — un processus qui prend des heures, pas des semaines.",
+        "Rien que la première année, les économies projetées dépassent **3,2 millions de dollars**. Par rapport au coût de construction du modèle, cela représente un **retour sur investissement supérieur à 20 000 %.**"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Au-delà des chiffres",
+      "paragraphs": [
+        "L'impact financier ne raconte qu'une partie de l'histoire.",
+        "Avant le modèle d'optimisation, l'équipe des opérations redoutait le cycle de planification trimestriel. C'était un travail fastidieux et à enjeux élevés où une seule erreur pouvait se propager en lacunes de couverture ou en violations de conformité. La charge cognitive était énorme.",
+        "Maintenant, l'équipe se concentre sur la **supervision et l'affinage** plutôt que sur la construction. Elle examine une base optimale et ajuste pour les facteurs humains — préférences de vacances, dynamiques d'équipe, rotations de formation — que le modèle laisse intentionnellement de la marge pour gérer.",
+        "Le modèle n'a pas remplacé l'équipe des opérations. Il lui a donné une fondation en laquelle elle peut avoir confiance — et le temps de se concentrer sur les décisions qui nécessitent réellement un jugement humain."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'enseignement pour les responsables opérationnels",
+      "paragraphs": [
+        "Tous les problèmes ne sont pas des problèmes de langage. Toutes les solutions IA n'ont pas besoin d'un grand modèle de langage.",
+        "Les organisations qui mèneront la prochaine décennie ne sont pas seulement celles qui adoptent l'IA — ce sont celles qui savent **quel type d'IA appliquer**. Quand le problème est l'ambiguïté et le contexte, tournez-vous vers un LLM. Quand le problème est les contraintes et l'optimisation, tournez-vous vers un solveur.",
+        "Cet aéroport n'avait pas besoin d'un chatbot. Il avait besoin d'un mathématicien. Et la différence entre les deux leur a fait économiser **3,2 millions de dollars la première année.**",
+        "La rapidité ne vient pas de la précipitation. Elle vient de **savoir quel outil prendre en premier.**"
+      ]
+    }
+  ]
+}

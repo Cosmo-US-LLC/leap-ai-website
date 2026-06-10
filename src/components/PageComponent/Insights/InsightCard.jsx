@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LocaleLink } from "../../layouts/LocaleLink.jsx";
 import { ArrowRightIcon } from "../NewHome/icons/ArrowRightIcon.jsx";
 import { ClockIcon } from "../NewHome/icons/ClockIcon.jsx";
 
@@ -23,12 +24,13 @@ const insightCardVariantClass = {
 };
 
 export default function InsightCard({ article, className = "", variant = "default" }) {
+  const { t } = useTranslation("insights");
   const excerpt = article.excerpt;
 
   return (
-    <Link
+    <LocaleLink
       to={`/insights/${article.slug}`}
-      aria-label={`Read article: ${article.title}`}
+      aria-label={t("card.readArticleAria", { title: article.title })}
       className={`${insightCardBaseClass} ${insightCardVariantClass[variant] ?? insightCardVariantClass.default} ${className}`}
     >
       <ArticleMeta article={article} />
@@ -45,10 +47,10 @@ export default function InsightCard({ article, className = "", variant = "defaul
       <div className="mt-8 flex items-center justify-between gap-4 border-t border-[#cad1dd] pt-[17px] transition-colors duration-300 group-hover:border-[#b8c4d6]">
         <span className="text-sm font-bold leading-5 text-[#201463]">{article.author}</span>
         <span className="inline-flex shrink-0 items-center gap-1.5 border-b-2 border-[#18a3e6] pb-[3px] text-sm font-bold capitalize leading-5 text-[#18a3e6] transition-colors duration-300 group-hover:border-[#201463] group-hover:text-[#201463]">
-          Read Article
+          {t("card.readArticle")}
           <ArrowRightIcon className="h-4 w-4 -rotate-45 text-current transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>
       </div>
-    </Link>
+    </LocaleLink>
   );
 }
