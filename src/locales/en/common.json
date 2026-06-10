@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "methodology": "Methodology",
+    "caseStudies": "Case studies",
+    "demos": "Demos",
+    "insights": "Insights",
+    "contact": "Contact"
+  },
+  "cta": {
+    "bookACall": "Book a Call",
+    "bookACallShort": "Book a call",
+    "scheduleConsultation": "Schedule Your Free Consultation"
+  },
+  "footer": {
+    "titleBold": "Make AI work for your ",
+    "titleBoldDesktop": "your ",
+    "titleMuted": "business.",
+    "titleLine": "Make AI work for",
+    "ctaNote": "No fluff. No obligation.",
+    "teamImageAlt": "Leap 41 team in conversation",
+    "followUs": "Follow us on",
+    "company": "Company",
+    "newsletter": "Newsletter",
+    "newsletterText": "Field notes from real engagements. No fluff.",
+    "emailPlaceholder": "you@company.com",
+    "copyright": "© {{year}} Leap 41 AI Solutions. All rights reserved.",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "address": "140 2nd Ave West Cardston, AB T0K0K0 Canada"
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "selector": "Language selector",
+    "shortEn": "EN",
+    "shortFr": "FR",
+    "shortEs": "ES"
+  },
+  "aria": {
+    "home": "Leap 41 home",
+    "mainNav": "Main",
+    "mobileNav": "Mobile",
+    "mobileMenu": "Mobile menu",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "subscribe": "Subscribe"
+  }
+}

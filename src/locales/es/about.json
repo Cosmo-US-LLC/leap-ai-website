@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "titleLine1": "La tecnología está lista.",
+    "titleAccent": "¿Su negocio también?",
+    "titleDesktopLine1": "La tecnología",
+    "titleDesktopLine2": "está lista.",
+    "body": "El mundo no necesita otro chatbot. Necesita empresas que puedan pensar, aprender y adaptarse. En Leap AI no solo desplegamos software; construimos organizaciones adaptativas que lideran la transición.",
+    "ctaMobile": "Prepare su negocio para el futuro",
+    "meetTeam": "Conocer al equipo",
+    "imageAlt": "Líder profesional revisando estrategia al aire libre"
+  },
+  "mission": {
+    "headingBold": "Nuestra",
+    "headingMuted": "misión",
+    "paragraphs": [
+      "La IA avanza de forma exponencial, pero la mayoría de las empresas aún operan de manera lineal. Nuestra misión es cerrar esa brecha. Nos asociamos con equipos de liderazgo para construir organizaciones adaptativas.",
+      "Cada compromiso comienza con una evaluación estratégica profunda: entrevistas estructuradas, análisis de IA específico del sector y sesiones de validación colaborativa. Co-creamos su hoja de ruta de IA y permanecemos hasta la implementación."
+    ],
+    "stats": [
+      {
+        "value": "37%",
+        "label": "Ganancia promedio de productividad identificada por evaluación"
+      },
+      {
+        "value": "50+",
+        "label": "Horas de entrevistas profundas por compromiso"
+      },
+      {
+        "value": "92%",
+        "label": "De los clientes pasan a implementación completa"
+      }
+    ]
+  },
+  "team": {
+    "headingBold": "Conozca al ",
+    "headingMuted": "equipo",
+    "intro": "Con experiencia en liderazgo ejecutivo, entendemos los desafíos que enfrenta. Trabajamos junto a usted para convertir problemas complejos en ventajas prácticas y duraderas.",
+    "prev": "Miembro anterior",
+    "next": "Siguiente miembro",
+    "viewMember": "Ver {{name}}",
+    "members": {
+      "gregory": {
+        "name": "Gregory van Duyse",
+        "role": "CEO y cofundador",
+        "bio": "Con años de experiencia emprendedora, Greg aporta una perspectiva sólida sobre liderazgo y estrategia. Se enfoca en ayudar a las empresas a convertir las capacidades de IA en crecimiento significativo y operaciones más fluidas."
+      },
+      "benjamin": {
+        "name": "Benjamin Gonzalez M.Sc.",
+        "role": "CEO y cofundador",
+        "bio": "Con un máster en ciencia de datos, Ben cierra la brecha entre la ingeniería técnica y los objetivos de negocio. Le gusta hacer accesibles los conceptos complejos y convertirlos en valor práctico para el equipo y los clientes."
+      },
+      "junaid": {
+        "name": "Junaid Dar",
+        "role": "Socio de marketing",
+        "bio": "Junaid aporta pensamiento analítico y ejecución de marketing práctica. Con más de 10 años de experiencia con startups, empresas en escalamiento y marcas Fortune 1000, se especializa en construir sistemas de crecimiento basados en datos.",
+        "roleCapitalize": "true"
+      },
+      "azeem": {
+        "name": "Azeem Khan",
+        "role": "Ingeniero de automatización",
+        "bio": "Azeem tiene talento para diseñar flujos de automatización bien pensados que simplifican las operaciones diarias. Se toma el tiempo para entender los procesos manuales y construye sistemas confiables que ayudan a los equipos a trabajar con mayor eficiencia."
+      },
+      "azu": {
+        "name": "Azu Avalos",
+        "role": "Especialista en éxito del cliente",
+        "bio": "Azu es el vínculo entre nuestras soluciones y los objetivos de nuestros clientes. Se apoya en su experiencia en la industria y un genuino interés por las personas para ayudar a cada socio a aprovechar al máximo nuestra colaboración."
+      },
+      "samuel": {
+        "name": "Samuel Avila",
+        "role": "Ingeniero de QA",
+        "bio": "Sam aporta un enfoque cuidadoso y orientado al detalle en aseguramiento de calidad. Su minuciosidad y dedicación a altos estándares ayudan a garantizar que las soluciones que entregamos sean confiables y bien probadas."
+      },
+      "steven": {
+        "name": "Steven Brodson",
+        "role": "Experto en IA y ciberseguridad",
+        "bio": "Steven ayuda a las organizaciones a asegurar sus sistemas de IA antes de que fallen. Se enfoca en gobernanza de IA, ciberresiliencia, evaluación de riesgos y salvaguardas prácticas para IA generativa en entornos empresariales."
+      }
+    }
+  },
+  "trust": {
+    "titleBold": "Un socio en quien ",
+    "titleMuted": "puede confiar.",
+    "description": "Ayudamos a líderes visionarios a navegar la transformación de IA sin complejidad, riesgo ni conjeturas. Deje los pilotos aleatorios y construya un negocio que piensa, aprende y se optimiza.",
+    "photoAlt": "Equipo Leap 41 colaborando alrededor de una mesa",
+    "bookConsultation": "Reservar una consulta gratuita"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "methodology": "Méthodologie",
+    "caseStudies": "Études de cas",
+    "demos": "Démos",
+    "insights": "Perspectives",
+    "contact": "Contact"
+  },
+  "cta": {
+    "bookACall": "Réserver un appel",
+    "bookACallShort": "Réserver un appel",
+    "scheduleConsultation": "Planifier votre consultation gratuite"
+  },
+  "footer": {
+    "titleBold": "Faites travailler l'IA pour votre ",
+    "titleBoldDesktop": "votre ",
+    "titleMuted": "entreprise.",
+    "titleLine": "Faites travailler l'IA pour",
+    "ctaNote": "Sans blabla. Sans obligation.",
+    "teamImageAlt": "L'équipe Leap 41 en discussion",
+    "followUs": "Suivez-nous sur",
+    "company": "Entreprise",
+    "newsletter": "Infolettre",
+    "newsletterText": "Notes de terrain issues de mandats réels. Sans blabla.",
+    "emailPlaceholder": "vous@entreprise.com",
+    "copyright": "© {{year}} Leap 41 AI Solutions. Tous droits réservés.",
+    "terms": "Conditions",
+    "privacy": "Confidentialité",
+    "address": "140 2nd Ave West Cardston, AB T0K0K0 Canada"
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "selector": "Sélecteur de langue",
+    "shortEn": "EN",
+    "shortFr": "FR",
+    "shortEs": "ES"
+  },
+  "aria": {
+    "home": "Accueil Leap 41",
+    "mainNav": "Principal",
+    "mobileNav": "Mobile",
+    "mobileMenu": "Menu mobile",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu",
+    "subscribe": "S'abonner"
+  }
+}

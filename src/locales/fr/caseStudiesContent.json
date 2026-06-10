@@ -1,0 +1,544 @@
+{
+  "studies": [
+    {
+      "slug": "ai-powered-roleplay-sales",
+      "tag": "Services financiers",
+      "metric": "3×",
+      "metricParts": [
+        "3",
+        "×"
+      ],
+      "metricLabel": "fréquence de pratique",
+      "title": "Jeu de rôle propulsé par l'IA qui améliore réellement la performance commerciale",
+      "description": "Comment une société de services financiers a remplacé une formation obsolète par un jeu de rôle interactif propulsé par l'IA — et a observé une amélioration mesurable de la confiance des conseillers et des taux de clôture en 60 jours.",
+      "hero": {
+        "titlePrefix": "Jeu de rôle propulsé par l'IA qui ",
+        "titleHighlight": "améliore réellement la performance commerciale",
+        "subtitle": "Comment une société de services financiers a remplacé une formation obsolète par un jeu de rôle interactif propulsé par l'IA — et a observé une amélioration mesurable de la confiance des conseillers et des taux de clôture en 60 jours."
+      },
+      "sidebar": {
+        "metrics": [
+          {
+            "value": "3×",
+            "label": "Fréquence de pratique"
+          },
+          {
+            "value": "40%",
+            "label": "Intégration plus rapide"
+          },
+          {
+            "value": "89%",
+            "label": "Satisfaction des conseillers"
+          },
+          {
+            "value": "60 Days",
+            "label": "Avant impact"
+          }
+        ],
+        "delivered": [
+          "Personas IA adaptatifs",
+          "Retour en temps réel",
+          "Scénarios personnalisés",
+          "Analytique de progression",
+          "Garde-fous de conformité",
+          "Tableau de bord gestionnaire"
+        ],
+        "technologies": [
+          "LLM",
+          "NLP",
+          "Synthèse vocale",
+          "IA en temps réel"
+        ],
+        "industry": "Services financiers / Assurance",
+        "location": "Amérique du Nord"
+      },
+      "cta": {
+        "titleMuted": "Prêt à transformer votre ",
+        "titleBold": "formation commerciale ?",
+        "description": "Découvrez comment le jeu de rôle propulsé par l'IA peut accélérer la préparation des conseillers et améliorer les taux de clôture."
+      },
+      "sections": [
+        {
+          "type": "content",
+          "title": "L'écart de formation",
+          "paragraphs": [
+            "La formation commerciale dans les services financiers a un problème fondamental : elle est coûteuse, incohérente et presque impossible à mettre à l'échelle.",
+            "La plupart des sociétés s'appuient sur une combinaison de sessions en salle, de scénarios scriptés et de jeux de rôle entre pairs. Les gestionnaires trouvent du temps entre leurs propres responsabilités pour animer des sessions de pratique — quand ils le peuvent. Les nouvelles recrues bénéficient d'une intégration intensive, mais le développement continu se limite souvent à des réunions d'équipe sporadiques et à des recyclages annuels.",
+            "Le résultat est prévisible. Les conseillers qui pratiquent davantage performent mieux. Mais les occasions de pratique sont rares, inégalement distribuées et rarement mesurées."
+          ]
+        },
+        {
+          "type": "highlightCards",
+          "cards": [
+            {
+              "icon": "sliders",
+              "title": "Qualité incohérente",
+              "description": "La qualité de la formation varie considérablement selon le gestionnaire, le bureau et le temps disponible."
+            },
+            {
+              "icon": "calendarClock",
+              "title": "Faible fréquence",
+              "description": "Les sessions de pratique ont lieu au mieux une fois par mois — insuffisant pour créer des habitudes durables."
+            },
+            {
+              "icon": "barChart",
+              "title": "Aucune mesure",
+              "description": "Sans suivi structuré, il est impossible de relier l'effort de formation aux résultats de performance.",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Pourquoi le jeu de rôle traditionnel échoue",
+          "paragraphs": [
+            "Le jeu de rôle entre pairs est la norme du secteur depuis des décennies. Deux conseillers jouent tour à tour le client et le conseiller, en parcourant des scénarios de gestion d'objections ou d'analyse des besoins.",
+            "En théorie, cela fonctionne. En pratique, il souffre de trois faiblesses structurelles.",
+            "Premièrement, **les pairs sont prévisibles**. Après quelques tours, les conseillers apprennent les schémas de l'autre. La pratique perd son acuité. Les vrais clients ne suivent pas de script.",
+            "Deuxièmement, **le retour est subjectif**. Sans cadre d'évaluation cohérent, la qualité du coaching dépend entièrement de qui observe. Deux gestionnaires pourraient évaluer la même conversation différemment.",
+            "Troisièmement, **la planification est un goulot d'étranglement**. Coordonner deux personnes ou plus pour une session de pratique signifie rivaliser avec les réunions, les appels clients et le travail administratif. La session annulée, c'est toujours la formation."
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Présentation du jeu de rôle propulsé par l'IA",
+          "paragraphs": [
+            "Leap AI a construit une plateforme de jeu de rôle interactive qui donne à chaque conseiller un accès à une pratique réaliste à la demande — sans partenaire, gestionnaire ou session planifiée.",
+            "Les conseillers sélectionnent un scénario correspondant à leur domaine de focus : un primo-accédant posant des questions sur la protection hypothécaire, un propriétaire d'entreprise examinant les avantages collectifs, ou un retraité évaluant des options de rente. L'IA adapte son persona en temps réel, répondant comme le ferait un vrai client — avec hésitation, questions, objections et nuances émotionnelles.",
+            "Chaque session génère un retour structuré et actionnable. Pas d'encouragements vagues, mais une analyse précise : où le conseiller a créé du rapport, où il a manqué une opportunité de découverte, où son langage de conformité devait être resserré.",
+            "La plateforme s'intègre directement au système de gestion de l'apprentissage existant de la société. Pas de nouvelles applications. Pas de nouveaux mots de passe. Juste une meilleure pratique, disponible dès qu'un conseiller a 15 minutes."
+          ]
+        },
+        {
+          "type": "checklist",
+          "intro": "La plateforme offre une boucle de formation complète — pratique, retour et mesure — en une seule session :",
+          "items": [
+            "Personas IA adaptatifs qui répondent comme de vrais clients",
+            "Retour en temps réel sur la technique de communication",
+            "Scénarios personnalisés correspondant à vos gammes de produits",
+            "Analytique de progression et suivi de l'amélioration",
+            "Garde-fous de conformité et notation des meilleures pratiques",
+            "Tableau de bord gestionnaire pour la supervision d'équipe"
+          ]
+        },
+        {
+          "type": "howItWorks",
+          "title": "Comment se déroule une session",
+          "steps": [
+            {
+              "icon": "clipboardList",
+              "title": "Sélectionner un scénario",
+              "description": "Choisissez parmi une bibliothèque de scénarios personnalisés conçus autour de vos gammes de produits et profils clients."
+            },
+            {
+              "icon": "messages",
+              "title": "Pratiquer",
+              "description": "Engagez une conversation réaliste avec un persona IA qui s'adapte à vos réponses en temps réel."
+            },
+            {
+              "icon": "feedback",
+              "title": "Obtenir un retour",
+              "description": "Recevez un coaching structuré sur le rapport, la découverte, la gestion d'objections et la conformité."
+            },
+            {
+              "icon": "trendingUp",
+              "title": "Suivre la progression",
+              "description": "Surveillez l'amélioration dans le temps avec des analytiques visibles pour les conseillers et les gestionnaires."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Impact concret",
+          "paragraphs": [
+            "Dans les 60 premiers jours, les conseillers utilisant la plateforme ont complété en moyenne **12 sessions de pratique chacun** — comparé à la moyenne précédente de 2 par trimestre via le jeu de rôle traditionnel.",
+            "Les gestionnaires ont signalé que les conversations de coaching sont passées de « voici ce que vous devriez faire » à « j'ai remarqué que vous vous êtes déjà amélioré sur X — travaillons sur Y ». La plateforme a donné aux conseillers la responsabilité de leur développement, et les gestionnaires pouvaient voir la progression sans assister à chaque pratique."
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Résultats mesurables",
+          "paragraphs": [
+            "La société a suivi la performance sur trois dimensions au cours des 90 premiers jours.",
+            "La **fréquence de pratique** a augmenté de 3×. Les conseillers pratiquaient plus souvent parce qu'ils pouvaient le faire selon leur propre horaire, sans surcharge de coordination. Les conseillers les plus engagés effectuaient 2 à 3 sessions par semaine.",
+            "Le **temps d'intégration** a diminué d'environ 40 %. Les nouvelles recrues atteignaient plus rapidement les repères de compétence parce qu'elles avaient une pratique structurée illimitée dès le premier jour — pas seulement de l'observation et de l'accompagnement sur le terrain.",
+            "La **satisfaction des conseillers** vis-à-vis de la formation a atteint 89 % dans les enquêtes internes, contre 54 % sous le programme précédent. La raison la plus citée : « Je peux pratiquer sans me sentir jugé. »",
+            "Les taux de clôture et les métriques de conversion ont montré une évolution positive précoce, bien que la société l'attribue à une combinaison de facteurs incluant la nouvelle formation, les scripts mis à jour et les tendances saisonnières."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "L'essentiel",
+          "paragraphs": [
+            "Une formation qui a lieu une fois par mois ne crée pas d'habitudes. Une formation disponible à la demande, si.",
+            "Le jeu de rôle propulsé par l'IA ne remplace pas les gestionnaires ou les mentors. Il donne à chaque conseiller accès au type de pratique délibérée et répétée que les meilleurs performers ont toujours trouvé le moyen d'obtenir par leurs propres moyens.",
+            "Les sociétés qui gagneront la prochaine décennie des services financiers ne se contentent pas d'embaucher de meilleures personnes. Elles **construisent de meilleurs systèmes pour développer les personnes qu'elles ont déjà**."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "insurance-call-coverage",
+      "tag": "Assurance",
+      "metric": "100%",
+      "metricLabel": "couverture des appels",
+      "title": "Comment une agence d'assurance canadienne a pris le contrôle de chaque conversation commerciale en 30 jours",
+      "description": "Ils n'examinaient que 5 % des appels. En 30 jours, ils avaient une supervision complète de chaque conversation commerciale significative — sans ajouter un seul poste.",
+      "hero": {
+        "titlePrefix": "Comment une agence d'assurance canadienne ",
+        "titleHighlight": "a pris le contrôle de chaque conversation commerciale en 30 jours",
+        "subtitle": "Ils n'examinaient que 5 % des appels. En 30 jours, ils avaient une supervision complète de chaque conversation commerciale significative — sans ajouter un seul poste."
+      },
+      "sidebar": {
+        "metrics": [
+          {
+            "value": "100%",
+            "label": "Couverture des appels"
+          },
+          {
+            "value": "30 min",
+            "label": "Délai de traitement"
+          },
+          {
+            "value": "~80%",
+            "label": "Temps QA économisé"
+          },
+          {
+            "value": "30 Days",
+            "label": "Pour déployer"
+          }
+        ],
+        "delivered": [
+          "Transcription et analyse automatiques",
+          "Notation de performance",
+          "Recommandations de coaching",
+          "Liste de contrôle de conformité",
+          "Alertes d'escalade",
+          "Intégration CRM"
+        ],
+        "technologies": [
+          "IA/ML",
+          "NLP",
+          "Speech-to-Text",
+          "Cloud Computing"
+        ],
+        "industry": "Assurance / Services financiers",
+        "location": "Québec, Canada"
+      },
+      "cta": {
+        "titleMuted": "Prêt à voir ",
+        "titleBold": "chaque conversation ?",
+        "description": "Réservez un appel stratégique de 30 minutes pour découvrir comment l'évaluation d'appels propulsée par l'IA peut transformer votre supervision commerciale."
+      },
+      "sections": [
+        {
+          "type": "content",
+          "title": "Le défi",
+          "paragraphs": [
+            "Cette agence d'assurance en ligne canadienne savait que le coaching fonctionnait. Lorsque leurs conseillers agréés recevaient un retour structuré, la performance s'améliorait. Le problème n'était pas la qualité — c'était la **couverture**.",
+            "Avec environ **200 à 250 appels commerciaux par semaine**, chacun d'une durée de **60 à 90 minutes**, leur responsable QA pouvait réalistiquement n'examiner que **10 à 15 appels par semaine**. Cela signifiait que seulement **cinq à huit pour cent** des conversations clients étaient évaluées.",
+            "Plus de 90 % restaient non examinés. Dans une industrie compétitive et réglementée, ce niveau de visibilité n'est pas suffisant.",
+            "Examiner manuellement chaque appel nécessiterait d'augmenter les effectifs QA pour correspondre à l'équipe commerciale — une impasse économique. La direction ne voulait pas plus d'auditeurs. Elle voulait du levier."
+          ]
+        },
+        {
+          "type": "highlightCards",
+          "cards": [
+            {
+              "icon": "eyeOff",
+              "title": "Couverture limitée",
+              "description": "Seulement 5 à 8 % des 200+ appels commerciaux hebdomadaires étaient examinés par l'équipe QA."
+            },
+            {
+              "icon": "clock",
+              "title": "Chronophage",
+              "description": "Chaque appel de 75 minutes nécessitait une écoute complète, la prise de notes et la préparation du coaching."
+            },
+            {
+              "icon": "scale",
+              "title": "Plafond structurel",
+              "description": "Augmenter les effectifs QA pour correspondre à l'équipe commerciale était économiquement impossible.",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Le goulot d'étranglement que personne ne pouvait compenser par le travail",
+          "paragraphs": [
+            "L'agence avait déjà un processus de coaching structuré. Les appels étaient enregistrés via leur système PBX interne. Le responsable QA sélectionnait les conversations selon son expérience — priorisant les nouveaux conseillers, les sous-performants perçus ou des vérifications aléatoires occasionnelles.",
+            "Le retour était délivré en tête-à-tête, souvent mensuellement ou selon les besoins.",
+            "Mais examiner un seul appel de 75 minutes nécessite une écoute complète, la prise de notes, une évaluation structurée et la préparation du coaching. Multipliez cela par plus de 200 appels par semaine et les mathématiques deviennent impossibles.",
+            "La pression du temps introduisait un autre risque. Pour gérer la charge de travail, des parties d'appels étaient parfois ignorées pour atteindre les moments « importants ». Le contexte pouvait être perdu. Des signaux de conformité subtils pouvaient être manqués.",
+            "La direction faisait face à un plafond structurel : une supervision partielle dans une entreprise où la cohérence et l'alignement réglementaire comptent."
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Construire une visibilité complète sans changer le flux de travail",
+          "paragraphs": [
+            "Leap AI s'est associé à la direction et à la fonction QA pour concevoir un système qui augmenterait le coaching humain plutôt que de le remplacer.",
+            "Le mandat était clair : analyser **100 % des appels commerciaux significatifs**, s'intégrer directement à leur CRM existant et respecter des normes de sécurité de niveau réglementaire.",
+            "En quatre semaines, un moteur d'évaluation d'appels propulsé par l'IA a été déployé.",
+            "Dans les 30 minutes suivant la fin de chaque rendez-vous commercial, le système transcrit et évalue automatiquement la conversation. Dans le dossier CRM, la direction et les agents peuvent voir :"
+          ]
+        },
+        {
+          "type": "checklist",
+          "intro": null,
+          "items": [
+            "Résumé structuré de la conversation",
+            "Score de performance aligné sur les normes internes",
+            "Raisonnement clair derrière le score",
+            "Recommandations de coaching spécifiques",
+            "Liste de contrôle de conformité complétée"
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Détection de problèmes en temps réel",
+          "paragraphs": [
+            "Le système a introduit des signaux d'escalade automatisés. Si une conversation inclut un langage suggérant un risque de conformité, un ton inapproprié ou une insatisfaction client, la direction est alertée immédiatement.",
+            "Dans un cas précoce, un conseiller a perdu patience pendant un appel. Le système a signalé l'interaction en quelques minutes. Le directeur a contacté le client avant qu'une plainte ne soit déposée — transformant ce qui aurait pu dégénérer en friction réputationnelle ou réglementaire en opportunité de récupération."
+          ]
+        },
+        {
+          "type": "howItWorks",
+          "title": "Comment ça fonctionne",
+          "steps": [
+            {
+              "icon": "mic",
+              "title": "Enregistrer",
+              "description": "Les appels sont capturés via le système PBX existant sans modification du flux de travail des conseillers."
+            },
+            {
+              "icon": "fileAudio",
+              "title": "Transcrire",
+              "description": "L'IA traite l'audio en transcription structurée et consultable en quelques minutes."
+            },
+            {
+              "icon": "clipboardCheck",
+              "title": "Évaluer",
+              "description": "La performance est notée automatiquement selon les normes de qualité internes."
+            },
+            {
+              "icon": "layoutDashboard",
+              "title": "Livrer",
+              "description": "Les résultats apparaissent directement dans le dossier CRM — sans nouvelles plateformes ni identifiants."
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Élever la fonction QA",
+          "paragraphs": [
+            "Avant l'implémentation, le responsable QA passait environ **20 à 25 heures par semaine** à écouter des enregistrements et préparer des notes. Le coaching nécessitait une révision complète des appels.",
+            "Aujourd'hui, le temps d'écoute est tombé à quasi zéro.",
+            "Au lieu de réécouter des conversations entières, le responsable QA examine les évaluations générées par l'IA et se concentre uniquement sur les segments qui comptent. Le temps de préparation est tombé à environ **5 à 8 heures par semaine**, alors que la capacité de coaching s'étend maintenant à toute l'équipe.",
+            "Le système n'a pas éliminé le rôle humain. Il a retiré la charge mécanique qui l'entourait. Le coaching est maintenant cohérent, ciblé et scalable."
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Conçu pour un environnement réglementé",
+          "paragraphs": [
+            "La sécurité et la conformité étaient des exigences fondamentales, pas des réflexions après coup.",
+            "La solution fonctionne avec une **résidence des données au Canada** et un transfert de données chiffré. Le traitement s'effectue dans un environnement serverless sécurisé avec **aucune rétention de données et aucun stockage tiers**. Les informations clients ne sont pas utilisées pour entraîner des modèles externes.",
+            "Chaque évaluation laisse des journaux traçables, et les examinateurs humains conservent une supervision et une capacité de correction complètes.",
+            "Le résultat n'est pas une boîte noire superposée à une entreprise réglementée. C'est une infrastructure qualité contrôlée et auditable, alignée sur les normes des services financiers."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "L'enseignement pour les dirigeants financiers",
+          "paragraphs": [
+            "Dans les environnements commerciaux à volume élevé et réglementés, la variance de performance est inévitable. La question est de savoir si vous pouvez la voir assez tôt pour la corriger.",
+            "Cette agence d'assurance est passée d'une visibilité partielle à une supervision complète en 30 jours — sans ajouter de postes, perturber le flux de travail ou compromettre la sécurité des données.",
+            "Ils n'ont pas automatisé les personnes. Ils ont donné du levier à leurs personnes. Et dans les marchés compétitifs des services financiers, **le levier se cumule**."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "regional-airport-ground-crew",
+      "tag": "Aviation / Opérations aéroportuaires",
+      "metric": "47%",
+      "metricLabel": "réduction des coûts",
+      "title": "Comment un aéroport régional a réduit les coûts de ses équipes au sol de 47 %",
+      "description": "Ils ont passé des semaines à essayer de résoudre le problème avec ChatGPT et des feuilles de calcul. La vraie réponse était un modèle d'optimisation sous contraintes — construit en 4 jours, économisant 800 000 $ par trimestre.",
+      "hero": {
+        "titlePrefix": "Comment un aéroport régional ",
+        "titleHighlight": "a réduit les coûts de ses équipes au sol de 47 %",
+        "subtitle": "Ils ont passé des semaines à essayer de résoudre le problème avec ChatGPT et des feuilles de calcul. La vraie réponse était un modèle d'optimisation sous contraintes — construit en 4 jours, économisant 800 000 $ par trimestre."
+      },
+      "sidebar": {
+        "metrics": [
+          {
+            "value": "47%",
+            "label": "Réduction des coûts"
+          },
+          {
+            "value": "$0.9M",
+            "label": "Nouveau coût trimestriel"
+          },
+          {
+            "value": "4 Days",
+            "label": "Pour construire"
+          },
+          {
+            "value": "20,000%",
+            "label": "ROI la première année"
+          }
+        ],
+        "delivered": [
+          "Modèle d'optimisation MILP",
+          "Encodage complet des contraintes",
+          "Génération de plannings trimestriels",
+          "Conformité au droit du travail",
+          "Moteur de minimisation des coûts",
+          "Sortie prête pour les opérations"
+        ],
+        "technologies": [
+          "MILP",
+          "Google OR-Tools",
+          "CP-SAT",
+          "Optimisation mathématique"
+        ],
+        "industry": "Aviation / Opérations aéroportuaires",
+        "location": "Québec, Canada"
+      },
+      "cta": {
+        "titleMuted": "Vous faites face à un ",
+        "titleBold": "problème d'optimisation complexe ?",
+        "description": "Tous les problèmes ne nécessitent pas un modèle de langage. Réservez un appel pour découvrir quelle approche IA convient au vôtre."
+      },
+      "sections": [
+        {
+          "type": "content",
+          "title": "Le problème : un casse-tête de planification qu'aucune feuille de calcul ne pouvait résoudre",
+          "paragraphs": [
+            "Un aéroport régional en croissance au Québec gère des vols commerciaux sur **9 portes**, chacune nécessitant une **équipe au sol de 6 personnes** dédiée pour les arrivées, les départs et les rotations.",
+            "Planifier ces équipes sur un trimestre complet — plus de 90 jours, plusieurs quarts de travail, volumes de vols variables — était devenu un véritable casse-tête opérationnel. L'équipe des opérations construisait les plannings manuellement dans Excel, passant **2 à 3 semaines par cycle** à jongler avec la réglementation du travail, la disponibilité des équipes, les assignations de portes et les contraintes budgétaires.",
+            "Le résultat était toujours le même : des plannings techniquement valides mais financièrement surdimensionnés. **Les effectifs au sol coûtaient 1,7 million de dollars par trimestre** — et la direction soupçonnait qu'il y avait un gaspillage significatif dans le processus."
+          ]
+        },
+        {
+          "type": "highlightCards",
+          "cards": [
+            {
+              "icon": "calendar",
+              "title": "Planification manuelle",
+              "description": "Chaque planning trimestriel prenait 2 à 3 semaines à construire manuellement dans Excel — un processus fragile et sujet aux erreurs."
+            },
+            {
+              "icon": "dollar",
+              "title": "1,7 M$ / trimestre",
+              "description": "Les coûts de personnel au sol dépassaient largement ce que le volume de vols exigeait réellement."
+            },
+            {
+              "icon": "plane",
+              "title": "9 portes, équipes de 6 personnes",
+              "description": "Coordonner la couverture entre portes, quarts et règles du travail créait une complexité de planification exponentielle.",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Pourquoi ChatGPT n'a pas pu résoudre cela",
+          "paragraphs": [
+            "Avant de faire appel à Leap AI, l'équipe des opérations de l'aéroport a passé plusieurs semaines à essayer de résoudre le problème avec **ChatGPT et des macros Excel**. La logique semblait solide : décrire les contraintes, demander au modèle de générer un planning optimisé.",
+            "Cela n'a pas fonctionné. Non pas parce que l'équipe manquait d'efforts — mais parce que **ce n'était pas un problème de langage.**",
+            "Les grands modèles de langage sont extraordinaires pour comprendre le contexte, générer du texte et raisonner face à l'ambiguïté. Mais la planification des équipes est un **problème de satisfaction de contraintes** — un défi mathématique avec des limites strictes : droit du travail, périodes de repos minimales, exigences de couverture des portes, plafonds budgétaires et limites de durée des quarts.",
+            "Un LLM peut décrire le problème avec éloquence. Il ne peut pas le résoudre de façon optimale. Cela nécessite une catégorie d'outils fondamentalement différente."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "L'insight clé",
+          "paragraphs": [
+            "L'IA est une boîte à outils, pas un outil unique. Les organisations qui tirent le plus de valeur de l'IA sont celles qui associent la bonne technique au bon problème.",
+            "Modèles de langage pour les problèmes de langage. Solveurs d'optimisation pour les problèmes d'optimisation. Connaître la différence — et avoir accès aux deux — c'est l'avantage concurrentiel."
+          ]
+        },
+        {
+          "type": "content",
+          "title": "La solution : un moteur d'optimisation sur mesure",
+          "paragraphs": [
+            "Leap AI a construit un modèle de **programmation linéaire en nombres entiers mixtes (MILP)** utilisant le solveur **Google OR-Tools CP-SAT** — l'un des moteurs d'optimisation sous contraintes open source les plus puissants disponibles.",
+            "Le modèle a été conçu pour minimiser le coût total de personnel tout en respectant chaque contrainte opérationnelle et réglementaire auxquelles l'aéroport est confronté. Il ne devine pas. Il n'approxime pas. Il trouve la solution mathématiquement optimale sur l'ensemble de l'horizon de planification.",
+            "De la première conversation au modèle fonctionnel : **4 jours.**"
+          ]
+        },
+        {
+          "type": "checklist",
+          "intro": "Le modèle d'optimisation applique simultanément chaque contrainte du monde réel :",
+          "items": [
+            "Couverture complète des portes — chaque arrivée, départ et rotation est couverte",
+            "Conformité au droit du travail — heures maximales, périodes de repos obligatoires, règles des heures supplémentaires",
+            "Exigences de taille d'équipe — minimum de 6 personnes par porte active",
+            "Continuité des quarts — pas de quarts interrompus ou de transitions impossibles",
+            "Optimisation budgétaire — planning au coût minimum satisfaisant toutes les contraintes",
+            "Horizon trimestriel — plannings complets sur 90 jours générés en quelques minutes"
+          ]
+        },
+        {
+          "type": "howItWorks",
+          "title": "Comment ça fonctionne",
+          "steps": [
+            {
+              "icon": "file",
+              "title": "Définir les contraintes",
+              "description": "Les plannings de vols, les assignations de portes, les règles d'équipe et la réglementation du travail sont encodés comme contraintes mathématiques."
+            },
+            {
+              "icon": "code",
+              "title": "Construire le modèle",
+              "description": "Un modèle MILP structure le problème en variables de décision binaires avec un objectif de minimisation des coûts."
+            },
+            {
+              "icon": "search",
+              "title": "Résoudre",
+              "description": "Le solveur Google OR-Tools CP-SAT explore l'espace des solutions et trouve le planning mathématiquement optimal."
+            },
+            {
+              "icon": "deploy",
+              "title": "Déployer",
+              "description": "Le planning optimisé est livré dans un format prêt pour les opérations — sans nouveaux systèmes ni formation requise."
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Les résultats",
+          "paragraphs": [
+            "L'impact a été immédiat et spectaculaire.",
+            "Les coûts trimestriels de personnel au sol sont passés de **1,7 million de dollars à 0,9 million de dollars** — une **réduction de 47 %**. Les économies ne proviennent pas de coupes arbitraires, mais de l'élimination des inefficacités que la planification manuelle crée inévitablement : surdotation pendant les périodes de faible volume, distributions de quarts sous-optimales et chevauchements redondants.",
+            "Le processus de planification lui-même est passé de **2 à 3 semaines de travail manuel à quelques minutes de calcul**. L'équipe des opérations exécute maintenant le modèle, examine le résultat et apporte les ajustements manuels qu'elle souhaite — un processus qui prend des heures, pas des semaines.",
+            "Rien que la première année, les économies projetées dépassent **3,2 millions de dollars**. Par rapport au coût de construction du modèle, cela représente un **retour sur investissement supérieur à 20 000 %.**"
+          ]
+        },
+        {
+          "type": "content",
+          "title": "Au-delà des chiffres",
+          "paragraphs": [
+            "L'impact financier ne raconte qu'une partie de l'histoire.",
+            "Avant le modèle d'optimisation, l'équipe des opérations redoutait le cycle de planification trimestriel. C'était un travail fastidieux et à enjeux élevés où une seule erreur pouvait se propager en lacunes de couverture ou en violations de conformité. La charge cognitive était énorme.",
+            "Maintenant, l'équipe se concentre sur la **supervision et l'affinage** plutôt que sur la construction. Elle examine une base optimale et ajuste pour les facteurs humains — préférences de vacances, dynamiques d'équipe, rotations de formation — que le modèle laisse intentionnellement de la marge pour gérer.",
+            "Le modèle n'a pas remplacé l'équipe des opérations. Il lui a donné une fondation en laquelle elle peut avoir confiance — et le temps de se concentrer sur les décisions qui nécessitent réellement un jugement humain."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "L'enseignement pour les responsables opérationnels",
+          "paragraphs": [
+            "Tous les problèmes ne sont pas des problèmes de langage. Toutes les solutions IA n'ont pas besoin d'un grand modèle de langage.",
+            "Les organisations qui mèneront la prochaine décennie ne sont pas seulement celles qui adoptent l'IA — ce sont celles qui savent **quel type d'IA appliquer**. Quand le problème est l'ambiguïté et le contexte, tournez-vous vers un LLM. Quand le problème est les contraintes et l'optimisation, tournez-vous vers un solveur.",
+            "Cet aéroport n'avait pas besoin d'un chatbot. Il avait besoin d'un mathématicien. Et la différence entre les deux leur a fait économiser **3,2 millions de dollars la première année.**",
+            "La rapidité ne vient pas de la précipitation. Elle vient de **savoir quel outil prendre en premier.**"
+          ]
+        }
+      ]
+    }
+  ]
+}

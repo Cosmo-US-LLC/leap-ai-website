@@ -1,0 +1,20 @@
+{
+  "page": {
+    "headingBold": "Últimas ",
+    "headingMuted": "perspectivas",
+    "intro": "Descubra cómo las empresas aprovechan la IA para revolucionar sus flujos de trabajo en nuestra sección de Perspectivas."
+  },
+  "card": {
+    "readArticle": "Leer artículo",
+    "readArticleAria": "Leer artículo: {{title}}"
+  },
+  "detail": {
+    "bottomLine": "En resumen:",
+    "tableOfContents": "Tabla de contenidos",
+    "moreHeadingBold": "Más ",
+    "moreHeadingMuted": "perspectivas",
+    "notFoundTitle": "Artículo no encontrado",
+    "notFoundBody": "La perspectiva que busca no existe.",
+    "viewAll": "Ver todas las perspectivas"
+  }
+}

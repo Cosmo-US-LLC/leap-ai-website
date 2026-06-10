@@ -2,6 +2,9 @@ import caseStudyAirport from "../assets/images/new-home/case-study-airport.webp"
 import caseStudyFinance from "../assets/images/new-home/case-study-finance.webp";
 import caseStudyInsurance from "../assets/images/new-home/case-study-insurance.webp";
 import partnerCtaPhoto from "../assets/images/new-home/partner-cta-photo.webp";
+import frCaseStudiesContent from "../locales/fr/caseStudiesContent.json";
+import esCaseStudiesContent from "../locales/es/caseStudiesContent.json";
+import { localizeBySlug } from "./mergeLocalizedContent.js";
 
 export const CASE_STUDIES = [
   {
@@ -533,10 +536,32 @@ export const CASE_STUDIES = [
   },
 ];
 
-export function getCaseStudyBySlug(slug) {
-  return CASE_STUDIES.find((study) => study.slug === slug);
+const CASE_STUDIES_CONTENT_BY_LOCALE = {
+  fr: frCaseStudiesContent,
+  es: esCaseStudiesContent,
+};
+
+function resolveLocale(locale) {
+  const lang = (locale ?? "en").split("-")[0];
+  return lang === "fr" || lang === "es" ? lang : "en";
 }
 
-export function getRelatedCaseStudies(slug, limit = 2) {
-  return CASE_STUDIES.filter((study) => study.slug !== slug).slice(0, limit);
+function getLocalizedCaseStudies(locale) {
+  const lang = resolveLocale(locale);
+  const pack = CASE_STUDIES_CONTENT_BY_LOCALE[lang];
+  if (!pack?.studies) return CASE_STUDIES;
+  return localizeBySlug(CASE_STUDIES, pack.studies);
+}
+
+export function getCaseStudies(locale = "en") {
+  return getLocalizedCaseStudies(locale);
+}
+
+export function getCaseStudyBySlug(slug, locale = "en") {
+  return getCaseStudies(locale).find((study) => study.slug === slug)
+    ?? CASE_STUDIES.find((study) => study.slug === slug);
+}
+
+export function getRelatedCaseStudies(slug, limit = 2, locale = "en") {
+  return getCaseStudies(locale).filter((study) => study.slug !== slug).slice(0, limit);
 }

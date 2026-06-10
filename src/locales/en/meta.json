@@ -1,0 +1,34 @@
+{
+  "home": {
+    "title": "AI Consulting & Transformation Experts | Leap AI",
+    "description": "We help visionary leaders implement AI without complexity or risk. Drive efficiency, reduce costs, and unlock measurable results with Leap AI's proven 7-pillar framework."
+  },
+  "about": {
+    "title": "About Leap AI | AI Transformation Experts & Former C-Suite Leaders",
+    "description": "Learn how Leap AI helps organizations navigate AI transformation with proven frameworks, hands-on execution."
+  },
+  "methodology": {
+    "title": "AI Implementation Methodology | Leap AI",
+    "description": "Explore Leap AI's proven AI implementation methodology. Our 7-pillar framework guides strategy, execution, and adoption to deliver measurable business results."
+  },
+  "caseStudies": {
+    "title": "Case Studies & Results | Real Business Impact | Leap AI",
+    "description": "Explore real case studies from Leap AI, see how organizations reduce costs, improve efficiency, and achieve measurable results through practical AI implementation."
+  },
+  "insights": {
+    "title": "Insights & Strategy Resources | Leap AI",
+    "description": "Explore insights on AI strategy, leadership, and transformation. Learn how to align AI with business goals and drive measurable results"
+  },
+  "contact": {
+    "title": "Contact Leap AI | Book an AI Consultation",
+    "description": "Get in touch with Leap AI to discuss your AI transformation."
+  },
+  "terms": {
+    "title": "Terms of Services | Leap 41",
+    "description": "Read the terms and conditions for using the Leap AI website and services."
+  },
+  "privacy": {
+    "title": "Privacy Policy | Leap 41",
+    "description": "Learn how Leap AI collects, uses, and protects your personal information."
+  }
+}

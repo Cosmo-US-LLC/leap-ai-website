@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import contactTeamPhoto from "../../../assets/images/contact/contact-team.webp";
 import { submitToGHL } from "../../../lib/ghlService.js";
 import { PrimaryCtaButton } from "../NewHome/PrimaryCtaButton.jsx";
@@ -28,6 +29,7 @@ const inputClassName =
   "w-full rounded-lg border-0 bg-white px-4 py-5 text-base leading-[26px] text-black outline-none ring-0 placeholder:text-black/50 focus:ring-2 focus:ring-[#18a3e6]/30";
 
 export default function ContactFormSection() {
+  const { t } = useTranslation("contact");
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,21 +48,21 @@ export default function ContactFormSection() {
     const nextErrors = {};
 
     if (!formData.fullName.trim()) {
-      nextErrors.fullName = "Full name is required";
+      nextErrors.fullName = t("validation.fullNameRequired");
     }
 
     if (!formData.email.trim()) {
-      nextErrors.email = "Email address is required";
+      nextErrors.email = t("validation.emailRequired");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      nextErrors.email = "Please enter a valid email address";
+      nextErrors.email = t("validation.emailInvalid");
     }
 
     if (!formData.phone.trim()) {
-      nextErrors.phone = "Phone number is required";
+      nextErrors.phone = t("validation.phoneRequired");
     }
 
     if (!formData.message.trim()) {
-      nextErrors.message = "Message is required";
+      nextErrors.message = t("validation.messageRequired");
     }
 
     setErrors(nextErrors);
@@ -93,7 +95,7 @@ export default function ContactFormSection() {
       setIsSuccess(true);
       setFormData(INITIAL_FORM);
     } catch (error) {
-      setSubmitError(error.message || "Failed to send message. Please try again.");
+      setSubmitError(error.message || t("submitError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -104,14 +106,10 @@ export default function ContactFormSection() {
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-8 lg:gap-12">
         <div className="flex w-full max-w-[800px] flex-col gap-5 text-center">
           <h1 className="text-[40px] capitalize leading-[46px] text-[#201463] lg:text-[56px] lg:leading-[58px]">
-            <span className="font-bold">Contact </span>
-            <span className="font-normal text-[rgba(32,20,99,0.7)]">Us</span>
+            <span className="font-bold">{t("headingBold")}</span>
+            <span className="font-normal text-[rgba(32,20,99,0.7)]">{t("headingMuted")}</span>
           </h1>
-          <p className="text-base leading-[26px] text-[#4e546c]">
-            Get in touch with us to explore how we can assist you in transforming your
-            business with innovative AI solutions. Our team is here to answer your
-            questions and provide the support you need.
-          </p>
+          <p className="text-base leading-[26px] text-[#4e546c]">{t("intro")}</p>
         </div>
 
         <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-12">
@@ -121,13 +119,13 @@ export default function ContactFormSection() {
             noValidate
           >
             <div className="flex flex-col gap-4">
-              <ContactField id="contact-full-name" label="Full Name">
+              <ContactField id="contact-full-name" label={t("fields.fullName")}>
                 <input
                   id="contact-full-name"
                   type="text"
                   name="fullName"
                   autoComplete="name"
-                  placeholder="Enter full name"
+                  placeholder={t("placeholders.fullName")}
                   value={formData.fullName}
                   onChange={(event) => handleChange("fullName", event.target.value)}
                   className={inputClassName}
@@ -138,13 +136,13 @@ export default function ContactFormSection() {
                 ) : null}
               </ContactField>
 
-              <ContactField id="contact-email" label="Email Address">
+              <ContactField id="contact-email" label={t("fields.email")}>
                 <input
                   id="contact-email"
                   type="email"
                   name="email"
                   autoComplete="email"
-                  placeholder="Enter email address"
+                  placeholder={t("placeholders.email")}
                   value={formData.email}
                   onChange={(event) => handleChange("email", event.target.value)}
                   className={inputClassName}
@@ -155,13 +153,13 @@ export default function ContactFormSection() {
                 ) : null}
               </ContactField>
 
-              <ContactField id="contact-phone" label="Phone Number">
+              <ContactField id="contact-phone" label={t("fields.phone")}>
                 <input
                   id="contact-phone"
                   type="tel"
                   name="phone"
                   autoComplete="tel"
-                  placeholder="Enter phone number"
+                  placeholder={t("placeholders.phone")}
                   value={formData.phone}
                   onChange={(event) => handleChange("phone", event.target.value)}
                   className={inputClassName}
@@ -172,12 +170,12 @@ export default function ContactFormSection() {
                 ) : null}
               </ContactField>
 
-              <ContactField id="contact-message" label="Message">
+              <ContactField id="contact-message" label={t("fields.message")}>
                 <textarea
                   id="contact-message"
                   name="message"
                   rows={6}
-                  placeholder="Type your message here..."
+                  placeholder={t("placeholders.message")}
                   value={formData.message}
                   onChange={(event) => handleChange("message", event.target.value)}
                   className={`${inputClassName} min-h-[180px] resize-y`}
@@ -194,9 +192,7 @@ export default function ContactFormSection() {
             ) : null}
 
             {isSuccess ? (
-              <p className="text-sm font-medium text-[#201463]">
-                Thank you. Your message has been sent successfully.
-              </p>
+              <p className="text-sm font-medium text-[#201463]">{t("success")}</p>
             ) : null}
 
             <PrimaryCtaButton
@@ -206,14 +202,14 @@ export default function ContactFormSection() {
               className="w-fit px-6 py-3.5 text-sm font-semibold leading-[22px] disabled:cursor-not-allowed disabled:opacity-70"
               capitalize={false}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? t("submit.sending") : t("submit.sendMessage")}
             </PrimaryCtaButton>
           </form>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl lg:min-h-0 lg:self-stretch">
             <img
               src={contactTeamPhoto}
-              alt="Leap 41 team in conversation"
+              alt={t("imageAlt")}
               className="h-full w-full object-cover"
             />
           </div>

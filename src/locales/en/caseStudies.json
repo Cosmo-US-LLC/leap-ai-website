@@ -1,0 +1,19 @@
+{
+  "page": {
+    "subtitle": "See how organizations use AI to transform their operations.",
+    "headingMuted": "Results"
+  },
+  "detail": {
+    "bookStrategyCall": "Book a Strategy Call",
+    "impactTitle": "Impact at a Glance",
+    "deliveredTitle": "What Was Delivered",
+    "technologiesTitle": "Technologies",
+    "industryLabel": "Industry",
+    "locationLabel": "Location",
+    "relatedHeadingPrefix": "Related ",
+    "relatedHeadingMuted": "Case Studies",
+    "notFoundTitle": "Case study not found",
+    "notFoundBody": "The case study you are looking for does not exist.",
+    "viewAll": "View all case studies"
+  }
+}

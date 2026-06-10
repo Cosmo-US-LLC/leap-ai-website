@@ -1,0 +1,181 @@
+{
+  "slug": "regional-airport-ground-crew",
+  "tag": "Aviación / Operaciones aeroportuarias",
+  "metric": "47%",
+  "metricLabel": "reducción de costos",
+  "title": "Cómo un aeropuerto regional redujo los costos de personal de tierra en un 47 %",
+  "description": "Pasaron semanas intentando resolverlo con ChatGPT y hojas de cálculo. La respuesta real fue un modelo de optimización con restricciones, construido en 4 días, ahorrando 800.000 USD por trimestre.",
+  "hero": {
+    "titlePrefix": "Cómo un aeropuerto regional ",
+    "titleHighlight": "redujo los costos de personal de tierra en un 47 %",
+    "subtitle": "Pasaron semanas intentando resolverlo con ChatGPT y hojas de cálculo. La respuesta real fue un modelo de optimización con restricciones — construido en 4 días, ahorrando 800.000 USD por trimestre."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "47%",
+        "label": "Reducción de costos"
+      },
+      {
+        "value": "$0.9M",
+        "label": "Nuevo costo trimestral"
+      },
+      {
+        "value": "4 Days",
+        "label": "Para construir"
+      },
+      {
+        "value": "20,000%",
+        "label": "ROI del primer año"
+      }
+    ],
+    "delivered": [
+      "Modelo de optimización MILP",
+      "Codificación completa de restricciones",
+      "Generación de horarios trimestrales",
+      "Cumplimiento de la legislación laboral",
+      "Motor de minimización de costos",
+      "Salida lista para operaciones"
+    ],
+    "technologies": [
+      "MILP",
+      "Google OR-Tools",
+      "CP-SAT",
+      "Mathematical Optimization"
+    ],
+    "industry": "Aviación / Operaciones aeroportuarias",
+    "location": "Quebec, Canadá"
+  },
+  "cta": {
+    "titleMuted": "¿Enfrenta un ",
+    "titleBold": "problema de optimización complejo?",
+    "description": "No todo problema necesita un modelo de lenguaje. Reserve una llamada para descubrir qué enfoque de IA se adapta al suyo."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "El problema: un rompecabezas de programación que ninguna hoja de cálculo podía resolver",
+      "paragraphs": [
+        "Un aeropuerto regional en crecimiento en Quebec atiende vuelos comerciales en **9 puertas de embarque**, cada una requiriendo una **tripulación de tierra dedicada de 6 personas** para llegadas, salidas y rotaciones.",
+        "Programar esas tripulaciones durante un trimestre completo — más de 90 días, múltiples turnos, volúmenes de vuelo variables — se había convertido en un serio dolor de cabeza operativo. El equipo de operaciones construía horarios manualmente en Excel, dedicando **de 2 a 3 semanas por ciclo** equilibrando regulaciones laborales, disponibilidad de personal, asignaciones de puertas y restricciones presupuestarias.",
+        "El resultado siempre era el mismo: horarios técnicamente válidos pero financieramente inflados. **El personal de tierra costaba 1,7 millones de dólares por trimestre** — y el liderazgo sospechaba que había un desperdicio significativo integrado en el proceso."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "calendar",
+          "title": "Programación manual",
+          "description": "Cada horario trimestral tomaba de 2 a 3 semanas en construirse manualmente en Excel — un proceso frágil y propenso a errores."
+        },
+        {
+          "icon": "dollar",
+          "title": "$1.7M / trimestre",
+          "description": "Los costos de personal de tierra estaban muy por encima de lo que el volumen de vuelos realmente requería."
+        },
+        {
+          "icon": "plane",
+          "title": "9 puertas, tripulaciones de 6 personas",
+          "description": "Coordinar cobertura entre puertas, turnos y reglas laborales creaba una complejidad de programación exponencial.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Por qué ChatGPT no pudo resolver esto",
+      "paragraphs": [
+        "Antes de contratar a Leap AI, el equipo de operaciones del aeropuerto dedicó varias semanas intentando resolver el problema con **ChatGPT y macros de Excel**. La lógica parecía sólida: describir las restricciones, pedir al modelo que generara un horario optimizado.",
+        "No funcionó. No porque al equipo le faltara esfuerzo — sino porque **esto no era un problema de lenguaje.**",
+        "Los modelos de lenguaje grandes son extraordinarios para entender contexto, generar texto y razonar ante la ambigüedad. Pero la programación de tripulaciones es un **problema de satisfacción de restricciones** — un desafío matemático con límites estrictos: leyes laborales, períodos mínimos de descanso, requisitos de cobertura de puertas, techos presupuestarios y límites de duración de turnos.",
+        "Un LLM puede describir el problema con elocuencia. No puede resolverlo de forma óptima. Eso requiere una clase de herramienta fundamentalmente distinta."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "La idea clave",
+      "paragraphs": [
+        "La IA es una caja de herramientas, no una sola herramienta. Las organizaciones que obtienen más valor de la IA son las que emparejan la técnica correcta con el problema correcto.",
+        "Modelos de lenguaje para problemas de lenguaje. Solvers de optimización para problemas de optimización. Conocer la diferencia — y tener acceso a ambos — es la ventaja competitiva."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "La solución: un motor de optimización diseñado a medida",
+      "paragraphs": [
+        "Leap AI construyó un modelo de **Programación Lineal Entera Mixta (MILP)** usando el **solver CP-SAT de Google OR-Tools** — uno de los motores de optimización con restricciones de código abierto más potentes disponibles.",
+        "El modelo fue diseñado para minimizar el costo total de personal respetando cada restricción operativa y regulatoria que enfrenta el aeropuerto. No adivina. No aproxima. Encuentra la solución matemáticamente óptima en todo el horizonte de programación.",
+        "Desde la primera conversación hasta el modelo funcional: **4 días.**"
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": "El modelo de optimización aplica simultáneamente cada restricción del mundo real:",
+      "items": [
+        "Cobertura completa de puertas — cada llegada, salida y rotación tiene personal asignado",
+        "Cumplimiento de la legislación laboral — horas máximas, períodos de descanso obligatorios, reglas de horas extra",
+        "Requisitos de tamaño de tripulación — mínimo de 6 personas por puerta activa",
+        "Continuidad de turnos — sin turnos rotos ni transiciones imposibles",
+        "Optimización presupuestaria — horario de costo mínimo que satisface todas las restricciones",
+        "Horizonte trimestral — horarios completos de 90 días generados en minutos"
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Cómo funciona",
+      "steps": [
+        {
+          "icon": "file",
+          "title": "Definir restricciones",
+          "description": "Los horarios de vuelos, asignaciones de puertas, reglas de tripulación y regulaciones laborales se codifican como restricciones matemáticas."
+        },
+        {
+          "icon": "code",
+          "title": "Construir el modelo",
+          "description": "Un modelo MILP estructura el problema como variables de decisión binarias con un objetivo de minimización de costos."
+        },
+        {
+          "icon": "search",
+          "title": "Resolver",
+          "description": "El solver CP-SAT de Google OR-Tools explora el espacio de soluciones y encuentra el horario matemáticamente óptimo."
+        },
+        {
+          "icon": "deploy",
+          "title": "Desplegar",
+          "description": "El horario optimizado se entrega en un formato listo para operaciones — sin nuevos sistemas ni capacitación requerida."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Los resultados",
+      "paragraphs": [
+        "El impacto fue inmediato y dramático.",
+        "Los costos trimestrales de personal de tierra bajaron de **1,7 millones de dólares a 0,9 millones de dólares** — una **reducción del 47 %**. Los ahorros no vinieron de recortar esquinas, sino de eliminar las ineficiencias que la programación manual inevitablemente crea: sobrepersonal en períodos de bajo volumen, distribuciones de turnos subóptimas y solapamientos redundantes.",
+        "El proceso de programación pasó de **2 a 3 semanas de trabajo manual a minutos de tiempo de cómputo**. El equipo de operaciones ahora ejecuta el modelo, revisa la salida y hace los ajustes manuales que desee — un proceso que toma horas, no semanas.",
+        "Solo en el primer año, los ahorros proyectados superan **3,2 millones de dólares**. Frente al costo de construir el modelo, eso representa un **retorno de inversión superior al 20.000 %.**"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Más allá de los números",
+      "paragraphs": [
+        "El impacto financiero cuenta solo una parte de la historia.",
+        "Antes del modelo de optimización, el equipo de operaciones temía el ciclo de programación trimestral. Era un trabajo tedioso y de alto riesgo donde un solo error podía desencadenar brechas de cobertura o violaciones de cumplimiento. La carga cognitiva era enorme.",
+        "Ahora, el equipo se enfoca en **supervisión y refinamiento** en lugar de construcción. Revisan una línea base óptima y ajustan por factores humanos — preferencias de vacaciones, dinámica de equipo, rotaciones de capacitación — para los que el modelo deja espacio intencionalmente.",
+        "El modelo no reemplazó al equipo de operaciones. Les dio una base en la que pueden confiar y el tiempo para enfocarse en las decisiones que realmente requieren juicio humano."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "La conclusión para líderes de operaciones",
+      "paragraphs": [
+        "No todo problema es un problema de lenguaje. No toda solución de IA necesita un modelo de lenguaje grande.",
+        "Las organizaciones que liderarán en la próxima década no son solo las que adoptan IA — son las que saben **qué tipo de IA aplicar**. Cuando el problema es ambigüedad y contexto, recurra a un LLM. Cuando el problema es restricciones y optimización, recurra a un solver.",
+        "Este aeropuerto no necesitaba un chatbot. Necesitaba un matemático. Y la diferencia entre los dos les ahorró **3,2 millones de dólares en el primer año.**",
+        "La velocidad no viene de apresurarse. Viene de **saber qué herramienta tomar primero.**"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import heroGrid from "../../../assets/images/about/hero-grid.webp";
 import heroImage from "../../../assets/images/methodology/methodology-hero.webp";
 import { PrimaryCtaButton } from "../NewHome/PrimaryCtaButton.jsx";
@@ -25,42 +26,30 @@ function DownloadIcon() {
 }
 
 export default function MethodologyHeroSection() {
+  const { t } = useTranslation(["methodology", "common"]);
+
   return (
     <section className="meth-hero-section">
       <div className="meth-hero-gradient" aria-hidden />
-      <img
-        src={heroGrid}
-        alt=""
-        aria-hidden
-        className="meth-hero-grid"
-      />
+      <img src={heroGrid} alt="" aria-hidden className="meth-hero-grid" />
 
       <div className="meth-hero-container">
         <div className="meth-hero-content">
           <div className="meth-hero-text-group">
             <h1 className="meth-hero-title">
-              Stop guessing.{" "}
-              <span className="meth-hero-title-accent">Start leading.</span>
+              {t("methodology:hero.title")}{" "}
+              <span className="meth-hero-title-accent">{t("methodology:hero.titleAccent")}</span>
             </h1>
-            <p className="meth-hero-body">
-              Most companies are buying AI tools and hoping for the best.
-              That&apos;s not a strategy, it&apos;s a gamble. We built a proven
-              framework that turns AI from an expensive experiment into your
-              greatest competitive advantage.
-            </p>
+            <p className="meth-hero-body">{t("methodology:hero.body")}</p>
           </div>
 
           <div className="meth-hero-buttons">
             <PrimaryCtaButton className=" justify-center sm:w-auto">
-              Schedule Your Free Consultation
+              {t("common:cta.scheduleConsultation")}
             </PrimaryCtaButton>
-            <a
-              href={reportPdf}
-              download
-              className="meth-hero-download-btn"
-            >
+            <a href={reportPdf} download className="meth-hero-download-btn">
               <DownloadIcon />
-              Download report
+              {t("methodology:hero.downloadReport")}
             </a>
           </div>
         </div>
@@ -68,7 +57,7 @@ export default function MethodologyHeroSection() {
         <div className="meth-hero-image-wrap">
           <img
             src={heroImage}
-            alt="Team collaborating on AI strategy"
+            alt={t("methodology:hero.imageAlt")}
             className="meth-hero-image"
           />
         </div>

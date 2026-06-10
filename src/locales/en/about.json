@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "titleLine1": "The technology is ready.",
+    "titleAccent": "Is your business?",
+    "titleDesktopLine1": "The technology",
+    "titleDesktopLine2": "is ready.",
+    "body": "The world doesn't need another chatbot. It needs businesses that can think, learn, and adapt. At Leap AI, we don't just deploy software; we build Adaptive Organizations. We bridge the gap between the exponential speed of AI and the operational reality of your company, ensuring you don't just survive the transition—you lead it.",
+    "ctaMobile": "Future Proof your Business",
+    "meetTeam": "Meet the Team",
+    "imageAlt": "Professional leader reviewing strategy outdoors"
+  },
+  "mission": {
+    "headingBold": "Our",
+    "headingMuted": "mission",
+    "paragraphs": [
+      "AI is advancing at an exponential pace, but most businesses are still operating linearly. Our mission is to close that gap. We partner with forward-thinking leadership teams to build Adaptive Organizations—companies that don't just adopt AI tools, but fundamentally evolve how they think, decide, and compete.",
+      "Every engagement begins with a deep-dive strategic assessment: structured interviews with department heads and executives, industry-specific AI analysis, and collaborative validation sessions. We don't hand you a generic report and walk away. We co-author your AI roadmap, prioritize the initiatives that will move the needle on your KPIs, and stay with you through implementation. The result is a clear, actionable strategy backed by the trust and expertise of a team that has been in your shoes."
+    ],
+    "stats": [
+      {
+        "value": "37%",
+        "label": "Average productivity gain identified per assessment"
+      },
+      {
+        "value": "50+",
+        "label": "Hours of deep-dive interviews per engagement"
+      },
+      {
+        "value": "92%",
+        "label": "Of clients move to full implementation"
+      }
+    ]
+  },
+  "team": {
+    "headingBold": "Meet ",
+    "headingMuted": "the team",
+    "intro": "With backgrounds in executive leadership, we understand the challenges you face firsthand. We work alongside you to turn complex problems into lasting, practical advantages.",
+    "prev": "Previous team member",
+    "next": "Next team member",
+    "viewMember": "View {{name}}",
+    "members": {
+      "gregory": {
+        "name": "Gregory van Duyse",
+        "role": "CEO & Co-founder",
+        "bio": "With years of entrepreneurial experience, Greg brings a grounded perspective on leadership and strategy. He focuses on helping businesses translate AI capabilities into meaningful growth and smoother operations."
+      },
+      "benjamin": {
+        "name": "Benjamin Gonzalez M.Sc.",
+        "role": "CEO & Co-founder",
+        "bio": "Holding a Master's in Data Science, Ben works to bridge the gap between technical engineering and business goals. He enjoys making complex concepts accessible and turning them into practical value for the team and clients."
+      },
+      "junaid": {
+        "name": "Junaid Dar",
+        "role": "Marketing Partner",
+        "roleCapitalize": "true",
+        "bio": "Junaid brings analytical thinking and hands-on marketing execution. With over 10 years of experience working with startups, scaling companies, and Fortune 1000 brands, he specializes in building data-driven growth systems."
+      },
+      "azeem": {
+        "name": "Azeem Khan",
+        "role": "Automation Engineer",
+        "bio": "Azeem has a knack for designing thoughtful automation workflows that simplify day-to-day operations. He takes the time to understand manual processes and builds reliable systems that help teams work more efficiently."
+      },
+      "azu": {
+        "name": "Azu Avalos",
+        "role": "Customer Success Specialist",
+        "bio": "Azu serves as the connection between our solutions and our clients' goals. She draws on her industry experience and a genuine care for people to help every partner get the most out of our work together."
+      },
+      "samuel": {
+        "name": "Samuel Avila",
+        "role": "QA Engineer",
+        "bio": "Sam brings a careful, detail-oriented approach to quality assurance. His thoroughness and dedication to high standards help ensure that the solutions we deliver are reliable and well-tested."
+      },
+      "steven": {
+        "name": "Steven Brodson",
+        "role": "AI & Cyber Security Expert",
+        "bio": "Steven helps organizations secure AI systems before they fail. He focuses on AI governance, cyber resilience, risk assessment, and practical safeguards for generative AI across enterprise environments."
+      }
+    }
+  },
+  "trust": {
+    "titleBold": "A partner you ",
+    "titleMuted": "can trust.",
+    "description": "We help visionary leaders navigate the AI transformation without the complexity, the risk, or the guesswork. Stop running random pilot projects and start building a business that thinks, learns, and optimizes itself.",
+    "photoAlt": "Leap 41 team collaborating around a table",
+    "bookConsultation": "Book a Free Consultation Call"
+  }
+}

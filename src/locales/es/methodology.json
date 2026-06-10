@@ -1,0 +1,263 @@
+{
+  "hero": {
+    "title": "Deje de adivinar.",
+    "titleAccent": "Empiece a liderar.",
+    "body": "La mayoría de las empresas compran herramientas de IA y esperan lo mejor. Eso no es estrategia, es una apuesta. Construimos un marco probado que convierte la IA de un experimento costoso en su mayor ventaja competitiva.",
+    "downloadReport": "Descargar informe",
+    "imageAlt": "Equipo colaborando en estrategia de IA"
+  },
+  "challenge": {
+    "headingBold": "La IA no es un desafío tecnológico. ",
+    "headingMuted": "Es un desafío de liderazgo.",
+    "body": [
+      "La mayoría de las iniciativas de IA fracasan , no porque la tecnología no funcione , sino porque las empresas omiten los fundamentos. Compran herramientas antes de alinear a sus equipos. Automatizan procesos antes de limpiar sus datos. Persiguen tendencias antes de definir su estrategia.",
+      "¿El resultado? Presupuestos desperdiciados, equipos frustrados y una brecha creciente entre usted y los competidores que lo hicieron bien."
+    ],
+    "cardHeading": "Las empresas que esperan no solo se quedarán atrás , pagarán un precio premium para ponerse al día.",
+    "stats": [
+      {
+        "value": "87%",
+        "label": "de los proyectos de IA fracasan",
+        "description": "No porque la tecnología fallara , sino porque la organización no estaba preparada."
+      },
+      {
+        "value": "$4.4T",
+        "label": "mercado para 2028",
+        "description": "Las empresas que esperan no solo se quedarán atrás , pagarán un precio premium para ponerse al día."
+      },
+      {
+        "value": "#1",
+        "label": "razón del fracaso de la IA",
+        "description": "Falta de preparación organizacional , no la tecnología en sí."
+      }
+    ],
+    "callout": "Falta de preparación organizacional, no la tecnología en sí."
+  },
+  "pillars": {
+    "headingBold": "Los 7 ",
+    "headingMuted": "pilares estratégicos",
+    "intro": "Si el problema es la preparación organizacional, la solución no son más herramientas , es un marco completo. Estos siete pilares abordan cada dimensión de la transformación con IA: su gente, sus datos, su estrategia y la gobernanza que une todo.",
+    "navAria": "Pilares estratégicos",
+    "progress": "{{current}} de 7",
+    "talkToExpert": "Hablar con un experto sobre este pilar",
+    "nextPillar": "Siguiente pilar",
+    "backToFirst": "Volver al primero",
+    "items": {
+      "01": {
+        "category": "Innovación",
+        "title": "Construya un motor de innovación guiada",
+        "description": "Cree un entorno estructurado donde cada empleado pueda experimentar con IA de forma segura y descubrir casos de uso del mundo real. El resultado: un flujo continuo de innovaciones prácticas de las personas que mejor conocen sus operaciones.",
+        "bullets": [
+          "Entornos sandbox con barreras de seguridad",
+          "Flujos mensuales de ideas de cada departamento",
+          "Rúbrica de evaluación ligera para nuevos casos de uso"
+        ],
+        "stat": {
+          "value": "3×",
+          "label": "Más casos de uso calificados por trimestre"
+        }
+      },
+      "02": {
+        "category": "Personas",
+        "title": "Ponga a las personas en el centro de la transformación",
+        "description": "La mayor barrera para la IA no es la tecnología — es el miedo. Este pilar redefine el contrato social: la IA se convierte en una herramienta para el crecimiento profesional, no en una amenaza. Cuando las personas confían en el proceso, la adopción se acelera y la resistencia desaparece.",
+        "bullets": [
+          "Comunicación transparente sobre el rol de la IA",
+          "Programas de capacitación y recualificación dirigidos",
+          "Campeones de adopción de IA liderados por empleados"
+        ],
+        "stat": {
+          "value": "100%",
+          "label": "Enfoque en la IA como herramienta de crecimiento profesional"
+        }
+      },
+      "03": {
+        "category": "Datos",
+        "title": "Centralice sus datos y defina KPIs accionables",
+        "description": "La IA sin datos limpios y conectados es solo adivinanza costosa. Unifique fuentes de datos dispersas, defina los KPIs que realmente importan y cree bucles de retroalimentación que permitan a su organización medir, aprender y optimizar en tiempo real.",
+        "bullets": [
+          "Data lakes unificados e integraciones fluidas",
+          "Seguimiento en tiempo real de KPIs accionables",
+          "Bucles automatizados de retroalimentación y aprendizaje"
+        ],
+        "stat": {
+          "value": "360°",
+          "label": "Visibilidad de optimizaciones en tiempo real"
+        }
+      },
+      "04": {
+        "category": "Estrategia",
+        "title": "Cree urgencia estratégica sin pánico",
+        "description": "La ventana de oportunidad de la IA se está cerrando. Las empresas que esperan condiciones perfectas serán superadas por competidores que empezaron ahora. Este pilar le ayuda a distinguir qué debe construirse de inmediato de lo que puede esperar — impulsando la acción sin imprudencia.",
+        "bullets": [
+          "Hojas de ruta priorizadas para impacto inmediato",
+          "Marcos ágiles para despliegue seguro y rápido",
+          "Análisis y monitoreo de brechas competitivas"
+        ],
+        "stat": {
+          "value": "#1",
+          "label": "Prioridad en construcciones de alto impacto e inmediatas"
+        }
+      },
+      "05": {
+        "category": "CX",
+        "title": "Haga de la experiencia del cliente su estrella del norte",
+        "description": "La mayoría de las empresas usan la IA para reducir costos. Las mejores la usan para ganar clientes. Redirija las ganancias de eficiencia hacia experiencias que definan el mercado — tiempos de respuesta más rápidos, interacciones personalizadas, servicio predictivo. Entregue tanto valor que sus clientes no puedan imaginar irse a otro lado.",
+        "bullets": [
+          "Hojas de ruta priorizadas para impacto inmediato",
+          "Recorridos del usuario hiperpersonalizados",
+          "Sistemas de respuesta automatizados y empáticos"
+        ],
+        "stat": {
+          "value": "5x",
+          "label": "Respuestas al cliente más rápidas y altamente personalizadas"
+        }
+      },
+      "06": {
+        "category": "Acumulación",
+        "title": "Diseñe la mejora recursiva autorreferencial",
+        "description": "La ventaja más poderosa de la IA es un bucle compuesto: la IA optimiza procesos, los procesos generan mejores datos, mejores datos entrenan una IA más precisa. Sus competidores mejoran de forma lineal. Usted mejora de forma exponencial.",
+        "bullets": [
+          "Sistemas de refinamiento de datos en bucle cerrado",
+          "Reentrenamiento continuo de modelos de IA",
+          "Optimización automatizada de procesos internos"
+        ],
+        "stat": {
+          "value": "10x",
+          "label": "Bucles de mejora exponencial frente a los competidores"
+        }
+      },
+      "07": {
+        "category": "Gobernanza",
+        "title": "Establezca gobernanza de IA y genere confianza",
+        "description": "La velocidad sin barreras es imprudencia. Establezca políticas éticas, protocolos de seguridad y marcos de responsabilidad que ganen la confianza de sus empleados, clientes y reguladores. La gobernanza no es un freno a la innovación — es la base que le permite avanzar rápido con confianza.",
+        "bullets": [
+          "Políticas integrales de uso ético de IA",
+          "Protocolos sólidos de seguridad y privacidad",
+          "Marcos claros de responsabilidad organizacional"
+        ],
+        "stat": {
+          "value": "100%",
+          "label": "Base de innovación conforme y segura"
+        }
+      }
+    }
+  },
+  "value": {
+    "headingBold": "No vendemos software. ",
+    "headingMuted": "Construimos líderes del mercado.",
+    "intro": "Conocer los pilares es una cosa. Ejecutarlos dentro de su organización , con su gente, sus restricciones, su mercado , es otra. Ahí es donde entramos nosotros.",
+    "cards": [
+      {
+        "title": "Una hoja de ruta real, no un discurso de ventas",
+        "description": "Obtiene un plan estratégico de más de 100 páginas con 15–20 proyectos específicos de IA, secuenciados por prioridad, cada uno vinculado a KPIs medibles y ROI validado. No es teoría , es un plano de ejecución."
+      },
+      {
+        "title": "Personas primero, tecnología segundo",
+        "description": "El 95% de los proyectos de IA fracasan porque ignoran el factor humano. Nuestro marco comienza con su fuerza laboral, su cultura y sus flujos de trabajo , la base que hace que todo lo demás funcione."
+      },
+      {
+        "title": "Ingresos desacoplados del número de empleados",
+        "description": "Deje de escalar costos al mismo ritmo que los ingresos. Nuestra metodología rediseña cómo funciona su empresa para que pueda crecer sin aumentar proporcionalmente su equipo ni erosionar sus márgenes."
+      }
+    ]
+  },
+  "trustReport": {
+    "titleBold": "Esta página cubre los principios. ",
+    "titleMuted": "El informe profundiza.",
+    "description": "Cada pilar incluye 3–4 acciones estratégicas detalladas, orientación de implementación del mundo real y una metodología paso a paso que puede empezar a ejecutar mañana. Además, marcos de prueba de estrés del ROI para mantener su plan viable.",
+    "photoAlt": "Equipo colaborando en estrategia de IA",
+    "downloadFullReport": "Descargar el informe completo"
+  },
+  "roadmap": {
+    "headingBold": "Cómo construimos su ",
+    "headingMuted": "hoja de ruta de IA",
+    "intro": "Los principios son claros, pero su negocio es complejo. No puede copiar y pegar una estrategia genérica. Esta es la metodología que usamos para traducir estos pilares en un plan que se ajuste a su realidad, sus restricciones y su ambición.",
+    "includesLabel": "Qué incluye",
+    "steps": [
+      {
+        "title": "El diagnóstico operativo",
+        "description": "No se puede recetar una cura sin un diagnóstico. Entrevistamos a cada líder de departamento, mapeamos su motor de valor y encontramos las oportunidades clave que se ocultan detrás de sus mayores problemas. Ninguna estrategia sobrevive sin una comprensión honesta de la realidad actual.",
+        "includes": [
+          "Mapa de flujo de valor",
+          "Inventario de fricciones",
+          "Lista corta de victorias rápidas"
+        ],
+        "imageAlt": "Equipo realizando taller de diagnóstico operativo"
+      },
+      {
+        "title": "Definir el objetivo",
+        "description": "¿Qué quiere lograr? Trabajamos con el CEO para tener total claridad sobre los objetivos del negocio, la estrategia actual y lo que se interpone en el camino. El objetivo no es empezar desde cero , es crear una estrategia impulsada por IA que acelere y supere sus ambiciones existentes.",
+        "includes": [
+          "Documento de intención estratégica",
+          "Registro de restricciones",
+          "Criterios de éxito"
+        ],
+        "imageAlt": "Ejecutivo definiendo objetivos estratégicos"
+      },
+      {
+        "title": "Alineación estratégica",
+        "description": "Con una comprensión clara de los problemas, objetivos y restricciones, creamos una nueva estrategia impulsada por IA anclada a un único KPI \"Estrella del Norte\" que determina el progreso de su transición con IA. Validada con su liderazgo para garantizar alineación total.",
+        "includes": [
+          "KPI Estrella del Norte",
+          "Memorando de alineación del liderazgo",
+          "Registro de compensaciones"
+        ],
+        "imageAlt": "Equipo de liderazgo alineando la estrategia"
+      },
+      {
+        "title": "Portafolio de proyectos de IA",
+        "description": "El corazón de la estrategia. Definimos 12–20 proyectos específicos de IA: qué hay que hacer, por qué, cómo lo implementaremos, el costo y el impacto en su KPI Estrella del Norte. Cada proyecto se secuencia para máximo efecto compuesto.",
+        "includes": [
+          "Portafolio de proyectos puntuado",
+          "Hoja de ruta de secuenciación",
+          "Brechas de capacidades"
+        ],
+        "imageAlt": "Equipo revisando portafolio de proyectos de IA"
+      },
+      {
+        "title": "Prueba de estrés de su ROI",
+        "description": "Validación financiera usando el Principio de Prudencia: divida el impacto positivo esperado entre dos, duplique los costos proyectados. Su modelo de inversión incluye escalamiento, mejora continua y un factor de nuevos proyectos. El plan debe ser realista y viable.",
+        "includes": [
+          "Caso de negocio viable",
+          "ROI ajustado por riesgo",
+          "Recomendación de avanzar / no avanzar"
+        ],
+        "imageAlt": "Sesión de prueba de estrés financiero del ROI"
+      }
+    ]
+  },
+  "authors": {
+    "headingBold": "Sobre los ",
+    "headingMuted": "autores",
+    "intro": "Este marco fue construido por practicantes, no por teóricos. Como ejecutivos anteriores, no solo asesoramos , hemos estado en su lugar.",
+    "prev": "Autor anterior",
+    "next": "Siguiente autor",
+    "viewAuthor": "Ver {{name}}",
+    "items": [
+      {
+        "name": "Gregory van Duyse",
+        "role": "CEO y cofundador",
+        "bio": "Emprendedor en serie y CEO visionario. Greg aprovecha su profunda experiencia en liderazgo para ayudar a las empresas a obtener una ventaja estratégica decisiva, transformando capacidades de IA de vanguardia en crecimiento tangible y excelencia operativa."
+      },
+      {
+        "name": "Benjamin Gonzalez",
+        "role": "CTO y cofundador · M.Sc.",
+        "bio": "Con una maestría en ciencia de datos y sólida experiencia como CTO, Ben cierra la brecha entre la ingeniería técnica profunda y los objetivos estratégicos del negocio. Traduce tecnología compleja en valor claro y de alto impacto."
+      }
+    ],
+    "cta": {
+      "headingBold": "¿Quiere ",
+      "headingMuted": "el marco completo?",
+      "body": "El informe completo incluye acciones estratégicas detalladas para cada pilar, la metodología completa de implementación en 5 pasos, marcos de prueba de estrés del ROI y una hoja de ruta para construir su organización potenciada con IA.",
+      "downloadReport": "Descargar el informe de los 7 pilares"
+    }
+  },
+  "trust": {
+    "defaultTitleBold": "Un socio en quien ",
+    "defaultTitleMuted": "puede confiar.",
+    "defaultDescription": "Ayudamos a líderes visionarios a navegar la transformación con IA sin la complejidad, el riesgo ni la incertidumbre. Deje de ejecutar proyectos piloto aleatorios y empiece a construir un negocio que piensa, aprende y se optimiza solo.",
+    "defaultPhotoAlt": "Equipo de Leap 41 colaborando alrededor de una mesa",
+    "bookConsultation": "Agendar una llamada de consulta gratuita"
+  }
+}

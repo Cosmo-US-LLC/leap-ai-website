@@ -1,0 +1,34 @@
+{
+  "home": {
+    "title": "Experts en conseil et transformation IA | Leap AI",
+    "description": "Nous aidons les dirigeants visionnaires à mettre en œuvre l'IA sans complexité ni risque. Améliorez l'efficacité, réduisez les coûts et obtenez des résultats mesurables grâce au cadre en 7 piliers de Leap AI."
+  },
+  "about": {
+    "title": "À propos de Leap AI | Experts en transformation IA et anciens dirigeants",
+    "description": "Découvrez comment Leap AI aide les organisations à naviguer la transformation IA avec des cadres éprouvés et une exécution concrète."
+  },
+  "methodology": {
+    "title": "Méthodologie de mise en œuvre de l'IA | Leap AI",
+    "description": "Explorez la méthodologie éprouvée de Leap AI. Notre cadre en 7 piliers guide la stratégie, l'exécution et l'adoption pour des résultats mesurables."
+  },
+  "caseStudies": {
+    "title": "Études de cas et résultats | Impact réel | Leap AI",
+    "description": "Explorez des études de cas réelles de Leap AI : réduction des coûts, amélioration de l'efficacité et résultats mesurables grâce à une mise en œuvre pratique de l'IA."
+  },
+  "insights": {
+    "title": "Perspectives et ressources stratégiques | Leap AI",
+    "description": "Explorez des perspectives sur la stratégie IA, le leadership et la transformation. Alignez l'IA sur vos objectifs d'affaires."
+  },
+  "contact": {
+    "title": "Contactez Leap AI | Réservez une consultation IA",
+    "description": "Contactez Leap AI pour discuter de votre transformation IA."
+  },
+  "terms": {
+    "title": "Conditions d'utilisation | Leap 41",
+    "description": "Consultez les conditions d'utilisation du site et des services Leap AI."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité | Leap 41",
+    "description": "Découvrez comment Leap AI collecte, utilise et protège vos informations personnelles."
+  }
+}

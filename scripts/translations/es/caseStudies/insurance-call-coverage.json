@@ -1,0 +1,182 @@
+{
+  "slug": "insurance-call-coverage",
+  "tag": "Seguros",
+  "metric": "100%",
+  "metricLabel": "cobertura de llamadas",
+  "title": "Cómo una agencia de seguros canadiense tomó control de cada conversación comercial en 30 días",
+  "description": "Revisaban solo el 5 % de las llamadas. En 30 días, tenían supervisión completa de cada conversación comercial significativa — sin añadir ni una sola persona al equipo.",
+  "hero": {
+    "titlePrefix": "Cómo una agencia de seguros canadiense ",
+    "titleHighlight": "tomó control de cada conversación comercial en 30 días",
+    "subtitle": "Revisaban solo el 5 % de las llamadas. En 30 días, tenían supervisión completa de cada conversación comercial significativa — sin añadir ni una sola persona al equipo."
+  },
+  "sidebar": {
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Cobertura de llamadas"
+      },
+      {
+        "value": "30 min",
+        "label": "Tiempo de respuesta"
+      },
+      {
+        "value": "~80%",
+        "label": "Tiempo de QA ahorrado"
+      },
+      {
+        "value": "30 Days",
+        "label": "Para desplegar"
+      }
+    ],
+    "delivered": [
+      "Transcripción y análisis automáticos",
+      "Puntuación de desempeño",
+      "Recomendaciones de coaching",
+      "Lista de verificación de cumplimiento",
+      "Alertas de escalamiento",
+      "Integración con CRM"
+    ],
+    "technologies": [
+      "AI/ML",
+      "NLP",
+      "Speech-to-Text",
+      "Cloud Computing"
+    ],
+    "industry": "Seguros / Servicios financieros",
+    "location": "Quebec, Canadá"
+  },
+  "cta": {
+    "titleMuted": "¿Listo para ver ",
+    "titleBold": "cada conversación?",
+    "description": "Reserve una llamada estratégica de 30 minutos para descubrir cómo la evaluación de llamadas con IA puede transformar su supervisión comercial."
+  },
+  "sections": [
+    {
+      "type": "content",
+      "title": "El desafío",
+      "paragraphs": [
+        "Esta agencia de seguros en línea canadiense sabía que el coaching funcionaba. Cuando sus asesores licenciados recibían retroalimentación estructurada, el desempeño mejoraba. El problema no era la calidad — era la **cobertura**.",
+        "Con aproximadamente **200 a 250 llamadas comerciales por semana**, cada una de **60 a 90 minutos**, su líder de QA podía revisar de forma realista solo **10 a 15 llamadas semanales**. Eso significaba que solo el **cinco al ocho por ciento** de las conversaciones con clientes se evaluaban.",
+        "Más del 90 por ciento quedaba sin revisar. En una industria competitiva y regulada, ese nivel de visibilidad no es suficiente.",
+        "Revisar manualmente cada llamada requeriría escalar el personal de QA para igualar al equipo comercial — un callejón sin salida económico. El liderazgo no quería más oyentes. Querían apalancamiento."
+      ]
+    },
+    {
+      "type": "highlightCards",
+      "cards": [
+        {
+          "icon": "eyeOff",
+          "title": "Cobertura limitada",
+          "description": "Solo el 5–8 % de más de 200 llamadas comerciales semanales eran revisadas por el equipo de QA."
+        },
+        {
+          "icon": "clock",
+          "title": "Intensivo en tiempo",
+          "description": "Cada llamada de 75 minutos requería reproducción completa, toma de notas y preparación para coaching."
+        },
+        {
+          "icon": "scale",
+          "title": "Techo estructural",
+          "description": "Escalar el personal de QA para igualar al equipo comercial era económicamente inviable.",
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "El cuello de botella que nadie podía vencer con más esfuerzo",
+      "paragraphs": [
+        "La agencia ya tenía un proceso de coaching estructurado. Las llamadas se grababan a través de su sistema PBX interno. El líder de QA seleccionaba conversaciones según la experiencia — priorizando asesores nuevos, quienes percibía como de bajo desempeño, o controles aleatorios ocasionales.",
+        "La retroalimentación se entregaba uno a uno, a menudo mensualmente o según fuera necesario.",
+        "Pero revisar una sola llamada de 75 minutos requiere reproducción completa, toma de notas, evaluación estructurada y preparación para coaching. Multiplique eso por más de 200 llamadas por semana y la matemática se vuelve imposible.",
+        "La presión de tiempo introdujo otro riesgo. Para gestionar la carga de trabajo, a veces se omitían partes de las llamadas para llegar a los momentos \"importantes\". Se podía perder contexto. Se podían pasar por alto señales sutiles de cumplimiento.",
+        "El liderazgo enfrentaba un techo estructural: supervisión parcial en un negocio donde la consistencia y la alineación regulatoria importan."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Construyendo visibilidad completa sin cambiar el flujo de trabajo",
+      "paragraphs": [
+        "Leap AI se asoció con el liderazgo y la función de QA para diseñar un sistema que complementara el coaching humano en lugar de reemplazarlo.",
+        "El mandato era claro: analizar **el 100 por ciento de las llamadas comerciales significativas**, integrarse directamente a su CRM existente y cumplir estándares de seguridad de grado regulatorio.",
+        "En cuatro semanas, se desplegó un motor de evaluación de llamadas con IA.",
+        "Dentro de los 30 minutos posteriores a que termina cada cita comercial, el sistema transcribe y evalúa automáticamente la conversación. Dentro del registro del CRM, el liderazgo y los agentes pueden ver:"
+      ]
+    },
+    {
+      "type": "checklist",
+      "intro": null,
+      "items": [
+        "Resumen estructurado de la conversación",
+        "Puntuación de desempeño alineada con estándares internos",
+        "Razonamiento claro detrás de la puntuación",
+        "Recomendaciones específicas de coaching",
+        "Lista de verificación de cumplimiento completada"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Detección de problemas en tiempo real",
+      "paragraphs": [
+        "El sistema introdujo banderas de escalamiento automatizadas. Si una conversación incluye lenguaje que sugiere riesgo de cumplimiento, tono inapropiado o insatisfacción del cliente, el liderazgo recibe una alerta de inmediato.",
+        "En un caso temprano, un asesor perdió la paciencia durante una llamada. El sistema marcó la interacción en minutos. El director contactó al cliente antes de que se presentara una queja — convirtiendo lo que podría haber escalado en fricción reputacional o regulatoria en una oportunidad de recuperación."
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "Cómo funciona",
+      "steps": [
+        {
+          "icon": "mic",
+          "title": "Grabar",
+          "description": "Las llamadas se capturan a través del sistema PBX existente sin cambios en el flujo de trabajo de los asesores."
+        },
+        {
+          "icon": "fileAudio",
+          "title": "Transcribir",
+          "description": "La IA procesa el audio en una transcripción estructurada y buscable en minutos."
+        },
+        {
+          "icon": "clipboardCheck",
+          "title": "Evaluar",
+          "description": "El desempeño se puntúa automáticamente contra los estándares internos de calidad."
+        },
+        {
+          "icon": "layoutDashboard",
+          "title": "Entregar",
+          "description": "Los resultados aparecen directamente dentro del registro del CRM — sin plataformas ni inicios de sesión nuevos."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Elevando la función de QA",
+      "paragraphs": [
+        "Antes de la implementación, el líder de QA dedicaba aproximadamente **20 a 25 horas por semana** escuchando grabaciones y preparando notas. El coaching requería revisar la llamada completa.",
+        "Hoy, el tiempo de escucha ha caído casi a cero.",
+        "En lugar de reproducir conversaciones enteras, el líder de QA revisa evaluaciones generadas por IA y se enfoca solo en los segmentos que importan. El tiempo de preparación ha bajado a aproximadamente **5 a 8 horas por semana**, pero la capacidad de coaching ahora se extiende a todo el equipo.",
+        "El sistema no eliminó el rol humano. Eliminó la carga mecánica que lo rodeaba. El coaching ahora es consistente, focalizado y escalable."
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Diseñado para un entorno regulado",
+      "paragraphs": [
+        "La seguridad y el cumplimiento fueron requisitos fundamentales, no consideraciones posteriores.",
+        "La solución opera con **residencia de datos en Canadá** y transferencia de datos cifrada. El procesamiento ocurre dentro de un entorno serverless seguro con **sin retención de datos ni almacenamiento de terceros**. La información del cliente no se usa para entrenar modelos externos.",
+        "Cada evaluación deja registros trazables, y los revisores humanos retienen supervisión y capacidad de corrección completas.",
+        "El resultado no es una caja negra superpuesta a un negocio regulado. Es una infraestructura de calidad controlada y auditable alineada con los estándares de servicios financieros."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "La conclusión para líderes financieros",
+      "paragraphs": [
+        "En entornos comerciales de alto volumen y regulados, la variación de desempeño es inevitable. La pregunta es si puede verla a tiempo para corregirla.",
+        "Esta agencia de seguros pasó de visibilidad parcial a supervisión completa en 30 días — sin añadir personal, interrumpir el flujo de trabajo ni comprometer la seguridad de datos.",
+        "No automatizaron personas fuera del proceso. Les dieron apalancamiento a sus personas. Y en mercados competitivos de servicios financieros, **el apalancamiento se compone**."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "privacy": {
+    "linkText": "Privacy Policy",
+    "gaOptOutLabel": "Google Analytics opt-out tool."
+  },
+  "terms": {
+    "headingBold": "Terms ",
+    "headingMuted": "of Services",
+    "intro": [
+      "By accessing this website, you are agreeing to these terms and conditions, so we suggest that you review them carefully.",
+      "When we say \"we\", \"us\" or \"our\", we mean Leap AI Solutions (or more commonly known as Leap AI)."
+    ],
+    "sections": [
+      {
+        "heading": "Acceptable use of this website",
+        "paragraphs": [
+          "We require you to follow several simple rules when accessing or using this website. You must not:"
+        ],
+        "list": [
+          "use this website in violation of any law, rule or regulation",
+          "interfere with or disrupt this website or any of our computer systems, servers, networks, databases, software, hardware or equipment used by or for this website",
+          "interfere with the use or enjoyment of this website by others",
+          "introduce code which is disruptive or harmful",
+          "attempt to gain unauthorized access to our computer systems, servers, networks, databases, software, hardware or equipment, including to: user-restricted areas of this website; logins and passwords of others; or personal information and personal accounts of others"
+        ],
+        "ordered": true
+      },
+      {
+        "heading": "Privacy",
+        "privacyLink": true,
+        "paragraphs": [
+          "Your privacy is important to us. If you provide any personal information to us through this website, we will handle it according to what we say in our",
+          ""
+        ]
+      },
+      {
+        "heading": "Copyright & trademarks",
+        "paragraphs": [
+          "The website design, the content on this website and its arrangement is protected by our copyright.",
+          "The name, trademarks and official marks of Leap AI may not be reproduced, whether for commercial or non-commercial purposes, without our prior authorization which you must receive in writing from us."
+        ]
+      },
+      {
+        "heading": "User contributed content",
+        "paragraphs": [
+          "By submitting your content, you agree to give us a right to do what we want with the content that you submit and to permit others to do the same; in both cases, without the need to give you notice, acknowledgement or payment, subject to terms of our Privacy Policy. You also agree to waive your moral rights as an author under copyright law in the submitted content."
+        ]
+      },
+      {
+        "heading": "Password protected information",
+        "paragraphs": [
+          "Portions of this website require a user ID and a password to access and may require you to agree to additional terms and conditions. To apply for a user ID and a password, follow the instructions on the password-protected pages. You alone are responsible for keeping your user ID and password confidential, and for any and all activity that occurs on this Website under your user ID or password. You agree to immediately notify Leap AI of any unauthorized use of your user ID or password or any other breach of security."
+        ]
+      },
+      {
+        "heading": "Links to other websites and social media platforms",
+        "paragraphs": [
+          "You may see links on this website to other websites and some widely used social media platforms. We have included them because they may be of interest to you. Just to be clear, providing a link to them doesn't mean that we endorse or recommend them to you.",
+          "Also, since these other websites and social media platforms are controlled and maintained by other people, we can't be sure that the link will still work when you click on it or that the service or content is useful, appropriate, virus-free or reliable. Therefore, you need to decide for yourself whether you want to follow any link or to agree to receive or rely on any service or content that is made available to you."
+        ]
+      },
+      {
+        "heading": "Your privacy and third party sites",
+        "paragraphs": [
+          "Any information that you provide to or through a social media platform or other website is not collected or controlled by Leap AI. Social media platforms or other websites are not bound by our Privacy Policy. You should review the privacy policies of any linked website or social media platform before providing any personal or other information. Others may not comply with the same privacy laws, policies and practices that we do."
+        ]
+      },
+      {
+        "heading": "Warranty disclaimer",
+        "paragraphs": [
+          "USE OF THIS WEBSITE AND ITS CONTENTS IS AT YOUR OWN RISK. THIS WEBSITE AND ALL OF ITS CONTENT ARE PROVIDED \"AS IS\". YOU MUST NOT RELY ON ANY CONTENT PUBLISHED ON OR LINKED TO THIS WEBSITE WITHOUT FIRST MAKING YOUR OWN ENQUIRIES TO VERIFY IT IS ACCURATE, CURRENT AND COMPLETE. WE DO NOT MAKE, AND EXPRESSLY DISCLAIM, ANY REPRESENTATIONS, WARRANTIES, COVENANTS AND CONDITIONS, EXPRESS OR IMPLIED, ARISING OUT OF OPERATION OF LAW, COURSE OF PERFORMANCE, COURSE OF DEALING, USAGE OF TRADE OR OTHERWISE, INCLUDING ANY EXPRESS OR IMPLIED WARRANTIES AND CONDITIONS OF: MERCHANTABILITY; MERCHANTABLE QUALITY; FITNESS FOR A PARTICULAR PURPOSE; NON-INFRINGEMENT; SAFETY; QUALITY; FREEDOM FROM DEFECTS OR THAT DEFECTS WILL BE CORRECTED; UNINTERRUPTED, VIRUS-FREE OR ERROR-FREE USE OF THIS WEBSITE; OR ACCURACY, CURRENCY, RELIABILITY, COMPLETENESS OR APPROPRIATENESS RELATING TO THE CONTENT OF THIS WEBSITE."
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "paragraphs": [
+          "Under no circumstances will Leap AI or its directors, employees, agents and independent contractors have any responsibility or liability for any loss or damage whatsoever (including without limitation direct, indirect, special, incidental, consequential, punitive, exemplary or other damages, and including without limitation to any loss of profit, costs, expenses, harm to business, business interruption, reputation, loss of information or programs or data, loss of savings, loss of revenue, loss of goodwill, loss of tangible or intangible property, legal fees or legal costs, wasted management or office time or damages of any kind whatsoever), whether based in contract, tort, negligence or any other legal basis, arising out of or in connection with this website, any linked website or linked social media platform (including without limitation any damages suffered as a result of the use, inability to use, failure of, or any omissions or inaccuracies in, this website, any linked websites or linked social media platforms, or any of the services or content of the foregoing), even if Leap AI has been specifically advised of the possibility of such damage or loss, or if such damage or loss was foreseeable."
+        ]
+      },
+      {
+        "heading": "General",
+        "paragraphs": [
+          "Leap AI reserves the right to supplement, remove or modify these terms and conditions at any time and from time to time without notice. Please check this website regularly for any changes. If you continue to use this website following a change to these terms and conditions, you will be deemed to have accepted the changes.",
+          "If any term or condition set out in these terms and conditions is held to be invalid, unenforceable or illegal for any reason, the remaining terms and conditions will continue in full force.",
+          "The website's content and use, and these terms and conditions are governed by the laws of the Province of Alberta, without giving effect to any conflict of law principles or rules. These terms and conditions are deemed to be entered into by you in the Province of Alberta.",
+          "Leap AI maintains and controls this website from the Province of Alberta, Canada. Leap AI makes no representation that this website is appropriate or available for use outside Canada. Access to this website from territories where the website's contents are illegal is prohibited. If you access this website from outside Canada, you are responsible for complying with all local laws."
+        ]
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "headingBold": "Privacy ",
+    "headingMuted": "Policy",
+    "sections": [
+      {
+        "heading": "Our commitment",
+        "paragraphs": [
+          "We are committed to protecting your privacy. This Privacy Statement explains our current practices regarding what information we may collect, use, and secure your personal information when you visit our website."
+        ]
+      },
+      {
+        "heading": "Collection",
+        "paragraphs": [
+          "When you browse our website, limited amounts of standard information are automatically collected for traffic monitoring and statistical purposes. The information is analyzed for operational trends, performance, and for ways to improve our website. We cannot identify you from this information. See \"Analytics & Cookies\" below."
+        ]
+      },
+      {
+        "heading": "Use",
+        "paragraphs": [
+          "We only use personal information for the purpose it has been collected, or for a consistent purpose, or any other use specifically authorized by law."
+        ]
+      },
+      {
+        "heading": "Disclosure",
+        "paragraphs": [
+          "We do not disclose personal information to anyone."
+        ]
+      },
+      {
+        "heading": "Analytics & Cookies",
+        "gaOptOutLink": true,
+        "paragraphs": [
+          "In order to serve you better, we use Google Analytics to help analyse the use of our website. These tools use cookies to collect and generate information about your visits to our site (including your IP address) that is transmitted to their servers in an anonymous form for processing. We study patterns of website activity so we can improve the experience of visitors to our site.",
+          "The use of these tools does not allow us or our analytics service provider to identify individuals.",
+          "You can opt-out of analytics activity by setting your browser to notify you when a cookie is sent and block analytics cookies if desired. Please consult your browser's Help Menu for instructions. Visiting our website with analytics cookies disabled will have no significant impact on your browsing experience. Google currently offers a free "
+        ]
+      },
+      {
+        "heading": "How to unsubscribe",
+        "paragraphs": [
+          "If you do not want to continue to receive e-mail from Leap AI, please note that every time we send you an email, we will give you the option to unsubscribe from our e-mail list, so you'll be able to stop receiving our e-mails at any time. Your email address will be immediately removed from our email list."
+        ]
+      },
+      {
+        "heading": "Who to contact?",
+        "emailLink": true,
+        "paragraphs": [
+          "Questions or comments regarding these practices may be directed to:",
+          ""
+        ]
+      },
+      {
+        "heading": "Security",
+        "paragraphs": [
+          "Our security practices are continually evolving to ensure that the integrity and confidentiality of information and systems are maintained. We use up-to-date security safeguards to protect our network and website from misuse, alteration, copying, disclosure, destruction, monitoring or unauthorized sharing of information and damage."
+        ]
+      }
+    ]
+  }
+}

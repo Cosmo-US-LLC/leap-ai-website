@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FREE_CONSULTATION_URL } from "../../../lib/newHomeLinks.js";
 
 import arrowActiveIcon from "../../../assets/icons/pillars/arrow-active.svg";
@@ -22,113 +23,17 @@ import pillar05Img from "../../../assets/images/methodology/pillars/pillar-05.we
 import pillar06Img from "../../../assets/images/methodology/pillars/pillar-06.webp";
 import pillar07Img from "../../../assets/images/methodology/pillars/pillar-07.webp";
 
-const PILLARS = [
-  {
-    id: "01",
-    category: "Innovation",
-    title: "Build a Guided Innovation Engine",
-    description:
-      "Create a structured environment where every employee can safely experiment with AI and surface real-world use cases. The result: a continuous pipeline of practical innovations from the people who know your operations best.",
-    bullets: [
-      "Sandbox environments with safety guardrails",
-      "Monthly idea pipelines from every department",
-      "Lightweight evaluation rubric for new use cases",
-    ],
-    stat: { value: "3×", label: "More qualified use cases per quarter" },
-    icon: ideaIcon,
-    image: pillar01Img,
-  },
-  {
-    id: "02",
-    category: "People",
-    title: "Put People at the Center of Transformation",
-    description:
-      "The biggest barrier to AI isn't technology — it's fear. This pillar redefines the social contract: AI becomes a tool for career growth, not a threat. When people trust the process, adoption accelerates and resistance disappears.",
-    bullets: [
-      "Transparent communication on AI's role",
-      "Targeted upskilling and retraining programs",
-      "Employee-led AI adoption champions",
-    ],
-    stat: { value: "100%", label: "Focus on AI as a tool for career growth" },
-    icon: usersIcon,
-    image: pillar02Img,
-  },
-  {
-    id: "03",
-    category: "Data",
-    title: "Centralize Your Data & Define Actionable KPIs",
-    description:
-      "AI without clean, connected data is just expensive guessing. Unify scattered data sources, define the KPIs that actually matter, and create feedback loops that let your organization measure, learn, and optimize in real time.",
-    bullets: [
-      "Unified data lakes and seamless integrations",
-      "Real-time tracking for actionable KPIs",
-      "Automated feedback and learning loops",
-    ],
-    stat: { value: "360°", label: "Visibility into real-time optimizations" },
-    icon: dataIcon,
-    image: pillar03Img,
-  },
-  {
-    id: "04",
-    category: "Strategy",
-    title: "Create Strategic Urgency Without Panic",
-    description:
-      "The AI window is narrowing. Companies that wait for perfect conditions will be outrun by competitors who started now. This pillar helps you distinguish what must be built immediately from what can wait — driving action without recklessness.",
-    bullets: [
-      "Prioritized roadmaps for immediate impact",
-      "Agile frameworks for safe, rapid deployment",
-      "Competitive gap analysis and monitoring",
-    ],
-    stat: { value: "#1", label: "Priority on high-impact, immediate builds" },
-    icon: goalsIcon,
-    image: pillar04Img,
-  },
-  {
-    id: "05",
-    category: "CX",
-    title: "Make Customer Experience Your North Star",
-    description:
-      "Most companies use AI to cut costs. The best use it to win customers. Redirect efficiency gains toward market-defining experiences — faster response times, personalized interactions, predictive service. Deliver so much value your customers can't imagine going anywhere else.",
-    bullets: [
-      "Prioritized roadmaps for immediate impact",
-      "Hyper-personalized user journeys",
-      "Automated, empathetic response systems",
-    ],
-    stat: { value: "5x", label: "Faster, highly personalized customer responses" },
-    icon: ratingIcon,
-    image: pillar05Img,
-  },
-  {
-    id: "06",
-    category: "Compounding",
-    title: "Engineer Recursive Self-Improvement",
-    description:
-      "The most powerful AI advantage is a compounding loop: AI optimizes processes, processes generate better data, better data trains sharper AI. Your competitors improve linearly. You improve exponentially.",
-    bullets: [
-      "Closed-loop data refinement systems",
-      "Continuous AI model retraining",
-      "Automated internal process optimization",
-    ],
-    stat: { value: "10x", label: "Exponential improvement loops over competitors" },
-    icon: chartIcon,
-    image: pillar06Img,
-  },
-  {
-    id: "07",
-    category: "Governance",
-    title: "Establish AI Governance & Build Trust",
-    description:
-      "Speed without guardrails is recklessness. Establish ethical policies, security protocols, and accountability frameworks that earn the trust of your employees, customers, and regulators. Governance isn't a brake on innovation — it's the foundation that lets you move fast with confidence.",
-    bullets: [
-      "Comprehensive ethical AI usage policies",
-      "Robust security and privacy protocols",
-      "Clear organizational accountability frameworks",
-    ],
-    stat: { value: "100%", label: "Compliant and secure innovation foundation" },
-    icon: rocketIcon,
-    image: pillar07Img,
-  },
-];
+const PILLAR_IDS = ["01", "02", "03", "04", "05", "06", "07"];
+
+const PILLAR_ASSETS = {
+  "01": { icon: ideaIcon, image: pillar01Img },
+  "02": { icon: usersIcon, image: pillar02Img },
+  "03": { icon: dataIcon, image: pillar03Img },
+  "04": { icon: goalsIcon, image: pillar04Img },
+  "05": { icon: ratingIcon, image: pillar05Img },
+  "06": { icon: chartIcon, image: pillar06Img },
+  "07": { icon: rocketIcon, image: pillar07Img },
+};
 
 const MOBILE_TAB_TRANSITION =
   "max-lg:transition-all max-lg:duration-300 max-lg:ease-in-out motion-reduce:max-lg:transition-none";
@@ -240,11 +145,21 @@ function scrollMobileTabToIndex(track, index) {
 }
 
 export default function MethodologyPillarsSection() {
+  const { t } = useTranslation("methodology");
+  const pillars = useMemo(
+    () =>
+      PILLAR_IDS.map((id) => {
+        const item = t(`pillars.items.${id}`, { returnObjects: true });
+        return { id, ...item, ...PILLAR_ASSETS[id] };
+      }),
+    [t],
+  );
+
   const [active, setActive] = useState(0);
   const mobileTabTrackRef = useRef(null);
   const isProgrammaticScrollRef = useRef(false);
   const scrollEndTimerRef = useRef(null);
-  const pillar = PILLARS[active];
+  const pillar = pillars[active];
 
   const setActivePillar = (index) => {
     setActive(index);
@@ -257,7 +172,7 @@ export default function MethodologyPillarsSection() {
   };
 
   const handleNext = () =>
-    setActivePillar(active === PILLARS.length - 1 ? 0 : active + 1);
+    setActivePillar(active === pillars.length - 1 ? 0 : active + 1);
 
   useEffect(() => {
     const track = mobileTabTrackRef.current;
@@ -315,24 +230,19 @@ export default function MethodologyPillarsSection() {
         {/* ── Header ── */}
         <div className="flex w-full flex-col items-center gap-4 text-center max-lg:gap-4 lg:max-w-[800px] lg:gap-5">
           <h2 className="w-full text-[40px] font-normal leading-[46px] text-[#201463] lg:text-[56px] lg:leading-[58px]">
-            <span className="font-bold">The 7 </span>
-            <span className="font-normal text-[rgba(32,20,99,0.7)]">Strategic Pillars</span>
+            <span className="font-bold">{t("pillars.headingBold")}</span>
+            <span className="font-normal text-[rgba(32,20,99,0.7)]">{t("pillars.headingMuted")}</span>
           </h2>
-          <p className="text-base leading-6 text-[#4e546c] lg:leading-[26px]">
-            If the problem is organizational readiness, the solution isn&apos;t
-            more tools , it&apos;s a complete framework. These seven pillars
-            address every dimension of AI transformation: your people, your
-            data, your strategy, and the governance to tie it all together.
-          </p>
+          <p className="text-base leading-6 text-[#4e546c] lg:leading-[26px]">{t("pillars.intro")}</p>
         </div>
 
         {/* Mobile: horizontal tab carousel (Figma 2108:1413) */}
         <nav
           ref={mobileTabTrackRef}
           className="-mx-5 flex w-[calc(100%+40px)] gap-3 overflow-x-auto scroll-smooth px-5 [scroll-snap-type:x_mandatory] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:hidden"
-          aria-label="Strategic pillars"
+          aria-label={t("pillars.navAria")}
         >
-          {PILLARS.map((p, i) => (
+          {pillars.map((p, i) => (
             <PillarTabButton
               key={p.id}
               pillar={p}
@@ -350,10 +260,10 @@ export default function MethodologyPillarsSection() {
             {/* Desktop: vertical tab list */}
             <nav
               className="hidden flex-col bg-[rgba(242,246,251,0.6)] p-3 lg:flex lg:w-[360px] lg:self-stretch"
-              aria-label="Strategic pillars"
+              aria-label={t("pillars.navAria")}
             >
               <div className="flex flex-1 flex-col gap-y-2 sm:justify-between lg:h-full">
-                {PILLARS.map((p, i) => (
+                {pillars.map((p, i) => (
                   <PillarTabButton
                     key={p.id}
                     pillar={p}
@@ -379,7 +289,9 @@ export default function MethodologyPillarsSection() {
                       className="h-6 w-6 shrink-0"
                     />
                   </span>
-                  <span className="text-sm font-semibold text-[#4e546c]">{active + 1} of 7</span>
+                  <span className="text-sm font-semibold text-[#4e546c]">
+                    {t("pillars.progress", { current: active + 1 })}
+                  </span>
                 </div>
 
                 {/* Body — stacked mobile, side-by-side desktop */}
@@ -455,7 +367,7 @@ export default function MethodologyPillarsSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-bold text-black no-underline hover:underline"
                   >
-                    Talk to an expert about this pillar
+                    {t("pillars.talkToExpert")}
                     <img src={arrowBlackIcon} alt="" aria-hidden className="h-4 w-4 shrink-0" />
                   </a>
 
@@ -464,7 +376,7 @@ export default function MethodologyPillarsSection() {
                     onClick={handleNext}
                     className="inline-flex cursor-pointer items-center gap-2 self-start rounded-full border border-[#cad1dd] bg-transparent px-6 py-2 text-sm font-semibold text-[#201463] transition-colors hover:bg-[#f0f4fa]"
                   >
-                    {active === PILLARS.length - 1 ? "Back to first" : "Next pillar"}
+                    {active === pillars.length - 1 ? t("pillars.backToFirst") : t("pillars.nextPillar")}
                     <img src={arrowNavyIcon} alt="" aria-hidden className="h-3 w-3 shrink-0" />
                   </button>
                 </div>

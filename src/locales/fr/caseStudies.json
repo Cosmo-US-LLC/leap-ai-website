@@ -1,0 +1,19 @@
+{
+  "page": {
+    "subtitle": "Découvrez comment les organisations utilisent l'IA pour transformer leurs opérations.",
+    "headingMuted": "Résultats"
+  },
+  "detail": {
+    "bookStrategyCall": "Réserver un appel stratégique",
+    "impactTitle": "Impact en un coup d'œil",
+    "deliveredTitle": "Ce qui a été livré",
+    "technologiesTitle": "Technologies",
+    "industryLabel": "Industrie",
+    "locationLabel": "Emplacement",
+    "relatedHeadingPrefix": "Études de cas ",
+    "relatedHeadingMuted": "connexes",
+    "notFoundTitle": "Étude de cas introuvable",
+    "notFoundBody": "L'étude de cas que vous recherchez n'existe pas.",
+    "viewAll": "Voir toutes les études de cas"
+  }
+}
