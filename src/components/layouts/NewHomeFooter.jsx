@@ -60,61 +60,61 @@ const SOCIAL_LINKS = [
 
   },
 
-  {
+  // {
 
-    label: "Instagram",
+  //   label: "Instagram",
 
-    href: "https://www.instagram.com/leapaisolutions/",
+  //   href: "https://www.instagram.com/leapaisolutions/",
 
-    icon: iconInstagram,
+  //   icon: iconInstagram,
 
-    iconClass: "h-4 w-4 object-contain",
+  //   iconClass: "h-4 w-4 object-contain",
 
-    iconClassMobile: "h-3 w-3 object-contain",
+  //   iconClassMobile: "h-3 w-3 object-contain",
 
-  },
+  // },
 
-  {
+  // {
 
-    label: "Facebook",
+  //   label: "Facebook",
 
-    href: "https://www.facebook.com/leapaisolutions",
+  //   href: "https://www.facebook.com/leapaisolutions",
 
-    icon: iconFacebook,
+  //   icon: iconFacebook,
 
-    iconClass: "h-4 w-[9px] object-contain",
+  //   iconClass: "h-4 w-[9px] object-contain",
 
-    iconClassMobile: "h-3 w-[7px] object-contain",
+  //   iconClassMobile: "h-3 w-[7px] object-contain",
 
-  },
+  // },
 
-  {
+  // {
 
-    label: "TikTok",
+  //   label: "TikTok",
 
-    href: "https://www.tiktok.com/leapaisolutions/",
+  //   href: "https://www.tiktok.com/leapaisolutions/",
 
-    icon: iconTiktok,
+  //   icon: iconTiktok,
 
-    iconClass: "h-4 w-[14px] object-contain",
+  //   iconClass: "h-4 w-[14px] object-contain",
 
-    iconClassMobile: "h-3 w-[11px] object-contain",
+  //   iconClassMobile: "h-3 w-[11px] object-contain",
 
-  },
+  // },
 
-  {
+  // {
 
-    label: "X",
+  //   label: "X",
 
-    href: "https://twitter.com/leapaisolutions",
+  //   href: "https://twitter.com/leapaisolutions",
 
-    icon: iconX,
+  //   icon: iconX,
 
-    iconClass: "size-[12.8px]",
+  //   iconClass: "size-[12.8px]",
 
-    iconClassMobile: "size-[10.24px]",
+  //   iconClassMobile: "size-[10.24px]",
 
-  },
+  // },
 
   {
 
